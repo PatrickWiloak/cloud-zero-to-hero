@@ -6,8 +6,8 @@ Working task list for **cloud-zero-to-hero** (Cloud Zero to Hero, https://cloud.
 
 ## Community (2026-10-27)
 
-- [ ] 2026-10-27 Reply to outside PR #13 (Joehonathon, A+ PBQ resource, open since 2026-10-19) - merge or explain.
-- [ ] Link check #12: 28 errors (SAP training, Power Platform blog 404s; GCP "connection failed" is CI-side) - fix real 404s.
+- [x] 2026-10-27 PR #13 closed with thanks: freemium product link, out of scope per CONTRIBUTING (marketing / paid ads).
+- [x] 2026-10-27 Link check #12: real 404s fixed (SAP, Power Platform blog, 4 renamed NVIDIA slugs on ai.); the rest is CI-side connection noise.
 
 
 ## Zero to Hero split (2026-10-21)
