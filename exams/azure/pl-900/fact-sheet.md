@@ -382,7 +382,7 @@ last-updated: 2026-05-03
 
 **[📖 Power Platform Community](https://powerusers.microsoft.com/)** - Community forums and discussions.
 
-**[📖 Power Platform Blog](https://cloudblogs.microsoft.com/powerplatform/)** - Latest updates and announcements.
+**[📖 Power Platform Blog](https://www.microsoft.com/en-us/power-platform/blog/)** - Latest updates and announcements.
 
 ---
 

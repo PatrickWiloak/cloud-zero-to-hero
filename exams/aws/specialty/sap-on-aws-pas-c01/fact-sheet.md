@@ -537,7 +537,7 @@ Covers security, compliance, and access control.
 ### Related Certifications
 **📖 [AWS Solutions Architect Professional](https://aws.amazon.com/certification/certified-solutions-architect-professional/)** - Advanced architecture
 **📖 [AWS Security Specialty](https://aws.amazon.com/certification/certified-security-specialty/)** - Security focus
-**📖 [SAP Certifications](https://training.sap.com/certification)** - SAP technology certifications
+**📖 [SAP Certifications](https://learning.sap.com/certifications)** - SAP technology certifications
 
 ### Continuous Learning
 - Follow SAP on AWS blog

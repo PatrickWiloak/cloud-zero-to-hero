@@ -79,7 +79,7 @@ flowchart LR
 - [AWS Solutions Architect Professional (SAP-C02)](../exams/aws/professional/solutions-architect-pro-sap-c02/)
 - [AWS Advanced Networking Specialty (ANS-C01)](../exams/aws/specialty/advanced-networking-ans-c01/)
 - [GCP Cloud Network Engineer](../exams/gcp/cloud-network-engineer/)
-- [NVIDIA Networking Professional](https://ai.noblerworks.com/certifications/nvidia/networking-professional/) - data center fabric for AI workloads
+- [NVIDIA Networking Professional](https://ai.noblerworks.com/certifications/nvidia/ai-networking-professional/) - data center fabric for AI workloads
 
 **Service mesh and ingress**
 - [Istio Certified Associate (ICA)](../exams/kubernetes/ica/)

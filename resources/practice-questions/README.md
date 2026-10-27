@@ -109,9 +109,9 @@ Scenario-based practice question banks, one per certification. Every bank follow
 - [NVIDIA Certified Professional - AI Operations (NCP-AIO)](https://ai.noblerworks.com/certifications/practice-questions/nvidia-ai-operations-professional/)
 - [NVIDIA Certified Associate - Generative AI and LLMs (NCA-GENL)](https://ai.noblerworks.com/certifications/practice-questions/nvidia-genai-llms-associate/)
 - [NVIDIA Certified Professional - Generative AI & LLMs (NCP-GENL)](https://ai.noblerworks.com/certifications/practice-questions/nvidia-genai-llms-professional/)
-- [NVIDIA Certified Associate - Multimodal Generative AI (NCA-MMGA)](https://ai.noblerworks.com/certifications/practice-questions/nvidia-multimodal-genai-associate/)
-- [NVIDIA Certified Professional - Networking (NCP-NET)](https://ai.noblerworks.com/certifications/practice-questions/nvidia-networking-professional/)
-- [NVIDIA Certified Professional - OpenUSD (NCP-USD)](https://ai.noblerworks.com/certifications/practice-questions/nvidia-openusd-professional/)
+- [NVIDIA Certified Associate - Multimodal Generative AI (NCA-MMGA)](https://ai.noblerworks.com/certifications/practice-questions/nvidia-generative-ai-multimodal-associate/)
+- [NVIDIA Certified Professional - Networking (NCP-NET)](https://ai.noblerworks.com/certifications/practice-questions/nvidia-ai-networking-professional/)
+- [NVIDIA Certified Professional - OpenUSD (NCP-USD)](https://ai.noblerworks.com/certifications/practice-questions/nvidia-openusd-development-professional/)
 
 ### HashiCorp (7)
 
