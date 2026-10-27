@@ -4,11 +4,17 @@ Working task list for **cloud-zero-to-hero** (Cloud Zero to Hero, https://cloud.
 
 ---
 
+## Community (2026-10-27)
+
+- [ ] 2026-10-27 Reply to outside PR #13 (Joehonathon, A+ PBQ resource, open since 2026-10-19) - merge or explain.
+- [ ] Link check #12: 28 errors (SAP training, Power Platform blog 404s; GCP "connection failed" is CI-side) - fix real 404s.
+
+
 ## Zero to Hero split (2026-10-21)
 
 - [x] 2026-10-21 Split from cloud-data-ai-security-zero-to-hero on 2026-10-21: data, security and AI content (and their TODO items) moved to data-zero-to-hero, security-zero-to-hero and ai-zero-to-hero; this repo is Cloud Zero to Hero. README, STUDY-HUB, home page, CLAUDE.md, CONTRIBUTING, docs/ARCHITECTURE.md, mkdocs.yml, social card and repo-metadata template rewritten for cloud only.
 - [x] 2026-10-21 Repo renamed to `cloud-zero-to-hero`; `check-repo-metadata.py --fix` run (description, homepage).
-- [ ] 2026-10-28 Patrick: upload `assets/brand/social-preview-1280x640.png` at GitHub Settings > General > Social preview (no API). Card is the shared Zero to Hero template (`assets/brand/social-preview.html`, 2026-10-21).
+- [x] 2026-10-27 (custom preview set) Patrick: upload `assets/brand/social-preview-1280x640.png` at GitHub Settings > General > Social preview (no API). Card is the shared Zero to Hero template (`assets/brand/social-preview.html`, 2026-10-21).
 
 ---
 
