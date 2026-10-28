@@ -419,6 +419,16 @@ If this repository helped you, please ⭐ star it and share with others.
 
 ## More from Nobler Works
 
+### Our products
+
+<a href="https://gitgood.dev/?utm_source=github&utm_medium=readme&utm_campaign=nobler-footer&utm_content=cloud-zero-to-hero"><img src="https://gitgood.dev/og-image.png" alt="gitGood.dev - train for the tech role, not just the interview" width="260"></a>
+<a href="https://semantix.chat/?utm_source=github&utm_medium=readme&utm_campaign=nobler-footer&utm_content=cloud-zero-to-hero"><img src="https://semantix.chat/og/home.png" alt="Semantix.chat - talk your way to fluency with an AI language tutor" width="260"></a>
+<a href="https://achilles.fit/?utm_source=github&utm_medium=readme&utm_campaign=nobler-footer&utm_content=cloud-zero-to-hero"><img src="https://achilles.fit/og/home.png" alt="Achilles.fit - adaptive training plans with an AI coach" width="260"></a>
+
+**[gitGood.dev](https://gitgood.dev/?utm_source=github&utm_medium=readme&utm_campaign=nobler-footer&utm_content=cloud-zero-to-hero)** - train for the tech role, not just the interview · **[Semantix.chat](https://semantix.chat/?utm_source=github&utm_medium=readme&utm_campaign=nobler-footer&utm_content=cloud-zero-to-hero)** - talk your way to fluency with an AI language tutor · **[Achilles.fit](https://achilles.fit/?utm_source=github&utm_medium=readme&utm_campaign=nobler-footer&utm_content=cloud-zero-to-hero)** - adaptive training plans with an AI coach
+
+### Free and open source
+
 Free, open-source projects from the [Nobler Works](https://noblerworks.com/) team. If one helps you, a ⭐ helps the next person find it.
 
 </div>
@@ -432,8 +442,6 @@ Free, open-source projects from the [Nobler Works](https://noblerworks.com/) tea
 | 🏃 **[Proper Training for Distance Running](https://github.com/PatrickWiloak/proper-distance-running-training-guidance)** | Evidence-based running guide with twelve 5K-to-marathon plans | **[Read online →](https://achilles.fit/guides)** |
 
 <div align="center" markdown="1">
-
-**Our products:** [gitGood.dev](https://gitgood.dev) - train for the tech role, not just the interview · [Achilles.fit](https://achilles.fit) - adaptive training plans with an AI coach
 
 **Follow Nobler Works**
 
