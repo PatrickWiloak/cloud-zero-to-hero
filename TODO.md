@@ -178,7 +178,7 @@ all 783 now repaired**, each replacement fetched and title-checked. The old-to-n
       Target: Google + Bing referrals above 11 per 14 days (baseline above), and new pages showing in
       Search Console → Pages → Indexed (if the property exists by then).
 - [x] 2026-10-21 Moved to `cloud.noblerworks.com` (Route 53 CNAME, NW) + robots.txt; no redirect needed (never indexed).
-- [ ] 2026-10-28 Patrick: Search Console `sc-domain:noblerworks.com` -> submit `https://cloud.noblerworks.com/sitemap.xml`.
+- [ ] 2026-11-01 Patrick (moved from 10-28): Search Console `sc-domain:noblerworks.com` -> submit `https://cloud.noblerworks.com/sitemap.xml`.
 - [x] ~~CompTIA A+ (220-1201/1202)~~ ✅ done 2026-09-28 - the biggest-search-volume gap.
 - [ ] **By 2026-10-31: confirm the A+ voucher price** on the CompTIA store (US) and replace the "not verified"
       line in `exams/comptia/a-plus/fact-sheet.md` (CompTIA renders prices client-side; no official figure was readable).
