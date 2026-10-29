@@ -126,7 +126,7 @@ all 783 now repaired**, each replacement fetched and title-checked. The old-to-n
       rewrites that issue instead of opening a new one (no open issue -> it opens one). YAML parses; NOT run in
       Actions (nothing pushed).
 - [x] ✅ 2026-10-22 judged the 10-19 run: opened #12 (no open issue existed, so the update path is still unrun); 3 real breaks fixed here, the rest moved to data/ai repos in the split.
-- [ ] **Judge 2026-10-27:** the 10-26 Monday run rewrites #12 instead of opening #13 (`gh issue list --label link-check`).
+- [x] **Judge 2026-10-27:** the 10-26 Monday run rewrites #12 instead of opening #13 (`gh issue list --label link-check`). ✅ 2026-10-29: scheduled run 40320699752 opened no new issue (#13 is an unrelated PR); #12 was updated, then closed 10-27.
 - [ ] 🟡 Link-check noise: 130 of #12's 257 errors are `cloud.google.com` refusing the Actions runner ("Connection failed"); lower lychee concurrency for that host or exclude it. S.
 - [ ] **Spot-check the retired-product replacements (by 2026-10-31).** These links now reach the successor product,
       but the surrounding notes may still teach the retired one: OpsWorks, IBM Watson and Cloud Foundry
@@ -174,7 +174,7 @@ all 783 now repaired**, each replacement fetched and title-checked. The old-to-n
 - [x] 2026-10-20 ✅ **2026-10-05 check** (✏️ 2026-10-20: run 39078323231, 2026-10-17, prints `IndexNow: 2 URL(s)` / `IndexNow accepted: HTTP 200`): open the next "Docs site" run's "Notify IndexNow" step; it should now say
       `IndexNow accepted`. If it 403s again, the key file at the site root is not being served - check
       `https://cloud.noblerworks.com/<key>.txt` (key in `.github/site/indexnow-key.txt`).
-- [ ] **2026-10-28 judge**: re-pull `gh api repos/PatrickWiloak/cloud-zero-to-hero/traffic/popular/referrers`.
+- [x] **2026-10-28 judge**: re-pull `gh api repos/PatrickWiloak/cloud-zero-to-hero/traffic/popular/referrers`. ✅ 2026-10-29: Google 20 + Bing 2 = 22 per 14 days (target > 11). Indexed-pages half waits on the Search Console line below.
       Target: Google + Bing referrals above 11 per 14 days (baseline above), and new pages showing in
       Search Console → Pages → Indexed (if the property exists by then).
 - [x] 2026-10-21 Moved to `cloud.noblerworks.com` (Route 53 CNAME, NW) + robots.txt; no redirect needed (never indexed).
