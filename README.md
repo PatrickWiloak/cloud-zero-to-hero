@@ -349,6 +349,7 @@ cloud-zero-to-hero/
 - [📅 Freshness ledger](./docs/freshness.md)
 - [🧪 Labs by certification](./resources/hands-on-projects/labs-by-cert.md) - which hands-on build backs which exam
 - [🛠️ Improvement roadmap](./docs/improvement-roadmap.md) - known gaps and what is being done about them
+- [🔑 Practice-question key review](./docs/practice-question-key-review.md) - 2026-10-14 record of the AI-verified answer-key review: keys fixed, wording tightened, what is still open
 - [📝 Contributing](./CONTRIBUTING.md)
 
 ---
