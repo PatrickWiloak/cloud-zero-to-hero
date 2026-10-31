@@ -61,7 +61,8 @@ CERTS_JSON = REPO / "docs" / "certs.json"
 # directory is a deliberate choice rather than an accident.
 ROOT_FILES = ["README.md", "STUDY-HUB.md"]
 CONTENT_DIRS = ["learn", "resources", "exams", "topics", "docs", "assets", ".templates"]
-ABOUT_FILES = ["CONTRIBUTING.md", "CHANGELOG.md", "TODO.md", "CLAUDE.md"]
+# TODO.md and CLAUDE.md are repo-internal (task list, agent instructions): not site pages (Patrick, 2026-10-31).
+ABOUT_FILES = ["CONTRIBUTING.md", "CHANGELOG.md"]
 
 # MkDocs ignores dot-directories inside docs_dir, but `.templates/` holds three
 # real pages (the shared per-provider resource lists) that cert guides link to

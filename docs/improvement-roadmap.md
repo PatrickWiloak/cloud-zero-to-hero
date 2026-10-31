@@ -42,7 +42,7 @@ commands in [How the numbers were produced](#how-the-numbers-were-produced) to r
 > 2.17M in `exams/`; it gained 11 pages and a topic hub.
 >
 > **Still open:** practice questions for the 103 certs that still lack them. Tracked in
-> [TODO.md](../TODO.md).
+> [TODO.md](https://github.com/PatrickWiloak/cloud-zero-to-hero/blob/main/TODO.md).
 
 <!-- -->
 
