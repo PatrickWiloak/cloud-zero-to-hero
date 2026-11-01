@@ -295,6 +295,6 @@ See the [budget study plan](./resources/budget-study-plan.md) for detailed cost-
 
 **Ready to start? [Browse the AWS catalog](./exams/aws/) · [Browse Azure](./exams/azure/) · [Browse GCP](./exams/gcp/) · [Browse Kubernetes](./exams/kubernetes/)**
 
-*Maintained by [Patrick Wiloak](https://patricklukewilson.com) - Star this repo if it helps you pass.*
+*Maintained by [Patrick Wiloak](https://patrickwiloak.com) - Star this repo if it helps you pass.*
 
 </div>

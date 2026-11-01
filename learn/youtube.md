@@ -6,7 +6,7 @@ last-updated: 2026-05-03
 
 > **A filtered list of YouTube content for learning cloud and AI/ML. No algorithmic slop, no engagement-bait thumbnails - just channels and individual videos that actually teach.**
 >
-> Curated by [Patrick Wiloak](https://patricklukewilson.com). If you find dead links or want to suggest additions, see [CONTRIBUTING.md](../CONTRIBUTING.md).
+> Curated by [Patrick Wiloak](https://patrickwiloak.com). If you find dead links or want to suggest additions, see [CONTRIBUTING.md](../CONTRIBUTING.md).
 
 ---
 
