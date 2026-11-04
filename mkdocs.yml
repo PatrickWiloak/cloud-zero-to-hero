@@ -83,28 +83,22 @@ theme:
     # of sites shares a language. `custom` opts out of Material's built-in
     # colour palettes entirely; the actual values are defined in
     # .github/site/extra.css under the scheme selectors.
-    # All three entries need it - this first one is what renders before the
-    # palette JS runs, so omitting it here shows Material's default indigo.
-    - media: "(prefers-color-scheme)"
+    # Dark is the default for everyone (first entry, no media query): the toggle
+    # offers light and the choice is remembered. Both entries need `custom` -
+    # the first is what renders before the palette JS runs, so omitting it
+    # shows Material's default indigo.
+    - scheme: slate
       primary: custom
       accent: custom
       toggle:
-        icon: material/brightness-auto
+        icon: material/brightness-4
         name: Switch to light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
+    - scheme: default
       primary: custom
       accent: custom
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: custom
-      accent: custom
-      toggle:
-        icon: material/brightness-4
-        name: Switch to system preference
   # gitGood's typeface. Both families are served by Google Fonts, which is
   # where Material loads webfonts from.
   font:

@@ -6,6 +6,12 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 
 ---
 
+## [2026-11-04] - Dark mode by default
+
+### Changed
+
+- The site opens in dark mode for everyone instead of following the visitor's system setting. The header toggle still switches to light and remembers the choice.
+
 ## [2026-10-22] - "Which site should I start with?" page
 
 ### Added
