@@ -34,7 +34,7 @@ Read-only fleet audit (9 agents, nothing changed). Each line: effort S (<half da
 - [x] 2026-10-02 🟡 medium - Home page bio hard-coded stale cert counts (`.github/site/home.md:129`, "60 ... 18x"): numbers removed ("multi-cloud certified"); `build-site.py --strict` passes. Goes live on the next push to main (Pages workflow).
 - [x] 2026-10-02 🟢 low - README Nobler banner was hotlinked from `Noblerworks/IRONSIGHT`: vendored to `assets/brand/nobler-works-banner.jpg`.
 - [ ] 🟢 **Patrick: decide** whether the bio should carry a cert count again. If yes, add a `{{personal_certs}}` token in `build-site.py` fed from one checked-in value, and update it on 2026-10-21 / 2026-11-05 (lapses) - the private career ledger cannot feed CI.
-- [ ] 2026-11-05: Database Specialty lapses - `README.md` (lines ~53 and ~409) and `learn/README.md` line 5 go from 19x multi-cloud / 14x AWS / 64 to **18x / 13x / 63**. (2026-10-20: swept 20x / 15x / 65 -> 19x / 14x / 64 for the 2026-10-21 ML Specialty lapse; source `go-to-market/claims.md`.)
+- [x] ✅ 2026-11-06: 2026-11-05: Database Specialty lapses - `README.md` (lines ~53 and ~409) and `learn/README.md` line 5 go from 19x multi-cloud / 14x AWS / 64 to **18x / 13x / 63**. (2026-10-20: swept 20x / 15x / 65 -> 19x / 14x / 64 for the 2026-10-21 ML Specialty lapse; source `go-to-market/claims.md`.)
 
 ## Retired-exam sweep (2026-10-16)
 

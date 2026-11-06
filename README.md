@@ -50,7 +50,7 @@ Built for **every kind of technologist**, across 21 role-targeted learning paths
 >
 > Whether you've never opened a terminal or you're chasing your fifth cloud cert, start here.
 >
-> Patrick: Ex-AWS Solutions Architect | 10 Years in Tech | 64 Certifications & Accreditations | 19x Multi Cloud Certified
+> Patrick: Ex-AWS Solutions Architect | 10 Years in Tech | 63 Certifications & Accreditations | 18x Multi Cloud Certified
 >
 > 🎥 [@patrickwiloak](https://youtube.com/@patrickwiloak) | 💼 [LinkedIn](https://www.linkedin.com/in/patricklukewilson/)
 
@@ -402,7 +402,7 @@ If these materials helped you pass a certification or advance your career, pleas
 
 Created and maintained by **[Patrick Wiloak](https://patrickwiloak.com)**
 
-**19x Multi Cloud Certified** | **64 Certifications & Accreditations** | **Prev @ AWS** | **14x AWS Certified** | **3x GCP** | **2x Azure**
+**18x Multi Cloud Certified** | **63 Certifications & Accreditations** | **Prev @ AWS** | **13x AWS Certified** | **3x GCP** | **2x Azure**
 
 🎥 **[YouTube: @patrickwiloak](https://youtube.com/@patrickwiloak)** - Cloud certification tips and tutorials
 💼 **[LinkedIn: Patrick Luke Wilson](https://www.linkedin.com/in/patricklukewilson/)** - Let's connect
