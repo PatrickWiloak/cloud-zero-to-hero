@@ -129,6 +129,7 @@ all 783 now repaired**, each replacement fetched and title-checked. The old-to-n
 - [x] **Judge 2026-10-27:** the 10-26 Monday run rewrites #12 instead of opening #13 (`gh issue list --label link-check`). ✅ 2026-10-29: scheduled run 40320699752 opened no new issue (#13 is an unrelated PR); #12 was updated, then closed 10-27.
 - [ ] 🟡 Link-check noise: 130 of #12's 257 errors are `cloud.google.com` refusing the Actions runner ("Connection failed"); lower lychee concurrency for that host or exclude it. S.
 - [ ] 2026-11-22 **Spot-check the retired-product replacements** (11-06: PAS-C01 flagged, AWS page unlists it; no official dates read for OpsWorks or IBM Cloud Foundry, docs 404/JS-only; IBM notes still teach Watson + Cloud Foundry). These links now reach the successor product,
+- [ ] **Spot-check the retired-product replacements (by 2026-10-31).** These links now reach the successor product, ✏️ 2026-11-06: card-verify: the replaced links are still surrounded by notes that teach Watson and Cloud Foundry as current (`exams/ibm/cloud-advocate/notes/03-ai-devops-and-security.md:17`, `:14
       but the surrounding notes may still teach the retired one: OpsWorks, IBM Watson and Cloud Foundry
       (`exams/ibm`), AWS SAP specialty exam. The report lists every replacement.
 - [ ] **Content checks the sweep surfaced** (links fixed, content may be stale):
