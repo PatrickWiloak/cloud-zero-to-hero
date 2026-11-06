@@ -51,7 +51,7 @@ Read-only fleet audit (9 agents, nothing changed). Each line: effort S (<half da
 
 - [x] 2026-10-22 Cert pages restructured to current guides: GH-200, GH-900, Cloud+, KCNA, SOA-C03, AZ-700, PCNE, Terraform Advanced.
 - [ ] 2026-11-15 Verify from-memory details flagged in the 2026-10-22 rewrites: PCNE gcloud flags (`--bgp-bps-*`, `firewall-rules migrate`, PBR next hop, Secure Web Proxy import) and Terraform Advanced OPA Rego sample (`notes/06-hcp-terraform.md`).
-- [ ] 2026-11-01 Reconcile README vs fact-sheet domains/weights: IBM Cloud x4 (Advocate code C1000-176 vs -170), OCI x5 (also -24 codes), PL-900; banks follow the fact sheets.
+- [ ] 2026-11-22 Reconcile README vs fact-sheet against vendor pages, not each other (11-06: both differ per exam across IBM x4, OCI x5, PL-900; codes also differ, Advocate -176/-170, SRE -173/-174; PL-900 still names Power Virtual Agents).
 - [ ] 2026-11-01 Check whether VCP-DCV 2V0-21.23 is superseded and Salesforce Administrator is now "Platform Administrator"; fix stale IBM doc links (`account-iamoverview`, `account-costs` 404).
 - [x] 2026-10-22 All 39 remaining 15-question banks expanded to 30 (new questions carry Key Concept links; Q1-15 in those banks do not).
 
@@ -128,7 +128,7 @@ all 783 now repaired**, each replacement fetched and title-checked. The old-to-n
 - [x] ✅ 2026-10-22 judged the 10-19 run: opened #12 (no open issue existed, so the update path is still unrun); 3 real breaks fixed here, the rest moved to data/ai repos in the split.
 - [x] **Judge 2026-10-27:** the 10-26 Monday run rewrites #12 instead of opening #13 (`gh issue list --label link-check`). ✅ 2026-10-29: scheduled run 40320699752 opened no new issue (#13 is an unrelated PR); #12 was updated, then closed 10-27.
 - [ ] 🟡 Link-check noise: 130 of #12's 257 errors are `cloud.google.com` refusing the Actions runner ("Connection failed"); lower lychee concurrency for that host or exclude it. S.
-- [ ] **Spot-check the retired-product replacements (by 2026-10-31).** These links now reach the successor product,
+- [ ] 2026-11-22 **Spot-check the retired-product replacements** (11-06: PAS-C01 flagged, AWS page unlists it; no official dates read for OpsWorks or IBM Cloud Foundry, docs 404/JS-only; IBM notes still teach Watson + Cloud Foundry). These links now reach the successor product,
       but the surrounding notes may still teach the retired one: OpsWorks, IBM Watson and Cloud Foundry
       (`exams/ibm`), AWS SAP specialty exam. The report lists every replacement.
 - [ ] **Content checks the sweep surfaced** (links fixed, content may be stale):
@@ -180,7 +180,7 @@ all 783 now repaired**, each replacement fetched and title-checked. The old-to-n
 - [x] 2026-10-21 Moved to `cloud.noblerworks.com` (Route 53 CNAME, NW) + robots.txt; no redirect needed (never indexed).
 - [x] ✅ 2026-10-31 submitted via API (read, 1,075 URLs, 0 errors); 2026-11-01 Patrick (moved from 10-28): Search Console `sc-domain:noblerworks.com` -> submit `https://cloud.noblerworks.com/sitemap.xml`.
 - [x] ~~CompTIA A+ (220-1201/1202)~~ ✅ done 2026-09-28 - the biggest-search-volume gap.
-- [ ] **By 2026-10-31: confirm the A+ voucher price** on the CompTIA store (US) and replace the "not verified"
+- [ ] 2026-11-22 Pat (2 min, browser): **confirm the A+ voucher price** (11-06: store URL redirects away headless; third parties say $249-$274) on the CompTIA store (US) and replace the "not verified"
       line in `exams/comptia/a-plus/fact-sheet.md` (CompTIA renders prices client-side; no official figure was readable).
 - [ ] **Remaining high-search cert gap**: CompTIA **Linux+**.
 - [ ] **Patrick: start a fresh Claude session for the next cert guide** - **Linux+**. On 2026-09-29 a Linux+ attempt

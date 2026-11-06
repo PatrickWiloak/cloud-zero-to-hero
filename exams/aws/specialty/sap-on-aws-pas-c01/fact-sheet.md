@@ -4,6 +4,8 @@ last-updated: 2026-05-03
 
 # AWS Certified SAP on AWS - Specialty (PAS-C01) Fact Sheet
 
+> **Check before booking (2026-11-06):** AWS no longer lists this exam on its [Certification page](https://aws.amazon.com/certification/), and the old exam URL redirects there. No retirement date found on an official page.
+
 ## 📋 Exam Overview
 
 **Exam Code:** PAS-C01
