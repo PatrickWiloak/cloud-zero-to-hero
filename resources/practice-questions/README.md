@@ -85,7 +85,7 @@ Scenario-based practice question banks, one per certification. Every bank follow
 - [Google Cloud Professional Machine Learning Engineer Certification](https://ai.noblerworks.com/certifications/practice-questions/gcp-machine-learning-engineer/)
 - [Google Cloud Professional Google Workspace Administrator Certification](./gcp-workspace-administrator.md)
 
-### Kubernetes (14)
+### Kubernetes (15)
 
 - [Certified Argo Project Associate (CAPA)](./cncf-capa.md)
 - [Cilium Certified Associate (CCA)](./cncf-cca.md)
@@ -95,6 +95,7 @@ Scenario-based practice question banks, one per certification. Every bank follow
 - [Certified Kubernetes Application Developer (CKAD)](./kubernetes-ckad.md)
 - [Certified Kubernetes Security Specialist (CKS)](https://security.noblerworks.com/resources/practice-questions/kubernetes-cks/)
 - [Cloud Native Platform Engineering Associate (CNPA)](./cncf-cnpa.md)
+- [Certified Cloud Native Platform Engineer (CNPE)](./cncf-cnpe.md)
 - [Istio Certified Associate (ICA)](./cncf-ica.md)
 - [Kyverno Certified Associate (KCA)](./cncf-kca.md)
 - [Kubernetes and Cloud Native Associate (KCNA)](./cncf-kcna.md)

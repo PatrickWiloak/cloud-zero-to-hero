@@ -4,7 +4,7 @@ Study guides for Kubernetes/CNCF in this repo. For the full picture across every
 
 <!-- BEGIN GENERATED: provider-certs - edit .github/scripts/build-provider-indexes.py, not this block -->
 
-12 certifications in this repo. Counts and statuses are generated from [docs/certs.json](../../docs/certs.json).
+13 certifications in this repo. Counts and statuses are generated from [docs/certs.json](../../docs/certs.json).
 
 | Cert | Code | Level | Status | Notes |
 |------|------|-------|--------|------:|
@@ -18,6 +18,7 @@ Study guides for Kubernetes/CNCF in this repo. For the full picture across every
 | [Kyverno Certified Associate (KCA)](kca/) | KCA | Associate | Ready | 6 |
 | [OpenTelemetry Certified Associate (OTCA)](otca/) | OTCA | Associate | Ready | 4 |
 | [Prometheus Certified Associate (PCA)](pca/) | PCA | Associate | Ready | 5 |
+| [Certified Cloud Native Platform Engineer (CNPE)](cnpe/) | Not stated by the Linux Foundation page (it uses CNPE as the purchase SKU) | - | Ready | 5 |
 | [Certified Kubernetes Administrator (CKA)](cka/) | CKA | - | Ready | 7 |
 | [Certified Kubernetes Application Developer (CKAD)](ckad/) | CKAD | - | Ready | 6 |
 
