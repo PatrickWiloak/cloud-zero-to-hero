@@ -68,6 +68,8 @@ Read-only fleet audit (9 agents, nothing changed). Each line: effort S (<half da
 - [ ] 2026-11-04 Run `gitops-with-argo-cd.md` end to end on kind and fix any command that fails (written, not executed).
 - [ ] 2026-11-04 `build-a-landing-zone.md` static dry run done 2026-11-07 (43 commands checked, 7 fixed); live run still needs a throwaway AWS account Patrick opens: new email + card at aws.amazon.com, admin access key, `export AWS_PROFILE=<new>`, run Steps 1-7 + Cleanup, fix any failure.
 - [ ] 2026-11-04 Add glossary terms the new pages use but `learn/glossary.md` lacks: RPO, RTO, landing zone, SCP, golden path, SPOF.
+- [ ] 2026-11-04 Dry-run `build-a-landing-zone.md` in a throwaway AWS org (never in NW `791588190257` or a client account); fix commands.
+- [x] 2026-11-04 Add glossary terms the new pages use but `learn/glossary.md` lacks: RPO, RTO, landing zone, SCP, golden path, SPOF. ✏️ card-docs: Added glossary entries for RPO, RTO, landing zone, SCP, golden path and SPOF in learn/glossary.md
 - [ ] 2026-11-04 App Mesh reached end of support 2026-09-30: drop it from mesh rows in `resources/service-comparison-*.md`, `microservices-architecture.md`, `certification-roadmap-kubernetes-specialist.md`.
 
 ## GCP exam refresh (2026-10-14)
