@@ -85,7 +85,7 @@ kind: KubeProxyConfiguration
 mode: "nftables"   # or "iptables", "ipvs"
 ```
 
-*That snippet is the standard config form; the fetched excerpt did not show the `mode` field itself, so confirm the exact field in the kube-proxy reference.*
+*`KubeProxyConfiguration` (`kubeproxy.config.k8s.io/v1alpha1`) is listed in the kube-proxy configuration reference; the `mode` value matches the proxy modes on the virtual IPs page.*
 
 **CNI alternatives** means CNIs that implement Service load balancing themselves instead of kube-proxy (Cilium is the example covered in this repo's [CCA guide](../../cca/)). The practical consequence: when kube-proxy is replaced, `iptables` inspection no longer shows Service rules, and troubleshooting uses the CNI's own tooling. First find out what is running: check for a kube-proxy DaemonSet and its ConfigMap in `kube-system`.
 
@@ -199,7 +199,7 @@ options ndots:5
 
 Which Pods receive Service traffic is decided by EndpointSlices. A Pod that is not ready is not an endpoint, and its DNS record is withheld (unless `publishNotReadyAddresses=True`). Readiness is therefore how you control endpoint availability.
 
-The fetched pages did not include the readiness-probe section, so the following is **general Kubernetes practice, to be confirmed in the probes documentation**:
+From the probes task page (which shows `tcpSocket` and gRPC probes, `initialDelaySeconds`, `periodSeconds` and startup probes) and general practice:
 
 - A failing **readiness probe** marks the Pod not ready and removes its IP from Service endpoints without restarting the container.
 - Probe types: `httpGet`, `tcpSocket`, `exec` and `grpc`; tuning fields include `initialDelaySeconds`, `periodSeconds`, `timeoutSeconds`, `successThreshold` and `failureThreshold`.

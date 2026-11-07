@@ -208,7 +208,7 @@ spec:
 
 - `steps` run when `.spec.template` changes. `setWeight` sets the canary's traffic percentage (approximated with Pod counts when no traffic routing is configured).
 - `pause` with a `duration` resumes automatically; **`pause: {}` waits until a human promotes**: `kubectl argo rollouts promote <rollout>`.
-- `trafficRouting` hooks in a mesh or ingress. When it is set, `setCanaryScale` and `dynamicStableScale` become available, and `maxSurge` and `maxUnavailable` no longer determine stable and canary replica counts.
+- `trafficRouting` hooks in a mesh or ingress. The page says `setCanaryScale` is only available with a traffic router; `dynamicStableScale` (since v1.1) is described in its traffic-routing section. With traffic routing, `maxSurge` and `maxUnavailable` only affect replica math for the basic canary, so the stable ReplicaSet stays at full scale and total Pods can exceed twice `spec.replicas`.
 - The page documents `analysis` as a canary-level field that runs background analysis, and an unsuccessful result aborts the rollout. It does not cover blue/green or an abort command, so read the blue/green page and the CLI help in the exam environment.
 
 **[📖 Argo Rollouts canary](https://argo-rollouts.readthedocs.io/en/stable/features/canary/)** - steps, traffic routing, promotion

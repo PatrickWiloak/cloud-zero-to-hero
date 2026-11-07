@@ -86,28 +86,36 @@ The Service side is documented in the ClusterIP allocation page:
 - The range is split into a static band and a dynamic band using `min(max(16, cidrSize / 16), 256)`; dynamic allocation uses the upper band first.
 - Example from the page: in `10.96.0.0/16` the static band is `10.96.0.1` to `10.96.1.0` (256 addresses) and the DNS Service is given the static address `10.96.0.10`.
 
-The page does **not** cover Pod CIDR allocation flags such as `--cluster-cidr` and `--allocate-node-cidrs` or `node.spec.podCIDR`. Those are in the kube-controller-manager reference and in your CNI's documentation, which is where to look during a task. Plugins differ: some use the per-node Pod CIDR from the control plane; others (Cilium has several IPAM modes) manage ranges themselves.
+Pod CIDR allocation by the control plane is set on the kube-controller-manager. Its reference says `--allocate-node-cidrs` controls whether CIDRs for Pods are allocated and set on the cloud provider (it requires `--cluster-cidr`), `--cluster-cidr` is the CIDR range for Pods in the cluster (ignored unless `--allocate-node-cidrs=true`), and `--node-cidr-mask-size` is the mask size for each node's CIDR (default 24 for IPv4 and 64 for IPv6; `--node-cidr-mask-size-ipv4` and `-ipv6` apply in dual-stack). Your CNI's documentation covers the rest, which is where to look during a task. Plugins differ: some use the per-node Pod CIDR from the control plane; others (Cilium has several IPAM modes) manage ranges themselves.
 
 Rule of thumb for any IPAM task: Pod range, Service range and Node range must not overlap, and ranges are painful to change on a live cluster, so read what is configured before changing anything.
 
 **[📖 ClusterIP allocation](https://kubernetes.io/docs/concepts/services-networking/cluster-ip-allocation/)** - static and dynamic bands
 
+**[📖 kube-controller-manager reference](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-controller-manager/)** - `--allocate-node-cidrs`, `--cluster-cidr`, `--node-cidr-mask-size`
+
 ---
 
 ## Linux tools for packet-level issues
 
-The curriculum names `iptables`, `ip` and `tcpdump`. These are standard Linux tools and were **not** among the pages fetched for this guide, so treat the table as general practice and confirm syntax with `--help` or the man page.
+The curriculum names `iptables`, `ip` and `tcpdump`. These are standard Linux tools. The flags in the table (`iptables -t`, `-L`, `-n`; `ip -d`; `tcpdump -i`, `-n`) were checked against the man pages; how to read the output is general practice, so confirm syntax with `--help` or the man page.
 
 | Tool | Use in a networking task |
 |---|---|
 | `ip addr`, `ip route`, `ip link` | See interfaces, node and Pod routes, whether a veth or bridge exists |
 | `iptables -t nat -L -n` (or `iptables-save`) | Inspect the NAT rules kube-proxy writes for Services (iptables mode) |
-| `tcpdump -i <iface> -nn host <ip>` | Confirm whether packets arrive, leave, or are dropped |
+| `tcpdump -i <iface> -n host <ip>` | Confirm whether packets arrive, leave, or are dropped |
 | `nslookup` / `dig` in a debug Pod | Test DNS from where the failing client lives |
 
 The kube-proxy page notes one caveat: kernel-level rules such as iptables rules "won't get cleaned up, in some cases until you reboot" after changing modes.
 
-Reaching a node or a Pod network namespace is a `kubectl debug` job. The standard forms are `kubectl debug -it <pod> --image=<image> --target=<container>` (ephemeral container) and `kubectl debug node/<node> -it --image=<image>` (node shell, host filesystem under `/host`). The fetched excerpt of the debug page did not show these, so confirm with `kubectl debug --help`.
+Reaching a node or a Pod network namespace is a `kubectl debug` job. The kubectl reference shows `kubectl debug mypod -it --image=busybox` (interactive debug container in a pod; `--target` names the container whose processes to target when using an ephemeral container) and `kubectl debug node/mynode -it --image=busybox` (runs in the host namespaces with the host filesystem mounted at `/host`).
+
+**[📖 kubectl debug](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_debug/)** - pod and node debug examples, `--target`
+
+**[📖 tcpdump man page](https://www.tcpdump.org/manpages/tcpdump.1.html)** - `-i` and `-n`
+
+**[📖 iptables(8)](https://man7.org/linux/man-pages/man8/iptables.8.html)** - `-t`, `-L`, `-n`
 
 ---
 

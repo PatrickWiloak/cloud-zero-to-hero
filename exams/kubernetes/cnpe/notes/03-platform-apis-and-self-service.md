@@ -143,7 +143,7 @@ spec:
                 type: string
 ```
 
-Facts from the XRD page: the XRD name must be `<plural>.<group>`; you cannot change group or names after creation (delete and recreate); `referenceable: true` marks the version Compositions use and only one version can be referenceable; `scope` can be `Namespaced` (the default in v2: composite resources live in a namespace and compose resources in that namespace), `Cluster`, or `LegacyCluster` (cluster-scoped with claim support for v1 compatibility).
+Facts from the XRD page: the XRD name must be `<plural>.<group>`; you cannot change group or names after creation (delete and recreate); `referenceable: true` marks the version Compositions use and only one version can be referenceable; `scope` (a field in the `apiextensions.crossplane.io/v2` examples; the v1 example above does not use it) can be `Namespaced` (the default in v2: composite resources live in a namespace and compose resources in that namespace), `Cluster`, or `LegacyCluster` (cluster-scoped with claim support for v1 compatibility).
 
 A Composition in **pipeline mode** (condensed from the Compositions page):
 

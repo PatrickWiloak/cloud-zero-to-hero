@@ -141,7 +141,11 @@ cilium clustermesh connect --context $CLUSTER1 --destination-context $CLUSTER2
 cilium clustermesh status --context $CLUSTER1 --wait
 ```
 
-Run `connect` once; the connection is established in both directions. The setup page links to a separate Load-balancing and Service Discovery page for how a Service becomes global, so read that page for the annotation.
+Run `connect` once; the connection is established in both directions. The cluster ID range 1 to 255 is the default; `clustermesh.maxConnectedClusters=511` widens it, must be the same in every cluster and can only be set at installation.
+
+To make a Service global, define a Service with an identical name and namespace in each cluster and add the annotation `service.cilium.io/global: "true"`. Cilium then load-balances to Pods in all clusters. By default a global Service also shares its local backends (`service.cilium.io/shared: "true"` is implied); set `service.cilium.io/shared: "false"` to use remote endpoints without sharing local ones.
+
+**[📖 Cilium Global Services](https://docs.cilium.io/en/stable/network/clustermesh/global-services/)** - the `service.cilium.io/global` and `shared` annotations
 
 **[📖 Cluster Mesh setup](https://docs.cilium.io/en/stable/network/clustermesh/setup/index.html)** - requirements and commands
 

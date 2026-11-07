@@ -64,7 +64,7 @@ spec:
       port: 5978
 ```
 
-The standard default-deny pattern (the fetched excerpt did not include the page's own default-deny examples, so this is the usual form and should be confirmed in the docs):
+With no policies in a namespace, all ingress and egress is allowed. The page's default-deny-ingress example selects all Pods and allows no ingress:
 
 ```yaml
 apiVersion: networking.k8s.io/v1
@@ -77,9 +77,9 @@ spec:
   - Ingress
 ```
 
-A common mistake: an egress default-deny blocks DNS too. If Pods can no longer resolve names after you add it, allow egress to CoreDNS on port 53 (UDP and TCP). Another: `from` entries listed as **separate items** are ORed, while a `namespaceSelector` and `podSelector` inside **one item** are ANDed (standard NetworkPolicy semantics, not shown in the fetched excerpt; the page's example lists three separate peers under one `from`). Read selector structure carefully when you debug.
+A common mistake: an egress default-deny blocks DNS too. If Pods can no longer resolve names after you add it, allow egress to CoreDNS on port 53 (UDP and TCP). Another: `from` entries listed as **separate items** are ORed, while a `namespaceSelector` and `podSelector` inside **one item** are ANDed (the NetworkPolicy page: a single `from` entry with both selectors selects Pods within namespaces; the example policy lists three separate peers under one `from`). Read selector structure carefully when you debug.
 
-The excerpt did not cover `endPort` ranges, FQDN rules or AdminNetworkPolicy; check the full page if a task needs them.
+`endPort` (stable since Kubernetes 1.25) targets a port range and must be equal to or greater than `port`. FQDN rules and AdminNetworkPolicy were not checked; use the full page if a task needs them. The DNS-blocking caveat above is general practice, not a page quote.
 
 **[📖 Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/)** - isolation, additive rules, selectors
 
