@@ -95,6 +95,7 @@ Scenario-based practice question banks, one per certification. Every bank follow
 - [Certified Kubernetes Security Specialist (CKS)](https://security.noblerworks.com/resources/practice-questions/kubernetes-cks/)
 - [Cloud Native Platform Engineering Associate (CNPA)](./cncf-cnpa.md)
 - [Istio Certified Associate (ICA)](./cncf-ica.md)
+- [Kyverno Certified Associate (KCA)](./cncf-kca.md)
 - [Kubernetes and Cloud Native Associate (KCNA)](./cncf-kcna.md)
 - [Kubernetes and Cloud Native Security Associate (KCSA)](https://security.noblerworks.com/resources/practice-questions/cncf-kcsa/)
 - [OpenTelemetry Certified Associate (OTCA)](./cncf-otca.md)

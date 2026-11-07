@@ -48,7 +48,8 @@ Read-only fleet audit (9 agents, nothing changed). Each line: effort S (<half da
 - [ ] **Version or code mismatches to confirm, then fix.** Oracle OCI codes -24/-25 are stale (-26 pages exist for Foundations, Architect Associate and Professional [H]; Developer is "Developer Professional" in the catalog [M]); FinOps analyst is "FinOps Certified FOCUS Analyst" and the code "FOCA" is unsourced [L].
 - [x] 2026-11-06 GitHub Administration validity corrected to 2 years.
 - [ ] **Guides that may not describe a real exam.** HashiCorp `nomad-associate` and `packer-associate` have no vendor exam on HashiCorp's lists [M]. The IBM guides pair "IBM Certified ... Cloud v2" titles with codes C1000-170..174 that third-party listings give to other exams (the Advocate code is probably C1000-142) and IBM's pages were unreadable [L]. **Patrick or a fresh session: check ibm.com/training and each of these exam pages by hand before editing.** Also unverified: VMware 2V0-21.23 (Broadcom page unreadable), Salesforce Admin/PD1/PD2, AWS PAS-C01 (not on AWS's landing page).
-- [ ] **New-guide candidates found** (verify codes first): Terraform Infrastructure Engineer Pro; CNCF CNPE, CKNE, KCA, CBA; FinOps AI Value and Technology Value; GitHub GH-600 [L].
+- [ ] **New-guide candidates found** (verify codes first): Terraform Infrastructure Engineer Pro; CNCF CNPE, CKNE, CBA (KCA done 2026-11-07); FinOps AI Value and Technology Value; GitHub GH-600 [L].
+- [ ] 2026-11-21 KCA guide (built 2026-11-07): Kyverno docs mark ClusterPolicy/Policy/CleanupPolicy/legacy PolicyException deprecated in v1.19, removal planned v1.20 (check release notes, update `exams/kubernetes/kca/notes/05-06`); LF page gives no question count or passing score, add when published. YAML syntax-checked only, never run (no Kyverno CLI or cluster here).
 
 ## Stale cert-page domains (found 2026-10-22, bank expansion)
 
@@ -62,7 +63,7 @@ Read-only fleet audit (9 agents, nothing changed). Each line: effort S (<half da
 ## Content backlog (gap review 2026-10-16, ranked)
 
 1. **Outage postmortems** beside the 3 existing ones: CrowdStrike 2024 and the Oct 2025 AWS us-east-1 DNS event.
-2. **Cert gaps**: observability (Splunk/Elastic/Datadog), CNCF Backstage and Kyverno associates, (Linux+ done 2026-11-07).
+2. **Cert gaps**: observability (Splunk/Elastic/Datadog), CNCF Backstage associate, (Linux+ and Kyverno KCA done 2026-11-07).
 3. **Concept pages**: day-one Python shipped 2026-11-07 (DR/RPO-RTO and environment variables 2026-10-21).
 
 ## Concept gap fill (2026-10-21)

@@ -4,7 +4,7 @@ Study guides for Kubernetes/CNCF in this repo. For the full picture across every
 
 <!-- BEGIN GENERATED: provider-certs - edit .github/scripts/build-provider-indexes.py, not this block -->
 
-10 certifications in this repo. Counts and statuses are generated from [docs/certs.json](../../docs/certs.json).
+11 certifications in this repo. Counts and statuses are generated from [docs/certs.json](../../docs/certs.json).
 
 | Cert | Code | Level | Status | Notes |
 |------|------|-------|--------|------:|
@@ -14,6 +14,7 @@ Study guides for Kubernetes/CNCF in this repo. For the full picture across every
 | [Cloud Native Platform Engineering Associate (CNPA)](cnpa/) | CNPA | Associate | Ready | 4 |
 | [Istio Certified Associate (ICA)](ica/) | ICA | Associate | Ready | 6 |
 | [Kubernetes and Cloud Native Associate (KCNA)](kcna/) | KCNA | Associate | Ready | 4 |
+| [Kyverno Certified Associate (KCA)](kca/) | KCA | Associate | Ready | 6 |
 | [OpenTelemetry Certified Associate (OTCA)](otca/) | OTCA | Associate | Ready | 4 |
 | [Prometheus Certified Associate (PCA)](pca/) | PCA | Associate | Ready | 5 |
 | [Certified Kubernetes Administrator (CKA)](cka/) | CKA | - | Ready | 7 |
