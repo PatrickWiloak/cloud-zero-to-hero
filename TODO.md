@@ -60,7 +60,7 @@ Read-only fleet audit (9 agents, nothing changed). Each line: effort S (<half da
 ## Stale cert-page domains (found 2026-10-22, bank expansion)
 
 - [x] 2026-10-22 Cert pages restructured to current guides: GH-200, GH-900, Cloud+, KCNA, SOA-C03, AZ-700, PCNE, Terraform Advanced.
-- [ ] 2026-11-15 Verify from-memory details flagged in the 2026-10-22 rewrites: PCNE gcloud flags (`--bgp-bps-*`, `firewall-rules migrate`, PBR next hop, Secure Web Proxy import) and Terraform Advanced OPA Rego sample (`notes/06-hcp-terraform.md`).
+- [ ] 2026-11-29 Verify from-memory details flagged in the 2026-10-22 rewrites: PCNE gcloud flags (`--bgp-bps-*`, `firewall-rules migrate`, PBR next hop, Secure Web Proxy import) and Terraform Advanced OPA Rego sample (`notes/06-hcp-terraform.md`).
 - [ ] 2026-11-22 Reconcile README vs fact-sheet against vendor pages, not each other (11-06: both differ per exam across IBM x4, OCI x5, PL-900; codes also differ, Advocate -176/-170, SRE -173/-174; PL-900 still names Power Virtual Agents).
 - [x] 2026-11-06 Salesforce Administrator renamed Platform Administrator (Plat-Admn-201) from the credential page.
 - [ ] 2026-11-22 Pat: in a browser, check VCP-DCV 2V0-21.23 is still current and find the new IBM links (`account-iamoverview`, `account-costs`). 11-06: Broadcom + IBM pages unreadable by tools.
@@ -75,8 +75,8 @@ Read-only fleet audit (9 agents, nothing changed). Each line: effort S (<half da
 ## Concept gap fill (2026-10-21)
 
 - [x] 2026-10-21 14 concept pages, 3 day-one pages, 2 projects (landing zone, GitOps with Argo CD) added and wired in; see git log.
-- [ ] 2026-11-14 Run `gitops-with-argo-cd.md` end to end on kind and fix any command that fails (written, not executed). ✏️ 2026-11-07 re-dated 2026-11-14: docker present but no `kind` binary; install kind first
-- [ ] 2026-11-15 `build-a-landing-zone.md` static dry run done 2026-11-07 (43 commands checked, 7 fixed); live run still needs a throwaway AWS account Patrick opens: new email + card at aws.amazon.com, admin access key, `export AWS_PROFILE=<new>`, run Steps 1-7 + Cleanup, fix any failure. ✏️ 2026-11-07 re-dated 2026-11-15: Patrick opens the throwaway AWS account
+- [ ] 2026-11-22 Run `gitops-with-argo-cd.md` end to end on kind and fix any command that fails (written, not executed). ✏️ 2026-11-07 re-dated 2026-11-14: docker present but no `kind` binary; install kind first
+- [ ] 2026-11-29 `build-a-landing-zone.md` static dry run done 2026-11-07 (43 commands checked, 7 fixed); live run still needs a throwaway AWS account Patrick opens: new email + card at aws.amazon.com, admin access key, `export AWS_PROFILE=<new>`, run Steps 1-7 + Cleanup, fix any failure. ✏️ 2026-11-07 re-dated 2026-11-15: Patrick opens the throwaway AWS account
 - [x] 2026-11-04 Add glossary terms the new pages use but `learn/glossary.md` lacks: RPO, RTO, landing zone, SCP, golden path, SPOF. ✏️ 2026-11-07 DONE: RPO, RTO, landing zone, SCP, golden path, SPOF all in learn/glossary.md (commit 1dc6c69); duplicate of the ticked line below
 - [x] 2026-11-04 Dry-run `build-a-landing-zone.md` in a throwaway AWS org (never in NW `791588190257` or a client account); fix commands. ✏️ 2026-11-07 DUPLICATE of the static-dry-run line above, which carries the live-run need
 - [x] 2026-11-04 Add glossary terms the new pages use but `learn/glossary.md` lacks: RPO, RTO, landing zone, SCP, golden path, SPOF. ✏️ card-docs: Added glossary entries for RPO, RTO, landing zone, SCP, golden path and SPOF in learn/glossary.md
