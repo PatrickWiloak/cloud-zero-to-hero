@@ -6,7 +6,7 @@ exam-retires: 2026-11-16
 
 # AWS Solutions Architect Professional (SAP-C02) - Fact Sheet
 
-> ⚠️ **RETIRING November 16, 2026.** The last day to sit SAP-C02 is November 16, 2026. **SAP-C03** registration opens October 27, 2026; its outline was not published when this was checked.
+> ⚠️ **RETIRING November 16, 2026.** The last day to sit SAP-C02 is November 16, 2026. **SAP-C03** registration opened October 27, 2026 and its outline is published: this guide is **superseded by the [SAP-C03 guide](../solutions-architect-pro-sap-c03/README.md)**, which lists what changed. SAP-C03 is in use from November 17, 2026.
 
 ## Quick Reference
 

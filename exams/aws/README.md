@@ -4,7 +4,7 @@ Study guides for AWS in this repo. For the full picture across every provider, s
 
 <!-- BEGIN GENERATED: provider-certs - edit .github/scripts/build-provider-indexes.py, not this block -->
 
-11 certifications in this repo. Counts and statuses are generated from [docs/certs.json](../../docs/certs.json).
+12 certifications in this repo. Counts and statuses are generated from [docs/certs.json](../../docs/certs.json).
 
 | Cert | Code | Level | Status | Notes |
 |------|------|-------|--------|------:|
@@ -16,6 +16,7 @@ Study guides for AWS in this repo. For the full picture across every provider, s
 | [AWS Certified SysOps Administrator - Associate (SOA-C02)](associate/sysops-administrator-soa-c02/) | SOA-C02 | Associate | Retired | 4 |
 | [AWS Certified DevOps Engineer - Professional (DOP-C02)](professional/devops-engineer-pro-dop-c02/) | DOP-C02 | Professional | Ready | 3 |
 | [AWS Certified Solutions Architect - Professional (SAP-C02)](professional/solutions-architect-pro-sap-c02/) | SAP-C02 | Professional | Ready | 9 |
+| [AWS Certified Solutions Architect - Professional (SAP-C03)](professional/solutions-architect-pro-sap-c03/) | SAP-C03 | Professional | Ready | 5 |
 | [AWS Certified Advanced Networking - Specialty (ANS-C01)](specialty/advanced-networking-ans-c01/) | ANS-C01 | Specialty | Ready | 3 |
 | [AWS Certified SAP on AWS - Specialty (PAS-C01)](specialty/sap-on-aws-pas-c01/) | PAS-C01 | Specialty | Ready | 3 |
 | [AWS Quantum Practitioner (QPC-C01) - Anticipated Study Track](specialty/quantum-practitioner-qpc-c01/) | QPC-C01 | Specialty | Anticipated | 6 |

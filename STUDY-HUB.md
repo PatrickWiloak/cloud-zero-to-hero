@@ -155,7 +155,7 @@ Heading toward security, data or AI? The decision trees for those live on the [S
 
 | Provider | Certs | Highlights | Browse |
 |----------|------:|------------|--------|
-| **AWS** | 11 | CLF-C02, SAA-C03, SOA-C03, DVA-C02, SAP-C02, DOP-C02, Advanced Networking (ANS-C01), SAP on AWS (PAS-C01), Quantum (QPC-C01); retired SOA-C02 retained | [exams/aws/](./exams/aws/) |
+| **AWS** | 12 | CLF-C02, SAA-C03, SOA-C03, DVA-C02, SAP-C02, DOP-C02, Advanced Networking (ANS-C01), SAP on AWS (PAS-C01), Quantum (QPC-C01); retired SOA-C02 retained | [exams/aws/](./exams/aws/) |
 | **Azure** | 10 | AZ-900/104/204/305/400/700, MS-900, PL-100/200/900 | [exams/azure/](./exams/azure/) |
 | **GCP** | 7 | Digital Leader, Associate Cloud Engineer, Cloud Architect, Cloud Developer, DevOps, Network Engineer, Workspace Admin | [exams/gcp/](./exams/gcp/) |
 | **Kubernetes/CNCF** | 10 | KCNA, CKA, CKAD, plus Argo (CAPA), Cilium (CCA), GitOps (CGOA), Istio (ICA), OpenTelemetry (OTCA), Prometheus (PCA), Platform Engineering (CNPA) | [exams/kubernetes/](./exams/kubernetes/) |
@@ -171,7 +171,7 @@ Heading toward security, data or AI? The decision trees for those live on the [S
 | **IBM Cloud** | 4 | Advocate, Developer, Solution Architect, SRE | [exams/ibm/](./exams/ibm/) |
 | **ServiceNow** | 1 | Certified System Administrator | [exams/servicenow/](./exams/servicenow/) |
 | **VMware** | 1 | VCP-DCV (2V0-21.23) | [exams/vmware/](./exams/vmware/) |
-| **CERTIFICATIONS TOTAL** | **74** | across 16 providers | |
+| **CERTIFICATIONS TOTAL** | **75** | across 16 providers | |
 
 ◇ = outline stage: README, fact-sheet, and practice plan are written; topic notes are outlined but not yet drafted. See [TODO.md](https://github.com/PatrickWiloak/cloud-zero-to-hero/blob/main/TODO.md) for the drafting queue.
 
