@@ -9,7 +9,7 @@ Domain 3 carries **22%** of the scored content. **Task 3.1** is provisioning and
 
 The exam guide lists **designing CI/CD pipelines** as out of scope. You still need to recognize what CodePipeline, CodeBuild and CodeDeploy do and to operate deployments safely, but you will not be asked to architect a pipeline from nothing.
 
-> **Retired service:** AWS OpsWorks (Stacks, Chef Automate and Puppet Enterprise) reached **end of life on 26 May 2024** and is no longer available. If an answer option offers OpsWorks for configuration management, it is wrong for current AWS; the replacement is Systems Manager (State Manager, Run Command, Automation, Distributor).
+> **Retired service:** AWS OpsWorks (Stacks, Chef Automate and Puppet Enterprise) reached **end of life in May 2024** and is no longer available. If an answer option offers OpsWorks for configuration management, it is wrong for current AWS; the replacement is Systems Manager (State Manager, Run Command, Automation, Distributor).
 
 ---
 
@@ -251,7 +251,7 @@ Most of these can target nodes **by tag**, so automation follows the fleet as it
 
 ## Exam traps
 
-- **OpsWorks is end of life** (26 May 2024). Configuration management answers are Systems Manager.
+- **OpsWorks is end of life** (May 2024). Configuration management answers are Systems Manager.
 - **AMIs are Regional**; copy them. Sharing an encrypted AMI also needs the **customer managed KMS key** shared.
 - **Image Builder** is the managed answer for scheduled, tested, multi-Region golden images and container images.
 - **`ROLLBACK_COMPLETE` stacks** can only be deleted; **`UPDATE_ROLLBACK_FAILED`** needs "continue update rollback".

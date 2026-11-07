@@ -109,7 +109,7 @@ last-updated: 2026-05-03
   - Remediation actions (SSM Automation)
   - [📖 Config Documentation](https://docs.aws.amazon.com/config/)
 
-- **OpsWorks** - Chef/Puppet managed configuration, (retired: end of life 26 May 2024; use Systems Manager)
+- **OpsWorks** - Chef/Puppet managed configuration, (retired: end of life May 2024; use Systems Manager)
 - **[📖 Migrate AWS OpsWorks Stacks to Systems Manager](https://aws.amazon.com/blogs/mt/migrate-your-aws-opsworks-stacks-to-aws-systems-manager/)** - Configuration management
 - **AppConfig** - Feature flags and configuration deployment
 - **[📖 AWS AppConfig](https://docs.aws.amazon.com/appconfig/latest/userguide/)** - Application configuration

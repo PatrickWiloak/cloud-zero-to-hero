@@ -738,7 +738,7 @@ Skip if you already have networking experience; pair with [AWS Advanced Networki
 
 **Key Services to Master:**
 - Operations: CloudWatch, CloudTrail, Systems Manager
-- Deployment: CloudFormation, Elastic Beanstalk (OpsWorks is retired, end of life 26 May 2024)
+- Deployment: CloudFormation, Elastic Beanstalk (OpsWorks is retired, end of life May 2024)
 - Security: IAM, KMS, AWS Config
 - Networking: VPC, Direct Connect, Transit Gateway
 

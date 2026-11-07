@@ -43,7 +43,7 @@ The AWS Certified DevOps Engineer - Professional (DOP-C02) exam validates advanc
 - AWS CDK for infrastructure as code
 - Terraform on AWS
 - AWS Systems Manager for configuration management
-- OpsWorks for Chef and Puppet (retired: end of life 26 May 2024; use Systems Manager) - know it only to rule it out
+- OpsWorks for Chef and Puppet (retired: end of life May 2024; use Systems Manager) - know it only to rule it out
 - AWS AppConfig for application configuration
 - Parameter Store and Secrets Manager
 - AWS Service Catalog for governance

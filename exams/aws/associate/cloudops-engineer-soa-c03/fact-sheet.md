@@ -95,7 +95,7 @@ Tasks: 3.1 provision and maintain resources; 3.2 automate management of existing
 - **Deployment strategies**: rolling, immutable, blue/green, canary, linear; CodeDeploy rolls back on alarms.
 - **Terraform** state in a versioned, encrypted, locked S3 backend; Git as the source of truth.
 - **Systems Manager**: State Manager, Patch Manager, Run Command, Automation, Session Manager. A missing managed node is agent, role or network.
-- **OpsWorks reached end of life on 26 May 2024** - never the current answer.
+- **OpsWorks reached end of life in May 2024** - never the current answer.
 
 ### Domain 4: Security and Compliance (16%)
 

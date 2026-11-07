@@ -153,7 +153,7 @@ exam-retires: 2025-09-29
 - **[📖 Deployment Policies](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.rolling-version-deploy.html)** - Deployment strategies
 - **[📖 .ebextensions](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/ebextensions.html)** - Configuration files
 
-**OpsWorks** (retired: end of life 26 May 2024; this exam version is retired too)
+**OpsWorks** (retired: end of life May 2024; this exam version is retired too)
 - Chef and Puppet managed configuration
 - Stacks, layers, instances
 - Lifecycle events with recipes

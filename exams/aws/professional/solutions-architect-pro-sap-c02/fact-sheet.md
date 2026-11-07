@@ -159,7 +159,7 @@ exam-retires: 2026-11-16
 - **[📖 AWS CDK](https://docs.aws.amazon.com/cdk/latest/guide/)** - Cloud Development Kit
 - **Systems Manager** - Operational hub, Parameter Store, Session Manager, Patch Manager
 - **[📖 Systems Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/)** - Operations management
-- **OpsWorks** - Chef/Puppet managed configuration, (retired: end of life 26 May 2024; use Systems Manager)
+- **OpsWorks** - Chef/Puppet managed configuration, (retired: end of life May 2024; use Systems Manager)
 - **[📖 Migrate AWS OpsWorks Stacks to Systems Manager](https://aws.amazon.com/blogs/mt/migrate-your-aws-opsworks-stacks-to-aws-systems-manager/)** - Configuration management
 - **Service Catalog** - Governed product catalog
 - **[📖 Service Catalog](https://docs.aws.amazon.com/servicecatalog/latest/adminguide/)** - Governance
