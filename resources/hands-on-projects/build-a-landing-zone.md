@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-10-21
+last-updated: 2026-11-07
 certs:
   - aws/professional/solutions-architect-pro-sap-c02
   - azure/az-305
@@ -41,9 +41,13 @@ This is a hand-built miniature of what AWS Control Tower or the Landing Zone Acc
 
 ## Step 1: Create the organization
 
-Run these from the account that will become the **management account**.
+Run these from the account that will become the **management account**. Every command in this project runs in one shell session, because later steps reuse the variables you set here.
+
+Set a Region first. Organizations, STS, Budgets and CloudTrail all refuse to run without one ("You must specify a region"), and many machines have no default configured. Exporting `AWS_REGION` also carries through when you switch to a member account's credentials in Step 4:
 
 ```bash
+export AWS_REGION=us-east-1
+
 aws organizations create-organization --feature-set ALL
 
 ROOT_ID=$(aws organizations list-roots --query 'Roots[0].Id' --output text)
@@ -90,7 +94,7 @@ aws organizations move-account --account-id "$DEV_ID" \
   --source-parent-id "$ROOT_ID" --destination-parent-id "$WORK_OU"
 ```
 
-Each new account gets a role named `OrganizationAccountAccessRole` that the management account can assume. That is how you will work inside them. In a real landing zone, people would instead sign in through IAM Identity Center with permission sets; enable it in the console under IAM Identity Center if you want to try that path.
+Each new account gets a role named `OrganizationAccountAccessRole` that the management account can assume. That is how you will work inside them. In a real landing zone, people would instead sign in through IAM Identity Center with permission sets; enable it in the console under IAM Identity Center if you want to try that path. Switch the console to `us-east-1` first: an Identity Center instance lives in the one home Region you enable it in, so pick the Region the rest of the landing zone uses.
 
 ## Step 4: Central logging
 
@@ -112,7 +116,7 @@ aws s3api put-public-access-block --bucket "$BUCKET" --public-access-block-confi
   BlockPublicAcls=true,IgnorePublicAcls=true,BlockPublicPolicy=true,RestrictPublicBuckets=true
 ```
 
-Save this as `bucket-policy.json`, replacing the placeholders, and apply it. It lets CloudTrail write logs for the management account and for every account in the organization.
+Save this as `bucket-policy.template.json`. It lets CloudTrail write logs for the management account and for every account in the organization, and the `aws:SourceArn` condition limits that to your one trail, so no other trail in any other account can write into the bucket.
 
 ```json
 {
@@ -123,7 +127,8 @@ Save this as `bucket-policy.json`, replacing the placeholders, and apply it. It 
       "Effect": "Allow",
       "Principal": { "Service": "cloudtrail.amazonaws.com" },
       "Action": "s3:GetBucketAcl",
-      "Resource": "arn:aws:s3:::BUCKET"
+      "Resource": "arn:aws:s3:::BUCKET",
+      "Condition": { "StringEquals": { "aws:SourceArn": "arn:aws:cloudtrail:us-east-1:MGMT_ID:trail/org-trail" } }
     },
     {
       "Sid": "WriteOrgLogs",
@@ -134,13 +139,23 @@ Save this as `bucket-policy.json`, replacing the placeholders, and apply it. It 
         "arn:aws:s3:::BUCKET/AWSLogs/MGMT_ID/*",
         "arn:aws:s3:::BUCKET/AWSLogs/ORG_ID/*"
       ],
-      "Condition": { "StringEquals": { "s3:x-amz-acl": "bucket-owner-full-control" } }
+      "Condition": {
+        "StringEquals": {
+          "s3:x-amz-acl": "bucket-owner-full-control",
+          "aws:SourceArn": "arn:aws:cloudtrail:us-east-1:MGMT_ID:trail/org-trail"
+        }
+      }
     }
   ]
 }
 ```
 
+Fill in the three placeholders from the variables you already have, rather than by hand, so a typo cannot slip in, then apply it:
+
 ```bash
+sed -e "s/BUCKET/${BUCKET}/g" -e "s/MGMT_ID/${MGMT_ID}/g" -e "s/ORG_ID/${ORG_ID}/g" \
+  bucket-policy.template.json > bucket-policy.json
+jq . bucket-policy.json   # fails loudly if the result is not valid JSON
 aws s3api put-bucket-policy --bucket "$BUCKET" --policy file://bucket-policy.json
 
 # Back to the management account
@@ -248,13 +263,16 @@ aws ec2 describe-vpcs --region eu-west-1
 
 # Try to switch off the audit trail from inside a member account: denied
 aws cloudtrail stop-logging --name "arn:aws:cloudtrail:us-east-1:${MGMT_ID}:trail/org-trail" --region us-east-1
+
+# Back to the management account before Step 7
+unset AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY AWS_SESSION_TOKEN
 ```
 
-Note what happened: the role you assumed has `AdministratorAccess` inside `app-dev`, and it was still denied. That is the point of an SCP. It caps what any identity in the account can do, admins included. Then check the log archive bucket: your denied calls are recorded there too, with `errorCode` set.
+Note what happened: the role you assumed has `AdministratorAccess` inside `app-dev`, and it was still denied. That is the point of an SCP. It caps what any identity in the account can do, admins included. The `stop-logging` call is refused twice over: CloudTrail itself never lets a member account change an organization trail, and the `protect-baseline` SCP would deny it even if it did. The SCP is what still protects any trail a member account creates for itself. Then check the log archive bucket: your denied calls are recorded there too, with `errorCode` set.
 
 ## Step 7: A budget alarm per account
 
-From the management account, save `budget.json`:
+From the management account, save `budget.template.json`:
 
 ```json
 {
@@ -267,6 +285,7 @@ From the management account, save `budget.json`:
 ```
 
 ```bash
+sed "s/DEV_ACCOUNT_ID/${DEV_ID}/" budget.template.json > budget.json
 aws budgets create-budget --account-id "$MGMT_ID" --budget file://budget.json \
   --notifications-with-subscribers '[{"Notification":{"NotificationType":"ACTUAL","ComparisonOperator":"GREATER_THAN","Threshold":80,"ThresholdType":"PERCENTAGE"},"Subscribers":[{"SubscriptionType":"EMAIL","Address":"you@example.com"}]}]'
 ```
@@ -275,7 +294,7 @@ aws budgets create-budget --account-id "$MGMT_ID" --budget file://budget.json \
 
 ## Verification checklist
 
-- [ ] `aws organizations list-accounts` shows three accounts, each in the expected OU.
+- [ ] `aws organizations list-accounts` shows three accounts, and `aws organizations list-accounts-for-parent --parent-id "$SEC_OU"` (then `"$WORK_OU"`) shows each member account in the expected OU. `list-accounts` alone does not show OUs.
 - [ ] The log archive bucket holds CloudTrail files for both member accounts.
 - [ ] A call to an unapproved region from `app-dev` fails with an explicit SCP deny.
 - [ ] Stopping the org trail from a member account fails.
@@ -351,7 +370,7 @@ aws organizations close-account --account-id "$DEV_ID"
 aws organizations close-account --account-id "$LOG_ID"
 ```
 
-Empty the log bucket before closing the log archive account if you do not want to keep the logs. An organization can only be deleted once it has no member accounts left.
+If you do not want to keep the logs, empty the bucket **before** you close the log archive account: assume its role as in Step 4 and delete every object version (the bucket is versioned, so `aws s3 rm --recursive` alone leaves the old versions behind; the S3 console's **Empty** button removes them all). An organization can only be deleted once it has no member accounts left.
 
 ---
 
