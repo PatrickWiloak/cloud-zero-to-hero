@@ -54,7 +54,7 @@ Built for **every kind of technologist**, across 21 role-targeted learning paths
 >
 > 🎥 [@patrickwiloak](https://youtube.com/@patrickwiloak) | 💼 [LinkedIn](https://www.linkedin.com/in/patricklukewilson/)
 
-![Certifications](https://img.shields.io/badge/Certifications-78-blue.svg)
+![Certifications](https://img.shields.io/badge/Certifications-79-blue.svg)
 ![Documentation Links](https://img.shields.io/badge/Documentation%20Links-6000+-green.svg)
 ![Providers](https://img.shields.io/badge/Providers-16-orange.svg)
 ![Free to Use](https://img.shields.io/badge/Free%20to%20Use-Educational-green.svg)
@@ -92,7 +92,7 @@ All four are free, by [Nobler Works](https://noblerworks.com/).
 |---|---|---|---|
 | 🎓 | **Learn** | Plain-English cloud concepts, a beginner on-ramp, a structured path. No exam scaffolding. | [learn/](./learn/) |
 | 🛠️ | **Build** | Hands-on projects, architecture patterns, CLI cheat sheets. Practitioner reference. | [resources/hands-on-projects/](./resources/hands-on-projects/) |
-| 🎯 | **Certify** | 78 cert study guides across 16 providers. Fact sheets, practice plans, scenarios, practice questions. | [STUDY-HUB.md](./STUDY-HUB.md) |
+| 🎯 | **Certify** | 79 cert study guides across 16 providers. Fact sheets, practice plans, scenarios, practice questions. | [STUDY-HUB.md](./STUDY-HUB.md) |
 | 📚 | **Reference** | Cross-cloud service comparisons, career roadmaps, migration, cost and troubleshooting guides. | [resources/](./resources/) |
 
 Cross-pillar **[topic index](./topics/)** ties Learn + Build + Reference + Certify together by subject (Kubernetes, networking, serverless, observability, SRE, platform engineering, FinOps).
@@ -135,7 +135,7 @@ A complete cloud learning resource. Whether you're starting fresh, building prod
 - ✅ **[Day One on-ramp](./learn/day-one/)** - terminal, git, HTTP, servers
 - ✅ **[37 concept pages](./learn/concepts/)** - cloud computing, regions, VPCs, DNS, CDNs, load balancing, containers, Kubernetes, serverless, Terraform, CI/CD, observability, cost, storage types, high availability, disaster recovery, API gateways, landing zones, IaC, GitOps, service mesh, platform engineering, edge
 - ✅ **[Cloud from Scratch](./learn/cloud-from-scratch.md)** - a structured 8-phase path
-- ✅ **78 certification study guides** across 16 providers, 6,000+ embedded vendor doc links
+- ✅ **79 certification study guides** across 16 providers, 6,000+ embedded vendor doc links
 - ✅ **[7 cross-pillar topic indexes](./topics/)** - Kubernetes, networking, serverless, observability, SRE, platform engineering, FinOps (find everything by topic, not provider)
 - ✅ **7 cross-cloud service comparisons** - compute, storage, networking, containers, DevOps/CI/CD, observability, serverless
 - ✅ **9 CLI cheat sheets** (AWS, Azure, GCP, kubectl, Terraform, Docker, Helm, GitHub CLI, multi-cloud)
@@ -160,7 +160,7 @@ Full per-provider breakdown lives in **[STUDY-HUB.md](./STUDY-HUB.md)**. Quick l
 | ☁️ [AWS](./exams/aws/) | 12 | CLF-C02, SAA-C03, SOA-C03, DVA-C02, SAP-C02, DOP-C02, Advanced Networking (ANS-C01), SAP on AWS (PAS-C01), Quantum (QPC-C01); retired SOA-C02 retained |
 | ☁️ [Azure](./exams/azure/) | 10 | AZ-900/104/204/305/400/700, MS-900, PL-100/200/900 |
 | ☁️ [GCP](./exams/gcp/) | 7 | Digital Leader, Associate Cloud Engineer, Cloud Architect, Cloud Developer, DevOps, Network Engineer, Workspace Admin |
-| ☸️ [Kubernetes/CNCF](./exams/kubernetes/) | 13 | KCNA, CKA, CKAD, plus Argo (CAPA), Backstage (CBA), Cilium (CCA), GitOps (CGOA), Istio (ICA), Kyverno (KCA), OpenTelemetry (OTCA), Prometheus (PCA), Platform Engineering (CNPA), Platform Engineer (CNPE) |
+| ☸️ [Kubernetes/CNCF](./exams/kubernetes/) | 14 | KCNA, CKA, CKAD, CKNE, plus Argo (CAPA), Backstage (CBA), Cilium (CCA), GitOps (CGOA), Istio (ICA), Kyverno (KCA), OpenTelemetry (OTCA), Prometheus (PCA), Platform Engineering (CNPA), Platform Engineer (CNPE) |
 | 🔧 [HashiCorp](./exams/hashicorp/) | 5 | Terraform Assoc + Pro, Consul, Packer, Nomad |
 | 🐙 [GitHub](./exams/github/) | 3 | Foundations, Actions, Administration |
 | 🎩 [Red Hat](./exams/redhat/) | 2 | RHCSA (EX200), OpenShift Administrator (EX280) |
@@ -173,7 +173,7 @@ Full per-provider breakdown lives in **[STUDY-HUB.md](./STUDY-HUB.md)**. Quick l
 | ☁️ [IBM Cloud](./exams/ibm/) | 4 | Advocate, Developer, Solution Architect, SRE |
 | 🧰 [ServiceNow](./exams/servicenow/) | 1 | Certified System Administrator |
 | 🖥️ [VMware](./exams/vmware/) | 1 | VCP-DCV (2V0-21.23) |
-| **Total** | **78** | across 16 providers |
+| **Total** | **79** | across 16 providers |
 
 Highlights are a sample, not the full list - the Certs column is the total. Open a provider for everything it covers.
 
@@ -300,7 +300,7 @@ On the sibling sites: [Data Pipeline](https://data.noblerworks.com/resources/han
 
 ## 📊 Repository Statistics
 
-- **Certifications:** 78
+- **Certifications:** 79
 - **Documentation links:** 6,000+
 - **Providers:** 16
 - **Concept pages:** 37
@@ -327,7 +327,7 @@ cloud-zero-to-hero/
 │   ├── day-one/          # absolute-beginner on-ramp
 │   ├── cloud-from-scratch.md
 │   └── glossary.md
-├── exams/                # 78 certs across 16 providers
+├── exams/                # 79 certs across 16 providers
 ├── resources/            # comparisons, cheat sheets, roadmaps, guides, projects
 ├── topics/               # cross-pillar topic indexes
 ├── assets/diagrams/      # PNG diagrams, for the few too dense for inline Mermaid
