@@ -166,6 +166,8 @@ Several scripts live under `.github/scripts/`. The validators run in CI on every
 - `validate-cert-structure.sh` - confirms every `exams/<provider>/<cert>/` has a `README.md`. Tier-aware: senior-tier certs (Pro / Specialty / Expert and a curated cert list) also get warnings for missing `scenarios.md` and `strategy.md`. Run locally with `bash .github/scripts/validate-cert-structure.sh`.
 - `validate-frontmatter.sh` - validates YAML frontmatter on concept pages, top-level learn pages, day-one pages, hands-on projects, cert fact-sheets, topic indexes, architecture patterns, networking deep dives, and decision-matrix / postmortem / playlist files. Fails on malformed YAML or bad date format; warns on missing or stale (>180d) `last-updated`. Run with `bash .github/scripts/validate-frontmatter.sh`.
 - `build-freshness-ledger.sh` - regenerates [docs/freshness.md](./docs/freshness.md) from each file's `last-updated:` frontmatter. Run locally with `bash .github/scripts/build-freshness-ledger.sh > docs/freshness.md`.
+- `check-code-fences.py` - fails on a markdown file with an unclosed ``` or ~~~ fence and names the line. Run with `python3 .github/scripts/check-code-fences.py`.
+- `check-internal-links.py` - fails on a relative link whose file or `#heading` anchor does not exist. Run with `python3 .github/scripts/check-internal-links.py`.
 - `check-orphan-links.sh` - lists `.md` files with no inbound links from other markdown. Manual one-shot, not a workflow gate. Useful before retiring or moving a file.
 
 **Glossary autolink (one-shot maintenance scripts):**

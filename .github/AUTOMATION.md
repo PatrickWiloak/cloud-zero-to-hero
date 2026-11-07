@@ -31,6 +31,7 @@ This directory holds CI workflows, validation scripts, and contributor templates
     ├── build-lab-map.py
     ├── build-provider-indexes.py
     ├── check-cert-freshness.py
+    ├── check-code-fences.py
     ├── check-internal-links.py
     ├── check-orphan-links.sh
     ├── glossary-add-anchors.py
@@ -52,7 +53,7 @@ GitHub Actions run on PR, push to main, and a weekly schedule. All four are desi
 |---|---|---|---|
 | `link-check.yml` | PR, push, weekly Mondays | Two jobs. **Internal** runs `check-internal-links.py` and blocks the merge. **External** runs lychee (`cloud.ibm.com` excluded: its docs answer lychee with bot-wall 404s but load in a browser) and, on the weekly run, opens one rolling auto-issue or updates the open `link-check` issue in place. | Internal: yes. External: no (vendor URL rot is not a contributor's fault) |
 | `markdown-lint.yml` | PR, push | Runs `markdownlint-cli2` against `.markdownlint.json` config | Yes |
-| `structure-validate.yml` | PR, push | Runs `validate-cert-structure.sh`, `validate-frontmatter.sh`, and `--check` on both index generators | Yes (fails on missing required files, malformed frontmatter, or stale generated files; warns are advisory) |
+| `structure-validate.yml` | PR, push | Runs `validate-cert-structure.sh`, `validate-frontmatter.sh`, `--check` on the generators, `check-code-fences.py`, and `check-internal-links.py` (links plus heading anchors) | Yes (fails on missing required files, malformed frontmatter, or stale generated files; warns are advisory) |
 | `cspell.yml` | PR, push to `**/*.md` | Spell-checks against `.cspell.json` | No (currently non-strict; will flip once dictionary is tuned) |
 | `docs-site.yml` | PR, push to main, manual | Builds the published site with `build-site.py --strict`. Deploys to GitHub Pages on push to main, then sends the changed page URLs to IndexNow (`notify-indexnow.py`, continue-on-error). | Yes (fails on a broken relative link, a missing heading anchor, or a page no nav entry reaches) |
 
@@ -131,10 +132,19 @@ python3 .github/scripts/check-readme-counts.py --check   # CI mode: fail on drif
 Add an entry to `CLAIMS` whenever the README gains a counted claim. A number no script checks is a number that will be wrong within a month.
 
 **`check-internal-links.py`**
-Verifies every relative markdown link resolves on disk. Skips fenced code blocks, inline code spans, external schemes, and `<placeholder>` targets. Blocking in CI.
+Verifies every relative markdown link resolves on disk, and that a `#fragment` (also a bare same-page `#fragment`) names a heading id that exists on the target page. Heading ids are computed with the site's rules, not GitHub's guess: `pymdownx.slugs.slugify(case="lower")`, Python-Markdown's `_1` duplicate suffix, explicit `{: #id }` ids (which toc reserves first) and `<a id>` ids (a raw id inside a heading is not reserved), `pymdownx.smartsymbols` (`1/4` becomes a fraction character in the slug), and `build-site.py`'s emoji handling (a non-H1 heading keeps its pinned emoji-hyphen slug; an H1 is slugged from the stripped text). Anchors on the root `README.md` are not checked, because the site renders it from `.github/site/home.md`. Skips fenced code blocks, inline code spans, external schemes, and `<placeholder>` targets. Blocking in CI (`link-check.yml` and `structure-validate.yml`). The strict site build stays the ground truth: when the two disagree, fix the checker (`--self-test` holds fixture cases).
 
 ```bash
 python3 .github/scripts/check-internal-links.py
+python3 .github/scripts/check-internal-links.py --self-test
+```
+
+**`check-code-fences.py`**
+Fails on any tracked `.md` file with an unclosed ``` or ~~~ fence and prints `file:line` of the opening fence. Follows CommonMark: a closer must use the same character and be at least as long as the opener, fences may be indented (list items) or sit in blockquotes, and a line such as ```` ```code``` ```` is inline code. Skips `site/`, `.site-src/`, `node_modules/`. Blocking in CI.
+
+```bash
+python3 .github/scripts/check-code-fences.py
+python3 .github/scripts/check-code-fences.py --self-test
 ```
 
 **`build-lab-map.py`**

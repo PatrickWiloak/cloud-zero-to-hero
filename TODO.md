@@ -6,6 +6,7 @@ Working task list for **cloud-zero-to-hero** (Cloud Zero to Hero, https://cloud.
 
 ## Community (2026-10-27)
 
+- [x] 2026-11-07 Heading-anchor validation folded into `check-internal-links.py` and `check-code-fences.py` added (ported from data-zero-to-hero); both blocking in `structure-validate.yml`. 784 anchors, 0 broken, 0 unclosed fences; ids match the strict build's on all 1,064 comparable pages.
 - [x] 2026-10-27 PR #13 closed with thanks: freemium product link, out of scope per CONTRIBUTING (marketing / paid ads).
 - [x] 2026-10-27 Link check #12: real 404s fixed (SAP, Power Platform blog, 4 renamed NVIDIA slugs on ai.); the rest is CI-side connection noise.
 
@@ -392,13 +393,6 @@ link checker:
 - The search index is 28 MB uncompressed. It is lazy-loaded and served gzipped,
   but if first-search latency becomes a complaint, the options are splitting the
   index per section or excluding the deepest cert notes from it.
-- `check-internal-links.py` and the site build now overlap but are not
-  redundant: the former checks the source tree offline, the latter checks
-  rendered URLs and heading anchors. Worth folding anchor validation into the
-  standalone checker so the failure is reported without a full site build.
-- No CI check for unbalanced code fences. The site build catches them only
-  indirectly, as missing anchors on the affected page. A direct validator would
-  name the file and line.
 - `PROVIDER_HIGHLIGHTS` is the last hand-written thing in either provider table.
   Nothing can check that a sample is a *good* sample, only that it exists - so a
   provider that gains a cert can still keep a blurb that does not mention it. The

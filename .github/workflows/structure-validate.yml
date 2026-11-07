@@ -11,6 +11,7 @@ on:
       - 'learn/**'
       - 'topics/**'
       - 'resources/**'
+      - '**/*.md'
       - '.github/scripts/validate-cert-structure.sh'
       - '.github/scripts/validate-frontmatter.sh'
       - '.github/scripts/build-freshness-ledger.sh'
@@ -19,6 +20,8 @@ on:
       - '.github/scripts/build-lab-map.py'
       - '.github/scripts/build-flashcards.py'
       - '.github/scripts/check-readme-counts.py'
+      - '.github/scripts/check-code-fences.py'
+      - '.github/scripts/check-internal-links.py'
       - '.github/scripts/check-repo-metadata.py'
       - '.github/scripts/balance-answer-positions.py'
   pull_request:
@@ -30,6 +33,7 @@ on:
       - 'learn/**'
       - 'topics/**'
       - 'resources/**'
+      - '**/*.md'
       - '.github/scripts/validate-cert-structure.sh'
       - '.github/scripts/validate-frontmatter.sh'
       - '.github/scripts/build-freshness-ledger.sh'
@@ -38,6 +42,8 @@ on:
       - '.github/scripts/build-lab-map.py'
       - '.github/scripts/build-flashcards.py'
       - '.github/scripts/check-readme-counts.py'
+      - '.github/scripts/check-code-fences.py'
+      - '.github/scripts/check-internal-links.py'
       - '.github/scripts/check-repo-metadata.py'
       - '.github/scripts/balance-answer-positions.py'
   workflow_dispatch:
@@ -86,6 +92,21 @@ jobs:
       # shortest in 38% of questions. Fix by rewording options (no script can).
       - name: Check practice-question option lengths carry no tell
         run: python3 .github/scripts/balance-answer-positions.py --check-length $(ls resources/practice-questions/*.md | grep -v -e README.md -e template.md)
+
+      # An unclosed ``` / ~~~ fence swallows the rest of the page into a code block;
+      # the site build only notices as missing anchors. This names file:line.
+      - name: Check code fences are balanced
+        run: |
+          python3 .github/scripts/check-code-fences.py --self-test
+          python3 .github/scripts/check-code-fences.py
+
+      # Relative links must resolve to a file AND, when they carry a #fragment, to a
+      # heading id the site build produces (same slug rules as mkdocs.yml). Offline,
+      # so a broken anchor is reported without a full site build.
+      - name: Check internal links and heading anchors
+        run: |
+          python3 .github/scripts/check-internal-links.py --self-test
+          python3 .github/scripts/check-internal-links.py
 
       - name: Check README counts match the tree
         run: python3 .github/scripts/check-readme-counts.py --check
