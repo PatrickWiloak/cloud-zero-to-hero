@@ -1347,7 +1347,23 @@
     "zstd",
     "ZSTD",
     "ZTNA",
-    "ztunnel"
+    "ztunnel",
+    "OUTPUTNEW",
+    "configcheck",
+    "ddtrace",
+    "eventstats",
+    "expvar",
+    "inputlookup",
+    "netcat",
+    "outputlookup",
+    "rollup",
+    "screenboard",
+    "sourcetype",
+    "timeboard",
+    "timechart",
+    "timeshift",
+    "subsearches",
+    "choropleth"
   ],
   "files": [
     "**/*.md"

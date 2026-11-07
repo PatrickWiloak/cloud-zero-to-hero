@@ -77,6 +77,7 @@ PROVIDER_NAMES = {
     "comptia": "CompTIA",
     "confluent": "Confluent/Kafka",
     "databricks": "Databricks",
+    "datadog": "Datadog",
     "finops": "FinOps Foundation",
     "gcp": "GCP",
     "github": "GitHub",
@@ -95,6 +96,7 @@ PROVIDER_NAMES = {
     "salesforce": "Salesforce",
     "servicenow": "ServiceNow",
     "snowflake": "Snowflake",
+    "splunk": "Splunk",
     "vmware": "VMware",
 }
 

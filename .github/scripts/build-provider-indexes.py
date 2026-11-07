@@ -81,6 +81,8 @@ PROVIDER_HIGHLIGHTS = {
     "ibm": "Advocate, Developer, Solution Architect, SRE",
     "servicenow": "Certified System Administrator",
     "vmware": "VCP-DCV (2V0-21.23)",
+    "splunk": "Core Certified User",
+    "datadog": "Fundamentals",
     "anthropic": "Associate (CCAO-F), Developer (CCDV-F), Architect Foundations (CCAR-F) + Professional (CCAR-P)",
 }
 
@@ -95,6 +97,7 @@ PROVIDER_EMOJI = {
     "cloud-security-alliance": "☁️", "offensive-security": "🎯",
     "palo-alto-networks": "🔥", "linux-foundation": "🐧", "oracle": "☁️",
     "ibm": "☁️", "servicenow": "🧰", "vmware": "🖥️", "anthropic": "🤖",
+    "splunk": "🔎", "datadog": "🐶",
 }
 
 # Order both provider tables the same way: cloud first, then platforms, then the
@@ -106,6 +109,7 @@ PROVIDER_ORDER = [
     "confluent", "mongodb", "finops", "comptia", "isc2", "isaca",
     "cloud-security-alliance", "offensive-security", "palo-alto-networks",
     "linux-foundation", "oracle", "ibm", "servicenow", "vmware",
+    "splunk", "datadog",
 ]
 
 # Headings the six hand-written READMEs already use for their repo-guide section.

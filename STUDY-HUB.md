@@ -171,7 +171,9 @@ Heading toward security, data or AI? The decision trees for those live on the [S
 | **IBM Cloud** | 4 | Advocate, Developer, Solution Architect, SRE | [exams/ibm/](./exams/ibm/) |
 | **ServiceNow** | 1 | Certified System Administrator | [exams/servicenow/](./exams/servicenow/) |
 | **VMware** | 1 | VCP-DCV (2V0-21.23) | [exams/vmware/](./exams/vmware/) |
-| **CERTIFICATIONS TOTAL** | **79** | across 16 providers | |
+| **Splunk** | 1 | Core Certified User | [exams/splunk/](./exams/splunk/) |
+| **Datadog** | 1 | Fundamentals | [exams/datadog/](./exams/datadog/) |
+| **CERTIFICATIONS TOTAL** | **81** | across 18 providers | |
 
 ◇ = outline stage: README, fact-sheet, and practice plan are written; topic notes are outlined but not yet drafted. See [TODO.md](https://github.com/PatrickWiloak/cloud-zero-to-hero/blob/main/TODO.md) for the drafting queue.
 
