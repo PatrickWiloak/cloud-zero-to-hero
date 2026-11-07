@@ -66,10 +66,10 @@ HashiCorp's validation guide lists four mechanisms. Know which runs when, and wh
 
 | Mechanism | Where it goes | Evaluated | Failure blocks the run? |
 |-----------|---------------|-----------|------------------------|
-| **Input variable validation** | `validation` block inside a `variable` | When Terraform creates a plan, to check the input | Yes |
-| **Precondition** | `lifecycle` block of a resource or data source, or inside an `output` | During planning, before the object is created | Yes |
-| **Postcondition** | `lifecycle` block of a resource or data source | After the object is planned or applied, or the data source is read | Yes |
-| **Check block** | Top-level `check` block | After the run, continuous validation possible in HCP Terraform | No, it reports a warning |
+| **Input variable validation** | `validation` block inside a `variable` | Immediately, before a plan is generated | Yes |
+| **Precondition** | `lifecycle` block of a resource or data source, or inside an `output` | After the plan is generated, before the object is created | Yes |
+| **Postcondition** | `lifecycle` block of a resource or data source | After planning and applying changes, or after the data source is read | Yes |
+| **Check block** | Top-level `check` block | As the last step of a plan or apply (continuous validation also runs in HCP Terraform) | No, it reports a warning |
 
 Version requirements stated in the guide: input variable validation needs Terraform 0.13 or later, preconditions and postconditions need 1.2 or later, and `check` blocks need 1.5 or later. All are available in 1.12.
 

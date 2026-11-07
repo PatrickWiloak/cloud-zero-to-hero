@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document covers Infrastructure as Code (IaC) fundamentals and Terraform's purpose, architecture, and advantages. These topics account for 30% of the exam (Domains 1 and 2 combined), making them critical for certification success.
+This document covers Infrastructure as Code (IaC) fundamentals and Terraform's purpose, architecture, and advantages. They map to 004 objective 1 (IaC with Terraform) and parts of objective 2. HashiCorp publishes no weights for 004.
 
 **[📖 Introduction to Terraform](https://developer.hashicorp.com/terraform/intro)** - Official introduction to Terraform and IaC concepts
 
@@ -45,7 +45,7 @@ This document covers Infrastructure as Code (IaC) fundamentals and Terraform's p
 ## Terraform Purpose and Architecture
 
 ### Why Terraform?
-- **Provider agnostic:** Works with AWS, Azure, GCP, and 3000+ providers
+- **Provider agnostic:** Works with AWS, Azure, GCP, and the many providers in the Terraform Registry
 - **State management:** Tracks real-world infrastructure state
 - **Execution plans:** Preview changes before applying them
 - **Resource graph:** Automatic dependency resolution and parallel execution
@@ -147,14 +147,14 @@ This three-step workflow is the foundation of all Terraform operations.
 
 ## Key Exam Concepts
 
-### Must-Know for Domain 1 (IaC Concepts - 15%)
+### Must-Know for Objective 1 (IaC with Terraform)
 - Definition and benefits of IaC
 - Declarative vs imperative approaches
 - Idempotency and reproducibility
 - Version control integration
 - How IaC reduces risk and increases speed
 
-### Must-Know for Domain 2 (Purpose of Terraform - 15%)
+### Must-Know for Terraform's Purpose and Workflow
 - Multi-cloud and provider-agnostic benefits
 - Plugin-based architecture with providers
 - State file purpose and importance

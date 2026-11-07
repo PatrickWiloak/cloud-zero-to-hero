@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document covers Terraform providers, resource management, data sources, and dependency handling. Providers are the bridge between Terraform and cloud APIs, and understanding how they work is essential for the exam. This maps to parts of Domain 3 (Understand Terraform basics - 20%).
+This document covers Terraform providers, resource management, data sources, and dependency handling. Providers are the bridge between Terraform and cloud APIs, and understanding how they work is essential for the exam. This maps to 004 objectives 2 and 4 (no weights are published for 004).
 
 **[📖 Providers Overview](https://developer.hashicorp.com/terraform/language/providers)** - Provider system documentation
 
@@ -211,7 +211,7 @@ resource "aws_instance" "web" {
 ### Purpose
 - Query existing infrastructure not managed by current configuration
 - Read external data for use in resource configuration
-- Populated during the plan phase (before apply)
+- Terraform attempts to read them during planning; the read can be deferred to apply when an argument depends on a value not yet known
 
 ```hcl
 data "aws_vpc" "main" {

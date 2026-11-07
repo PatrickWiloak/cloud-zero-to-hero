@@ -10,9 +10,9 @@ last-updated: 2026-11-07
 **Scenario:** Your team has been using local state for a Terraform project. Multiple engineers now need to collaborate, and you need to prevent concurrent modifications. How should you configure remote state with locking?
 
 **Solution Pattern:**
-- **Backend:** Configure S3 backend with DynamoDB table for locking
+- **Backend:** Configure S3 backend with locking (`use_lockfile = true`; the older DynamoDB table setting `dynamodb_table` is deprecated)
 - **Migration:** Run `terraform init -migrate-state` to move state
-- **Locking:** DynamoDB table provides automatic state locking
+- **Locking:** the S3 lock file (or a DynamoDB table on older setups) provides state locking; it is off unless you configure it
 - **Encryption:** Enable server-side encryption on S3 bucket
 
 ```hcl
@@ -21,14 +21,14 @@ terraform {
     bucket         = "my-terraform-state"
     key            = "prod/terraform.tfstate"
     region         = "us-east-1"
-    dynamodb_table = "terraform-locks"
+    use_lockfile   = true
     encrypt        = true
   }
 }
 ```
 
 **Common Distractors:**
-- Using S3 alone without DynamoDB (wrong - S3 does not provide native state locking)
+- Using the S3 backend with no locking configured (wrong - S3 locking is opt-in via `use_lockfile` or the deprecated DynamoDB table)
 - Using `terraform state push` to migrate (wrong - use `terraform init -migrate-state`)
 - Storing state in version control (wrong - state contains sensitive data, not suitable for VCS)
 - Using `terraform init -reconfigure` for migration (wrong - this discards existing state)

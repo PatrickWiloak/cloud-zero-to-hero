@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document covers the Terraform core workflow (init, plan, apply, destroy), workspaces, provisioners, debugging, and other advanced features. The core workflow accounts for 15% of the exam (Domain 6), and advanced features outside the core workflow account for 10% (Domain 4).
+This document covers the Terraform core workflow (init, plan, apply, destroy), workspaces, provisioners, debugging, and other advanced features. The core workflow is 004 objective 3 and maintenance tasks are objective 7 (HashiCorp publishes no weights for 004).
 
 **[📖 Core Workflow](https://developer.hashicorp.com/terraform/intro/core-workflow)** - Write, Plan, Apply workflow
 
@@ -14,7 +14,7 @@ Initializes the working directory for Terraform operations.
 ```bash
 terraform init                    # Standard initialization
 terraform init -upgrade           # Upgrade providers and modules
-terraform init -reconfigure       # Reconfigure backend, discard state
+terraform init -reconfigure       # Reconfigure backend, ignore existing config (no state migration)
 terraform init -migrate-state     # Migrate state to new backend
 terraform init -backend=false     # Skip backend initialization
 terraform init -input=false       # Disable interactive input
@@ -77,7 +77,7 @@ terraform plan -generate-config-out=gen.tf  # Generate config for imports
 - `-` Destroy
 - `~` Update in-place
 - `-/+` Destroy and recreate
-- `<=` Read (data source)
+- `<=` Read (data source; this symbol is not on the plan command page, unverified)
 
 **[📖 terraform plan](https://developer.hashicorp.com/terraform/cli/commands/plan)** - Plan command reference
 
@@ -186,7 +186,7 @@ resource "aws_instance" "web" {
 
 ### State File Location
 - Default workspace: `terraform.tfstate`
-- Named workspaces: `terraform.tfstate.d/<workspace>/terraform.tfstate`
+- Named workspaces: the local backend keeps them in a separate directory (commonly `terraform.tfstate.d/<workspace>/`; the directory name is not stated on the workspace or local backend pages, unverified)
 
 ### CLI Workspaces vs Terraform Cloud Workspaces
 | Feature | CLI Workspaces | Cloud Workspaces |
@@ -267,7 +267,7 @@ provisioner "file" {
 - `when = destroy` runs during resource destruction
 - `on_failure = continue` allows Terraform to continue on failure
 - `on_failure = fail` (default) stops execution on failure
-- Not stored in state - cannot be re-run without recreation
+- A failed creation-time provisioner taints the resource, so it is destroyed and recreated on the next apply
 - HashiCorp recommends using cloud-init, user_data, or configuration management tools instead
 
 ### Why Provisioners Are a Last Resort
@@ -295,8 +295,8 @@ export TF_LOG_CORE=TRACE              # Core-specific logging
 export TF_LOG_PROVIDER=DEBUG          # Provider-specific logging
 ```
 
-- Set `TF_LOG` to empty string to disable logging
-- `TF_LOG_CORE` and `TF_LOG_PROVIDER` override `TF_LOG` for their scope
+- `TF_LOG` must be set for any logging to be enabled (`TF_LOG_PATH` alone does nothing); how to switch logging off again is not covered on the debugging page
+- `TF_LOG_CORE` and `TF_LOG_PROVIDER` take the same levels as `TF_LOG` but only activate a subset of the logs (Terraform core or provider plugins)
 - Log files are useful for debugging provider issues and plan failures
 
 **[📖 Debugging](https://developer.hashicorp.com/terraform/internals/debugging)** - Debugging Terraform

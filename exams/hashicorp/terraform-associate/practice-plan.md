@@ -74,7 +74,7 @@ last-updated: 2026-11-07
 - [ ] **Practice:** Manipulate state with terraform state commands
 
 #### Day 5-7: Remote Backends
-- [ ] Configure S3 backend with DynamoDB locking
+- [ ] Configure S3 backend with locking (`use_lockfile`)
 - [ ] Study Terraform Cloud backend configuration
 - [ ] Learn backend authentication methods
 - [ ] Practice backend migration with terraform init -migrate-state
@@ -153,7 +153,7 @@ last-updated: 2026-11-07
 - [ ] Review variable precedence order
 - [ ] Review state locking backends table
 - [ ] Review terraform commands and key flags
-- [ ] Verify PSI system requirements and test connection
+- [ ] Check the system requirements in HashiCorp's exam rules and test your connection
 - [ ] **Prepare:** Set up quiet workspace, check ID, ensure stable internet
 
 #### Day 6-7: Exam and Post-Exam

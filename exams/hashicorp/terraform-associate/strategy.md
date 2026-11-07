@@ -84,11 +84,10 @@ last-updated: 2026-11-07
 5. **Concept clarity:** Understand WHY, not just WHAT
 
 ### Time Management
-- **~1 minute per question** average (57 questions in 60 minutes)
+- **Pace yourself:** the exam is 1 hour; the question count is not published on HashiCorp's page, so check it when you book
 - **Flag and move:** Do not spend more than 90 seconds on any question
 - **Quick wins first:** Answer confident questions immediately
 - **Review pass:** Use remaining time for flagged questions
-- **Fill-in-blank:** These may take more time, budget accordingly
 
 ### Common Patterns on the Exam
 - **State management:** Remote backends, locking, state commands
@@ -113,7 +112,7 @@ last-updated: 2026-11-07
 - Not knowing that `count` and `for_each` cannot coexist on the same resource
 - Confusing CLI workspaces with Terraform Cloud workspaces
 - Assuming all backends support state locking (not all do)
-- Forgetting that variable precedence has environment variables as highest priority
+- Forgetting that variable precedence has environment variables near the bottom (only the default is lower) and `-var` / `-var-file` at the top
 - Thinking `terraform validate` checks provider credentials (it does not)
 - Confusing `-reconfigure` with `-migrate-state` for backend changes
 

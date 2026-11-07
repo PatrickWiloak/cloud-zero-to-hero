@@ -44,7 +44,7 @@ Bold items are new in 004. **[📖 Associate exam content list (004)](https://de
 
 ### What 004 dropped from the 003 outline
 
-The 004 objective list no longer names `terraform taint`/`replace`, CLI `terraform workspace` use cases, `terraform refresh`, remote state data sources or provisioners. Those topics remain valid Terraform knowledge and the notes still cover them, but they are no longer listed as objectives. `terraform refresh` is superseded by `terraform plan -refresh-only` (6d names refresh-only mode), and drift handling (6d) is the objective to study.
+The 004 objective list no longer names `terraform taint`/`replace`, CLI `terraform workspace` use cases, `terraform refresh`, remote state data sources or provisioners. Those topics remain valid Terraform knowledge and the notes still cover them, but they are no longer listed as objectives. `terraform refresh` is superseded by `terraform plan -refresh-only`; drift handling (6d) is the objective to study.
 
 ## Key Study Areas
 
@@ -144,7 +144,7 @@ The 004 objective list no longer names `terraform taint`/`replace`, CLI `terrafo
 ## Exam Registration
 
 Register through:
-- **PSI Online:** Online proctored exam via PSI
+- **Online proctored exam:** book through the certification page (the proctoring vendor is not named on it; check the exam rules before booking)
 - **HashiCorp Certification Portal:** [hashicorp.com/certifications](https://www.hashicorp.com/certifications)
 
 ## Exam Day Preparation
@@ -154,13 +154,13 @@ Register through:
 - Webcam and microphone
 - Clean, quiet workspace
 - Valid government-issued ID
-- PSI Secure Browser installed
+- Proctoring software or secure browser the exam rules require (check HashiCorp's exam rules; the vendor is not named on the certification page)
 
 ### Exam Strategy
 1. **Read questions carefully:** Pay attention to exact wording and keywords
 2. **Eliminate wrong answers:** Use process of elimination
 3. **Flag uncertain questions:** Review flagged questions at the end
-4. **Time management:** ~1 minute per question with review time
+4. **Time management:** the exam is 1 hour; keep time at the end to review flagged questions
 5. **Practical thinking:** Apply hands-on experience to scenarios
 
 ### Common Question Types

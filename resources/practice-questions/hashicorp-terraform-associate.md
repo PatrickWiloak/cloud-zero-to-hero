@@ -24,7 +24,7 @@ D. The team member's local Terraform CLI is newer than the one that last wrote t
 
 **Correct: C**
 
-**Why:** This is **drift** - the actual infrastructure state differs from what Terraform recorded. Manual console changes, other tools modifying resources, or state file corruption can cause this. `terraform refresh` (or `plan -refresh-only`) syncs state with reality. Avoid manual changes to TF-managed resources.
+**Why:** This is **drift** - the actual infrastructure state differs from what Terraform recorded. Manual console changes, other tools modifying resources, or state file corruption can cause this. `terraform plan -refresh-only` (or `apply -refresh-only`) shows and records the drift; the older `terraform refresh` command is deprecated. Avoid manual changes to TF-managed resources.
 </details>
 
 ---
@@ -32,7 +32,7 @@ D. The team member's local Terraform CLI is newer than the one that last wrote t
 ### Question 2
 **Scenario:** You want to share Terraform state across a team and prevent simultaneous applies. What backend feature do you need?
 
-A. Remote state with state locking (S3 + DynamoDB, or Terraform Cloud)
+A. Remote state with state locking (for example the S3 backend with locking enabled, or Terraform Cloud)
 B. Local state with git
 C. Encrypted local state
 D. Terraform Cloud only, since open-source Terraform has no way to lock a remote backend
@@ -42,7 +42,7 @@ D. Terraform Cloud only, since open-source Terraform has no way to lock a remote
 
 **Correct: A**
 
-**Why:** Remote state (S3, Azure Storage, GCS, Terraform Cloud, Consul) supports state locking. S3 backend uses a DynamoDB table for locks. Without locking, two simultaneous `apply` operations corrupt state. Local state with git races on commit; not safe.
+**Why:** Remote state (S3, Azure Storage, GCS, Terraform Cloud, Consul) supports state locking. S3 locking is opt-in: `use_lockfile = true`, or the older `dynamodb_table` setting, which is deprecated. Without locking, two simultaneous `apply` operations corrupt state. Local state with git races on commit; not safe.
 </details>
 
 ---
@@ -282,7 +282,7 @@ D. Apply changes, then plan
 ---
 
 ### Question 16
-**Scenario:** Your team uses S3 + DynamoDB as the Terraform backend. What does the DynamoDB table provide?
+**Scenario:** Your team uses the S3 backend with the legacy `dynamodb_table` setting. What does the DynamoDB table provide?
 
 A. State locking (preventing concurrent applies)
 B. Audit history
@@ -293,7 +293,7 @@ D. Encryption keys for the state file stored in S3 and used to decrypt it
 
 **Correct: A**
 
-**Why:** S3 stores the state file; DynamoDB stores a lock entry while an `apply` is running. The lock prevents two engineers from running `apply` simultaneously and corrupting state.
+**Why:** S3 stores the state file; DynamoDB stores a lock entry while an `apply` is running. The lock prevents two engineers from running `apply` simultaneously and corrupting state. DynamoDB-based locking is deprecated; newer configurations use `use_lockfile = true` to keep the lock in S3.
 </details>
 
 ---
@@ -457,7 +457,7 @@ D. Run `terraform plan` to see drift; either accept the change into config or `t
 - **17-21:** Solid; review weak areas.
 - **<17:** Hands-on practice + re-read fact-sheet.
 
-Terraform Associate is multiple-choice, 60 minutes, ~57 questions. These reinforce concepts; for full coverage see HashiCorp Learn and the [exams/hashicorp/terraform-associate/](../../exams/hashicorp/terraform-associate/) materials.
+Terraform Associate is multiple-choice and 1 hour long; HashiCorp's page does not state the question count. These reinforce concepts; for full coverage see HashiCorp Learn and the [exams/hashicorp/terraform-associate/](../../exams/hashicorp/terraform-associate/) materials.
 
 ### Question 26
 **Scenario:** A team replaces an object that has a unique name constraint managed by Terraform. Replacement currently destroys the old object first and creates an outage. They want the new object created first and have used a name prefix to avoid collisions.

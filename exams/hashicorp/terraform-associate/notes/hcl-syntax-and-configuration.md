@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document covers the HashiCorp Configuration Language (HCL) syntax, configuration structure, variables, expressions, and functions. Understanding HCL is fundamental to Domain 3 (Understand Terraform basics - 20%), the largest single domain on the exam.
+This document covers the HashiCorp Configuration Language (HCL) syntax, configuration structure, variables, expressions, and functions. Understanding HCL is fundamental to 004 objective 4 (HashiCorp publishes no weights for 004).
 
 **[📖 Configuration Language](https://developer.hashicorp.com/terraform/language)** - Complete HCL language reference
 
@@ -76,13 +76,13 @@ variable "instance_type" {
 
 ### Variable Precedence (lowest to highest)
 1. Default values in `variable` block
-2. `terraform.tfvars` file (auto-loaded)
-3. `*.auto.tfvars` files (auto-loaded, alphabetical order)
-4. `-var-file` command line flag
-5. `-var` command line flag
-6. `TF_VAR_<name>` environment variables
+2. `TF_VAR_<name>` environment variables
+3. `terraform.tfvars` file (auto-loaded)
+4. `terraform.tfvars.json` file (auto-loaded)
+5. `*.auto.tfvars` and `*.auto.tfvars.json` files (auto-loaded, lexical order)
+6. `-var` and `-var-file` command line options, in the order given (and variables set in HCP Terraform)
 
-This order is heavily tested on the exam. Environment variables and CLI flags override file-based values.
+Later sources override earlier ones. Environment variables are the weakest source after the default: any variable file or command-line option overrides them. The exam may test this order.
 
 ### Output Values
 ```hcl

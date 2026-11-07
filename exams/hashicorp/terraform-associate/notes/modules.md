@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document covers Terraform modules including creation, usage, versioning, the module registry, and composition patterns. Modules account for 10% of the exam (Domain 5) and are fundamental to building reusable, maintainable infrastructure configurations.
+This document covers Terraform modules including creation, usage, versioning, the module registry, and composition patterns. Modules are 004 objective 5 (HashiCorp publishes no weights) and are fundamental to building reusable, maintainable infrastructure configurations.
 
 **[📖 Modules Overview](https://developer.hashicorp.com/terraform/language/modules)** - Module concepts and usage
 
@@ -97,7 +97,7 @@ module "web" {
 ```
 - Referenced with `./` or `../` prefix
 - No version constraint (always uses current files)
-- Changes take effect immediately without `terraform init`
+- Terraform reads the module from the directory you name; run `terraform init` after adding a module call or changing a module `source`
 
 ### Terraform Registry
 ```hcl
@@ -108,7 +108,7 @@ module "vpc" {
 }
 ```
 - Format: `<NAMESPACE>/<NAME>/<PROVIDER>`
-- Version constraint is required for registry modules (best practice)
+- The `version` argument is optional for registry modules, but HashiCorp recommends constraining it to avoid unexpected changes
 - Downloaded during `terraform init`
 - Public registry: `registry.terraform.io`
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document covers Terraform state management including backends, locking, import, and state commands. State management accounts for 15% of the exam (Domain 7) and is one of the most critical topics, as state is the foundation of how Terraform tracks and manages infrastructure.
+This document covers Terraform state management including backends, locking, import, and state commands. State management is 004 objective 6 (no weights are published) and is one of the most critical topics, as state is the foundation of how Terraform tracks and manages infrastructure.
 
 **[📖 State Overview](https://developer.hashicorp.com/terraform/language/state)** - Terraform state documentation
 
@@ -40,7 +40,7 @@ This document covers Terraform state management including backends, locking, imp
 ### Default Behavior
 - State stored in `terraform.tfstate` in the working directory
 - Previous state saved as `terraform.tfstate.backup`
-- No locking mechanism
+- The local backend locks state using system APIs
 - Suitable only for individual use, not team collaboration
 - No encryption at rest
 
@@ -69,14 +69,14 @@ terraform {
     bucket         = "my-terraform-state"
     key            = "project/terraform.tfstate"
     region         = "us-east-1"
-    dynamodb_table = "terraform-locks"
+    use_lockfile   = true
     encrypt        = true
   }
 }
 ```
 
 - State stored in S3 bucket
-- Locking requires DynamoDB table (S3 alone does not provide locking)
+- Locking: set `use_lockfile = true` to keep a lock file in S3 (defaults to `false`), or use a DynamoDB table with `dynamodb_table`; DynamoDB-based locking is deprecated and will be removed in a future minor version
 - Server-side encryption with SSE-S3 or SSE-KMS
 - Versioning recommended on the S3 bucket
 
@@ -108,7 +108,7 @@ terraform {
 }
 ```
 
-- Built-in state locking via blob leases
+- State locking and consistency checking through native Azure Blob Storage capabilities
 - Built-in encryption
 
 ### Consul Backend
@@ -151,10 +151,10 @@ terraform {
 
 | Backend | Locking | Encryption | Notes |
 |---------|---------|------------|-------|
-| Local | No | No | Default, single user only |
-| S3 | DynamoDB required | SSE (configurable) | Most common AWS backend |
+| Local | Yes (system file locking APIs) | No | Default, single user only |
+| S3 | `use_lockfile` (S3 lock file) or DynamoDB table (deprecated) | SSE (configurable) | Most common AWS backend |
 | GCS | Built-in | Built-in | Most common GCP backend |
-| Azure Blob | Built-in (blob lease) | Built-in | Most common Azure backend |
+| Azure Blob | Built-in | Built-in | Most common Azure backend |
 | Consul | Built-in | Optional | HashiCorp service |
 | Terraform Cloud | Built-in | Built-in | Recommended for teams |
 
@@ -169,7 +169,7 @@ terraform {
 ### Locked Operations
 - `terraform apply`
 - `terraform destroy`
-- `terraform plan` (acquires read lock)
+- `terraform plan` (locks by default; `-lock=false` skips locking)
 - `terraform state` subcommands that modify state
 
 ### Force Unlock
@@ -335,7 +335,7 @@ resource "aws_instance" "web" {
 ## Key Exam Points
 
 ### High-Priority Topics
-- S3 backend requires DynamoDB for locking (not S3 alone)
+- S3 backend locking is opt-in: `use_lockfile = true` (S3 lock file) or the deprecated `dynamodb_table`; neither is on by default
 - `terraform refresh` is deprecated - use `plan -refresh-only`
 - `terraform import` does not generate configuration
 - State file contains sensitive data and must be secured

@@ -68,7 +68,7 @@ Bold marks content that is new in 004. Notes: [dependencies, conditions and ephe
 - **State management:** Tracks actual infrastructure state
 - **Execution plans:** Preview changes before applying
 - **Resource graph:** Understands dependencies automatically
-- **Provider ecosystem:** 3000+ providers in the registry
+- **Provider ecosystem:** a large registry of providers (the count is not stated on the registry page, so no figure here)
 - **[📖 Terraform Use Cases](https://developer.hashicorp.com/terraform/intro/use-cases)** - Common Terraform use cases
 
 ## HCL Configuration Language
@@ -148,11 +148,13 @@ variable "object_var" {
 
 ### Variable Precedence (lowest to highest)
 1. Default values in variable block
-2. `terraform.tfvars` file
-3. `*.auto.tfvars` files (alphabetical order)
-4. `-var-file` flag
-5. `-var` flag
-6. `TF_VAR_` environment variables
+2. `TF_VAR_<name>` environment variables
+3. `terraform.tfvars` file
+4. `terraform.tfvars.json` file
+5. `*.auto.tfvars` and `*.auto.tfvars.json` files (lexical order)
+6. `-var` and `-var-file` options on the command line, in the order given (also variables from HCP Terraform)
+
+- **[📖 Variable definition precedence](https://developer.hashicorp.com/terraform/language/values/variables)** - Official order, checked 2026-11-07
 
 - **[📖 Input Variables](https://developer.hashicorp.com/terraform/language/values/variables)** - Variable definitions and usage
 - **[📖 Output Values](https://developer.hashicorp.com/terraform/language/values/outputs)** - Output configuration
@@ -218,7 +220,7 @@ resource "aws_instance" "west_instance" {
 
 ### Data Sources
 - Read-only queries to existing infrastructure
-- Populated during the plan phase
+- Read during planning when possible (deferred to apply if an argument is not yet known)
 - Used to reference resources not managed by current configuration
 - **[📖 Data Sources](https://developer.hashicorp.com/terraform/language/data-sources)** - Data source configuration
 
@@ -267,10 +269,10 @@ resource "aws_instance" "west_instance" {
 ### Remote Backends
 | Backend | Locking | Encryption | Provider |
 |---------|---------|------------|----------|
-| S3 + DynamoDB | Yes (DynamoDB) | Yes (SSE) | AWS |
+| S3 | Opt-in: `use_lockfile` (default false); DynamoDB locking is deprecated | Yes (SSE) | AWS |
 | GCS | Yes (built-in) | Yes (built-in) | GCP |
 | Azure Blob | Yes (built-in) | Yes (built-in) | Azure |
-| Consul | Yes (built-in) | Optional | HashiCorp |
+| Consul | Yes (built-in, `lock` option on by default) | Not stated on the backend page | HashiCorp |
 | Terraform Cloud | Yes (built-in) | Yes (built-in) | HashiCorp |
 
 - **[📖 Backend Configuration](https://developer.hashicorp.com/terraform/language/backend)** - Backend types and setup
@@ -360,7 +362,7 @@ terraform workspace show      # Show current workspace
 - Managing multiple environments (dev, staging, prod)
 - Each workspace has its own state file
 - Default workspace cannot be deleted
-- State stored in `terraform.tfstate.d/<workspace>/`
+- State for named workspaces is stored in a separate directory (commonly `terraform.tfstate.d/<workspace>/`, not stated on the pages read: unverified)
 - Access current workspace: `terraform.workspace`
 - **[📖 Workspaces](https://developer.hashicorp.com/terraform/language/state/workspaces)** - Workspace management
 
@@ -371,7 +373,7 @@ terraform workspace show      # Show current workspace
 terraform import aws_instance.example i-1234567890abcdef0
 ```
 - Brings existing infrastructure under Terraform management
-- Only imports into state - does not generate configuration
+- The CLI command only imports into state - it does not generate configuration (import blocks can, via `terraform plan -generate-config-out`)
 - Configuration must be written manually (or use `terraform plan -generate-config-out`)
 - One resource at a time
 - **[📖 Import](https://developer.hashicorp.com/terraform/cli/import)** - Import existing resources
@@ -385,7 +387,7 @@ import {
 ```
 - Declarative import in configuration
 - Can generate configuration automatically
-- Supports bulk imports
+- Declare one import block per resource; the CLI command imports one resource per run
 - Preview with `terraform plan`
 
 ## Provisioners
@@ -397,10 +399,10 @@ import {
 
 ### Key Points
 - Provisioners are a last resort - prefer native provider features
-- Run only during creation by default
-- `when = destroy` runs during resource destruction
+- Run right after the resource is created by default
+- `when = destroy` runs before the resource is destroyed
 - `on_failure = continue` or `on_failure = fail`
-- Not stored in state - not re-run on subsequent applies
+- A failed creation-time provisioner taints the resource, so it is recreated on the next apply
 - **[📖 Provisioners](https://developer.hashicorp.com/terraform/language/resources/provisioners/syntax)** - Provisioner configuration
 
 ## Debugging and Troubleshooting
@@ -450,21 +452,16 @@ terraform {
 - 004 adds `depends_on` and `create_before_destroy`, custom conditions (variable validation, preconditions, postconditions, checks), ephemeral resources and write-only arguments, and HCP Terraform workspaces and projects. See the 004 notes before the exam.
 - No weights are published for 004, so cover all eight objectives.
 
-### High-Value Topics (by weight)
-1. **Terraform basics (20%):** HCL syntax, resources, providers, dependencies
-2. **IaC concepts (15%):** Benefits, patterns, comparisons
-3. **Purpose of Terraform (15%):** Multi-cloud, state benefits, workflow
-4. **Core workflow (15%):** init, plan, apply, destroy commands and flags
-5. **State management (15%):** Backends, locking, state commands
-6. **Outside core workflow (10%):** Import, workspaces, debugging
-7. **Modules (10%):** Sources, versioning, inputs/outputs
+### High-Value Topics
+
+HashiCorp publishes no weights for 004. The 003-era percentage list that used to be here was removed on 2026-11-07. Cover all eight objectives; new in 004 are 4f, 4g, 4h and 8c.
 
 ### Common Exam Traps
-- Variable precedence order (environment variables are highest priority)
+- Variable precedence order (command-line `-var` and `-var-file` win; environment variables sit just above the default)
 - `terraform refresh` is deprecated - use `terraform plan -refresh-only`
 - Provisioners are a last resort, not a best practice
 - `count` and `for_each` cannot be used together on the same resource
-- State locking requires specific backend support (S3 needs DynamoDB)
+- State locking requires backend support, and on S3 it is opt-in (`use_lockfile`; the DynamoDB table method is deprecated)
 - `terraform.workspace` returns "default" in default workspace
 - `-auto-approve` skips the interactive approval, not validation
 - `terraform init` must be run when changing backend configuration
