@@ -98,6 +98,7 @@
 - [Concepts](learn/concepts/) - {{concept_pages}} five-minute explainers, one cloud idea each
 - [Topic indexes](topics/) - {{topic_indexes}} subjects tied across all four pillars
 - [Glossary](learn/glossary.md) - the vocabulary, defined once
+- [Cross-site learning paths](learn/learning-paths.md) - seven routes that span cloud, data, security and AI
 - [Hands-on projects](resources/hands-on-projects/) - {{hands_on_projects}} builds you can finish in a sitting
 - [Labs by certification](resources/hands-on-projects/labs-by-cert.md) - which build backs which exam
 - [Practice questions](resources/practice-questions/) - scenario banks with explained answers

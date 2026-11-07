@@ -37,6 +37,7 @@ If you **do** want certifications, head back to the **[Study Hub](../STUDY-HUB.m
 - **[Data Zero to Hero](https://data.noblerworks.com/learn/)** - databases, pipelines, streaming and analytics
 - **[Security Zero to Hero](https://security.noblerworks.com/learn/)** - identity, cloud security and compliance
 - **[Which site should I start with?](./which-site.md)** - all four Zero to Hero sites compared, with a starting page for each goal
+- **[Cross-site learning paths](./learning-paths.md)** - seven routes that cross cloud, data, security and AI, with matching certs
 
 ### 📖 Reference
 - **[Glossary](./glossary.md)** - cloud, DevOps and networking terms in plain English
@@ -52,6 +53,7 @@ There's no "right order." Pick what fits:
 |------------------|------------|
 | Start from absolute zero | [Day One](./day-one/) |
 | Not sure which Zero to Hero site fits you | [Which site should I start with?](./which-site.md) |
+| Moving between cloud, data, security and AI | [Cross-site learning paths](./learning-paths.md) |
 | Look up a term you keep seeing | [Glossary](./glossary.md) |
 | Understand one concept (VPC, DNS, containers, ...) | [Concepts](./concepts/) |
 | Build a foundation in cloud | [Cloud from Scratch](./cloud-from-scratch.md) |

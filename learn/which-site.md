@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-10-22
+last-updated: 2026-11-07
 difficulty: beginner
 reading-time: 8 min
 ---
@@ -7,7 +7,7 @@ reading-time: 8 min
 # Which Zero to Hero Site Should I Start With?
 
 **In one line:** Four free sites cover cloud, data, security and AI; this page tells you which one fits your goal, the exact page to open first, and the order to take them in if you want all four.
-**Last reviewed:** 2026-10-22
+**Last reviewed:** 2026-11-07
 
 ---
 
@@ -18,6 +18,7 @@ reading-time: 8 min
 - **Security Zero to Hero** is for protecting systems and people: identity, encryption, detection, compliance and the security certifications.
 - **AI Zero to Hero** is for using and building with AI: what models are, using AI well at work, building AI apps, and keeping them safe.
 - Not sure? Pick the job you want, find it in the table below, and open the page it names. You can switch sites at any point; they link to each other wherever subjects meet.
+- Already working and need a skill from another site? The [cross-site learning paths](https://cloud.noblerworks.com/learn/learning-paths/) string together pages from all four, such as cloud engineer to security or data engineer to ML.
 
 All four sites are free, need no signup, and are built by [Nobler Works](https://noblerworks.com/).
 
@@ -139,6 +140,7 @@ The four sites split one subject area between them, so each topic has one home a
 
 ## Next steps
 
+- [Cross-site learning paths](https://cloud.noblerworks.com/learn/learning-paths/) - seven routes that cross cloud, data, security and AI
 - [Cloud Zero to Hero](https://cloud.noblerworks.com/learn/) - the learn hub
 - [Data Zero to Hero](https://data.noblerworks.com/learn/) - the learn hub
 - [Security Zero to Hero](https://security.noblerworks.com/learn/) - the learn hub
