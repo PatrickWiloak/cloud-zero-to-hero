@@ -26,7 +26,7 @@ The largest domain. YAML and TypeScript here are quoted or adapted from the docs
 | Talks to others via | Extensions, Utility APIs and routes | Extension points and core services |
 | Install command | `yarn --cwd packages/app add <package>` | `yarn --cwd packages/backend add <package>` |
 
-The install guide states it plainly: "Frontend UI plugins go in the `app` package. Backend plugins go in `backend`."
+The install guide says frontend UI plugins go in the `app` package and backend plugins go in `backend`.
 
 Both sides keep plugins isolated. "There can be no direct communication between plugins through code," so a backend plugin is effectively its own microservice, and a frontend plugin calls its backend over an API.
 

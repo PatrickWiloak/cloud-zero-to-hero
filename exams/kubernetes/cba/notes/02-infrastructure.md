@@ -50,7 +50,7 @@ Facts the exam likes:
 
 - Service backend plugins make API requests to services. For example, the Software Catalog retrieves entities from the Backstage backend. Standalone plugins make no API requests.
 - Locally the frontend is on 3000 and the backend on 7007. The `app.baseUrl` and `backend.baseUrl` settings tell each side where the other lives.
-- Configuration is shared: "Configuration is shared between frontend and backend, so common values such as `backend.baseUrl` are defined once."
+- Configuration is shared between frontend and backend, so common values such as `backend.baseUrl` are defined once.
 
 ---
 
