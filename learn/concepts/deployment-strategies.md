@@ -138,36 +138,28 @@ Try these before you move on. Each answer is collapsed; click it to check yourse
 
 1. What is the main trade-off between blue-green and rolling updates?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   Blue-green gives instant rollback and no mixed versions but doubles infrastructure during the deploy. Rolling needs no extra capacity beyond a small surge, but both versions serve traffic at once and rollback is not instant. See: [Blue-green](#blue-green)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    Blue-green gives instant rollback and no mixed versions but doubles infrastructure during the deploy. Rolling needs no extra capacity beyond a small surge, but both versions serve traffic at once and rollback is not instant. See: <a href="#blue-green">Blue-green</a>
+    </details>
 
 2. What is the difference between a canary and A/B testing?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   A canary asks whether the version is broken and is judged by error rate and latency. A/B asks which version performs better on a business metric, runs longer and splits by user attribute. See: [A/B testing](#ab-testing)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    A canary asks whether the version is broken and is judged by error rate and latency. A/B asks which version performs better on a business metric, runs longer and splits by user attribute. See: <a href="#ab-testing">A/B testing</a>
+    </details>
 
 3. Why is a canary without metrics analysis not worth much?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   It is just a slow rolling update with extra steps. The value comes from automatically aborting when the new version's error rate diverges. See: [Canary](#canary)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    It is just a slow rolling update with extra steps. The value comes from automatically aborting when the new version's error rate diverges. See: <a href="#canary">Canary</a>
+    </details>
 
 4. Why does the expand and contract pattern take several releases, and what does that buy you?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   Both versions run at once, so the database must work with both. Spreading the change across releases means you can roll back at any point. See: [The part that actually breaks: schema changes](#the-part-that-actually-breaks-schema-changes)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    Both versions run at once, so the database must work with both. Spreading the change across releases means you can roll back at any point. See: <a href="#the-part-that-actually-breaks-schema-changes">The part that actually breaks: schema changes</a>
+    </details>

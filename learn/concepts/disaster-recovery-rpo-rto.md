@@ -112,36 +112,28 @@ Try these before you move on. Each answer is collapsed; click it to check yourse
 
 1. What do RPO and RTO each measure?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   RPO is how much data you can afford to lose. RTO is how long you can afford to be down. See: [The one-line answer](#the-one-line-answer)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    RPO is how much data you can afford to lose. RTO is how long you can afford to be down. See: <a href="#the-one-line-answer">The one-line answer</a>
+    </details>
 
 2. Why is high availability not enough to protect against a bad migration that drops a column?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   Replication copies the damage to the standby within milliseconds. You need a copy separate in time, such as a backup from before the damage. See: [Why HA is not enough](#why-ha-is-not-enough)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    Replication copies the damage to the standby within milliseconds. You need a copy separate in time, such as a backup from before the damage. See: <a href="#why-ha-is-not-enough">Why HA is not enough</a>
+    </details>
 
 3. A system needs RPO 15 minutes and RTO 1 hour. Why did the worked example choose pilot light rather than nightly backups or active-active?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   Nightly backups give a 24-hour RPO, which is too much loss. Active-active is far more than a one-hour RTO needs. See: [A worked example](#a-worked-example)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    Nightly backups give a 24-hour RPO, which is too much loss. Active-active is far more than a one-hour RTO needs. See: <a href="#a-worked-example">A worked example</a>
+    </details>
 
 4. Why should backups be copied to a separate account and made immutable?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   So an attacker with admin access to production cannot delete them. See: [The parts people forget](#the-parts-people-forget)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    So an attacker with admin access to production cannot delete them. See: <a href="#the-parts-people-forget">The parts people forget</a>
+    </details>

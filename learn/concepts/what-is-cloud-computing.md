@@ -114,36 +114,28 @@ Try these before you move on. Each answer is collapsed; click it to check yourse
 
 1. What three things did cloud change, according to the page?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   Capex became opex, months became minutes, and peak provisioning became elastic scaling. See: [Why this exists](#why-this-exists)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    Capex became opex, months became minutes, and peak provisioning became elastic scaling. See: <a href="#why-this-exists">Why this exists</a>
+    </details>
 
 2. What does a cloud provider do, in three steps?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   It owns thousands of servers in datacenters, lets you rent compute, storage, networking and managed services through an API or console, and charges by the hour, second or per request. See: [What "cloud" actually means](#what-cloud-actually-means)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    It owns thousands of servers in datacenters, lets you rent compute, storage, networking and managed services through an API or console, and charges by the hour, second or per request. See: <a href="#what-cloud-actually-means">What "cloud" actually means</a>
+    </details>
 
 3. Is cloud always cheaper than owning hardware?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   No. At scale, owning hardware is sometimes cheaper, and Dropbox famously moved off AWS to save money. See: [What "cloud" is NOT](#what-cloud-is-not)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    No. At scale, owning hardware is sometimes cheaper, and Dropbox famously moved off AWS to save money. See: <a href="#what-cloud-is-not">What "cloud" is NOT</a>
+    </details>
 
 4. Why does the page call 'someone else's computer' only half-true?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   The value is the API, elastic billing, global reach and managed services, not the hardware. See: [What "cloud" is NOT](#what-cloud-is-not)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    The value is the API, elastic billing, global reach and managed services, not the hardware. See: <a href="#what-cloud-is-not">What "cloud" is NOT</a>
+    </details>

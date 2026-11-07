@@ -116,36 +116,28 @@ Try these before you move on. Each answer is collapsed; click it to check yourse
 
 1. Why was OpenTofu forked from Terraform?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   HashiCorp moved Terraform from an open-source license to the Business Source License. The OpenTofu FAQ says the new terms are ambiguous for companies and developers, so the fork stays open source under the Linux Foundation. See: [How the fork happened](#how-the-fork-happened)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    HashiCorp moved Terraform from an open-source license to the Business Source License. The OpenTofu FAQ says the new terms are ambiguous for companies and developers, so the fork stays open source under the Linux Foundation. See: <a href="#how-the-fork-happened">How the fork happened</a>
+    </details>
 
 2. What command do you use with OpenTofu instead of `terraform`?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   `tofu`. See: [What differs](#what-differs)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    <code>tofu</code>. See: <a href="#what-differs">What differs</a>
+    </details>
 
 3. What does the migration guide say to do if `tofu plan` shows unexpected changes?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   Do not apply. Stop and investigate. See: [Moving over](#moving-over)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    Do not apply. Stop and investigate. See: <a href="#moving-over">Moving over</a>
+    </details>
 
 4. Why is mixing `terraform` and `tofu` on one state a mistake?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   Because it is risky without a plan. The page says to pick one per project. See: [Common mistakes](#common-mistakes)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    Because it is risky without a plan. The page says to pick one per project. See: <a href="#common-mistakes">Common mistakes</a>
+    </details>

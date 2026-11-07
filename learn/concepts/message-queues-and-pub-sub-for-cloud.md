@@ -97,36 +97,28 @@ Try these before you move on. Each answer is collapsed; click it to check yourse
 
 1. What is the difference between a queue and pub/sub?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   A queue holds messages until one worker takes each one. Pub/sub delivers a copy of every message to every subscriber. See: [The one-line answer](#the-one-line-answer)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    A queue holds messages until one worker takes each one. Pub/sub delivers a copy of every message to every subscriber. See: <a href="#the-one-line-answer">The one-line answer</a>
+    </details>
 
 2. What is the fan-out pattern?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   A queue is put behind each pub/sub subscriber, so the topic copies the event to several queues and each service drains its own at its own pace. If one service is down, its queue just fills up and nothing is lost. See: [Queue vs pub/sub](#queue-vs-pubsub)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    A queue is put behind each pub/sub subscriber, so the topic copies the event to several queues and each service drains its own at its own pace. If one service is down, its queue just fills up and nothing is lost. See: <a href="#queue-vs-pubsub">Queue vs pub/sub</a>
+    </details>
 
 3. A worker takes a message but processing takes longer than the visibility timeout. What happens?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   A second worker grabs the same message while the first is still working, causing duplicate processing. See: [Four things every builder must know](#four-things-every-builder-must-know)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    A second worker grabs the same message while the first is still working, causing duplicate processing. See: <a href="#four-things-every-builder-must-know">Four things every builder must know</a>
+    </details>
 
 4. Why does the page say your consumers must be idempotent?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   At-least-once delivery is the normal case, so the same message can arrive more than once. Processing it twice must not, for example, charge the customer twice. See: [Four things every builder must know](#four-things-every-builder-must-know)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    At-least-once delivery is the normal case, so the same message can arrive more than once. Processing it twice must not, for example, charge the customer twice. See: <a href="#four-things-every-builder-must-know">Four things every builder must know</a>
+    </details>

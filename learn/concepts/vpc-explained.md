@@ -153,36 +153,28 @@ Try these before you move on. Each answer is collapsed; click it to check yourse
 
 1. What makes a subnet public rather than private?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   A public subnet has a route to an internet gateway. A private subnet has no such route and cannot be reached from the internet directly. See: [Public vs private subnets](#public-vs-private-subnets)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    A public subnet has a route to an internet gateway. A private subnet has no such route and cannot be reached from the internet directly. See: <a href="#public-vs-private-subnets">Public vs private subnets</a>
+    </details>
 
 2. How does a resource in a private subnet get package updates?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   Through a NAT gateway, which allows outbound access without making the resource inbound-reachable. See: [Public vs private subnets](#public-vs-private-subnets)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    Through a NAT gateway, which allows outbound access without making the resource inbound-reachable. See: <a href="#public-vs-private-subnets">Public vs private subnets</a>
+    </details>
 
 3. How many addresses does a `/24` CIDR block contain, and what is it typically used for?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   256 addresses. A VPC is usually a `/16` and subnets are carved out of it as `/24` or smaller. See: [CIDR blocks (the address math)](#cidr-blocks-the-address-math)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    256 addresses. A VPC is usually a <code>/16</code> and subnets are carved out of it as <code>/24</code> or smaller. See: <a href="#cidr-blocks-the-address-math">CIDR blocks (the address math)</a>
+    </details>
 
 4. Security group or network ACL: which is stateful, and which is per-subnet?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   Security groups are stateful and per-resource. Network ACLs are per-subnet and not stateful, so both directions must be allowed. See: [Security groups vs network ACLs](#security-groups-vs-network-acls)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    Security groups are stateful and per-resource. Network ACLs are per-subnet and not stateful, so both directions must be allowed. See: <a href="#security-groups-vs-network-acls">Security groups vs network ACLs</a>
+    </details>

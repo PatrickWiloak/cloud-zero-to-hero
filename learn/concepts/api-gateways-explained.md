@@ -112,36 +112,28 @@ Try these before you move on. Each answer is collapsed; click it to check yourse
 
 1. Name three jobs an API gateway does before it passes a request to the backend.
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   Any three of: authentication, rate limiting, routing, request validation and logging. See: [The one-line answer](#the-one-line-answer)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    Any three of: authentication, rate limiting, routing, request validation and logging. See: <a href="#the-one-line-answer">The one-line answer</a>
+    </details>
 
 2. Why is it better to put cross-cutting concerns in a gateway than in each backend service?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   Otherwise every team implements token checks, throttling and logging slightly differently, and one of them gets it wrong. A gateway shrinks the backends to business logic and enforces security rules consistently. See: [Why it exists](#why-it-exists)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    Otherwise every team implements token checks, throttling and logging slightly differently, and one of them gets it wrong. A gateway shrinks the backends to business logic and enforces security rules consistently. See: <a href="#why-it-exists">Why it exists</a>
+    </details>
 
 3. A partner goes over the limit in their usage plan. What does the gateway do?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   It returns `429 Too Many Requests` without touching the backend. See: [A worked example](#a-worked-example)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    It returns <code>429 Too Many Requests</code> without touching the backend. See: <a href="#a-worked-example">A worked example</a>
+    </details>
 
 4. Why should the gateway not be your only security layer?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   The gateway knows who you are, not whether a specific order belongs to you. Backends still need to check authorization for the specific resource. See: [Common mistakes](#common-mistakes)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    The gateway knows who you are, not whether a specific order belongs to you. Backends still need to check authorization for the specific resource. See: <a href="#common-mistakes">Common mistakes</a>
+    </details>

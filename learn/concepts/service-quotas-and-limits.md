@@ -106,36 +106,28 @@ Try these before you move on. Each answer is collapsed; click it to check yourse
 
 1. What is the difference between a capacity (allocation) quota and a rate quota?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   A capacity quota limits how much you can hold at once, such as VPCs per Region. A rate quota limits how fast you can use something, such as API requests per second. See: [Two kinds of limit](#two-kinds-of-limit)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    A capacity quota limits how much you can hold at once, such as VPCs per Region. A rate quota limits how fast you can use something, such as API requests per second. See: <a href="#two-kinds-of-limit">Two kinds of limit</a>
+    </details>
 
 2. You raised a VPC quota in us-east-1. Does that raise it in eu-west-1?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   No. Regional quotas are counted separately in each Region, and raising one does not raise it in another. See: [Scope matters](#scope-matters)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    No. Regional quotas are counted separately in each Region, and raising one does not raise it in another. See: <a href="#scope-matters">Scope matters</a>
+    </details>
 
 3. Why is raising the quota only in the primary Region a problem for disaster recovery?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   A failover that cannot launch instances is not a failover. The DR Region needs its quotas raised too. See: [Common mistakes](#common-mistakes)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    A failover that cannot launch instances is not a failover. The DR Region needs its quotas raised too. See: <a href="#common-mistakes">Common mistakes</a>
+    </details>
 
 4. A utilization of 150 used out of a 200 quota is what percent?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   75 percent. See: [AWS terms](#aws-terms)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    75 percent. See: <a href="#aws-terms">AWS terms</a>
+    </details>

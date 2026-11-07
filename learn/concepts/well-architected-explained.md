@@ -111,36 +111,28 @@ Try these before you move on. Each answer is collapsed; click it to check yourse
 
 1. Is a Well-Architected Framework a set of rules you must follow?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   No. It is a structured way to ask the right questions about a design and find the risks before production does. See: [The one-line answer](#the-one-line-answer)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    No. It is a structured way to ask the right questions about a design and find the risks before production does. See: <a href="#the-one-line-answer">The one-line answer</a>
+    </details>
 
 2. Where does the page say the real value of the framework lies?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   In the review: sitting down with the team that built a workload and walking through the questions honestly, not in the document itself. See: [Why the frameworks exist](#why-the-frameworks-exist)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    In the review: sitting down with the team that built a workload and walking through the questions honestly, not in the document itself. See: <a href="#why-the-frameworks-exist">Why the frameworks exist</a>
+    </details>
 
 3. Give one example of two pillars pulling against each other.
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   Multi-region active-active improves reliability and roughly doubles cost. Inspecting all traffic through a firewall improves security but adds latency and cost. Spot instances cut cost and reduce reliability. See: [Trade-offs are the point](#trade-offs-are-the-point)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    Multi-region active-active improves reliability and roughly doubles cost. Inspecting all traffic through a firewall improves security but adds latency and cost. Spot instances cut cost and reduce reliability. See: <a href="#trade-offs-are-the-point">Trade-offs are the point</a>
+    </details>
 
 4. Why scope a review to one workload instead of the whole company?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   Reviewing everything at once is a listed mistake. A workload is an application and everything it depends on, which keeps the review honest and manageable. See: [How a review works](#how-a-review-works)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    Reviewing everything at once is a listed mistake. A workload is an application and everything it depends on, which keeps the review honest and manageable. See: <a href="#how-a-review-works">How a review works</a>
+    </details>

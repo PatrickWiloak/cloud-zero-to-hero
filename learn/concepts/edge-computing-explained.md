@@ -114,36 +114,28 @@ Try these before you move on. Each answer is collapsed; click it to check yourse
 
 1. Name three reasons besides latency to run something at the edge.
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   Any three of: bandwidth, intermittent connectivity, data residency and cost. See: [Why distance matters](#why-distance-matters)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    Any three of: bandwidth, intermittent connectivity, data residency and cost. See: <a href="#why-distance-matters">Why distance matters</a>
+    </details>
 
 2. A function in Sydney calls a database in Virginia on every request. Why has moving the code to the edge gained nothing?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   Running code at the edge is easy, but the real problem is running it next to the data it needs. The round trip to the distant data remains. See: [The hard part: data](#the-hard-part-data)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    Running code at the edge is easy, but the real problem is running it next to the data it needs. The round trip to the distant data remains. See: <a href="#the-hard-part-data">The hard part: data</a>
+    </details>
 
 3. In the news site example, why can the edge function verify the paywall token without calling the origin?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   It only needs a public key to verify signatures, which is read-only data that belongs at the edge. See: [A worked example](#a-worked-example)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    It only needs a public key to verify signatures, which is read-only data that belongs at the edge. See: <a href="#a-worked-example">A worked example</a>
+    </details>
 
 4. What is the general rule for edge function size and distance to the user?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   The closer to the user, the smaller the function. See: [CDN edge functions](#cdn-edge-functions)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    The closer to the user, the smaller the function. See: <a href="#cdn-edge-functions">CDN edge functions</a>
+    </details>

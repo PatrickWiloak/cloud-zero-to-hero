@@ -164,36 +164,28 @@ Try these before you move on. Each answer is collapsed; click it to check yourse
 
 1. What are the first two places that are checked for an answer when a browser looks up a name?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   The OS cache and then the recursive resolver's cache. Only if both miss does the resolver ask the root, TLD and authoritative servers. See: [How a lookup works](#how-a-lookup-works)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    The OS cache and then the recursive resolver's cache. Only if both miss does the resolver ask the root, TLD and authoritative servers. See: <a href="#how-a-lookup-works">How a lookup works</a>
+    </details>
 
 2. Why must you lower a record's TTL before a planned change instead of after?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   Lowering the TTL does not shorten records that are already cached. Lower it at least the old TTL before the change. See: [Common gotchas](#common-gotchas)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    Lowering the TTL does not shorten records that are already cached. Lower it at least the old TTL before the change. See: <a href="#common-gotchas">Common gotchas</a>
+    </details>
 
 3. Why can a CNAME not be used at the apex, and what is a workaround?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   The apex needs SOA and NS records. Workarounds are an A record at the apex or an ALIAS/ANAME record such as a Route 53 alias or Cloudflare CNAME flattening. See: [Apex vs subdomain](#apex-vs-subdomain)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    The apex needs SOA and NS records. Workarounds are an A record at the apex or an ALIAS/ANAME record such as a Route 53 alias or Cloudflare CNAME flattening. See: <a href="#apex-vs-subdomain">Apex vs subdomain</a>
+    </details>
 
 4. What does an MX record say?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   That email for this domain goes to the named mail server. See: [Record types you'll meet](#record-types-youll-meet)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    That email for this domain goes to the named mail server. See: <a href="#record-types-youll-meet">Record types you'll meet</a>
+    </details>

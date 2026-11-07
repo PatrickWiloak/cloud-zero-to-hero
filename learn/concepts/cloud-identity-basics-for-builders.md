@@ -85,36 +85,28 @@ Try these before you move on. Each answer is collapsed; click it to check yourse
 
 1. What is the difference between a human identity and a workload identity?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   Human identities are people, who should use single sign-on with MFA and temporary access. Workload identities are code such as a VM, container, function or CI pipeline. See: [Two kinds of identity](#two-kinds-of-identity)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    Human identities are people, who should use single sign-on with MFA and temporary access. Workload identities are code such as a VM, container, function or CI pipeline. See: <a href="#two-kinds-of-identity">Two kinds of identity</a>
+    </details>
 
 2. What are the AWS, Azure and GCP names for the identity a workload should use?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   IAM role on AWS, managed identity on Azure, and service account on GCP. See: [How workloads should get credentials](#how-workloads-should-get-credentials)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    IAM role on AWS, managed identity on Azure, and service account on GCP. See: <a href="#how-workloads-should-get-credentials">How workloads should get credentials</a>
+    </details>
 
 3. How does a CI job get cloud access without a stored access key?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   The CI system issues an OIDC token for the job, and the cloud trusts that issuer and swaps the token for short-lived credentials restricted to that repository and branch. See: [CI/CD without stored keys](#cicd-without-stored-keys)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    The CI system issues an OIDC token for the job, and the cloud trusts that issuer and swaps the token for short-lived credentials restricted to that repository and branch. See: <a href="#cicd-without-stored-keys">CI/CD without stored keys</a>
+    </details>
 
 4. What could go wrong if the OIDC trust says 'any repository in the organization' or 'any branch'?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   A pull request from a fork could assume your production role. See: [CI/CD without stored keys](#cicd-without-stored-keys)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    A pull request from a fork could assume your production role. See: <a href="#cicd-without-stored-keys">CI/CD without stored keys</a>
+    </details>

@@ -140,36 +140,28 @@ Try these before you move on. Each answer is collapsed; click it to check yourse
 
 1. Why do many systems use both an in-process cache and a shared cache like Redis?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   The in-process cache is fastest but each instance holds its own copy, so copies can disagree and a deploy wipes them. A shared cache costs a network round trip but gives every instance the same view and survives deploys. See: [Why in-process and shared caches both exist](#why-in-process-and-shared-caches-both-exist)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    The in-process cache is fastest but each instance holds its own copy, so copies can disagree and a deploy wipes them. A shared cache costs a network round trip but gives every instance the same view and survives deploys. See: <a href="#why-in-process-and-shared-caches-both-exist">Why in-process and shared caches both exist</a>
+    </details>
 
 2. In cache-aside, what happens on a cache miss?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   The application reads the database and populates the cache. The first request after an expiry is therefore slow. See: [Caching patterns](#caching-patterns)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    The application reads the database and populates the cache. The first request after an expiry is therefore slow. See: <a href="#caching-patterns">Caching patterns</a>
+    </details>
 
 3. A popular key expires and a thousand requests hit the database at once. What is this called, and name one fix.
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   It is a cache stampede (thundering herd). Fixes are adding jitter to TTLs, or using a lock so only one request refreshes while others serve the stale value briefly. See: [The failure modes worth knowing](#the-failure-modes-worth-knowing)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    It is a cache stampede (thundering herd). Fixes are adding jitter to TTLs, or using a lock so only one request refreshes while others serve the stale value briefly. See: <a href="#the-failure-modes-worth-knowing">The failure modes worth knowing</a>
+    </details>
 
 4. Why must a cache key for per-user data include the user's identity?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   Otherwise user A's data can be served to user B. Every dimension that varies the result belongs in the key, including tenant and user identity. See: [The failure modes worth knowing](#the-failure-modes-worth-knowing)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    Otherwise user A's data can be served to user B. Every dimension that varies the result belongs in the key, including tenant and user identity. See: <a href="#the-failure-modes-worth-knowing">The failure modes worth knowing</a>
+    </details>

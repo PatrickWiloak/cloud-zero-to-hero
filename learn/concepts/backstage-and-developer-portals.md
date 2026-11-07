@@ -85,36 +85,28 @@ Try these before you move on. Each answer is collapsed; click it to check yourse
 
 1. Name the four core features of Backstage listed on the page.
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   Software Catalog, Software Templates, TechDocs and Plugins. See: [What Backstage is](#what-backstage-is)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    Software Catalog, Software Templates, TechDocs and Plugins. See: <a href="#what-backstage-is">What Backstage is</a>
+    </details>
 
 2. What is the difference between a developer portal and a platform?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   The platform is the pipelines, clusters, policies and automation. The portal is only the interface to them. See: [Portal versus platform](#portal-versus-platform)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    The platform is the pipelines, clusters, policies and automation. The portal is only the interface to them. See: <a href="#portal-versus-platform">Portal versus platform</a>
+    </details>
 
 3. Why does a software catalog that was imported once tend to go stale?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   Without owners updating it, it goes stale within months. See: [Common mistakes](#common-mistakes)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    Without owners updating it, it goes stale within months. See: <a href="#common-mistakes">Common mistakes</a>
+    </details>
 
 4. A company has fewer than about ten services. Which option does the page suggest first?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   A simple catalog in a repo, which costs almost nothing. See: [Build or buy](#build-or-buy)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    A simple catalog in a repo, which costs almost nothing. See: <a href="#build-or-buy">Build or buy</a>
+    </details>

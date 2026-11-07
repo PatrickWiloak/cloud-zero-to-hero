@@ -172,36 +172,28 @@ Try these before you move on. Each answer is collapsed; click it to check yourse
 
 1. In IaaS, what do you manage and what does the provider manage?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   You manage the OS patches, runtime, application, scaling and monitoring. The provider manages the physical hardware, hypervisor, datacenter and networking fabric. See: [IaaS - Infrastructure as a Service](#iaas---infrastructure-as-a-service)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    You manage the OS patches, runtime, application, scaling and monitoring. The provider manages the physical hardware, hypervisor, datacenter and networking fabric. See: <a href="#iaas---infrastructure-as-a-service">IaaS - Infrastructure as a Service</a>
+    </details>
 
 2. Which of IaaS, PaaS and SaaS fits a small team without ops bandwidth that wants to ship code fast?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   PaaS, because you hand over code and the provider handles OS patching, runtime upgrades, scaling and load balancing. See: [PaaS - Platform as a Service](#paas---platform-as-a-service)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    PaaS, because you hand over code and the provider handles OS patching, runtime upgrades, scaling and load balancing. See: <a href="#paas---platform-as-a-service">PaaS - Platform as a Service</a>
+    </details>
 
 3. What are the defining traits of serverless?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   You do not think about servers, you pay per request or per millisecond, and it scales to zero when idle. See: [Where serverless fits](#where-serverless-fits)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    You do not think about servers, you pay per request or per millisecond, and it scales to zero when idle. See: <a href="#where-serverless-fits">Where serverless fits</a>
+    </details>
 
 4. Why does the modern startup stack in the page contain barely any IaaS?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   Most layers (auth, email, payments, database and so on) are available as SaaS or PaaS, so a small team can build serious products without ever provisioning a VM. See: [A real-world stack](#a-real-world-stack)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    Most layers (auth, email, payments, database and so on) are available as SaaS or PaaS, so a small team can build serious products without ever provisioning a VM. See: <a href="#a-real-world-stack">A real-world stack</a>
+    </details>

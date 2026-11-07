@@ -143,36 +143,28 @@ Try these before you move on. Each answer is collapsed; click it to check yourse
 
 1. Which storage type is a virtual hard disk attached to one machine, and which is a shared network folder?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   Block storage is the virtual disk attached to one machine. File storage is the shared network folder many machines mount at once. See: [The one-line answer](#the-one-line-answer)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    Block storage is the virtual disk attached to one machine. File storage is the shared network folder many machines mount at once. See: <a href="#the-one-line-answer">The one-line answer</a>
+    </details>
 
 2. An EBS volume is in `us-east-1a`. How do you use its data from an instance in `us-east-1b`?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   You cannot attach it across zones. Take a snapshot and create a new volume from it in the other zone. See: [Block storage](#block-storage)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    You cannot attach it across zones. Take a snapshot and create a new volume from it in the other zone. See: <a href="#block-storage">Block storage</a>
+    </details>
 
 3. Why are the slashes in an object key like `invoices/2026/` not real folders?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   They are just a shared prefix in the key. Consoles draw folders to be friendly, and renaming a folder means copying and deleting every object under it. See: [Object storage](#object-storage)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    They are just a shared prefix in the key. Consoles draw folders to be friendly, and renaming a folder means copying and deleting every object under it. See: <a href="#object-storage">Object storage</a>
+    </details>
 
 4. In the photo app, why did uploads go to object storage rather than the VMs' block disks?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   If uploads were stored on a VM's disk, a user could upload to VM A and then get a 404 from VM B. Object storage is reachable by every VM and by the browser. See: [A worked example](#a-worked-example)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    If uploads were stored on a VM's disk, a user could upload to VM A and then get a 404 from VM B. Object storage is reachable by every VM and by the browser. See: <a href="#a-worked-example">A worked example</a>
+    </details>

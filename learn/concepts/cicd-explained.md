@@ -168,36 +168,28 @@ Try these before you move on. Each answer is collapsed; click it to check yourse
 
 1. What is the difference between Continuous Delivery and Continuous Deployment?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   With Continuous Delivery a change that passes CI is ready to deploy but a human still chooses when. Continuous Deployment sends every passing change to production automatically. See: [Continuous Delivery](#continuous-delivery)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    With Continuous Delivery a change that passes CI is ready to deploy but a human still chooses when. Continuous Deployment sends every passing change to production automatically. See: <a href="#continuous-delivery">Continuous Delivery</a>
+    </details>
 
 2. What happens to a change if CI fails?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   The change is blocked from merging. See: [Continuous Integration](#continuous-integration)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    The change is blocked from merging. See: <a href="#continuous-integration">Continuous Integration</a>
+    </details>
 
 3. In a blue/green deployment, why is rollback instant?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   Two identical environments exist, and you switch traffic between them with DNS or the load balancer, so going back is just switching again. See: [Blue/Green](#bluegreen)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    Two identical environments exist, and you switch traffic between them with DNS or the load balancer, so going back is just switching again. See: <a href="#bluegreen">Blue/Green</a>
+    </details>
 
 4. Why is a 30-minute CI run a problem?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   Developers context-switch and lose momentum. The page suggests aiming for under 10 minutes. See: [Common pitfalls](#common-pitfalls)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    Developers context-switch and lose momentum. The page suggests aiming for under 10 minutes. See: <a href="#common-pitfalls">Common pitfalls</a>
+    </details>

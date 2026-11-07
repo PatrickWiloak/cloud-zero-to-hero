@@ -202,36 +202,28 @@ Try these before you move on. Each answer is collapsed; click it to check yourse
 
 1. What does `terraform plan` do, and why does the page call it the killer feature?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   It diffs your code against reality and shows exactly what will be created, modified or destroyed before you commit. See: [How it works](#how-it-works)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    It diffs your code against reality and shows exactly what will be created, modified or destroyed before you commit. See: <a href="#how-it-works">How it works</a>
+    </details>
 
 2. What does the state file do?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   It maps your code, such as `aws_s3_bucket.logs`, to real resources, tracks attributes not in your code, and lets `plan` know a resource already exists. See: [The state file](#the-state-file)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    It maps your code, such as <code>aws_s3_bucket.logs</code>, to real resources, tracks attributes not in your code, and lets <code>plan</code> know a resource already exists. See: <a href="#the-state-file">The state file</a>
+    </details>
 
 3. Why should you use a remote backend with locking?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   The lock prevents two engineers from running `apply` at once and corrupting state. See: [The state file](#the-state-file)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    The lock prevents two engineers from running <code>apply</code> at once and corrupting state. See: <a href="#the-state-file">The state file</a>
+    </details>
 
 4. Why does Terraform create the VPC before the subnet in the example?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   The subnet depends on the VPC, and Terraform builds a dependency graph automatically. See: [A small concrete example](#a-small-concrete-example)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    The subnet depends on the VPC, and Terraform builds a dependency graph automatically. See: <a href="#a-small-concrete-example">A small concrete example</a>
+    </details>

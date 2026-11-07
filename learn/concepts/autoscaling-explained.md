@@ -114,36 +114,28 @@ Try these before you move on. Each answer is collapsed; click it to check yourse
 
 1. Why is CPU a poor scaling signal for a queue-backed worker fleet, and what is a better one?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   Workers waiting on a slow downstream API show low CPU while the backlog grows for hours. Queue depth or message age is the correct signal. See: [What to scale on](#what-to-scale-on)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    Workers waiting on a slow downstream API show low CPU while the backlog grows for hours. Queue depth or message age is the correct signal. See: <a href="#what-to-scale-on">What to scale on</a>
+    </details>
 
 2. Why aim for a target of 60-70% CPU instead of 90%?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   You need headroom while new capacity is starting up. A 90% target leaves none. See: [The shape of a scaling policy](#the-shape-of-a-scaling-policy)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    You need headroom while new capacity is starting up. A 90% target leaves none. See: <a href="#the-shape-of-a-scaling-policy">The shape of a scaling policy</a>
+    </details>
 
 3. A cluster has an HPA but no node autoscaling. What happens when load keeps rising?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   The HPA adds pods, but they go Pending when no node has room, so scaling silently stops at the cluster's existing capacity. See: [Kubernetes specifics](#kubernetes-specifics)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    The HPA adds pods, but they go Pending when no node has room, so scaling silently stops at the cluster's existing capacity. See: <a href="#kubernetes-specifics">Kubernetes specifics</a>
+    </details>
 
 4. Why scale out fast and scale in slowly?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   Adding capacity you did not need costs a little money, while removing capacity you did need costs an outage. See: [The shape of a scaling policy](#the-shape-of-a-scaling-policy)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    Adding capacity you did not need costs a little money, while removing capacity you did need costs an outage. See: <a href="#the-shape-of-a-scaling-policy">The shape of a scaling policy</a>
+    </details>

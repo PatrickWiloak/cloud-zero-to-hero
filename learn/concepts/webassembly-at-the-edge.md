@@ -90,36 +90,28 @@ Try these before you move on. Each answer is collapsed; click it to check yourse
 
 1. What is WebAssembly, and what are its three stated goals?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   A compact, sandboxed binary format that many languages compile to. Its goals are fast (native speed), safe (memory-safe, sandboxed) and portable. See: [What Wasm is](#what-wasm-is)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    A compact, sandboxed binary format that many languages compile to. Its goals are fast (native speed), safe (memory-safe, sandboxed) and portable. See: <a href="#what-wasm-is">What Wasm is</a>
+    </details>
 
 2. Why does Wasm suit edge platforms that run code from many customers?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   Edge functions run untrusted code from many customers on the same machines and start on demand. That needs a sandbox and a small, fast-loading unit, and a Wasm module is both. See: [Why it suits the edge](#why-it-suits-the-edge)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    Edge functions run untrusted code from many customers on the same machines and start on demand. That needs a sandbox and a small, fast-loading unit, and a Wasm module is both. See: <a href="#why-it-suits-the-edge">Why it suits the edge</a>
+    </details>
 
 3. Name two limits of Wasm on Cloudflare Workers from the page.
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   Any two of: no threads, larger size and possibly slower startup, WASI being experimental with only some system calls. See: [A real platform: Cloudflare Workers](#a-real-platform-cloudflare-workers)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    Any two of: no threads, larger size and possibly slower startup, WASI being experimental with only some system calls. See: <a href="#a-real-platform-cloudflare-workers">A real platform: Cloudflare Workers</a>
+    </details>
 
 4. When should you not use Wasm at the edge?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   For ordinary header edits or redirects, where plain JavaScript edge functions are simpler. See: [When to use it](#when-to-use-it)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    For ordinary header edits or redirects, where plain JavaScript edge functions are simpler. See: <a href="#when-to-use-it">When to use it</a>
+    </details>

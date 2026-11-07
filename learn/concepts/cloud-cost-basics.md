@@ -107,36 +107,28 @@ Try these before you move on. Each answer is collapsed; click it to check yourse
 
 1. Name the five things almost every cloud bill breaks down into.
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   Compute, storage, network egress, requests and operations, and the managed service premium. See: [What you actually pay for](#what-you-actually-pay-for)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    Compute, storage, network egress, requests and operations, and the managed service premium. See: <a href="#what-you-actually-pay-for">What you actually pay for</a>
+    </details>
 
 2. Why is egress the most common surprise on a first serious bill?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   Nothing in a local development environment charges for network traffic and nothing warns you. See: [What you actually pay for](#what-you-actually-pay-for)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    Nothing in a local development environment charges for network traffic and nothing warns you. See: <a href="#what-you-actually-pay-for">What you actually pay for</a>
+    </details>
 
 3. Which pricing model fits a steady baseline, and which fits fault-tolerant batch work?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   Reserved instances or committed use (or savings plans) fit the steady baseline. Spot or preemptible fits fault-tolerant batch work, because it can be reclaimed with little notice. See: [The pricing models](#the-pricing-models)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    Reserved instances or committed use (or savings plans) fit the steady baseline. Spot or preemptible fits fault-tolerant batch work, because it can be reclaimed with little notice. See: <a href="#the-pricing-models">The pricing models</a>
+    </details>
 
 4. Why does the page say that a rising total bill is not automatically bad?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   If the bill rises while serving twice the traffic, efficiency is improving. Cost per unit of business value, such as cost per order, is the measure to track. See: [Unit economics](#unit-economics)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    If the bill rises while serving twice the traffic, efficiency is improving. Cost per unit of business value, such as cost per order, is the measure to track. See: <a href="#unit-economics">Unit economics</a>
+    </details>

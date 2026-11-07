@@ -142,36 +142,28 @@ Try these before you move on. Each answer is collapsed; click it to check yourse
 
 1. Why is the account described as the strongest isolation boundary a cloud provider offers?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   Permissions, quotas, billing and blast radius all stop at its edge by default, so using many accounts turns those defaults into free security and governance. See: [Why one account stops working](#why-one-account-stops-working)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    Permissions, quotas, billing and blast radius all stop at its edge by default, so using many accounts turns those defaults into free security and governance. See: <a href="#why-one-account-stops-working">Why one account stops working</a>
+    </details>
 
 2. Does an AWS SCP that allows S3 access give users S3 access?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   No. An SCP never grants permissions. It only sets the maximum the account's own IAM policies can allow, so a user needs an IAM allow and no SCP deny. See: [Guardrails: preventive and detective](#guardrails-preventive-and-detective)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    No. An SCP never grants permissions. It only sets the maximum the account's own IAM policies can allow, so a user needs an IAM allow and no SCP deny. See: <a href="#guardrails-preventive-and-detective">Guardrails: preventive and detective</a>
+    </details>
 
 3. Why does the region-blocking policy use `NotAction` to list services like IAM?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   It exempts global services, which would otherwise break when the policy denies requests outside the approved regions. See: [Worked example: a policy that blocks unapproved regions](#worked-example-a-policy-that-blocks-unapproved-regions)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    It exempts global services, which would otherwise break when the policy denies requests outside the approved regions. See: <a href="#worked-example-a-policy-that-blocks-unapproved-regions">Worked example: a policy that blocks unapproved regions</a>
+    </details>
 
 4. Why is running workloads in the management account a mistake?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   It is not constrained by SCPs and holds the keys to the whole organization. See: [Common mistakes](#common-mistakes)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    It is not constrained by SCPs and holds the keys to the whole organization. See: <a href="#common-mistakes">Common mistakes</a>
+    </details>

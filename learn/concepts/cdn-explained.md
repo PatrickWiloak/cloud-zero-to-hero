@@ -158,36 +158,28 @@ Try these before you move on. Each answer is collapsed; click it to check yourse
 
 1. What does a CDN do when a user requests an asset that its nearest PoP has not cached yet?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   The PoP has a cache miss and fetches the asset from the origin, then caches it. The next users in that region get a cache hit. See: [How it works](#how-it-works)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    The PoP has a cache miss and fetches the asset from the origin, then caches it. The next users in that region get a cache hit. See: <a href="#how-it-works">How it works</a>
+    </details>
 
 2. Name three things a CDN does besides caching.
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   Any three of: TLS termination, DDoS protection, WAF, edge compute, image optimization and smart routing. See: [What CDNs do besides caching](#what-cdns-do-besides-caching)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    Any three of: TLS termination, DDoS protection, WAF, edge compute, image optimization and smart routing. See: <a href="#what-cdns-do-besides-caching">What CDNs do besides caching</a>
+    </details>
 
 3. Why does appending a hash to a filename, like `app.a3b9.js`, avoid stale cache problems?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   A new version gets a new filename, so the CDN never serves the old cached copy for it. See: [Cache invalidation](#cache-invalidation)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    A new version gets a new filename, so the CDN never serves the old cached copy for it. See: <a href="#cache-invalidation">Cache invalidation</a>
+    </details>
 
 4. Why does the page say a CDN helps even though a user in Singapore could reach a US server?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   The speed of light is finite, so a long round trip is felt on every request. A nearby cache answers instead of crossing the planet to the origin. See: [Why this exists](#why-this-exists)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    The speed of light is finite, so a long round trip is felt on every request. A nearby cache answers instead of crossing the planet to the origin. See: <a href="#why-this-exists">Why this exists</a>
+    </details>

@@ -119,36 +119,28 @@ Try these before you move on. Each answer is collapsed; click it to check yourse
 
 1. What is the difference between push and pull deployment?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   In push, the pipeline runs `kubectl apply` or `helm upgrade` against the cluster and so holds cluster credentials. In pull, an agent inside the cluster watches a Git repository and applies changes itself. See: [Push vs pull](#push-vs-pull)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    In push, the pipeline runs <code>kubectl apply</code> or <code>helm upgrade</code> against the cluster and so holds cluster credentials. In pull, an agent inside the cluster watches a Git repository and applies changes itself. See: <a href="#push-vs-pull">Push vs pull</a>
+    </details>
 
 2. Which of the four principles separates GitOps from 'we keep our YAML in Git'?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   The fourth, continuous reconciliation. Agents keep comparing actual with desired state and correct differences, not just at deploy time. See: [The four principles](#the-four-principles)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    The fourth, continuous reconciliation. Agents keep comparing actual with desired state and correct differences, not just at deploy time. See: <a href="#the-four-principles">The four principles</a>
+    </details>
 
 3. Why is using the tag `latest` a problem in GitOps?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   Git says the same thing before and after, so nothing deploys. Use immutable version tags or digests. See: [Common mistakes](#common-mistakes)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    Git says the same thing before and after, so nothing deploys. Use immutable version tags or digests. See: <a href="#common-mistakes">Common mistakes</a>
+    </details>
 
 4. Git sets `replicas: 3` and an autoscaler scales to 10. What can happen?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   The agent may keep resetting it. Remove `replicas` from the manifest or tell the tool to ignore that field. See: [Common mistakes](#common-mistakes)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    The agent may keep resetting it. Remove <code>replicas</code> from the manifest or tell the tool to ignore that field. See: <a href="#common-mistakes">Common mistakes</a>
+    </details>

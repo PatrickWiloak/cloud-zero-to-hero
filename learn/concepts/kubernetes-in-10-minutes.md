@@ -201,36 +201,28 @@ Try these before you move on. Each answer is collapsed; click it to check yourse
 
 1. What is a pod, and why do most pods have one container?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   A pod is the smallest unit Kubernetes schedules: one or more containers that always run together on the same node, sharing network and storage. Multi-container pods are only for sidecars, which are helper containers such as logging agents. See: [Pod](#pod)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    A pod is the smallest unit Kubernetes schedules: one or more containers that always run together on the same node, sharing network and storage. Multi-container pods are only for sidecars, which are helper containers such as logging agents. See: <a href="#pod">Pod</a>
+    </details>
 
 2. What does it mean that Kubernetes is declarative?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   You describe the desired state, such as 5 replicas of an image with a CPU limit, rather than the steps. Kubernetes constantly reconciles reality with what you declared. See: [The mental model](#the-mental-model)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    You describe the desired state, such as 5 replicas of an image with a CPU limit, rather than the steps. Kubernetes constantly reconciles reality with what you declared. See: <a href="#the-mental-model">The mental model</a>
+    </details>
 
 3. Pods come and go. What gives clients a stable address to reach them?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   A Service, which is a stable network address for a set of pods and load-balances across the pod IPs. See: [Service](#service)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    A Service, which is a stable network address for a set of pods and load-balances across the pod IPs. See: <a href="#service">Service</a>
+    </details>
 
 4. Why does the page say Kubernetes is not a PaaS?
 
-   <details markdown="1">
-   <summary>Answer</summary>
-
-   It is a platform you build a PaaS on. You still manage upgrades, networking, observability and secrets. See: [What Kubernetes is NOT](#what-kubernetes-is-not)
-
-   </details>
+    <details>
+    <summary>Answer</summary>
+    It is a platform you build a PaaS on. You still manage upgrades, networking, observability and secrets. See: <a href="#what-kubernetes-is-not">What Kubernetes is NOT</a>
+    </details>
