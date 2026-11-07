@@ -777,3 +777,12 @@ A: Resource Manager drift detection
 ---
 
 **Congratulations on completing OCI Developer Associate study notes!**
+
+## Key terms
+
+- **OCI DevOps service** - the OCI service that provides code repositories, build pipelines and deployment pipelines.
+- **Build pipeline** - an OCI DevOps pipeline that compiles, tests and packages code into artifacts.
+- **Deployment pipeline** - an OCI DevOps pipeline that delivers artifacts to environments such as OKE or Functions.
+- **Resource Manager** - the OCI service that provisions infrastructure from Terraform configurations packaged as stacks.
+- **Log Analytics** - the OCI service for searching, analysing and visualising log data.
+- **Synthetic monitoring** - a way to measure application availability and performance by running scripted tests from vantage points.

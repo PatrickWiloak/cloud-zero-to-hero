@@ -407,3 +407,11 @@ After networking / firewall / SELinux changes:
 - `getenforce` shows expected mode (usually `Enforcing`)
 - `getsebool -a | grep <boolean>` shows expected `on`/`off`
 - After reboot, all of the above still hold
+
+## Key terms
+
+- **SELinux context** - the user, role, type and level label on a file or process that SELinux uses to decide access.
+- **SELinux boolean** - a switch, set with `setsebool`, that turns a policy behaviour on or off at runtime.
+- **`restorecon`** - resets a file's SELinux context to the default defined in policy.
+- **firewalld zone** - a named set of firewall rules applied to a network interface or source according to its trust level.
+- **`nmcli`** - the command-line tool for configuring NetworkManager connections.

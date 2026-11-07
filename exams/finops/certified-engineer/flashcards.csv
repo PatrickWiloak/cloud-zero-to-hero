@@ -1,0 +1,20 @@
+Question,Answer,Tags
+How long is the FinOps Certified Engineer exam?,60 minutes,exam-logistics
+How many questions are on the FinOps Certified Engineer exam?,50 multiple choice,exam-logistics
+What is the passing score for FinOps Certified Engineer?,70%,exam-logistics
+What does the FinOps Certified Engineer exam cost?,$300 USD,exam-logistics
+How long is FinOps Certified Engineer valid for?,2 years,exam-logistics
+How is the FinOps Certified Engineer exam delivered?,Online proctored,exam-logistics
+FOCUS (cloud cost data analytics),"the FinOps Open Cost and Usage Specification, a common format for cloud billing data across providers.","notes,cloud-cost-data-analytics"
+Cost allocation (cloud cost data analytics),"assigning cloud costs to teams, projects or products, usually by tags or account structure.","notes,cloud-cost-data-analytics"
+Unit economics (cloud cost data analytics),"cost measured against a business output, such as cost per customer or per transaction.","notes,cloud-cost-data-analytics"
+Cost and Usage Report (CUR) (cloud cost data analytics),the detailed AWS billing data export used for cost analysis.,"notes,cloud-cost-data-analytics"
+Right-size pods (rate and usage optimization),Match resource requests to actual usage,"notes,rate-and-usage-optimization"
+Cluster autoscaler (rate and usage optimization),Scale nodes based on pending pods,"notes,rate-and-usage-optimization"
+Spot/Preemptible nodes (rate and usage optimization),Use for fault-tolerant workloads,"notes,rate-and-usage-optimization"
+Resource quotas (rate and usage optimization),Prevent over-provisioning per namespace,"notes,rate-and-usage-optimization"
+Vertical Pod Autoscaler (rate and usage optimization),Auto-adjust pod resource requests,"notes,rate-and-usage-optimization"
+Rate optimization (rate and usage optimization),"paying less for the same resources, for example through commitment discounts or spot capacity.","notes,rate-and-usage-optimization"
+Usage optimization (rate and usage optimization),"using fewer or more appropriate resources, for example by rightsizing or removing waste.","notes,rate-and-usage-optimization"
+Rightsizing (rate and usage optimization),matching resource size to actual demand so you stop paying for unused capacity.,"notes,rate-and-usage-optimization"
+Commitment discount (rate and usage optimization),a lower rate given in return for committing to a level of usage or spend over a fixed term.,"notes,rate-and-usage-optimization"

@@ -1,0 +1,20 @@
+Question,Answer,Tags
+How long is the Oracle Cloud Infrastructure Operations Associate (1Z0-1067-24) exam?,90 minutes,exam-logistics
+How many questions are on the Oracle Cloud Infrastructure Operations Associate (1Z0-1067-24) exam?,55 questions,exam-logistics
+What is the passing score for Oracle Cloud Infrastructure Operations Associate (1Z0-1067-24)?,68%,exam-logistics
+What does the Oracle Cloud Infrastructure Operations Associate (1Z0-1067-24) exam cost?,$150 USD (may vary by region),exam-logistics
+How long is Oracle Cloud Infrastructure Operations Associate (1Z0-1067-24) valid for?,18 months (Oracle typically releases new exam versions annually),exam-logistics
+How is the Oracle Cloud Infrastructure Operations Associate (1Z0-1067-24) exam delivered?,Pearson VUE (online proctored or testing center),exam-logistics
+Compartment (infrastructure operations),a logical container in OCI used to organise resources and control access to them.,"notes,infrastructure-operations"
+Tag namespace (infrastructure operations),a container for tag keys that lets you apply defined tags to resources for cost tracking and governance.,"notes,infrastructure-operations"
+Resource Manager (infrastructure operations),the OCI service that provisions infrastructure from Terraform configurations packaged as stacks.,"notes,infrastructure-operations"
+Stack (infrastructure operations),the Resource Manager unit that holds a Terraform configuration and its variables.,"notes,infrastructure-operations"
+Boot volume backup (infrastructure operations),a point-in-time copy of an instance boot volume that can be used to restore or clone it.,"notes,infrastructure-operations"
+OK (monitoring troubleshooting),Metric below threshold,"notes,monitoring-troubleshooting"
+FIRING (monitoring troubleshooting),Alarm triggered (threshold exceeded),"notes,monitoring-troubleshooting"
+RESET (monitoring troubleshooting),"Was firing, now OK","notes,monitoring-troubleshooting"
+IAM policy (security cost management),a statement that grants a group permission to work with specific resources in a compartment or tenancy.,"notes,security-cost-management"
+Dynamic group (security cost management),"a group of compute instances or other resources that match rules, so they can be granted permissions as principals.","notes,security-cost-management"
+Audit service (security cost management),the OCI service that records API calls made to resources in a tenancy.,"notes,security-cost-management"
+Budget (security cost management),an OCI cost control that sets a spending target for a compartment and sends alerts when it is reached.,"notes,security-cost-management"
+Cost Analysis (security cost management),"the OCI tool for viewing and filtering spending by service, compartment or tag.","notes,security-cost-management"

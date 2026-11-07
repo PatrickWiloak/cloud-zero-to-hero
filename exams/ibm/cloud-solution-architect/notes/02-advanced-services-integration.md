@@ -1318,3 +1318,10 @@ ibm_edge_capabilities:
 5. Deploy serverless functions with triggers
 6. Set up API Gateway with security
 7. Explore OpenShift Operators and service mesh
+
+## Key terms
+
+- **IBM Cloud Satellite** - an IBM Cloud service that brings IBM Cloud services to on-premises, edge or other cloud locations.
+- **Event Streams** - the IBM Cloud managed Apache Kafka service for streaming events.
+- **Key Protect** - the IBM Cloud service for managing encryption keys.
+- **Activity Tracker** - the IBM Cloud service that records activity events on resources for auditing.

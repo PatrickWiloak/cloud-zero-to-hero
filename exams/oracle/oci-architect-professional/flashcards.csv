@@ -1,0 +1,24 @@
+Question,Answer,Tags
+How long is the Oracle Cloud Infrastructure Architect Professional (1Z0-997-24) exam?,120 minutes,exam-logistics
+How many questions are on the Oracle Cloud Infrastructure Architect Professional (1Z0-997-24) exam?,60 questions,exam-logistics
+What is the passing score for Oracle Cloud Infrastructure Architect Professional (1Z0-997-24)?,68%,exam-logistics
+What does the Oracle Cloud Infrastructure Architect Professional (1Z0-997-24) exam cost?,$245 USD,exam-logistics
+How long is Oracle Cloud Infrastructure Architect Professional (1Z0-997-24) valid for?,18 months (non-renewing),exam-logistics
+How is the Oracle Cloud Infrastructure Architect Professional (1Z0-997-24) exam delivered?,Pearson VUE (Testing center or online proctored),exam-logistics
+Geolocation (advanced architecture patterns),Route based on user location,"notes,advanced-architecture-patterns"
+Performance (advanced architecture patterns),Route to fastest responding region,"notes,advanced-architecture-patterns"
+Failover (advanced architecture patterns),Automatic region failover on health check failure,"notes,advanced-architecture-patterns"
+Load Balance (advanced architecture patterns),Distribute across regions,"notes,advanced-architecture-patterns"
+Oracle Kubernetes Engine (OKE) (advanced architecture patterns),the OCI managed Kubernetes service that runs and manages containerised applications.,"notes,advanced-architecture-patterns"
+OCI Functions (advanced architecture patterns),"the OCI serverless platform for running short-lived functions, based on the open source Fn Project.","notes,advanced-architecture-patterns"
+API Gateway (advanced architecture patterns),"the OCI service that publishes APIs and applies routing, authentication and rate limiting in front of backends.","notes,advanced-architecture-patterns"
+OCI Data Science (advanced architecture patterns),"the OCI platform for building, training and deploying machine learning models.","notes,advanced-architecture-patterns"
+OCI Data Catalog (advanced architecture patterns),the OCI service that harvests metadata so teams can discover and govern data assets.,"notes,advanced-architecture-patterns"
+Application Performance Monitoring (APM) (advanced architecture patterns),the OCI service that traces and measures application behaviour to find performance problems.,"notes,advanced-architecture-patterns"
+Dynamic Routing Gateway (DRG) (advanced networking security),a virtual router that connects VCNs to each other and to on-premises networks.,"notes,advanced-networking-security"
+Local peering gateway (LPG) (advanced networking security),a VCN component that peers two VCNs in the same region.,"notes,advanced-networking-security"
+FastConnect (advanced networking security),the OCI service that provides a dedicated private connection between your network and OCI.,"notes,advanced-networking-security"
+Network security group (NSG) (advanced networking security),a set of virtual firewall rules applied to chosen resources inside a VCN.,"notes,advanced-networking-security"
+Cloud Guard (advanced networking security),the OCI service that detects security problems and misconfigurations and can respond to them.,"notes,advanced-networking-security"
+OCI Vault (advanced networking security),the OCI service that manages encryption keys and secrets.,"notes,advanced-networking-security"
+Web Application Firewall (WAF) (advanced networking security),an OCI service that filters and blocks malicious web traffic to applications.,"notes,advanced-networking-security"

@@ -1044,3 +1044,14 @@ print(f"Percentage Remaining: {result['percentage_remaining']:.2f}%")
 - Create alert rules for Golden Signals
 - Calculate error budgets and SLO compliance
 - Build comprehensive observability dashboard
+
+## Key terms
+
+- **Four golden signals** - the four metrics to watch for any service: latency, traffic, errors and saturation.
+- **Service level indicator (SLI)** - a measured quantity of service behaviour, such as the share of requests that succeed.
+- **Service level objective (SLO)** - a target value or range for an SLI over a period of time.
+- **Service level agreement (SLA)** - a formal commitment to customers about service levels, usually with consequences if it is missed.
+- **Error budget** - the amount of unreliability an SLO allows, calculated as 100% minus the SLO target.
+- **OpenTelemetry** - an open source standard and set of tools for generating and collecting traces, metrics and logs.
+- **Distributed tracing** - following a single request across services to see where time is spent.
+- **IBM Cloud Monitoring** - the IBM Cloud service for collecting metrics and building dashboards and alerts, powered by Sysdig.

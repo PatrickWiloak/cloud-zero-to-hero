@@ -288,3 +288,11 @@ terraform destroy
 - [Binary Authorization](https://cloud.google.com/binary-authorization/docs)
 - [Terraform on GCP](https://cloud.google.com/docs/terraform)
 - [GitOps with Config Sync](https://cloud.google.com/kubernetes-engine/docs/add-on/config-sync)
+
+## Key terms
+
+- **Cloud Build** - the Google Cloud service that runs builds defined in steps, each run in a container.
+- **Artifact Registry** - the Google Cloud service for storing container images and language packages.
+- **Cloud Deploy** - the Google Cloud managed delivery service that promotes releases through a defined pipeline of targets.
+- **Binary Authorization** - a deploy-time control that allows only container images that carry required attestations.
+- **Blue/green deployment** - a release pattern that runs old and new versions side by side and switches traffic between them.

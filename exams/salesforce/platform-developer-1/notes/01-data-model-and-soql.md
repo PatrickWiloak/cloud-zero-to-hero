@@ -228,3 +228,11 @@ Useful for dynamic Apex that adapts to schema changes.
 - "Bulkify trigger" → Use Maps and Sets to gather IDs, do single SOQL outside loop
 - "Lock records to prevent concurrent updates" → `SELECT ... FOR UPDATE`
 - "Dynamic field reference" → Schema.getGlobalDescribe / DescribeSObjectResult
+
+## Key terms
+
+- **SOQL** - the Salesforce Object Query Language, used to read records from one object and its related objects.
+- **SOSL** - the Salesforce Object Search Language, used to search text across multiple objects at once.
+- **sObject** - the generic type for any Salesforce record, such as an Account or a custom object record.
+- **Master-detail relationship** - a tight parent-child link where the child inherits sharing from the parent and is deleted with it.
+- **Lookup relationship** - a loose link between two objects that does not make one depend on the other.

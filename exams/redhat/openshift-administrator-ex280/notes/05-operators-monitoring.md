@@ -324,3 +324,9 @@ After operator / monitoring changes:
 - `oc -n openshift-monitoring get pods` shows monitoring pods Running
 - For user workload monitoring: `oc -n openshift-user-workload-monitoring get pods` shows pods Running
 - The web console's monitoring views show metrics and alerts
+
+## Key terms
+
+- **Operator** - a controller that packages, deploys and manages an application on Kubernetes or OpenShift.
+- **Operator Lifecycle Manager (OLM)** - the component that installs, updates and manages Operators and their dependencies in a cluster.
+- **Subscription** - an OLM object that tracks an Operator's channel so it receives updates from a catalog.

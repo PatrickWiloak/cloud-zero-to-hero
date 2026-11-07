@@ -372,3 +372,12 @@ post-processors {
 - [ ] Know the most-used post-processors (manifest, checksum, docker-*, hcp-packer-registry)
 - [ ] Understand `on_error` options
 - [ ] Can filter provisioners with `only` and `except`
+
+## Key terms
+
+- **Provisioner** - a component that installs and configures software on the temporary machine before it is turned into an image.
+- **Post-processor** - a component that takes the artifact from a build and processes it further, for example by compressing or tagging it.
+- **`shell` provisioner** - runs shell scripts or inline commands on the machine being built.
+- **`file` provisioner** - uploads files or directories from the machine running Packer to the machine being built.
+- **`breakpoint` provisioner** - pauses a build until you confirm, which helps with debugging.
+- **`manifest` post-processor** - writes a JSON file that records the artifacts a build produced.

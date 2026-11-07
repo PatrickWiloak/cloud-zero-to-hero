@@ -391,3 +391,10 @@ After service / timer changes:
 - `systemctl list-timers` shows the timer with next-run time
 - `journalctl -u servicename -b` shows the service started cleanly
 - After reboot, all of the above still hold
+
+## Key terms
+
+- **systemd unit** - a configuration file that describes a service, socket, mount, timer or other resource managed by systemd.
+- **Target** - a systemd unit that groups other units and defines a system state, such as `multi-user.target`.
+- **`systemctl enable`** - makes a unit start automatically at boot.
+- **`journalctl`** - the command that reads logs collected by the systemd journal.

@@ -1,0 +1,18 @@
+Question,Answer,Tags
+How long is the Oracle Cloud Infrastructure Developer Associate (1Z0-1084-24) exam?,90 minutes,exam-logistics
+How many questions are on the Oracle Cloud Infrastructure Developer Associate (1Z0-1084-24) exam?,55 questions,exam-logistics
+What is the passing score for Oracle Cloud Infrastructure Developer Associate (1Z0-1084-24)?,68%,exam-logistics
+What does the Oracle Cloud Infrastructure Developer Associate (1Z0-1084-24) exam cost?,$150 USD (may vary by region),exam-logistics
+How long is Oracle Cloud Infrastructure Developer Associate (1Z0-1084-24) valid for?,18 months (Oracle typically releases new exam versions annually),exam-logistics
+How is the Oracle Cloud Infrastructure Developer Associate (1Z0-1084-24) exam delivered?,Pearson VUE (online proctored or testing center),exam-logistics
+Blue-green deployment (application deployment integration),a release pattern that runs old and new versions side by side and switches traffic between them.,"notes,application-deployment-integration"
+Canary deployment (application deployment integration),a release pattern that sends a small share of traffic to the new version before full rollout.,"notes,application-deployment-integration"
+OCI Streaming (application deployment integration),"the OCI service for ingesting and processing real-time data streams, compatible with Apache Kafka.","notes,application-deployment-integration"
+OCI Queue (application deployment integration),the OCI service for passing messages between application components asynchronously.,"notes,application-deployment-integration"
+Service Connector Hub (application deployment integration),"the OCI service that moves data between services, such as from Logging to Object Storage.","notes,application-deployment-integration"
+OCI DevOps service (devops monitoring),"the OCI service that provides code repositories, build pipelines and deployment pipelines.","notes,devops-monitoring"
+Build pipeline (devops monitoring),"an OCI DevOps pipeline that compiles, tests and packages code into artifacts.","notes,devops-monitoring"
+Deployment pipeline (devops monitoring),an OCI DevOps pipeline that delivers artifacts to environments such as OKE or Functions.,"notes,devops-monitoring"
+Resource Manager (devops monitoring),the OCI service that provisions infrastructure from Terraform configurations packaged as stacks.,"notes,devops-monitoring"
+Log Analytics (devops monitoring),"the OCI service for searching, analysing and visualising log data.","notes,devops-monitoring"
+Synthetic monitoring (devops monitoring),a way to measure application availability and performance by running scripted tests from vantage points.,"notes,devops-monitoring"

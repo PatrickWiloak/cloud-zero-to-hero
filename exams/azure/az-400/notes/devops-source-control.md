@@ -495,3 +495,10 @@ fi
 - Branch policies enforce quality
 - PRs enable collaboration and review
 - Protect main/master branch always
+
+## Key terms
+
+- **Branch policy** - a rule on a branch, such as required reviewers or a passing build, that must be met before a pull request can complete.
+- **Trunk-based development** - a branching strategy where developers merge small changes into one main branch frequently.
+- **Squash merge** - a merge that combines all commits of a branch into a single commit on the target branch.
+- **Git LFS** - an extension that stores large binary files outside the repository and keeps pointers in Git.

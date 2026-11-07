@@ -203,3 +203,16 @@ The Operate phase focuses on running FinOps as a continuous practice with govern
 4. **FinOps is cultural** - Always favor answers that emphasize collaboration and culture
 5. **Centralized team enables, not controls** - The FinOps team does not make decisions for other teams
 6. **Business value over cost cutting** - FinOps maximizes value, not just minimizes cost
+
+## Key terms
+
+- **FinOps** - a cloud financial management discipline and cultural practice that brings financial accountability to the variable spend model of cloud.
+- **Inform phase** - the FinOps phase that creates visibility into cloud spending through allocation, reporting and benchmarking.
+- **Optimize phase** - the FinOps phase that reduces cost through rate optimization and usage optimization.
+- **Operate phase** - the FinOps phase that puts governance, automation and continuous improvement in place.
+- **Rate optimization** - paying less for the same resources, for example through commitment discounts or spot capacity.
+- **Usage optimization** - using fewer or more appropriate resources, for example by rightsizing or removing waste.
+- **Showback** - reporting cloud costs back to the teams that incurred them without billing them.
+- **Chargeback** - billing the teams or business units that incurred cloud costs for what they used.
+- **Unit economics** - cost measured against a business output, such as cost per customer or per transaction.
+- **Maturity model (Crawl, Walk, Run)** - a way to rate how developed a FinOps capability is, starting small and improving step by step.

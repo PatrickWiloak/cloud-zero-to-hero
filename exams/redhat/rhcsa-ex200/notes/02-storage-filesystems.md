@@ -368,3 +368,12 @@ swapon --show
 - `mount` shows mount options as expected
 - `cat /proc/swaps` for swap
 - After reboot, all of the above still hold
+
+## Key terms
+
+- **Physical volume (PV)** - a disk or partition initialised for use by LVM.
+- **Volume group (VG)** - a pool of storage made from one or more physical volumes.
+- **Logical volume (LV)** - a flexible block device carved out of a volume group and used like a partition.
+- **`/etc/fstab`** - the file that lists filesystems to mount at boot.
+- **UUID** - a unique identifier for a filesystem, preferred over device names in fstab because it does not change.
+- **Swap** - disk space the kernel uses as overflow when physical memory is full.

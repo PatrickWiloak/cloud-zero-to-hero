@@ -663,3 +663,13 @@ jobs:
 - Canary = Gradual percentage rollout
 - Gates = Automated checks before deployment
 - IaC = Infrastructure in version control
+
+## Key terms
+
+- **Azure Pipelines** - the Azure DevOps service that builds, tests and deploys code using YAML or classic pipelines.
+- **Self-hosted agent** - a build agent you install and manage on your own machine instead of using a Microsoft-hosted one.
+- **Service connection** - a stored, secured link that lets a pipeline authenticate to an external service such as an Azure subscription.
+- **Environment** - a pipeline deployment target that supports approvals, checks and deployment history.
+- **Deployment slot** - a live staging instance of an App Service that can be swapped with production.
+- **Canary release** - a rollout pattern that sends a small share of traffic to the new version before full release.
+- **Variable group** - a shared set of variables, optionally linked to Key Vault, that multiple pipelines can use.

@@ -1,0 +1,23 @@
+Question,Answer,Tags
+How long is the Red Hat Certified Specialist in OpenShift Administration (EX280) exam?,3 hours,exam-logistics
+What is the passing score for Red Hat Certified Specialist in OpenShift Administration (EX280)?,210/300 (70%),exam-logistics
+What does the Red Hat Certified Specialist in OpenShift Administration (EX280) exam cost?,$500 USD,exam-logistics
+How long is Red Hat Certified Specialist in OpenShift Administration (EX280) valid for?,3 years,exam-logistics
+Project (projects quotas rbac),an OpenShift namespace with extra annotations that isolates a set of resources for a user or team.,"notes,projects-quotas-rbac"
+ResourceQuota (projects quotas rbac),"an object that caps the total resources, such as CPU, memory or object counts, that a project can use.","notes,projects-quotas-rbac"
+LimitRange (projects quotas rbac),an object that sets default and maximum resource requests and limits for containers in a project.,"notes,projects-quotas-rbac"
+Role binding (projects quotas rbac),"an object that grants the permissions of a role to a user, group or service account within a project.","notes,projects-quotas-rbac"
+Security context constraint (SCC) (projects quotas rbac),an OpenShift policy that controls what actions a pod may perform and what it can access.,"notes,projects-quotas-rbac"
+PersistentVolume (PV) (storage pv pvc),cluster-scoped storage resource (an actual disk / NFS share / cloud volume).,"notes,storage-pv-pvc"
+PersistentVolumeClaim (PVC) (storage pv pvc),namespace-scoped request for storage.,"notes,storage-pv-pvc"
+StorageClass (SC) (storage pv pvc),template for dynamically provisioning PVs.,"notes,storage-pv-pvc"
+CSI driver (storage pv pvc),Container Storage Interface driver that knows how to talk to the actual storage backend.,"notes,storage-pv-pvc"
+Delete (storage pv pvc),PV and underlying storage destroyed (typical for dynamic provisioning),"notes,storage-pv-pvc"
+Retain (storage pv pvc),PV kept; admin must manually clean up,"notes,storage-pv-pvc"
+Recycle (storage pv pvc),"deprecated, do not use","notes,storage-pv-pvc"
+Prometheus (operators monitoring),metrics collection,"notes,operators-monitoring"
+node-exporter (operators monitoring),per-node metrics,"notes,operators-monitoring"
+kube-state-metrics (operators monitoring),K8s object state metrics,"notes,operators-monitoring"
+Operator (operators monitoring),"a controller that packages, deploys and manages an application on Kubernetes or OpenShift.","notes,operators-monitoring"
+Operator Lifecycle Manager (OLM) (operators monitoring),"the component that installs, updates and manages Operators and their dependencies in a cluster.","notes,operators-monitoring"
+Subscription (operators monitoring),an OLM object that tracks an Operator's channel so it receives updates from a catalog.,"notes,operators-monitoring"

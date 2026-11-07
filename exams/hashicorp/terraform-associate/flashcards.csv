@@ -1,0 +1,27 @@
+Question,Answer,Tags
+How long is the HashiCorp Terraform Associate (003) Certification exam?,60 minutes,exam-logistics
+How many questions are on the HashiCorp Terraform Associate (003) Certification exam?,57 questions,exam-logistics
+What is the passing score for HashiCorp Terraform Associate (003) Certification?,70%,exam-logistics
+What does the HashiCorp Terraform Associate (003) Certification exam cost?,$70.50 USD,exam-logistics
+How long is HashiCorp Terraform Associate (003) Certification valid for?,2 years,exam-logistics
+terraform init (core workflow and advanced features),prepares a working directory by installing providers and modules and configuring the backend.,"notes,core-workflow-and-advanced-features"
+terraform plan (core workflow and advanced features),"compares configuration, state and real infrastructure and shows the changes Terraform would make.","notes,core-workflow-and-advanced-features"
+terraform apply (core workflow and advanced features),"carries out the planned changes to create, update or destroy infrastructure.","notes,core-workflow-and-advanced-features"
+terraform validate (core workflow and advanced features),checks that the configuration is syntactically valid and internally consistent without contacting remote services.,"notes,core-workflow-and-advanced-features"
+Provisioner (core workflow and advanced features),"a block that runs a script on a local or remote machine as part of resource creation or destruction, and is a last resort.","notes,core-workflow-and-advanced-features"
+Sentinel (core workflow and advanced features),HashiCorp's policy-as-code framework used in HCP Terraform to enforce rules on runs.,"notes,core-workflow-and-advanced-features"
+Input variable (hcl syntax and configuration),a declared parameter that lets callers customise a configuration or module without editing its code.,"notes,hcl-syntax-and-configuration"
+Output value (hcl syntax and configuration),a named value a module or configuration exposes after apply for users or other modules to read.,"notes,hcl-syntax-and-configuration"
+Local value (hcl syntax and configuration),"a named expression, declared in a locals block, that you reuse within a module.","notes,hcl-syntax-and-configuration"
+Data source (hcl syntax and configuration),a read-only block that fetches information defined outside the current configuration.,"notes,hcl-syntax-and-configuration"
+depends_on (hcl syntax and configuration),a meta-argument that declares an explicit dependency Terraform cannot infer from references.,"notes,hcl-syntax-and-configuration"
+count and for_each (hcl syntax and configuration),meta-arguments that create multiple instances of a resource or module from one block.,"notes,hcl-syntax-and-configuration"
+Sensitive variable (hcl syntax and configuration),a variable marked sensitive = true so Terraform hides its value in plan and apply output.,"notes,hcl-syntax-and-configuration"
+Deprecated as standalone command (state management),use terraform plan -refresh-only,"notes,state-management"
+State file (state management),the terraform.tfstate record that maps your configuration to the real infrastructure objects Terraform manages.,"notes,state-management"
+Remote backend (state management),a backend that stores state in a shared remote location such as S3 or HCP Terraform instead of on local disk.,"notes,state-management"
+State locking (state management),a backend feature that blocks concurrent operations so two runs cannot write the same state at once.,"notes,state-management"
+terraform import (state management),brings an existing real-world resource under Terraform management by writing it into state.,"notes,state-management"
+terraform state rm (state management),removes a resource from state without destroying the real infrastructure object.,"notes,state-management"
+Drift (state management),a difference between the real infrastructure and what the state and configuration describe.,"notes,state-management"
+Workspace (state management),"a named, separate state instance that lets one configuration manage multiple environments.","notes,state-management"

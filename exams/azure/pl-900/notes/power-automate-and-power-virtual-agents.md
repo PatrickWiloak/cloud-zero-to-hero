@@ -143,3 +143,14 @@ This domain covers Power Automate flow types, automation capabilities, Power Vir
 - Understand entities and their role in chatbots
 - Study bot analytics and monitoring
 - Learn how Power Virtual Agents integrates with Power Automate
+
+## Key terms
+
+- **Cloud flow** - a Power Automate flow that runs in the cloud and is started by an automatic, instant or scheduled trigger.
+- **Automated flow** - a cloud flow that starts when an event occurs, such as a new email arriving.
+- **Instant flow** - a cloud flow that a user starts manually, for example with a button.
+- **Scheduled flow** - a cloud flow that runs at set times or intervals.
+- **Desktop flow** - a Power Automate flow that automates actions in desktop applications, known as robotic process automation.
+- **Connector** - a wrapper around a service's API that lets apps and flows work with that service.
+- **Premium connector** - a connector that needs a paid Power Platform licence rather than one included with Microsoft 365.
+- **AI Builder** - a Power Platform capability that adds AI models, such as form processing, to apps and flows.

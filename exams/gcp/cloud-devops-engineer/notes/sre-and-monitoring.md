@@ -330,3 +330,14 @@ def forecast_capacity(historical_usage, days_ahead=90):
 - [Cloud Monitoring Documentation](https://cloud.google.com/monitoring/docs)
 - [SRE Workbook](https://sre.google/workbook/table-of-contents/)
 - [Incident Management Guide](https://cloud.google.com/architecture/devops/devops-process-incident-management)
+
+## Key terms
+
+- **Service level indicator (SLI)** - a measured quantity of service behaviour, such as the share of requests that succeed.
+- **Service level objective (SLO)** - a target value or range for an SLI over a period of time.
+- **Error budget** - the amount of unreliability an SLO allows, calculated as 100% minus the SLO target.
+- **Toil** - manual, repetitive, automatable work with no lasting value that grows with service size.
+- **Blameless postmortem** - a written review of an incident that focuses on causes and fixes rather than on individuals.
+- **Cloud Monitoring** - the Google Cloud service for metrics, dashboards, uptime checks and alerting policies.
+- **Cloud Logging** - the Google Cloud service that stores, searches and routes log entries.
+- **Cloud Trace** - the Google Cloud service that collects latency data to show how requests move through an application.

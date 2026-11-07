@@ -3318,3 +3318,12 @@ kubectl rollout undo deployment/NAME
 - [Cloud Run Deployment](https://cloud.google.com/run/docs/deploying)
 - [GKE Deployment Strategies](https://cloud.google.com/kubernetes-engine/docs/concepts/deployment)
 - [OpenTelemetry on GCP](https://cloud.google.com/learn/what-is-opentelemetry)
+
+## Key terms
+
+- **Cloud Monitoring** - the Google Cloud service for metrics, dashboards, uptime checks and alerting.
+- **Cloud Trace** - the Google Cloud service that collects latency data to show how requests move through an application.
+- **Error Reporting** - the Google Cloud service that groups and surfaces application errors and exceptions.
+- **Cloud Profiler** - the Google Cloud service that continuously profiles CPU and memory use in production applications.
+- **Log-based metric** - a metric that Cloud Logging computes from the log entries that match a filter.
+- **Structured logging** - writing log entries as JSON so fields can be filtered and queried.

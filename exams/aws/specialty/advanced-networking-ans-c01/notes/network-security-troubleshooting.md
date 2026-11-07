@@ -816,3 +816,12 @@ cloudwatch.put_metric_alarm(
 - Enable Shield Advanced for critical resources
 - Regular security audits
 - Document network architecture
+
+## Key terms
+
+- **Network ACL** - a stateless, subnet-level firewall with numbered allow and deny rules.
+- **Security group** - a stateful, instance-level firewall that supports allow rules only.
+- **VPC Flow Logs** - a feature that records IP traffic metadata for network interfaces, subnets or VPCs.
+- **Reachability Analyzer** - a tool that tests whether a path between two resources is reachable and finds the blocking component.
+- **AWS Network Firewall** - a managed, stateful network firewall and intrusion prevention service for VPCs.
+- **Traffic Mirroring** - a feature that copies network traffic from an elastic network interface to a monitoring appliance.

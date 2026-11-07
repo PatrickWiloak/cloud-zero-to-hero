@@ -1575,3 +1575,14 @@ spec:
 5. Build HA application with auto-scaling
 6. Design and implement DR solution
 7. Create architectural decision records (ADRs)
+
+## Key terms
+
+- **Twelve-factor app** - a set of twelve principles for building portable, scalable software-as-a-service applications.
+- **Architecture decision record (ADR)** - a short document that records an architectural decision, its context and its consequences.
+- **Microservices** - an architecture that builds an application from small, independently deployable services.
+- **Event-driven architecture** - a design in which components communicate by producing and reacting to events.
+- **Circuit breaker pattern** - a pattern that stops calls to a failing service for a while so failures do not cascade.
+- **Bulkhead pattern** - a pattern that isolates resources for different parts of a system so a failure in one does not exhaust the others.
+- **Multi-cloud** - using cloud services from more than one provider.
+- **Well-Architected Framework** - a set of design principles and review questions for judging the quality of a cloud architecture.

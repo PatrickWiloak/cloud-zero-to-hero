@@ -343,3 +343,13 @@ resource "aws_instance" "web" {
 - `-migrate-state` vs `-reconfigure` during backend changes
 - Remote state data source for cross-project references
 - The `cloud` block replaces the `remote` backend for Terraform Cloud
+
+## Key terms
+
+- **State file** - the `terraform.tfstate` record that maps your configuration to the real infrastructure objects Terraform manages.
+- **Remote backend** - a backend that stores state in a shared remote location such as S3 or HCP Terraform instead of on local disk.
+- **State locking** - a backend feature that blocks concurrent operations so two runs cannot write the same state at once.
+- **`terraform import`** - brings an existing real-world resource under Terraform management by writing it into state.
+- **`terraform state rm`** - removes a resource from state without destroying the real infrastructure object.
+- **Drift** - a difference between the real infrastructure and what the state and configuration describe.
+- **Workspace** - a named, separate state instance that lets one configuration manage multiple environments.

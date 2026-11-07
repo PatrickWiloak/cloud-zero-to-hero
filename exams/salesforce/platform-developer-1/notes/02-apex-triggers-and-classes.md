@@ -211,3 +211,11 @@ This blocks the operation and returns a user-friendly error - cleaner than throw
 - "Multiple triggers on Account doing different things" → consolidate into one trigger + dispatcher pattern
 - "Catch DML failure and continue" → `Database.insert(records, false)` returns SaveResult[] without throwing on partial failure
 - "Custom error message" → `addError()` (in before-trigger context) or throw custom exception
+
+## Key terms
+
+- **Apex trigger** - code that runs before or after a record is inserted, updated, deleted or undeleted.
+- **Before trigger** - a trigger that runs before records are saved, used to validate or change values on the records themselves.
+- **After trigger** - a trigger that runs after records are saved, used to act on related records or on values set by the system.
+- **Bulkification** - writing code to handle many records in one run instead of one at a time, to stay within governor limits.
+- **Governor limits** - runtime limits that Salesforce enforces on Apex so that no one tenant uses too many shared resources.

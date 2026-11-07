@@ -1,0 +1,24 @@
+Question,Answer,Tags
+How long is the HashiCorp Packer Associate (003) Certification exam?,60 minutes,exam-logistics
+How many questions are on the HashiCorp Packer Associate (003) Certification exam?,57,exam-logistics
+What is the passing score for HashiCorp Packer Associate (003) Certification?,Approximately 70% (HashiCorp does not publish exact cut score),exam-logistics
+What does the HashiCorp Packer Associate (003) Certification exam cost?,$70.50 USD,exam-logistics
+How long is HashiCorp Packer Associate (003) Certification valid for?,2 years,exam-logistics
+How is the HashiCorp Packer Associate (003) Certification exam delivered?,"Online proctored (PSI), multiple-choice and multi-select",exam-logistics
+Packer (packer fundamentals),a HashiCorp tool that builds identical machine images for multiple platforms from a single template.,"notes,packer-fundamentals"
+Template (packer fundamentals),"the HCL2 configuration that tells Packer what to build, how to provision it and what to do with the result.","notes,packer-fundamentals"
+Source block (packer fundamentals),"a block that defines a reusable builder configuration, such as an Amazon EBS or Docker source.","notes,packer-fundamentals"
+Build block (packer fundamentals),"a block that lists the sources to build, the provisioners to run and the post-processors to apply.","notes,packer-fundamentals"
+Artifact (packer fundamentals),"the output of a build, such as an AMI ID or a container image.","notes,packer-fundamentals"
+packer init (packer fundamentals),installs the plugins declared in the required_plugins block.,"notes,packer-fundamentals"
+packer validate (packer fundamentals),checks that a template is syntactically valid and correctly configured.,"notes,packer-fundamentals"
+packer fmt (packer fundamentals),rewrites template files into the canonical HCL2 format.,"notes,packer-fundamentals"
+Builder (builders and sources),"a plugin component that creates a machine, runs the build and produces an image for a specific platform.","notes,builders-and-sources"
+Communicator (builders and sources),"the mechanism, such as SSH or WinRM, that Packer uses to talk to the machine it is building.","notes,builders-and-sources"
+HCP Packer (builders and sources),"the HashiCorp Cloud Platform registry that tracks image metadata, versions and channels.","notes,builders-and-sources"
+Provisioner (provisioners and post processors),a component that installs and configures software on the temporary machine before it is turned into an image.,"notes,provisioners-and-post-processors"
+Post-processor (provisioners and post processors),"a component that takes the artifact from a build and processes it further, for example by compressing or tagging it.","notes,provisioners-and-post-processors"
+shell provisioner (provisioners and post processors),runs shell scripts or inline commands on the machine being built.,"notes,provisioners-and-post-processors"
+file provisioner (provisioners and post processors),uploads files or directories from the machine running Packer to the machine being built.,"notes,provisioners-and-post-processors"
+breakpoint provisioner (provisioners and post processors),"pauses a build until you confirm, which helps with debugging.","notes,provisioners-and-post-processors"
+manifest post-processor (provisioners and post processors),writes a JSON file that records the artifacts a build produced.,"notes,provisioners-and-post-processors"

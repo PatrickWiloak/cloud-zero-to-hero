@@ -204,3 +204,10 @@ Rate optimization focuses on reducing the unit cost of cloud resources by levera
 6. **Payment options affect discount level** - All Upfront gives highest discount
 7. **1-year vs 3-year tradeoff** - 3-year gives more savings but more risk
 8. **Monitor utilization** - Unused commitments are wasted money
+
+## Key terms
+
+- **Reserved Instance (RI)** - a commitment to a specific instance configuration for one or three years in return for a discounted rate.
+- **Savings Plan** - an AWS commitment to a consistent hourly spend for one or three years in return for a discounted rate.
+- **Compute Savings Plan** - the most flexible AWS Savings Plan, which applies across instance families, Regions and compute services.
+- **Spot instance** - spare cloud capacity sold at a deep discount that the provider can reclaim at short notice.

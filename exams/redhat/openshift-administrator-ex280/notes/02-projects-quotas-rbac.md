@@ -341,3 +341,11 @@ After RBAC / quota / identity changes:
 - `oc -n <project> describe quota` shows current usage vs limit
 - `oc login -u <user>` succeeds with correct password
 - `oc get user`, `oc get identity` show expected entries
+
+## Key terms
+
+- **Project** - an OpenShift namespace with extra annotations that isolates a set of resources for a user or team.
+- **ResourceQuota** - an object that caps the total resources, such as CPU, memory or object counts, that a project can use.
+- **LimitRange** - an object that sets default and maximum resource requests and limits for containers in a project.
+- **Role binding** - an object that grants the permissions of a role to a user, group or service account within a project.
+- **Security context constraint (SCC)** - an OpenShift policy that controls what actions a pod may perform and what it can access.

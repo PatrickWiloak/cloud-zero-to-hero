@@ -354,3 +354,12 @@ terraform untaint aws_instance.web
 - `TF_LOG=TRACE` is the most verbose logging level
 - `terraform apply -replace` replaces `terraform taint`
 - `terraform plan -refresh-only` replaces `terraform refresh`
+
+## Key terms
+
+- **`terraform init`** - prepares a working directory by installing providers and modules and configuring the backend.
+- **`terraform plan`** - compares configuration, state and real infrastructure and shows the changes Terraform would make.
+- **`terraform apply`** - carries out the planned changes to create, update or destroy infrastructure.
+- **`terraform validate`** - checks that the configuration is syntactically valid and internally consistent without contacting remote services.
+- **Provisioner** - a block that runs a script on a local or remote machine as part of resource creation or destruction, and is a last resort.
+- **Sentinel** - HashiCorp's policy-as-code framework used in HCP Terraform to enforce rules on runs.

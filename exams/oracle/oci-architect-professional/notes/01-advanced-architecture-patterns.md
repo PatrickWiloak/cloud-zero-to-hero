@@ -591,3 +591,12 @@ A: API Gateway + autoscaling instance pools + caching
 ---
 
 **Next**: Advanced Networking and Security
+
+## Key terms
+
+- **Oracle Kubernetes Engine (OKE)** - the OCI managed Kubernetes service that runs and manages containerised applications.
+- **OCI Functions** - the OCI serverless platform for running short-lived functions, based on the open source Fn Project.
+- **API Gateway** - the OCI service that publishes APIs and applies routing, authentication and rate limiting in front of backends.
+- **OCI Data Science** - the OCI platform for building, training and deploying machine learning models.
+- **OCI Data Catalog** - the OCI service that harvests metadata so teams can discover and govern data assets.
+- **Application Performance Monitoring (APM)** - the OCI service that traces and measures application behaviour to find performance problems.

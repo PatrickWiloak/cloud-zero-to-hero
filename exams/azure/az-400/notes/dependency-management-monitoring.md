@@ -244,3 +244,10 @@ exceptions
 - Alerts = Proactive notifications
 - Dashboards = Visualize metrics
 - Continuous feedback = Improve based on data
+
+## Key terms
+
+- **Azure Artifacts** - the Azure DevOps service for hosting NuGet, npm, Maven and Python packages in feeds.
+- **Application Insights** - the Azure Monitor feature that collects application telemetry such as requests, dependencies and exceptions.
+- **Log Analytics workspace** - the store where Azure Monitor collects log data that you query with KQL.
+- **KQL** - the Kusto Query Language used to query logs in Azure Monitor.

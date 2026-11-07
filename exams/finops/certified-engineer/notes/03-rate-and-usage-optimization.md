@@ -199,3 +199,10 @@ Implement lifecycle policies:
 - **Monthly:** Right-sizing recommendations and waste elimination
 - **Quarterly:** Commitment coverage review and purchasing
 - **Annually:** Architecture review and major optimization initiatives
+
+## Key terms
+
+- **Rate optimization** - paying less for the same resources, for example through commitment discounts or spot capacity.
+- **Usage optimization** - using fewer or more appropriate resources, for example by rightsizing or removing waste.
+- **Rightsizing** - matching resource size to actual demand so you stop paying for unused capacity.
+- **Commitment discount** - a lower rate given in return for committing to a level of usage or spend over a fixed term.

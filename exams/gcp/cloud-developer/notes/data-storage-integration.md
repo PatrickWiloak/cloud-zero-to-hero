@@ -3920,3 +3920,13 @@ def operation_with_backoff():
 - [Bigtable Schema Design](https://cloud.google.com/bigtable/docs/schema-design)
 - [Cloud Spanner Best Practices](https://docs.cloud.google.com/spanner/docs/sql-best-practices)
 - [Professional Cloud Developer Exam Guide](https://cloud.google.com/certification/cloud-developer)
+
+## Key terms
+
+- **Cloud Storage** - the Google Cloud object storage service for unstructured data, organised in buckets.
+- **Firestore** - a Google Cloud serverless NoSQL document database.
+- **Cloud Spanner** - a Google Cloud relational database that offers horizontal scaling and strong consistency across regions.
+- **Bigtable** - a Google Cloud wide-column NoSQL database for large, low-latency analytical and operational workloads.
+- **Memorystore** - the Google Cloud managed in-memory caching service for Redis and Memcached.
+- **Pub/Sub** - the Google Cloud messaging service that decouples senders from receivers using topics and subscriptions.
+- **Dead-letter topic** - a Pub/Sub topic that receives messages that could not be delivered after a set number of attempts.

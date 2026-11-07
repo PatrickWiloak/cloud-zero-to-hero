@@ -864,3 +864,11 @@ A: Events Service → Functions or Streaming
 ---
 
 **Next**: DevOps and Monitoring
+
+## Key terms
+
+- **Blue-green deployment** - a release pattern that runs old and new versions side by side and switches traffic between them.
+- **Canary deployment** - a release pattern that sends a small share of traffic to the new version before full rollout.
+- **OCI Streaming** - the OCI service for ingesting and processing real-time data streams, compatible with Apache Kafka.
+- **OCI Queue** - the OCI service for passing messages between application components asynchronously.
+- **Service Connector Hub** - the OCI service that moves data between services, such as from Logging to Object Storage.

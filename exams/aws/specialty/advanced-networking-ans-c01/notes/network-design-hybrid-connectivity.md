@@ -700,3 +700,15 @@ Resources:
 - Document network architecture
 - Use Transit Gateway for complex topologies
 - VPN as backup for Direct Connect
+
+## Key terms
+
+- **Transit Gateway** - a regional hub that connects VPCs and on-premises networks through attachments and route tables.
+- **Direct Connect gateway** - a global resource that connects a Direct Connect connection to VPCs or transit gateways in multiple Regions.
+- **Virtual interface (VIF)** - a Direct Connect logical interface; private reaches VPCs, public reaches AWS public services, and transit reaches transit gateways.
+- **Site-to-Site VPN** - an IPsec connection between your network and AWS, with two tunnels per connection for redundancy.
+- **VPC peering** - a one-to-one private connection between two VPCs that does not support transitive routing.
+- **Gateway Load Balancer** - a load balancer that distributes traffic to virtual appliances such as firewalls, using GENEVE encapsulation.
+- **AWS Cloud WAN** - a managed service that builds a global network with a core network policy and segments.
+- **Route 53 Resolver endpoint** - an inbound or outbound endpoint that forwards DNS queries between a VPC and an on-premises network.
+- **PrivateLink** - a service that exposes a service privately to other VPCs through interface endpoints, without internet access or peering.

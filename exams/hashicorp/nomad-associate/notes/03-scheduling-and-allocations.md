@@ -333,3 +333,14 @@ Restart is first; once restarts exhausted, reschedule engages.
 - [ ] Can drain a node and understand migrate behavior
 - [ ] Know constraints vs affinities vs spreads
 - [ ] Understand `nomad job plan` output
+
+## Key terms
+
+- **Job** - the top-level unit of work that a user submits to Nomad, made up of one or more task groups.
+- **Task group** - a set of tasks that are always placed together on the same client node.
+- **Allocation** - a mapping of a task group to a client node, created by the scheduler.
+- **Evaluation** - the process Nomad uses to decide what changes are needed for a job and to create a plan.
+- **Service job** - a long-running job type, such as a web server, that Nomad keeps running.
+- **Batch job** - a job type for short-lived tasks that run to completion.
+- **System job** - a job type that runs one allocation on every eligible client node.
+- **Canary** - a new-version allocation started alongside the old version so it can be checked before a full rollout.

@@ -3585,3 +3585,10 @@ gcloud deployment-manager deployments create DEPLOYMENT_NAME \
 - [Terraform Modules](https://github.com/terraform-google-modules)
 - [Packer GCP Builder](https://www.packer.io/plugins/builders/googlecompute)
 - [Ansible GCP Collection](https://docs.ansible.com/ansible/latest/collections/google/cloud/index.html)
+
+## Key terms
+
+- **Terraform** - an infrastructure as code tool that provisions resources from declarative configuration files.
+- **Config Connector** - a Kubernetes add-on that manages Google Cloud resources through Kubernetes custom resources.
+- **Deployment Manager** - the older Google Cloud service that creates resources from YAML templates.
+- **Infrastructure as code** - managing infrastructure through versioned, reviewable definition files instead of manual changes.

@@ -750,3 +750,11 @@ A: List volumes with AVAILABLE state and no attachments
 ---
 
 **Congratulations on completing OCI Operations Associate study notes!**
+
+## Key terms
+
+- **IAM policy** - a statement that grants a group permission to work with specific resources in a compartment or tenancy.
+- **Dynamic group** - a group of compute instances or other resources that match rules, so they can be granted permissions as principals.
+- **Audit service** - the OCI service that records API calls made to resources in a tenancy.
+- **Budget** - an OCI cost control that sets a spending target for a compartment and sends alerts when it is reached.
+- **Cost Analysis** - the OCI tool for viewing and filtering spending by service, compartment or tag.

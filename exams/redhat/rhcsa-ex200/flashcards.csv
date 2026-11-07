@@ -1,0 +1,30 @@
+Question,Answer,Tags
+How long is the Red Hat Certified System Administrator (RHCSA) - EX200 exam?,3 hours,exam-logistics
+What is the passing score for Red Hat Certified System Administrator (RHCSA) - EX200?,210 / 300 (70%),exam-logistics
+What does the Red Hat Certified System Administrator (RHCSA) - EX200 exam cost?,$500 USD,exam-logistics
+How long is Red Hat Certified System Administrator (RHCSA) - EX200 valid for?,3 years,exam-logistics
+MBR (storage filesystems),"max 4 primary partitions, 2 TB limit. Use for legacy BIOS systems.","notes,storage-filesystems"
+GPT (storage filesystems),"many partitions, no size limit. Default on modern UEFI systems.","notes,storage-filesystems"
+Physical volume (PV) (storage filesystems),a disk or partition initialised for use by LVM.,"notes,storage-filesystems"
+Volume group (VG) (storage filesystems),a pool of storage made from one or more physical volumes.,"notes,storage-filesystems"
+Logical volume (LV) (storage filesystems),a flexible block device carved out of a volume group and used like a partition.,"notes,storage-filesystems"
+/etc/fstab (storage filesystems),the file that lists filesystems to mount at boot.,"notes,storage-filesystems"
+UUID (storage filesystems),"a unique identifier for a filesystem, preferred over device names in fstab because it does not change.","notes,storage-filesystems"
+Swap (storage filesystems),disk space the kernel uses as overflow when physical memory is full.,"notes,storage-filesystems"
+SUID (users groups permissions),a permission bit that makes an executable run with the file owner's privileges.,"notes,users-groups-permissions"
+SGID (users groups permissions),"a permission bit that makes new files in a directory inherit its group, or runs an executable with the file's group.","notes,users-groups-permissions"
+Sticky bit (users groups permissions),a directory permission that lets only a file's owner or the directory owner delete or rename files inside.,"notes,users-groups-permissions"
+umask (users groups permissions),the mask that removes permission bits from newly created files and directories.,"notes,users-groups-permissions"
+Access control list (ACL) (users groups permissions),"an extended permission entry that grants access to specific users or groups beyond owner, group and other.","notes,users-groups-permissions"
+systemd unit (services systemd),"a configuration file that describes a service, socket, mount, timer or other resource managed by systemd.","notes,services-systemd"
+Target (services systemd),"a systemd unit that groups other units and defines a system state, such as multi-user.target.","notes,services-systemd"
+systemctl enable (services systemd),makes a unit start automatically at boot.,"notes,services-systemd"
+journalctl (services systemd),the command that reads logs collected by the systemd journal.,"notes,services-systemd"
+Enforcing (networking security selinux),SELinux enforces policy. Default.,"notes,networking-security-selinux"
+Permissive (networking security selinux),SELinux logs violations but allows them. Useful for diagnosis.,"notes,networking-security-selinux"
+Disabled (networking security selinux),SELinux off entirely. Avoid; never the right answer on the exam.,"notes,networking-security-selinux"
+SELinux context (networking security selinux),"the user, role, type and level label on a file or process that SELinux uses to decide access.","notes,networking-security-selinux"
+SELinux boolean (networking security selinux),"a switch, set with setsebool, that turns a policy behaviour on or off at runtime.","notes,networking-security-selinux"
+restorecon (networking security selinux),resets a file's SELinux context to the default defined in policy.,"notes,networking-security-selinux"
+firewalld zone (networking security selinux),a named set of firewall rules applied to a network interface or source according to its trust level.,"notes,networking-security-selinux"
+nmcli (networking security selinux),the command-line tool for configuring NetworkManager connections.,"notes,networking-security-selinux"

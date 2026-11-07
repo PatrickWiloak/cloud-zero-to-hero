@@ -792,3 +792,13 @@ A: Built-in L3/4 + WAF for L7 + Rate limiting
 ---
 
 **Next**: Advanced Services and Optimization
+
+## Key terms
+
+- **Dynamic Routing Gateway (DRG)** - a virtual router that connects VCNs to each other and to on-premises networks.
+- **Local peering gateway (LPG)** - a VCN component that peers two VCNs in the same region.
+- **FastConnect** - the OCI service that provides a dedicated private connection between your network and OCI.
+- **Network security group (NSG)** - a set of virtual firewall rules applied to chosen resources inside a VCN.
+- **Cloud Guard** - the OCI service that detects security problems and misconfigurations and can respond to them.
+- **OCI Vault** - the OCI service that manages encryption keys and secrets.
+- **Web Application Firewall (WAF)** - an OCI service that filters and blocks malicious web traffic to applications.

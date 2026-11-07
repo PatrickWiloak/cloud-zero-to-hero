@@ -189,3 +189,10 @@ Level 1: Executive (total spend, trend, top 5 services)
     Level 3: Service (per-service cost, utilization)
       Level 4: Resource (individual resource cost and metrics)
 ```
+
+## Key terms
+
+- **FOCUS** - the FinOps Open Cost and Usage Specification, a common format for cloud billing data across providers.
+- **Cost allocation** - assigning cloud costs to teams, projects or products, usually by tags or account structure.
+- **Unit economics** - cost measured against a business output, such as cost per customer or per transaction.
+- **Cost and Usage Report (CUR)** - the detailed AWS billing data export used for cost analysis.

@@ -1,0 +1,22 @@
+Question,Answer,Tags
+How long is the HashiCorp Nomad Associate Certification exam?,60 minutes,exam-logistics
+How many questions are on the HashiCorp Nomad Associate Certification exam?,57,exam-logistics
+What is the passing score for HashiCorp Nomad Associate Certification?,~70% (HashiCorp reports pass or fail),exam-logistics
+What does the HashiCorp Nomad Associate Certification exam cost?,$70.50 USD,exam-logistics
+How long is HashiCorp Nomad Associate Certification valid for?,2 years,exam-logistics
+How is the HashiCorp Nomad Associate Certification exam delivered?,"Online proctored (PSI), multi-choice and multi-select",exam-logistics
+Server agent (nomad architecture),"a Nomad agent that maintains cluster state, takes part in Raft and makes scheduling decisions.","notes,nomad-architecture"
+Client agent (nomad architecture),a Nomad agent that registers with the servers and runs the tasks allocated to its node.,"notes,nomad-architecture"
+Raft (nomad architecture),the consensus protocol Nomad servers use to replicate state and elect a leader.,"notes,nomad-architecture"
+Region (nomad architecture),"a Nomad cluster boundary that holds its own servers and state, and can be federated with other regions.","notes,nomad-architecture"
+Datacenter (nomad architecture),"a grouping of client nodes inside a region, used to place jobs.","notes,nomad-architecture"
+Gossip protocol (nomad architecture),the Serf-based protocol servers use to discover each other and detect failures.,"notes,nomad-architecture"
+Job (scheduling and allocations),"the top-level unit of work that a user submits to Nomad, made up of one or more task groups.","notes,scheduling-and-allocations"
+Task group (scheduling and allocations),a set of tasks that are always placed together on the same client node.,"notes,scheduling-and-allocations"
+Allocation (scheduling and allocations),"a mapping of a task group to a client node, created by the scheduler.","notes,scheduling-and-allocations"
+Evaluation (scheduling and allocations),the process Nomad uses to decide what changes are needed for a job and to create a plan.,"notes,scheduling-and-allocations"
+Service job (scheduling and allocations),"a long-running job type, such as a web server, that Nomad keeps running.","notes,scheduling-and-allocations"
+Batch job (scheduling and allocations),a job type for short-lived tasks that run to completion.,"notes,scheduling-and-allocations"
+System job (scheduling and allocations),a job type that runs one allocation on every eligible client node.,"notes,scheduling-and-allocations"
+Canary (scheduling and allocations),a new-version allocation started alongside the old version so it can be checked before a full rollout.,"notes,scheduling-and-allocations"
+"deny, read, write (acl security and federation)","Covers client node management (drain, update eligibility)","notes,acl-security-and-federation"

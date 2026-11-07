@@ -284,3 +284,11 @@ After permission / ACL / sudo changes:
 - `getfacl /path` shows expected ACLs
 - `sudo -l -U alice` shows what alice is allowed
 - `su - alice` then try the operation - it should succeed (or fail) as expected
+
+## Key terms
+
+- **SUID** - a permission bit that makes an executable run with the file owner's privileges.
+- **SGID** - a permission bit that makes new files in a directory inherit its group, or runs an executable with the file's group.
+- **Sticky bit** - a directory permission that lets only a file's owner or the directory owner delete or rename files inside.
+- **umask** - the mask that removes permission bits from newly created files and directories.
+- **Access control list (ACL)** - an extended permission entry that grants access to specific users or groups beyond owner, group and other.

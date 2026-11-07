@@ -246,3 +246,11 @@ Use a Platform Event-Triggered Flow.
 - "Decouple slow downstream from current save" → @future or Queueable
 - "Track progress across batches" → `Database.Stateful` interface
 - "Run logic at exactly 2 AM daily" → Schedulable with CRON expression
+
+## Key terms
+
+- **Future method** - an Apex method marked `@future` that runs asynchronously when system resources are free.
+- **Queueable Apex** - an asynchronous Apex class that can take complex types as input and be chained to another job.
+- **Batch Apex** - an Apex class that processes large record sets in chunks, each chunk running as its own transaction.
+- **Schedulable Apex** - an Apex class that runs at a set time using the Schedulable interface.
+- **Platform event** - a custom event message used for event-driven communication between Salesforce and external systems.

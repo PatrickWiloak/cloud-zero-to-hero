@@ -278,3 +278,12 @@ Use `consul-terraform-sync` or `consul-template` to rotate certs.
 - [ ] Can read and author a basic agent config
 - [ ] Understand allocation lifecycle
 - [ ] Know federation between regions via WAN gossip
+
+## Key terms
+
+- **Server agent** - a Nomad agent that maintains cluster state, takes part in Raft and makes scheduling decisions.
+- **Client agent** - a Nomad agent that registers with the servers and runs the tasks allocated to its node.
+- **Raft** - the consensus protocol Nomad servers use to replicate state and elect a leader.
+- **Region** - a Nomad cluster boundary that holds its own servers and state, and can be federated with other regions.
+- **Datacenter** - a grouping of client nodes inside a region, used to place jobs.
+- **Gossip protocol** - the Serf-based protocol servers use to discover each other and detect failures.

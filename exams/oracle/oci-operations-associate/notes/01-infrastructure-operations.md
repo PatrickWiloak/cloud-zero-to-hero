@@ -671,3 +671,11 @@ A: Quota policy
 ---
 
 **Next**: Monitoring and Troubleshooting
+
+## Key terms
+
+- **Compartment** - a logical container in OCI used to organise resources and control access to them.
+- **Tag namespace** - a container for tag keys that lets you apply defined tags to resources for cost tracking and governance.
+- **Resource Manager** - the OCI service that provisions infrastructure from Terraform configurations packaged as stacks.
+- **Stack** - the Resource Manager unit that holds a Terraform configuration and its variables.
+- **Boot volume backup** - a point-in-time copy of an instance boot volume that can be used to restore or clone it.

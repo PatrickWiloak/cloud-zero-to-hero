@@ -302,3 +302,9 @@ For truly different sources (different OS base images), declare multiple sources
 - [ ] Can declare Azure, GCP, Docker sources
 - [ ] Know what the `null` builder is for
 - [ ] Can filter builds with `only` and `except`
+
+## Key terms
+
+- **Builder** - a plugin component that creates a machine, runs the build and produces an image for a specific platform.
+- **Communicator** - the mechanism, such as SSH or WinRM, that Packer uses to talk to the machine it is building.
+- **HCP Packer** - the HashiCorp Cloud Platform registry that tracks image metadata, versions and channels.

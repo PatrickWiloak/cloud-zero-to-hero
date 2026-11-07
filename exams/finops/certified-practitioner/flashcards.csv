@@ -1,0 +1,21 @@
+Question,Answer,Tags
+How long is the FinOps Certified Practitioner exam?,60 minutes,exam-logistics
+How many questions are on the FinOps Certified Practitioner exam?,50 multiple choice,exam-logistics
+What is the passing score for FinOps Certified Practitioner?,70%,exam-logistics
+What does the FinOps Certified Practitioner exam cost?,$300 USD,exam-logistics
+How long is FinOps Certified Practitioner valid for?,2 years,exam-logistics
+How is the FinOps Certified Practitioner exam delivered?,Online proctored,exam-logistics
+FinOps (finops framework),a cloud financial management discipline and cultural practice that brings financial accountability to the variable spend model of cloud.,"notes,finops-framework"
+Inform phase (finops framework),"the FinOps phase that creates visibility into cloud spending through allocation, reporting and benchmarking.","notes,finops-framework"
+Optimize phase (finops framework),the FinOps phase that reduces cost through rate optimization and usage optimization.,"notes,finops-framework"
+Operate phase (finops framework),"the FinOps phase that puts governance, automation and continuous improvement in place.","notes,finops-framework"
+Rate optimization (finops framework),"paying less for the same resources, for example through commitment discounts or spot capacity.","notes,finops-framework"
+Usage optimization (finops framework),"using fewer or more appropriate resources, for example by rightsizing or removing waste.","notes,finops-framework"
+Showback (finops framework),reporting cloud costs back to the teams that incurred them without billing them.,"notes,finops-framework"
+Chargeback (finops framework),billing the teams or business units that incurred cloud costs for what they used.,"notes,finops-framework"
+Unit economics (finops framework),"cost measured against a business output, such as cost per customer or per transaction.","notes,finops-framework"
+"Maturity model (Crawl, Walk, Run) (finops framework)","a way to rate how developed a FinOps capability is, starting small and improving step by step.","notes,finops-framework"
+Reserved Instance (RI) (rate optimization),a commitment to a specific instance configuration for one or three years in return for a discounted rate.,"notes,rate-optimization"
+Savings Plan (rate optimization),an AWS commitment to a consistent hourly spend for one or three years in return for a discounted rate.,"notes,rate-optimization"
+Compute Savings Plan (rate optimization),"the most flexible AWS Savings Plan, which applies across instance families, Regions and compute services.","notes,rate-optimization"
+Spot instance (rate optimization),spare cloud capacity sold at a deep discount that the provider can reclaim at short notice.,"notes,rate-optimization"

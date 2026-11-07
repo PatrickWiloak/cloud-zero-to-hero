@@ -330,3 +330,13 @@ resource "aws_instance" "web" {
 - `sensitive = true` on outputs only hides from CLI, value is still in state
 - Variables without defaults are required and must be provided
 - `terraform.tfvars` is auto-loaded, other `.tfvars` files are not (unless `*.auto.tfvars`)
+
+## Key terms
+
+- **Input variable** - a declared parameter that lets callers customise a configuration or module without editing its code.
+- **Output value** - a named value a module or configuration exposes after apply for users or other modules to read.
+- **Local value** - a named expression, declared in a `locals` block, that you reuse within a module.
+- **Data source** - a read-only block that fetches information defined outside the current configuration.
+- **`depends_on`** - a meta-argument that declares an explicit dependency Terraform cannot infer from references.
+- **`count` and `for_each`** - meta-arguments that create multiple instances of a resource or module from one block.
+- **Sensitive variable** - a variable marked `sensitive = true` so Terraform hides its value in plan and apply output.

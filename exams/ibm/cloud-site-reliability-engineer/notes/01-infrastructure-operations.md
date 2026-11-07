@@ -902,3 +902,10 @@ get_account_usage(account_id, '2024-01')
 - Automate health checks and remediation
 - Optimize costs by right-sizing resources
 - Manage Kubernetes workloads at scale
+
+## Key terms
+
+- **Infrastructure as code** - managing infrastructure through versioned, reviewable definition files instead of manual changes.
+- **Terraform** - an infrastructure as code tool that provisions resources from declarative configuration files.
+- **Virtual server instance (VSI)** - an IBM Cloud VPC virtual machine.
+- **Instance group** - a set of identical VSIs managed together, which can scale automatically.

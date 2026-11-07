@@ -204,3 +204,14 @@ Treat Packer like any other build tool:
 - [ ] Know the plugin types and `required_plugins` syntax
 - [ ] Know variable precedence rules
 - [ ] Can convert a legacy JSON template to HCL2
+
+## Key terms
+
+- **Packer** - a HashiCorp tool that builds identical machine images for multiple platforms from a single template.
+- **Template** - the HCL2 configuration that tells Packer what to build, how to provision it and what to do with the result.
+- **Source block** - a block that defines a reusable builder configuration, such as an Amazon EBS or Docker source.
+- **Build block** - a block that lists the sources to build, the provisioners to run and the post-processors to apply.
+- **Artifact** - the output of a build, such as an AMI ID or a container image.
+- **`packer init`** - installs the plugins declared in the `required_plugins` block.
+- **`packer validate`** - checks that a template is syntactically valid and correctly configured.
+- **`packer fmt`** - rewrites template files into the canonical HCL2 format.

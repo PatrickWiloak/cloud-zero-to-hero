@@ -125,3 +125,13 @@ This domain covers Power Apps types, building applications, and integration capa
 - Understand app sharing and permissions
 - Study form types and their purposes
 - Learn about business process flows in model-driven apps
+
+## Key terms
+
+- **Power Platform** - the Microsoft low-code platform made up of Power Apps, Power Automate, Power BI and Power Pages.
+- **Canvas app** - a Power Apps app where the maker designs the screen layout freely and connects it to data.
+- **Model-driven app** - a Power Apps app whose layout is generated from the data model and business processes in Dataverse.
+- **Dataverse** - the Microsoft data platform that stores and manages data for Power Platform apps in tables.
+- **Table** - the Dataverse structure, formerly called an entity, that holds rows of data in columns.
+- **Business rule** - a no-code rule in Dataverse that applies validation or logic to a table.
+- **Environment** - a space that holds a set of Power Platform resources, such as apps and flows, and separates them from other sets.
