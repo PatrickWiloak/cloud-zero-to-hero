@@ -230,7 +230,7 @@ On the sibling sites: [Data Pipeline](https://data.noblerworks.com/resources/han
 [IaC tool](./resources/decision-matrix-iac-tool.md)
 
 ### **Postmortem Study Guides** - real public outages, mapped to exam domains
-[AWS S3 us-east-1, 2017](./resources/postmortem-aws-s3-2017.md) | [Cloudflare regex, 2019](./resources/postmortem-cloudflare-regex-2019.md) | [GCP networking, 2019](./resources/postmortem-gcp-networking-2019.md)
+[AWS S3 us-east-1, 2017](./resources/postmortem-aws-s3-2017.md) | [Cloudflare regex, 2019](./resources/postmortem-cloudflare-regex-2019.md) | [GCP networking, 2019](./resources/postmortem-gcp-networking-2019.md) | [CrowdStrike content update, 2024](./resources/postmortem-crowdstrike-2024.md) | [AWS DynamoDB DNS, 2025](./resources/postmortem-aws-dynamodb-dns-2025.md)
 
 ### **Persona Playlists** - curated reading sequences
 [SRE in 1 hour](./resources/playlist-sre-1hour.md)

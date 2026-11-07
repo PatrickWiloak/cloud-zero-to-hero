@@ -44,6 +44,8 @@ Read these alongside the playlist:
 - [AWS S3 us-east-1 outage 2017](./postmortem-aws-s3-2017.md) - blast radius and tooling guardrails
 - [Cloudflare regex outage 2019](./postmortem-cloudflare-regex-2019.md) - canary deploys and CPU SLOs
 - [GCP networking outage 2019](./postmortem-gcp-networking-2019.md) - configuration changes are production changes
+- [CrowdStrike content update 2024](./postmortem-crowdstrike-2024.md) - configuration is code; staged rollout
+- [AWS DynamoDB DNS event 2025](./postmortem-aws-dynamodb-dns-2025.md) - race conditions and recovery overload
 
 ## Next steps
 
