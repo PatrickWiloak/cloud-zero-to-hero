@@ -130,6 +130,6 @@ This domain covers Power BI components, data analysis, visualization capabilitie
 - **Power BI service** - the cloud service where reports are published, shared and consumed.
 - **Report** - a multi-page Power BI view of a dataset made of visuals.
 - **Dashboard** - a single-page Power BI canvas of tiles pinned from one or more reports.
-- **Dataset** - the collection of data that a Power BI report or dashboard is built on.
+- **Semantic model** (formerly dataset) - the data model that a Power BI report or dashboard is built on.
 - **Power Query** - the tool in Power BI for connecting to data sources and transforming data.
 - **DAX** - the Data Analysis Expressions formula language used to create measures and calculated columns in Power BI.

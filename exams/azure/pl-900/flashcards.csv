@@ -18,6 +18,5 @@ Power BI Desktop (power bi capabilities),"the Windows application used to connec
 Power BI service (power bi capabilities),"the cloud service where reports are published, shared and consumed.","notes,power-bi-capabilities"
 Report (power bi capabilities),a multi-page Power BI view of a dataset made of visuals.,"notes,power-bi-capabilities"
 Dashboard (power bi capabilities),a single-page Power BI canvas of tiles pinned from one or more reports.,"notes,power-bi-capabilities"
-Dataset (power bi capabilities),the collection of data that a Power BI report or dashboard is built on.,"notes,power-bi-capabilities"
 Power Query (power bi capabilities),the tool in Power BI for connecting to data sources and transforming data.,"notes,power-bi-capabilities"
 DAX (power bi capabilities),the Data Analysis Expressions formula language used to create measures and calculated columns in Power BI.,"notes,power-bi-capabilities"

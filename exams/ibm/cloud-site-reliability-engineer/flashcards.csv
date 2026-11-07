@@ -10,7 +10,7 @@ Service level agreement (SLA) (monitoring observability),"a formal commitment to
 Error budget (monitoring observability),"the amount of unreliability an SLO allows, calculated as 100% minus the SLO target.","notes,monitoring-observability"
 OpenTelemetry (monitoring observability),"an open source standard and set of tools for generating and collecting traces, metrics and logs.","notes,monitoring-observability"
 Distributed tracing (monitoring observability),following a single request across services to see where time is spent.,"notes,monitoring-observability"
-IBM Cloud Monitoring (monitoring observability),"the IBM Cloud service for collecting metrics and building dashboards and alerts, powered by Sysdig.","notes,monitoring-observability"
+IBM Cloud Monitoring (monitoring observability),the IBM Cloud service for collecting metrics and building dashboards and alerts.,"notes,monitoring-observability"
 SLI (Service Level Indicator) (reliability performance),Quantitative measure of service level,"notes,reliability-performance"
 SLO (Service Level Objective) (reliability performance),Target value for SLI,"notes,reliability-performance"
 SLA (Service Level Agreement) (reliability performance),Contract with consequences,"notes,reliability-performance"

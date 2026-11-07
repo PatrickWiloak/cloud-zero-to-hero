@@ -1,11 +1,10 @@
 Question,Answer,Tags
 Cloud Run (application development),"a Google Cloud service that runs stateless containers and scales them automatically, including down to zero.","notes,application-development"
 App Engine (application development),"a Google Cloud platform for running applications without managing servers, in standard and flexible environments.","notes,application-development"
-Cloud Functions (application development),a Google Cloud serverless service that runs single-purpose functions in response to events or HTTP requests.,"notes,application-development"
 Cloud Tasks (application development),a Google Cloud service for queuing and dispatching asynchronous tasks to a worker or HTTP endpoint.,"notes,application-development"
 Eventarc (application development),a Google Cloud service that routes events from Google Cloud services and other sources to targets such as Cloud Run.,"notes,application-development"
 Secret Manager (application development),a Google Cloud service for storing and versioning secrets such as API keys and passwords.,"notes,application-development"
-Workload Identity (application development),a way for workloads on GKE to act as a Google Cloud service account without exported keys.,"notes,application-development"
+Workload Identity Federation for GKE (application development),a way to use IAM policies to grant Kubernetes workloads access to Google Cloud APIs without exported keys.,"notes,application-development"
 Application Default Credentials (ADC) (application development),a strategy that client libraries use to find credentials automatically from the environment.,"notes,application-development"
 Cloud Storage (data storage integration),"the Google Cloud object storage service for unstructured data, organised in buckets.","notes,data-storage-integration"
 Firestore (data storage integration),a Google Cloud serverless NoSQL document database.,"notes,data-storage-integration"

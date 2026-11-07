@@ -17,4 +17,4 @@ Well-Architected Framework (architecture design patterns),a set of design princi
 IBM Cloud Satellite (advanced services integration),"an IBM Cloud service that brings IBM Cloud services to on-premises, edge or other cloud locations.","notes,advanced-services-integration"
 Event Streams (advanced services integration),the IBM Cloud managed Apache Kafka service for streaming events.,"notes,advanced-services-integration"
 Key Protect (advanced services integration),the IBM Cloud service for managing encryption keys.,"notes,advanced-services-integration"
-Activity Tracker (advanced services integration),the IBM Cloud service that records activity events on resources for auditing.,"notes,advanced-services-integration"
+Activity Tracker Event Routing (advanced services integration),the IBM Cloud platform service that routes audit events to targets such as IBM Cloud Logs; the original Activity Tracker service was deprecated on 28 March 2024.,"notes,advanced-services-integration"

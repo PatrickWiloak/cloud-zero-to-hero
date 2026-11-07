@@ -4325,9 +4325,9 @@ gcloud run services add-iam-policy-binding SERVICE \
 
 - **Cloud Run** - a Google Cloud service that runs stateless containers and scales them automatically, including down to zero.
 - **App Engine** - a Google Cloud platform for running applications without managing servers, in standard and flexible environments.
-- **Cloud Functions** - a Google Cloud serverless service that runs single-purpose functions in response to events or HTTP requests.
+- **Cloud Run functions** (formerly Cloud Functions) - a Google Cloud serverless service that runs single-purpose functions in response to events or HTTP requests.
 - **Cloud Tasks** - a Google Cloud service for queuing and dispatching asynchronous tasks to a worker or HTTP endpoint.
 - **Eventarc** - a Google Cloud service that routes events from Google Cloud services and other sources to targets such as Cloud Run.
 - **Secret Manager** - a Google Cloud service for storing and versioning secrets such as API keys and passwords.
-- **Workload Identity** - a way for workloads on GKE to act as a Google Cloud service account without exported keys.
+- **Workload Identity Federation for GKE** - a way to use IAM policies to grant Kubernetes workloads access to Google Cloud APIs without exported keys.
 - **Application Default Credentials (ADC)** - a strategy that client libraries use to find credentials automatically from the environment.

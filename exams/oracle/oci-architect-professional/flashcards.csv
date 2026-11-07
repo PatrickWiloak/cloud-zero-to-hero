@@ -9,7 +9,7 @@ Geolocation (advanced architecture patterns),Route based on user location,"notes
 Performance (advanced architecture patterns),Route to fastest responding region,"notes,advanced-architecture-patterns"
 Failover (advanced architecture patterns),Automatic region failover on health check failure,"notes,advanced-architecture-patterns"
 Load Balance (advanced architecture patterns),Distribute across regions,"notes,advanced-architecture-patterns"
-Oracle Kubernetes Engine (OKE) (advanced architecture patterns),the OCI managed Kubernetes service that runs and manages containerised applications.,"notes,advanced-architecture-patterns"
+Oracle Cloud Infrastructure Kubernetes Engine (OKE) (advanced architecture patterns),the OCI managed Kubernetes service that runs and manages containerised applications.,"notes,advanced-architecture-patterns"
 OCI Functions (advanced architecture patterns),"the OCI serverless platform for running short-lived functions, based on the open source Fn Project.","notes,advanced-architecture-patterns"
 API Gateway (advanced architecture patterns),"the OCI service that publishes APIs and applies routing, authentication and rate limiting in front of backends.","notes,advanced-architecture-patterns"
 OCI Data Science (advanced architecture patterns),"the OCI platform for building, training and deploying machine learning models.","notes,advanced-architecture-patterns"

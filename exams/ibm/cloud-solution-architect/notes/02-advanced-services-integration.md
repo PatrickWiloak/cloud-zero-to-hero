@@ -1324,4 +1324,4 @@ ibm_edge_capabilities:
 - **IBM Cloud Satellite** - an IBM Cloud service that brings IBM Cloud services to on-premises, edge or other cloud locations.
 - **Event Streams** - the IBM Cloud managed Apache Kafka service for streaming events.
 - **Key Protect** - the IBM Cloud service for managing encryption keys.
-- **Activity Tracker** - the IBM Cloud service that records activity events on resources for auditing.
+- **Activity Tracker Event Routing** - the IBM Cloud platform service that routes audit events to targets such as IBM Cloud Logs; the original Activity Tracker service was deprecated on 28 March 2024.
