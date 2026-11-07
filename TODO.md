@@ -60,7 +60,7 @@ Read-only fleet audit (9 agents, nothing changed). Each line: effort S (<half da
 
 1. **Outage postmortems** beside the 3 existing ones: CrowdStrike 2024 and the Oct 2025 AWS us-east-1 DNS event.
 2. **Cert gaps**: observability (Splunk/Elastic/Datadog), CNCF Backstage and Kyverno associates, plus the Linux+ item below.
-3. **Concept pages**: day-one Python still open (DR/RPO-RTO and environment variables shipped 2026-10-21).
+3. **Concept pages**: day-one Python shipped 2026-11-07 (DR/RPO-RTO and environment variables 2026-10-21).
 
 ## Concept gap fill (2026-10-21)
 
@@ -72,7 +72,10 @@ Read-only fleet audit (9 agents, nothing changed). Each line: effort S (<half da
 - [x] 2026-11-04 Add glossary terms the new pages use but `learn/glossary.md` lacks: RPO, RTO, landing zone, SCP, golden path, SPOF. ✏️ card-docs: Added glossary entries for RPO, RTO, landing zone, SCP, golden path and SPOF in learn/glossary.md
 - [x] 2026-11-04 App Mesh reached end of support 2026-09-30: drop it from mesh rows in `resources/service-comparison-*.md`, `microservices-architecture.md`, `certification-roadmap-kubernetes-specialist.md`. ✏️ 2026-11-07 DONE: mesh rows read 'App Mesh retired 2026-09-30' in service-comparison-compute.md, certification-roadmap-kubernetes-specialist.md, microservices-architecture.md (commit 1dc6c69)
 - [x] 2026-11-07 Added glossary terms RPO, RTO, landing zone, SCP, golden path, SPOF to `learn/glossary.md`.
-- [x] 2026-11-07 App Mesh (end of support 2026-09-30, confirmed on AWS docs) dropped from the mesh rows in `resources/`. [ ] Still mentions it: `exams/aws/shared/services/compute/{ecs,eks}.md`, SAP-C02 notes (architecture-pillars, compute-containers, integration-streaming).
+- [x] 2026-11-07 App Mesh (end of support 2026-09-30, confirmed on AWS docs) dropped from the mesh rows in `resources/`. 
+- [x] 2026-11-07 App Mesh relabelled retired in `exams/aws/shared/services/compute/{ecs,eks,fargate}.md` and the SAP-C02 notes (architecture-pillars, compute-containers, integration-streaming); cited to AWS's end-of-support notice.
+- [x] 2026-11-07 Wave 3 shipped: concept pages for eBPF, Backstage, OpenTofu vs Terraform, service quotas, WebAssembly at the edge; day-one `python-for-cloud.md` (samples run in a uv venv; pip/venv commands cited, not run).
+- [ ] 2026-11-22 IBM wording (Cloud Foundry, Watson Language Translator/Visual Recognition, Certificate Manager -> Secrets Manager, Watson -> watsonx) still unverified: cloud.ibm.com docs return 404/empty to tools on 2026-11-07. Pat: read the pages in a browser, then fix `exams/ibm/cloud-developer`, `cloud-advocate`, `cloud-solution-architect`.
 
 ## GCP exam refresh (2026-10-14)
 
