@@ -446,3 +446,11 @@ Was 54k words against 2.17M in `exams/`.
 
 ---
 
+
+## Content gaps (2026-11-07 review)
+
+Plan: [docs/content-gaps-2026-11-07.md](docs/content-gaps-2026-11-07.md). Wave 1 (currency) and the cert items are already listed above.
+
+- [ ] Wave 2: postmortems CrowdStrike 2024 + AWS us-east-1 Oct 2025; platform engineer + Kubernetes interview guides; CI/CD + Terraform state troubleshooting; Kubernetes cost page.
+- [ ] Wave 3: concept pages - eBPF, Backstage/developer portals, OpenTofu vs Terraform, service quotas, Wasm at the edge.
+- [ ] Wave 4: flashcard decks for the 21 guides without one (Terraform Associate, RHCSA, AZ-400, AZ-204, ANS-C01, GCP DevOps first); labs for certs with none.
