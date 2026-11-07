@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-10-21
+last-updated: 2026-11-07
 difficulty: intermediate
 reading-time: 8 min
 ---
@@ -107,3 +107,43 @@ The edge function holds no database. It only needs a public key to verify signat
 - **[Serverless explained](./serverless-explained.md)** - edge functions are serverless with tighter limits
 - **[Hybrid cloud connectivity](../../resources/architecture-patterns/hybrid-cloud-connectivity.md)** - linking on-premises edge sites to the cloud
 - **[Regions and availability zones](./regions-and-availability-zones.md)** - the central end of the spectrum
+
+## Check yourself
+
+Try these before you move on. Each answer is collapsed; click it to check yourself.
+
+1. Name three reasons besides latency to run something at the edge.
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Any three of: bandwidth, intermittent connectivity, data residency and cost. See: [Why distance matters](#why-distance-matters)
+
+   </details>
+
+2. A function in Sydney calls a database in Virginia on every request. Why has moving the code to the edge gained nothing?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Running code at the edge is easy, but the real problem is running it next to the data it needs. The round trip to the distant data remains. See: [The hard part: data](#the-hard-part-data)
+
+   </details>
+
+3. In the news site example, why can the edge function verify the paywall token without calling the origin?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   It only needs a public key to verify signatures, which is read-only data that belongs at the edge. See: [A worked example](#a-worked-example)
+
+   </details>
+
+4. What is the general rule for edge function size and distance to the user?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   The closer to the user, the smaller the function. See: [CDN edge functions](#cdn-edge-functions)
+
+   </details>

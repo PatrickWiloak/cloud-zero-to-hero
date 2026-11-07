@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-10-21
+last-updated: 2026-11-07
 difficulty: intermediate
 reading-time: 10 min
 ---
@@ -135,3 +135,43 @@ This is core material for professional architect exams (SAP-C02, AZ-305, Google 
 - **[Cloud identity basics for builders](./cloud-identity-basics-for-builders.md)** - how people and workloads get into those accounts
 - **[Cloud cost basics](./cloud-cost-basics.md)** - why per-account billing helps
 - **[Well-Architected explained](./well-architected-explained.md)** - the frameworks that landing zones put into practice
+
+## Check yourself
+
+Try these before you move on. Each answer is collapsed; click it to check yourself.
+
+1. Why is the account described as the strongest isolation boundary a cloud provider offers?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Permissions, quotas, billing and blast radius all stop at its edge by default, so using many accounts turns those defaults into free security and governance. See: [Why one account stops working](#why-one-account-stops-working)
+
+   </details>
+
+2. Does an AWS SCP that allows S3 access give users S3 access?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   No. An SCP never grants permissions. It only sets the maximum the account's own IAM policies can allow, so a user needs an IAM allow and no SCP deny. See: [Guardrails: preventive and detective](#guardrails-preventive-and-detective)
+
+   </details>
+
+3. Why does the region-blocking policy use `NotAction` to list services like IAM?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   It exempts global services, which would otherwise break when the policy denies requests outside the approved regions. See: [Worked example: a policy that blocks unapproved regions](#worked-example-a-policy-that-blocks-unapproved-regions)
+
+   </details>
+
+4. Why is running workloads in the management account a mistake?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   It is not constrained by SCPs and holds the keys to the whole organization. See: [Common mistakes](#common-mistakes)
+
+   </details>

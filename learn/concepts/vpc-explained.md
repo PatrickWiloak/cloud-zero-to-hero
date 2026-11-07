@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-11-07
 ---
 
 # VPC Explained
@@ -146,3 +146,43 @@ GCP VPCs are global by default (subnets are regional). AWS and Azure VPCs are re
 - **[CDN explained](./cdn-explained.md)** - how user traffic actually reaches your VPC
 - **[Glossary: VPC, Subnet, Security Group, NAT Gateway](../glossary.md#networking)**
 - **[Networking deep dives](../../resources/networking-deep-dives/)** - hybrid connectivity, multi-cloud patterns
+
+## Check yourself
+
+Try these before you move on. Each answer is collapsed; click it to check yourself.
+
+1. What makes a subnet public rather than private?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   A public subnet has a route to an internet gateway. A private subnet has no such route and cannot be reached from the internet directly. See: [Public vs private subnets](#public-vs-private-subnets)
+
+   </details>
+
+2. How does a resource in a private subnet get package updates?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Through a NAT gateway, which allows outbound access without making the resource inbound-reachable. See: [Public vs private subnets](#public-vs-private-subnets)
+
+   </details>
+
+3. How many addresses does a `/24` CIDR block contain, and what is it typically used for?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   256 addresses. A VPC is usually a `/16` and subnets are carved out of it as `/24` or smaller. See: [CIDR blocks (the address math)](#cidr-blocks-the-address-math)
+
+   </details>
+
+4. Security group or network ACL: which is stateful, and which is per-subnet?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Security groups are stateful and per-resource. Network ACLs are per-subnet and not stateful, so both directions must be allowed. See: [Security groups vs network ACLs](#security-groups-vs-network-acls)
+
+   </details>

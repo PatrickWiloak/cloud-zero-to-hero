@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-11-07
 ---
 
 # Containers vs VMs
@@ -153,3 +153,43 @@ Most users never touch these directly; they're cloud provider plumbing.
 - **[Kubernetes in 10 minutes](./kubernetes-in-10-minutes.md)** - orchestrating many containers
 - **[Serverless explained](./serverless-explained.md)** - serverless platforms run containers under the hood
 - **[Glossary: Container, Image, Pod, Hypervisor](../glossary.md#containers--kubernetes)**
+
+## Check yourself
+
+Try these before you move on. Each answer is collapsed; click it to check yourself.
+
+1. What do containers share that VMs do not?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Containers share the host kernel, while each VM runs its own full guest operating system. See: [The one-line answer](#the-one-line-answer)
+
+   </details>
+
+2. Which two Linux kernel features do the heavy lifting for containers?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Namespaces, which isolate what a process can see, and cgroups, which limit what it can use. See: [How containers actually work](#how-containers-actually-work)
+
+   </details>
+
+3. Why might you still pick a VM for running untrusted customer code?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   VMs are isolated by the hypervisor, which is much harder to escape than a shared kernel, so VM-level isolation is safer. See: [Why VMs still exist](#why-vms-still-exist)
+
+   </details>
+
+4. Why can a 500 MB image sometimes download only 50 MB?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Each Dockerfile line creates a layer, and layers are cached and shared between images, so cached layers are not downloaded again. See: [Container images](#container-images)
+
+   </details>

@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-11-07
 ---
 
 # CI/CD Explained
@@ -161,3 +161,43 @@ For a healthy CI/CD setup:
 - **[Terraform explained](./terraform-explained.md)** - infrastructure changes go through CI too
 - **[Glossary: CI, CD, GitOps, Blue/Green](../glossary.md#devops--infrastructure-as-code)**
 - **[Service comparison: DevOps & CI/CD](../../resources/service-comparison-devops-cicd.md)**
+
+## Check yourself
+
+Try these before you move on. Each answer is collapsed; click it to check yourself.
+
+1. What is the difference between Continuous Delivery and Continuous Deployment?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   With Continuous Delivery a change that passes CI is ready to deploy but a human still chooses when. Continuous Deployment sends every passing change to production automatically. See: [Continuous Delivery](#continuous-delivery)
+
+   </details>
+
+2. What happens to a change if CI fails?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   The change is blocked from merging. See: [Continuous Integration](#continuous-integration)
+
+   </details>
+
+3. In a blue/green deployment, why is rollback instant?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Two identical environments exist, and you switch traffic between them with DNS or the load balancer, so going back is just switching again. See: [Blue/Green](#bluegreen)
+
+   </details>
+
+4. Why is a 30-minute CI run a problem?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Developers context-switch and lose momentum. The page suggests aiming for under 10 minutes. See: [Common pitfalls](#common-pitfalls)
+
+   </details>

@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-11-07
 ---
 
 # Kubernetes in 10 Minutes
@@ -194,3 +194,43 @@ The cloud provider runs the control plane. You bring nodes (or use serverless no
 - **[Glossary: Containers & Kubernetes](../glossary.md#containers--kubernetes)**
 - **[Service comparison: Containers & Kubernetes](../../resources/service-comparison-containers-kubernetes.md)** - EKS vs AKS vs GKE
 - **[Kubernetes troubleshooting guide](../../resources/troubleshooting/kubernetes-troubleshooting.md)**
+
+## Check yourself
+
+Try these before you move on. Each answer is collapsed; click it to check yourself.
+
+1. What is a pod, and why do most pods have one container?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   A pod is the smallest unit Kubernetes schedules: one or more containers that always run together on the same node, sharing network and storage. Multi-container pods are only for sidecars, which are helper containers such as logging agents. See: [Pod](#pod)
+
+   </details>
+
+2. What does it mean that Kubernetes is declarative?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   You describe the desired state, such as 5 replicas of an image with a CPU limit, rather than the steps. Kubernetes constantly reconciles reality with what you declared. See: [The mental model](#the-mental-model)
+
+   </details>
+
+3. Pods come and go. What gives clients a stable address to reach them?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   A Service, which is a stable network address for a set of pods and load-balances across the pod IPs. See: [Service](#service)
+
+   </details>
+
+4. Why does the page say Kubernetes is not a PaaS?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   It is a platform you build a PaaS on. You still manage upgrades, networking, observability and secrets. See: [What Kubernetes is NOT](#what-kubernetes-is-not)
+
+   </details>

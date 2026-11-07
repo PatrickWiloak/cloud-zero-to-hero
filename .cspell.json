@@ -1313,7 +1313,11 @@
     "zstd",
     "ZSTD",
     "ZTNA",
-    "ztunnel"
+    "ztunnel",
+    "ANAME",
+    "WASI",
+    "Capex",
+    "opex"
   ],
   "files": [
     "**/*.md"

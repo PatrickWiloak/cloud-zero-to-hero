@@ -109,3 +109,43 @@ Terraform certification content is about Terraform itself. OpenTofu is backgroun
 
 - **[Terraform explained](./terraform-explained.md)** - the shared language
 - **[Infrastructure as code explained](./infrastructure-as-code-explained.md)** - why state exists
+
+## Check yourself
+
+Try these before you move on. Each answer is collapsed; click it to check yourself.
+
+1. Why was OpenTofu forked from Terraform?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   HashiCorp moved Terraform from an open-source license to the Business Source License. The OpenTofu FAQ says the new terms are ambiguous for companies and developers, so the fork stays open source under the Linux Foundation. See: [How the fork happened](#how-the-fork-happened)
+
+   </details>
+
+2. What command do you use with OpenTofu instead of `terraform`?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   `tofu`. See: [What differs](#what-differs)
+
+   </details>
+
+3. What does the migration guide say to do if `tofu plan` shows unexpected changes?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Do not apply. Stop and investigate. See: [Moving over](#moving-over)
+
+   </details>
+
+4. Why is mixing `terraform` and `tofu` on one state a mistake?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Because it is risky without a plan. The page says to pick one per project. See: [Common mistakes](#common-mistakes)
+
+   </details>

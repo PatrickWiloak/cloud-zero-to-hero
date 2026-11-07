@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-10-21
+last-updated: 2026-11-07
 difficulty: beginner
 reading-time: 8 min
 ---
@@ -105,3 +105,43 @@ A startup has a mobile app and is about to open its API to partners.
 - **[Serverless explained](./serverless-explained.md)** - the backend most often behind a managed gateway
 - **[Message queues and pub/sub](./message-queues-and-pub-sub-for-cloud.md)** - where long-running work goes instead of a synchronous API call
 - **[What is an API call?](../day-one/what-is-an-api-call.md)** - the request anatomy the gateway inspects
+
+## Check yourself
+
+Try these before you move on. Each answer is collapsed; click it to check yourself.
+
+1. Name three jobs an API gateway does before it passes a request to the backend.
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Any three of: authentication, rate limiting, routing, request validation and logging. See: [The one-line answer](#the-one-line-answer)
+
+   </details>
+
+2. Why is it better to put cross-cutting concerns in a gateway than in each backend service?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Otherwise every team implements token checks, throttling and logging slightly differently, and one of them gets it wrong. A gateway shrinks the backends to business logic and enforces security rules consistently. See: [Why it exists](#why-it-exists)
+
+   </details>
+
+3. A partner goes over the limit in their usage plan. What does the gateway do?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   It returns `429 Too Many Requests` without touching the backend. See: [A worked example](#a-worked-example)
+
+   </details>
+
+4. Why should the gateway not be your only security layer?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   The gateway knows who you are, not whether a specific order belongs to you. Backends still need to check authorization for the specific resource. See: [Common mistakes](#common-mistakes)
+
+   </details>

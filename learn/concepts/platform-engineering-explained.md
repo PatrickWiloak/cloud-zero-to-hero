@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-10-21
+last-updated: 2026-11-07
 difficulty: intermediate
 reading-time: 8 min
 ---
@@ -95,3 +95,43 @@ The CNCF offers the **Certified Cloud Native Platform Engineering Associate (CNP
 - **[Platform engineer certification roadmap](../../resources/certification-roadmap-platform-engineer.md)** - the cert path
 - **[Multi-account strategy and landing zones](./multi-account-and-landing-zones.md)** - the cloud foundation a platform sits on
 - **[GitOps explained](./gitops-explained.md)** - the most common deployment engine of a platform
+
+## Check yourself
+
+Try these before you move on. Each answer is collapsed; click it to check yourself.
+
+1. What problem is platform engineering's answer to, and what is it called?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Product teams at scale had to understand Kubernetes, Terraform, IAM, pipelines and more on top of their product. That burden is called cognitive load, and one team solves the common problems once and offers the result as a product. See: [How we got here](#how-we-got-here)
+
+   </details>
+
+2. What is a golden path?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   The supported, opinionated way to do a common task, such as creating a new service with a repository, pipeline, dashboards, alerts and a deployment to dev. Teams may leave it, but then they support what they built. See: [What a platform is](#what-a-platform-is)
+
+   </details>
+
+3. Why is a platform team that fulfils requests by hand not really a platform team?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   If humans fulfil requests, it is an operations team with a new name. A platform must be self-service. See: [Common mistakes](#common-mistakes)
+
+   </details>
+
+4. Why is building a portal first a mistake?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   A beautiful UI over a broken pipeline fixes nothing. Fix the paths, then add the interface. See: [Common mistakes](#common-mistakes)
+
+   </details>

@@ -83,3 +83,43 @@ Cloud certs seldom ask about Wasm. You may meet it in edge and CDN scenario disc
 - **[Edge computing explained](./edge-computing-explained.md)**
 - **[Serverless explained](./serverless-explained.md)**
 - **[CDN explained](./cdn-explained.md)**
+
+## Check yourself
+
+Try these before you move on. Each answer is collapsed; click it to check yourself.
+
+1. What is WebAssembly, and what are its three stated goals?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   A compact, sandboxed binary format that many languages compile to. Its goals are fast (native speed), safe (memory-safe, sandboxed) and portable. See: [What Wasm is](#what-wasm-is)
+
+   </details>
+
+2. Why does Wasm suit edge platforms that run code from many customers?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Edge functions run untrusted code from many customers on the same machines and start on demand. That needs a sandbox and a small, fast-loading unit, and a Wasm module is both. See: [Why it suits the edge](#why-it-suits-the-edge)
+
+   </details>
+
+3. Name two limits of Wasm on Cloudflare Workers from the page.
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Any two of: no threads, larger size and possibly slower startup, WASI being experimental with only some system calls. See: [A real platform: Cloudflare Workers](#a-real-platform-cloudflare-workers)
+
+   </details>
+
+4. When should you not use Wasm at the edge?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   For ordinary header edits or redirects, where plain JavaScript edge functions are simpler. See: [When to use it](#when-to-use-it)
+
+   </details>

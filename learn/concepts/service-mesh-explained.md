@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-10-21
+last-updated: 2026-11-07
 difficulty: intermediate
 reading-time: 8 min
 ---
@@ -106,3 +106,43 @@ An [API gateway](./api-gateways-explained.md) manages **north-south** traffic: e
 - **[Observability basics](./observability-basics.md)** - what the mesh's metrics and traces feed into
 - **[Deployment strategies](./deployment-strategies.md)** - canary releases a mesh can drive
 - **[Kubernetes topic](../../topics/kubernetes.md)** - the rest of the Kubernetes material
+
+## Check yourself
+
+Try these before you move on. Each answer is collapsed; click it to check yourself.
+
+1. What are the data plane and the control plane in a service mesh?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   The data plane is the proxies that carry traffic, such as Envoy. The control plane configures the proxies, issues certificates and exposes an API for policy. See: [How it works](#how-it-works)
+
+   </details>
+
+2. How is a service mesh different from an API gateway?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   A gateway manages north-south traffic, external clients coming in. A mesh manages east-west traffic, services calling each other inside. Many systems use both. See: [Mesh vs API gateway](#mesh-vs-api-gateway)
+
+   </details>
+
+3. The app retries 3 times and the mesh also retries 3 times. What can happen?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   One failure becomes 9 calls and can create a retry storm. Retry in one place. See: [Common mistakes](#common-mistakes)
+
+   </details>
+
+4. Why might a team with fewer than about a dozen services skip a mesh?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   A mesh adds operational complexity, resource overhead, latency and harder debugging. Kubernetes Services, network policies and a tracing library get you most of the way. See: [The cost](#the-cost)
+
+   </details>

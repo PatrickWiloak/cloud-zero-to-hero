@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-08-09
+last-updated: 2026-11-07
 difficulty: beginner
 reading-time: 8 min
 ---
@@ -131,3 +131,43 @@ Whatever strategy you pick, these are what make it safe:
 - **[Autoscaling explained](./autoscaling-explained.md)** - capacity changes during a rollout
 - **[Observability basics](./observability-basics.md)** - what you watch to decide whether to proceed
 - **[CGOA: GitOps certification](../../exams/kubernetes/cgoa/)** - rollback as a state store operation
+
+## Check yourself
+
+Try these before you move on. Each answer is collapsed; click it to check yourself.
+
+1. What is the main trade-off between blue-green and rolling updates?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Blue-green gives instant rollback and no mixed versions but doubles infrastructure during the deploy. Rolling needs no extra capacity beyond a small surge, but both versions serve traffic at once and rollback is not instant. See: [Blue-green](#blue-green)
+
+   </details>
+
+2. What is the difference between a canary and A/B testing?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   A canary asks whether the version is broken and is judged by error rate and latency. A/B asks which version performs better on a business metric, runs longer and splits by user attribute. See: [A/B testing](#ab-testing)
+
+   </details>
+
+3. Why is a canary without metrics analysis not worth much?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   It is just a slow rolling update with extra steps. The value comes from automatically aborting when the new version's error rate diverges. See: [Canary](#canary)
+
+   </details>
+
+4. Why does the expand and contract pattern take several releases, and what does that buy you?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Both versions run at once, so the database must work with both. Spreading the change across releases means you can roll back at any point. See: [The part that actually breaks: schema changes](#the-part-that-actually-breaks-schema-changes)
+
+   </details>

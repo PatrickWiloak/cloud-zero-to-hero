@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-10-21
+last-updated: 2026-11-07
 difficulty: beginner
 reading-time: 6 min
 ---
@@ -79,3 +79,43 @@ Rough guide: start with managed PostgreSQL or MySQL unless you have a clear reas
 - **[High availability and fault tolerance](./high-availability-and-fault-tolerance.md)** - why the database is usually the hardest tier to make redundant
 - **[Caching explained](./caching-explained.md)** - taking load off the database
 - **[Object, block, and file storage](./object-block-file-storage.md)** - the storage underneath
+
+## Check yourself
+
+Try these before you move on. Each answer is collapsed; click it to check yourself.
+
+1. What does the provider handle for a managed database, and what do you still own?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   The provider handles installation, patching, backups, replication and failover. You still own the schema, the queries, the data and who can reach it. See: [The one-line answer](#the-one-line-answer)
+
+   </details>
+
+2. Which gives automatic failover if an AZ fails, a read replica or a Multi-AZ standby?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   The Multi-AZ or HA standby. Read replicas spread read load and are not the same as high availability. See: [Common mistakes](#common-mistakes)
+
+   </details>
+
+3. Why might a fleet of serverless functions need a connection pooler?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Serverless functions and autoscaled apps can open thousands of connections, so a pooler such as RDS Proxy or PgBouncer is needed. See: [What you still own](#what-you-still-own)
+
+   </details>
+
+4. Which is usually cheaper for steady high load, provisioned or serverless?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Provisioned. Serverless suits spiky or unpredictable workloads and dev environments. See: [Serverless vs provisioned](#serverless-vs-provisioned)
+
+   </details>

@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-11-07
 ---
 
 # What is Cloud Computing?
@@ -107,3 +107,43 @@ You will learn more from this than from 5 hours of reading.
 - **[Regions and availability zones](./regions-and-availability-zones.md)** - where your code actually runs
 - **[Shared responsibility model](https://security.noblerworks.com/learn/concepts/shared-responsibility-model/)** - what's the provider's job vs yours
 - **[Glossary: Cloud Fundamentals](../glossary.md#cloud-fundamentals)**
+
+## Check yourself
+
+Try these before you move on. Each answer is collapsed; click it to check yourself.
+
+1. What three things did cloud change, according to the page?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Capex became opex, months became minutes, and peak provisioning became elastic scaling. See: [Why this exists](#why-this-exists)
+
+   </details>
+
+2. What does a cloud provider do, in three steps?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   It owns thousands of servers in datacenters, lets you rent compute, storage, networking and managed services through an API or console, and charges by the hour, second or per request. See: [What "cloud" actually means](#what-cloud-actually-means)
+
+   </details>
+
+3. Is cloud always cheaper than owning hardware?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   No. At scale, owning hardware is sometimes cheaper, and Dropbox famously moved off AWS to save money. See: [What "cloud" is NOT](#what-cloud-is-not)
+
+   </details>
+
+4. Why does the page call 'someone else's computer' only half-true?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   The value is the API, elastic billing, global reach and managed services, not the hardware. See: [What "cloud" is NOT](#what-cloud-is-not)
+
+   </details>

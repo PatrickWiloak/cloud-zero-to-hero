@@ -80,3 +80,43 @@ Cloud certs rarely test eBPF directly. It shows up in Kubernetes and platform ma
 - **[Service mesh explained](./service-mesh-explained.md)** - where eBPF changes the sidecar story
 - **[Observability basics](./observability-basics.md)** - what you do with the data
 - **[Kubernetes in 10 minutes](./kubernetes-in-10-minutes.md)** - the platform most eBPF tools run on
+
+## Check yourself
+
+Try these before you move on. Each answer is collapsed; click it to check yourself.
+
+1. What does eBPF let you do, in one sentence?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   It lets you run small, checked programs inside the Linux kernel without changing the kernel or loading a kernel module. See: [The one-line answer](#the-one-line-answer)
+
+   </details>
+
+2. What does the verifier do, and what does it not do?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   It checks that a program will not crash or harm the system, that it always terminates and that it stays within size limits. It does not check that the program does something sensible. See: [How it works](#how-it-works)
+
+   </details>
+
+3. Why does the page say eBPF may not be available on some managed platforms?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   It needs a Linux kernel with eBPF support and enough privilege to load programs. Managed services that hide the node may not allow it. See: [What it is not](#what-it-is-not)
+
+   </details>
+
+4. Why is it a mistake to call eBPF a Kubernetes feature?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   It is a Linux technology. Kubernetes tools happen to use it. See: [Common mistakes](#common-mistakes)
+
+   </details>

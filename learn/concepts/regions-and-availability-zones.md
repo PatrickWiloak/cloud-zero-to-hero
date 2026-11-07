@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-11-07
 ---
 
 # Regions and Availability Zones
@@ -115,3 +115,43 @@ You'll memorize the ones you use.
 - **[Shared responsibility model](https://security.noblerworks.com/learn/concepts/shared-responsibility-model/)** - region-level disaster recovery is mostly your job
 - **[VPC explained](./vpc-explained.md)** - VPCs are typically scoped to one region
 - **[Glossary: Availability Zone, Region, Edge Location](../glossary.md#cloud-fundamentals)**
+
+## Check yourself
+
+Try these before you move on. Each answer is collapsed; click it to check yourself.
+
+1. What is the difference between a region and an availability zone?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   A region is a city-sized geographic area. An availability zone is one or more datacenters inside that region. See: [The one-line answer](#the-one-line-answer)
+
+   </details>
+
+2. You spread across AZs for one kind of failure and across regions for another. Which is which?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Across AZs to survive a single datacenter failure, and across regions to survive a city-sized failure. See: [The one-line answer](#the-one-line-answer)
+
+   </details>
+
+3. Why does the page advise against multi-region until you have a business reason?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   It adds replication complexity, duplicated infrastructure and cross-region transfer costs, and operational overhead in two places. For most early-stage apps, multi-AZ in one region is plenty. See: [The cost of multi-region](#the-cost-of-multi-region)
+
+   </details>
+
+4. Are the numbers in AWS region names like `us-east-1` a ranking from best to worst?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   No. The numbers are arbitrary. See: [Region naming weirdness](#region-naming-weirdness)
+
+   </details>

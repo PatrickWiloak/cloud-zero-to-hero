@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-10-21
+last-updated: 2026-11-07
 difficulty: beginner
 reading-time: 9 min
 ---
@@ -136,3 +136,43 @@ Associate cloud exams love the "which storage" scenario. The keyword usually giv
 - **[CDN explained](./cdn-explained.md)** - how object storage gets served fast worldwide
 - **[Disaster recovery, RPO and RTO](./disaster-recovery-rpo-rto.md)** - snapshots and backups in a recovery plan
 - **[File formats and partitioning](https://data.noblerworks.com/learn/concepts/file-formats-and-partitioning/)** - how data lakes lay out objects (Data Zero to Hero)
+
+## Check yourself
+
+Try these before you move on. Each answer is collapsed; click it to check yourself.
+
+1. Which storage type is a virtual hard disk attached to one machine, and which is a shared network folder?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Block storage is the virtual disk attached to one machine. File storage is the shared network folder many machines mount at once. See: [The one-line answer](#the-one-line-answer)
+
+   </details>
+
+2. An EBS volume is in `us-east-1a`. How do you use its data from an instance in `us-east-1b`?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   You cannot attach it across zones. Take a snapshot and create a new volume from it in the other zone. See: [Block storage](#block-storage)
+
+   </details>
+
+3. Why are the slashes in an object key like `invoices/2026/` not real folders?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   They are just a shared prefix in the key. Consoles draw folders to be friendly, and renaming a folder means copying and deleting every object under it. See: [Object storage](#object-storage)
+
+   </details>
+
+4. In the photo app, why did uploads go to object storage rather than the VMs' block disks?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   If uploads were stored on a VM's disk, a user could upload to VM A and then get a 404 from VM B. Object storage is reachable by every VM and by the browser. See: [A worked example](#a-worked-example)
+
+   </details>

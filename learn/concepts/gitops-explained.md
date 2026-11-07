@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-10-21
+last-updated: 2026-11-07
 difficulty: intermediate
 reading-time: 8 min
 ---
@@ -112,3 +112,43 @@ GitOps has its own CNCF certifications: **CGOA** (Certified GitOps Associate) te
 - **[Infrastructure as Code explained](./infrastructure-as-code-explained.md)** - the declarative idea GitOps is built on
 - **[Deployment strategies](./deployment-strategies.md)** - canary and blue-green, which Argo Rollouts automates
 - **[Platform engineering explained](./platform-engineering-explained.md)** - GitOps is often the deploy engine of an internal platform
+
+## Check yourself
+
+Try these before you move on. Each answer is collapsed; click it to check yourself.
+
+1. What is the difference between push and pull deployment?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   In push, the pipeline runs `kubectl apply` or `helm upgrade` against the cluster and so holds cluster credentials. In pull, an agent inside the cluster watches a Git repository and applies changes itself. See: [Push vs pull](#push-vs-pull)
+
+   </details>
+
+2. Which of the four principles separates GitOps from 'we keep our YAML in Git'?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   The fourth, continuous reconciliation. Agents keep comparing actual with desired state and correct differences, not just at deploy time. See: [The four principles](#the-four-principles)
+
+   </details>
+
+3. Why is using the tag `latest` a problem in GitOps?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Git says the same thing before and after, so nothing deploys. Use immutable version tags or digests. See: [Common mistakes](#common-mistakes)
+
+   </details>
+
+4. Git sets `replicas: 3` and an autoscaler scales to 10. What can happen?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   The agent may keep resetting it. Remove `replicas` from the manifest or tell the tool to ignore that field. See: [Common mistakes](#common-mistakes)
+
+   </details>

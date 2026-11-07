@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-10-21
+last-updated: 2026-11-07
 difficulty: beginner
 reading-time: 6 min
 ---
@@ -90,3 +90,43 @@ The two combine. The **fan-out pattern** puts a queue behind each pub/sub subscr
 - **[Event-driven architecture](../../resources/architecture-patterns/event-driven-architecture.md)** - systems designed around events from the start
 - **[Build a serverless app](../../resources/hands-on-projects/serverless-application.md)** - hands-on: API, queue and function together
 - **[API gateways explained](./api-gateways-explained.md)** - the synchronous front door that often hands work to a queue
+
+## Check yourself
+
+Try these before you move on. Each answer is collapsed; click it to check yourself.
+
+1. What is the difference between a queue and pub/sub?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   A queue holds messages until one worker takes each one. Pub/sub delivers a copy of every message to every subscriber. See: [The one-line answer](#the-one-line-answer)
+
+   </details>
+
+2. What is the fan-out pattern?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   A queue is put behind each pub/sub subscriber, so the topic copies the event to several queues and each service drains its own at its own pace. If one service is down, its queue just fills up and nothing is lost. See: [Queue vs pub/sub](#queue-vs-pubsub)
+
+   </details>
+
+3. A worker takes a message but processing takes longer than the visibility timeout. What happens?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   A second worker grabs the same message while the first is still working, causing duplicate processing. See: [Four things every builder must know](#four-things-every-builder-must-know)
+
+   </details>
+
+4. Why does the page say your consumers must be idempotent?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   At-least-once delivery is the normal case, so the same message can arrive more than once. Processing it twice must not, for example, charge the customer twice. See: [Four things every builder must know](#four-things-every-builder-must-know)
+
+   </details>

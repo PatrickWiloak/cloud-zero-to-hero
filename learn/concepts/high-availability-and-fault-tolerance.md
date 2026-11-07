@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-10-21
+last-updated: 2026-11-07
 difficulty: beginner
 reading-time: 9 min
 ---
@@ -134,3 +134,43 @@ The most common pattern is a scenario with a hidden SPOF: "a web app runs on EC2
 - **[Multi-region active-active](../../resources/architecture-patterns/multi-region-active-active.md)** - the deep end of fault tolerance
 - **[Cell-based architecture](../../resources/architecture-patterns/cell-based-architecture.md)** - limiting the blast radius of any single failure
 - **[SRE and reliability topic](../../topics/sre-and-reliability.md)** - SLOs, error budgets and the rest of the reliability material
+
+## Check yourself
+
+Try these before you move on. Each answer is collapsed; click it to check yourself.
+
+1. What is the difference between high availability and fault tolerance?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   High availability means the system recovers quickly and on its own from failures. Fault tolerance means it keeps working through a failure with no interruption at all, which is stricter and more expensive. See: [The one-line answer](#the-one-line-answer)
+
+   </details>
+
+2. A request passes through a 99.99% load balancer, a 99.9% app tier and a 99.95% database. Is the whole system more or less available than the app tier alone, and why?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Less available: components in series multiply, giving about 99.84%. The system is less available than its weakest part. See: [The math of chains and copies](#the-math-of-chains-and-copies)
+
+   </details>
+
+3. Two zones each run at 70% load and one zone fails. What is the problem?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   The surviving zone would need 140% capacity. Run at most around 50% per zone with two zones, or use three zones. See: [Active-passive vs active-active](#active-passive-vs-active-active)
+
+   </details>
+
+4. Why is multi-AZ not a substitute for disaster recovery?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Multi-AZ protects against a zone failure only. A bad deploy or a deleted table replicates instantly to the standby, and a region-wide outage is outside its reach. See: [Common mistakes](#common-mistakes)
+
+   </details>

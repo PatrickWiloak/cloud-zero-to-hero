@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-08-09
+last-updated: 2026-11-07
 difficulty: beginner
 reading-time: 7 min
 ---
@@ -107,3 +107,43 @@ That last point is the one that bites. Autoscaling the compute tier without cons
 - **[Kubernetes in 10 minutes](./kubernetes-in-10-minutes.md)** - the three autoscalers in context
 - **[Queues vs streams](https://data.noblerworks.com/learn/concepts/queues-vs-streams/)** - where queue depth as a scaling signal comes from
 - **[Cloud cost basics](./cloud-cost-basics.md)** - the bill autoscaling is meant to control
+
+## Check yourself
+
+Try these before you move on. Each answer is collapsed; click it to check yourself.
+
+1. Why is CPU a poor scaling signal for a queue-backed worker fleet, and what is a better one?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Workers waiting on a slow downstream API show low CPU while the backlog grows for hours. Queue depth or message age is the correct signal. See: [What to scale on](#what-to-scale-on)
+
+   </details>
+
+2. Why aim for a target of 60-70% CPU instead of 90%?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   You need headroom while new capacity is starting up. A 90% target leaves none. See: [The shape of a scaling policy](#the-shape-of-a-scaling-policy)
+
+   </details>
+
+3. A cluster has an HPA but no node autoscaling. What happens when load keeps rising?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   The HPA adds pods, but they go Pending when no node has room, so scaling silently stops at the cluster's existing capacity. See: [Kubernetes specifics](#kubernetes-specifics)
+
+   </details>
+
+4. Why scale out fast and scale in slowly?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Adding capacity you did not need costs a little money, while removing capacity you did need costs an outage. See: [The shape of a scaling policy](#the-shape-of-a-scaling-policy)
+
+   </details>

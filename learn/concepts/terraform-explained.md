@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-11-07
 ---
 
 # Terraform Explained
@@ -195,3 +195,43 @@ Production: `apply` runs in CI (GitHub Actions, Atlantis, Terraform Cloud) so a 
 - **[Glossary: Terraform, IaC, State, Module](../glossary.md#devops--infrastructure-as-code)**
 - **[CLI cheat sheet: Terraform](../../resources/cli-cheat-sheet-terraform.md)**
 - **[HashiCorp certifications](../../exams/hashicorp/)** - Terraform Associate is the gateway cert
+
+## Check yourself
+
+Try these before you move on. Each answer is collapsed; click it to check yourself.
+
+1. What does `terraform plan` do, and why does the page call it the killer feature?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   It diffs your code against reality and shows exactly what will be created, modified or destroyed before you commit. See: [How it works](#how-it-works)
+
+   </details>
+
+2. What does the state file do?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   It maps your code, such as `aws_s3_bucket.logs`, to real resources, tracks attributes not in your code, and lets `plan` know a resource already exists. See: [The state file](#the-state-file)
+
+   </details>
+
+3. Why should you use a remote backend with locking?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   The lock prevents two engineers from running `apply` at once and corrupting state. See: [The state file](#the-state-file)
+
+   </details>
+
+4. Why does Terraform create the VPC before the subnet in the example?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   The subnet depends on the VPC, and Terraform builds a dependency graph automatically. See: [A small concrete example](#a-small-concrete-example)
+
+   </details>

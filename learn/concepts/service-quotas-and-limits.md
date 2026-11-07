@@ -99,3 +99,43 @@ A team plans a launch needing 400 vCPUs in a new Region. The new Region's defaul
 - **[Disaster recovery](./disaster-recovery-rpo-rto.md)** - quotas in the standby Region
 - **[Autoscaling explained](./autoscaling-explained.md)** - scaling stops at the quota
 - **[Cloud cost basics](./cloud-cost-basics.md)**
+
+## Check yourself
+
+Try these before you move on. Each answer is collapsed; click it to check yourself.
+
+1. What is the difference between a capacity (allocation) quota and a rate quota?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   A capacity quota limits how much you can hold at once, such as VPCs per Region. A rate quota limits how fast you can use something, such as API requests per second. See: [Two kinds of limit](#two-kinds-of-limit)
+
+   </details>
+
+2. You raised a VPC quota in us-east-1. Does that raise it in eu-west-1?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   No. Regional quotas are counted separately in each Region, and raising one does not raise it in another. See: [Scope matters](#scope-matters)
+
+   </details>
+
+3. Why is raising the quota only in the primary Region a problem for disaster recovery?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   A failover that cannot launch instances is not a failover. The DR Region needs its quotas raised too. See: [Common mistakes](#common-mistakes)
+
+   </details>
+
+4. A utilization of 150 used out of a 200 quota is what percent?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   75 percent. See: [AWS terms](#aws-terms)
+
+   </details>

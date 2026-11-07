@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-11-07
 difficulty: beginner
 reading-time: 6 min
 ---
@@ -147,3 +147,43 @@ This handles duplicates at the source level (webhook providers retry on non-2xx 
 - **[Queues vs streams](https://data.noblerworks.com/learn/concepts/queues-vs-streams/)** - delivery semantics
 - **[Topic: databases](https://data.noblerworks.com/topics/databases/)** - where dedup state usually lives
 - **[Architecture pattern: Event-driven](../../resources/architecture-patterns/event-driven-architecture.md)**
+
+## Check yourself
+
+Try these before you move on. Each answer is collapsed; click it to check yourself.
+
+1. What does it mean for an operation to be idempotent?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Running it once or running it five times has the same final effect. See: [The one-line answer](#the-one-line-answer)
+
+   </details>
+
+2. Why can a client not tell whether to worry about a timed-out request, and what is the safe default?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   It cannot tell whether the request never arrived, was processed with a lost response, or is still processing. The only safe default is to retry, and retrying is only safe if duplicates do not break anything. See: [Why retries are unavoidable](#why-retries-are-unavoidable)
+
+   </details>
+
+3. Should an idempotency key be generated per attempt or per intent, and why?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Per intent. If every retry made a new key, the retry would look like a new request and duplicate the work. See: [Choosing the key](#choosing-the-key)
+
+   </details>
+
+4. Two requests with the same idempotency key arrive at the same moment and both miss the dedup store. What happens, and how do you prevent it?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Both proceed and the customer is charged twice. Use atomic operations such as INSERT ... ON CONFLICT, conditional writes or distributed locks to make the check race-free. See: [Common pitfalls](#common-pitfalls)
+
+   </details>

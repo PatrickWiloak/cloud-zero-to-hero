@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-11-07
 difficulty: beginner
 reading-time: 8 min
 ---
@@ -162,3 +162,43 @@ Logs are the most expensive of the three. A noisy app at scale can run thousands
 - **[Service comparison: Observability and monitoring](../../resources/service-comparison-observability-monitoring.md)** - per-cloud tools
 - **[Troubleshooting: Kubernetes](../../resources/troubleshooting/kubernetes-troubleshooting.md)** - applied
 - **[Set up a monitoring stack](../../resources/hands-on-projects/setup-monitoring-stack.md)** - hands-on Prometheus + Grafana
+
+## Check yourself
+
+Try these before you move on. Each answer is collapsed; click it to check yourself.
+
+1. What question does each of logs, metrics and traces mainly answer?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Logs answer what happened, metrics answer how much and how often (is the system healthy), and traces answer where time was spent (why is this slow). See: [The three pillars](#the-three-pillars)
+
+   </details>
+
+2. Name the four golden signals.
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Latency, traffic, errors and saturation. See: [The four golden signals](#the-four-golden-signals)
+
+   </details>
+
+3. If 99 requests take 50 ms and one takes 5000 ms, why is the 99.5 ms average misleading?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   The average sounds great, but 1% of users are timing out. Averages hide tail latency, so watch p95 and p99. See: [Common pitfalls](#common-pitfalls)
+
+   </details>
+
+4. Why does adding a `request_id` tag to a metric cause trouble?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Every metric series becomes unique (a cardinality explosion) and the metrics back end falls over. High-cardinality data belongs in logs or traces. See: [Common pitfalls](#common-pitfalls)
+
+   </details>

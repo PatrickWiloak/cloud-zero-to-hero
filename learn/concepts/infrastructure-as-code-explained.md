@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-10-21
+last-updated: 2026-11-07
 difficulty: beginner
 reading-time: 9 min
 ---
@@ -109,3 +109,43 @@ A team needs the same three-tier stack in dev, staging and production.
 - **[GitOps explained](./gitops-explained.md)** - Git as the trigger and source of truth for deployments
 - **[Build infra with Terraform](../../resources/hands-on-projects/terraform-infrastructure.md)** - hands-on
 - **[Terraform CLI cheat sheet](../../resources/cli-cheat-sheet-terraform.md)** - the commands you will use daily
+
+## Check yourself
+
+Try these before you move on. Each answer is collapsed; click it to check yourself.
+
+1. What is the difference between imperative and declarative IaC?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Imperative means writing the steps, so running twice can create two VPCs. Declarative means writing the end state, and the tool works out the steps, so a second run does nothing. See: [Declarative vs imperative](#declarative-vs-imperative)
+
+   </details>
+
+2. What is drift, and name one fix from the page.
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Drift is when reality no longer matches the code, usually because someone changed something by hand. Fixes include restricting console write access in production, running scheduled drift detection, or porting a manual fix into code straight away. See: [State and drift](#state-and-drift)
+
+   </details>
+
+3. Why must a Terraform state file be stored remotely and locked?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   So the state is not lost and two people cannot apply at once. Losing or corrupting state is one of the worst IaC incidents. See: [State and drift](#state-and-drift)
+
+   </details>
+
+4. Why is applying without reading the plan risky?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   That is how databases get replaced instead of modified. See: [Common mistakes](#common-mistakes)
+
+   </details>

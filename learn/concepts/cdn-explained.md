@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-11-07
 ---
 
 # CDN Explained
@@ -151,3 +151,43 @@ If you're behind Cloudflare's free plan, you basically have a CDN with no work. 
 - **[VPC explained](./vpc-explained.md)** - the origin lives in a VPC; CDN sits in front
 - **[TLS and HTTPS](https://security.noblerworks.com/learn/concepts/tls-and-https/)** - CDNs typically terminate TLS at the edge
 - **[Glossary: CDN, Edge location, TTL](../glossary.md#networking)**
+
+## Check yourself
+
+Try these before you move on. Each answer is collapsed; click it to check yourself.
+
+1. What does a CDN do when a user requests an asset that its nearest PoP has not cached yet?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   The PoP has a cache miss and fetches the asset from the origin, then caches it. The next users in that region get a cache hit. See: [How it works](#how-it-works)
+
+   </details>
+
+2. Name three things a CDN does besides caching.
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Any three of: TLS termination, DDoS protection, WAF, edge compute, image optimization and smart routing. See: [What CDNs do besides caching](#what-cdns-do-besides-caching)
+
+   </details>
+
+3. Why does appending a hash to a filename, like `app.a3b9.js`, avoid stale cache problems?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   A new version gets a new filename, so the CDN never serves the old cached copy for it. See: [Cache invalidation](#cache-invalidation)
+
+   </details>
+
+4. Why does the page say a CDN helps even though a user in Singapore could reach a US server?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   The speed of light is finite, so a long round trip is felt on every request. A nearby cache answers instead of crossing the planet to the origin. See: [Why this exists](#why-this-exists)
+
+   </details>

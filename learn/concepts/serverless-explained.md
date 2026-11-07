@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-11-07
 ---
 
 # Serverless Explained
@@ -159,3 +159,43 @@ Pair them with serverless compute and you can build entire apps that idle to nea
 - **[Containers vs VMs](./containers-vs-vms.md)** - serverless platforms run on containers under the hood
 - **[Glossary: Serverless, Lambda, Cold start](../glossary.md#cloud-fundamentals)**
 - **[Service comparison: Serverless](../../resources/service-comparison-serverless.md)**
+
+## Check yourself
+
+Try these before you move on. Each answer is collapsed; click it to check yourself.
+
+1. What are you billed for in a serverless function, and what happens when nobody uses it?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   You are billed for the time your code actually executes (and the memory it uses). If zero requests arrive, you pay zero. See: [How it works](#how-it-works)
+
+   </details>
+
+2. What is a cold start?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   The first request after idle, when the platform must spin up a runtime and load your code. Latency is 100ms to 3s depending on platform and runtime. See: [Cold starts](#cold-starts)
+
+   </details>
+
+3. Why can serverless become more expensive than VMs at high steady load?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Per-request cost adds up, and there is a crossover point where renting instances 24/7 is cheaper. The rough rule is to do the math if you would run more than 2 small instances steady-state. See: [Pricing cliff at scale](#pricing-cliff-at-scale)
+
+   </details>
+
+4. Why are long-running stateful processes like game servers a bad fit?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Functions are ephemeral, so state has to live elsewhere, and execution time limits apply. See: [Tradeoffs](#tradeoffs)
+
+   </details>

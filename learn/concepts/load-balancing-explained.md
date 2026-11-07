@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-08-09
+last-updated: 2026-11-07
 difficulty: beginner
 reading-time: 7 min
 ---
@@ -117,3 +117,43 @@ See [Regions and availability zones](./regions-and-availability-zones.md).
 - **[Kubernetes in 10 minutes](./kubernetes-in-10-minutes.md)** - services and ingress do this inside a cluster
 - **[Load balancing deep dive](../../resources/networking-deep-dives/load-balancing-deep-dive.md)** - the reference-depth version
 - **[Service comparison: networking](../../resources/service-comparison-networking.md)** - the equivalent products per cloud
+
+## Check yourself
+
+Try these before you move on. Each answer is collapsed; click it to check yourself.
+
+1. What is the difference between layer 4 and layer 7 load balancing?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Layer 4 balances on TCP/UDP information such as IP and port and does not read the request. Layer 7 parses HTTP, so it can route by path, header or cookie. See: [Layer 4 versus layer 7](#layer-4-versus-layer-7)
+
+   </details>
+
+2. Why is least connections often a better choice than round robin when some requests are much slower?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Round robin keeps sending work to a server already stuck on a long request. Least connections picks the server with the fewest active connections. See: [Algorithms](#algorithms)
+
+   </details>
+
+3. What can go wrong with a very deep health check?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   If a shared database is slow, every server fails its check at once and the load balancer removes all of them, turning a partial degradation into a total outage. See: [Health checks](#health-checks)
+
+   </details>
+
+4. Why are sticky sessions called a smell, and what is the better fix?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   They mean servers hold user state in memory, which breaks scaling, deploys and failover. Make servers stateless and keep session state in a shared store such as Redis or in a signed token. See: [Sticky sessions](#sticky-sessions)
+
+   </details>

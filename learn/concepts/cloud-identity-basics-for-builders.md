@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-10-21
+last-updated: 2026-11-07
 difficulty: beginner
 reading-time: 7 min
 ---
@@ -78,3 +78,43 @@ Almost every associate exam has the question: "An application on EC2 / a VM / Cl
 - **[Multi-account strategy and landing zones](./multi-account-and-landing-zones.md)** - how human access is organized across many accounts
 - **[CI/CD explained](./cicd-explained.md)** - where OIDC federation fits in a pipeline
 - **[Environment variables and config](../day-one/environment-variables-and-config.md)** - why config belongs in the environment, and secrets mostly do not
+
+## Check yourself
+
+Try these before you move on. Each answer is collapsed; click it to check yourself.
+
+1. What is the difference between a human identity and a workload identity?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Human identities are people, who should use single sign-on with MFA and temporary access. Workload identities are code such as a VM, container, function or CI pipeline. See: [Two kinds of identity](#two-kinds-of-identity)
+
+   </details>
+
+2. What are the AWS, Azure and GCP names for the identity a workload should use?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   IAM role on AWS, managed identity on Azure, and service account on GCP. See: [How workloads should get credentials](#how-workloads-should-get-credentials)
+
+   </details>
+
+3. How does a CI job get cloud access without a stored access key?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   The CI system issues an OIDC token for the job, and the cloud trusts that issuer and swaps the token for short-lived credentials restricted to that repository and branch. See: [CI/CD without stored keys](#cicd-without-stored-keys)
+
+   </details>
+
+4. What could go wrong if the OIDC trust says 'any repository in the organization' or 'any branch'?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   A pull request from a fork could assume your production role. See: [CI/CD without stored keys](#cicd-without-stored-keys)
+
+   </details>

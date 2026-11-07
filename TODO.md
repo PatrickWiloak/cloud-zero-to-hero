@@ -6,6 +6,8 @@ Working task list for **cloud-zero-to-hero** (Cloud Zero to Hero, https://cloud.
 
 ## Community (2026-10-27)
 
+- [x] 2026-11-07 'Check yourself' sections (3-4 questions, collapsed `<details markdown="1">` answers) added to all 37 `learn/concepts/` pages.
+- [ ] 2026-11-07 Port the same 'Check yourself' sections to the sibling sites' concept pages (data-zero-to-hero, security-zero-to-hero, ai-zero-to-hero); same markup, answers drawn only from each page's own text.
 - [x] 2026-11-07 Heading-anchor validation folded into `check-internal-links.py` and `check-code-fences.py` added (ported from data-zero-to-hero); both blocking in `structure-validate.yml`. 784 anchors, 0 broken, 0 unclosed fences; ids match the strict build's on all 1,064 comparable pages.
 - [x] 2026-10-27 PR #13 closed with thanks: freemium product link, out of scope per CONTRIBUTING (marketing / paid ads).
 - [x] 2026-10-27 Link check #12: real 404s fixed (SAP, Power Platform blog, 4 renamed NVIDIA slugs on ai.); the rest is CI-side connection noise.

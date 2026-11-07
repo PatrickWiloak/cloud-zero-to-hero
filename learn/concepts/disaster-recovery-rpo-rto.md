@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-10-21
+last-updated: 2026-11-07
 difficulty: beginner
 reading-time: 9 min
 ---
@@ -105,3 +105,43 @@ DR questions nearly always hand you an RPO and RTO and four options from the lad
 - **[Run a DR drill](../../resources/hands-on-projects/disaster-recovery-drill.md)** - hands-on: fail over and measure your real RPO and RTO
 - **[Multi-region active-active](../../resources/architecture-patterns/multi-region-active-active.md)** - the top rung of the ladder
 - **[Object, block, and file storage](./object-block-file-storage.md)** - where snapshots and backups live
+
+## Check yourself
+
+Try these before you move on. Each answer is collapsed; click it to check yourself.
+
+1. What do RPO and RTO each measure?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   RPO is how much data you can afford to lose. RTO is how long you can afford to be down. See: [The one-line answer](#the-one-line-answer)
+
+   </details>
+
+2. Why is high availability not enough to protect against a bad migration that drops a column?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Replication copies the damage to the standby within milliseconds. You need a copy separate in time, such as a backup from before the damage. See: [Why HA is not enough](#why-ha-is-not-enough)
+
+   </details>
+
+3. A system needs RPO 15 minutes and RTO 1 hour. Why did the worked example choose pilot light rather than nightly backups or active-active?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Nightly backups give a 24-hour RPO, which is too much loss. Active-active is far more than a one-hour RTO needs. See: [A worked example](#a-worked-example)
+
+   </details>
+
+4. Why should backups be copied to a separate account and made immutable?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   So an attacker with admin access to production cannot delete them. See: [The parts people forget](#the-parts-people-forget)
+
+   </details>

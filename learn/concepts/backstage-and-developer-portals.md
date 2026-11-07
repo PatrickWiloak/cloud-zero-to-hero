@@ -78,3 +78,43 @@ The Linux Foundation's [Certified Cloud Native Platform Engineering Associate (C
 - **[Platform engineering explained](./platform-engineering-explained.md)** - the platform the portal fronts
 - **[GitOps explained](./gitops-explained.md)** - the deploy engine behind many templates
 - **[CI/CD explained](./cicd-explained.md)** - the pipelines a template wires up
+
+## Check yourself
+
+Try these before you move on. Each answer is collapsed; click it to check yourself.
+
+1. Name the four core features of Backstage listed on the page.
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Software Catalog, Software Templates, TechDocs and Plugins. See: [What Backstage is](#what-backstage-is)
+
+   </details>
+
+2. What is the difference between a developer portal and a platform?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   The platform is the pipelines, clusters, policies and automation. The portal is only the interface to them. See: [Portal versus platform](#portal-versus-platform)
+
+   </details>
+
+3. Why does a software catalog that was imported once tend to go stale?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   Without owners updating it, it goes stale within months. See: [Common mistakes](#common-mistakes)
+
+   </details>
+
+4. A company has fewer than about ten services. Which option does the page suggest first?
+
+   <details markdown="1">
+   <summary>Answer</summary>
+
+   A simple catalog in a repo, which costs almost nothing. See: [Build or buy](#build-or-buy)
+
+   </details>
