@@ -1,30 +1,47 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-11-07
 ---
 
-# HashiCorp Terraform Associate (003) - Fact Sheet
+# HashiCorp Terraform Associate (004) - Fact Sheet
 
 ## Quick Reference
 
-**Exam Code:** Terraform Associate (003)
-**Duration:** 60 minutes
-**Questions:** 57 questions
-**Passing Score:** 70%
-**Cost:** $70.50 USD
+**Exam Code:** Terraform Associate (004)
+**Duration:** 1 hour
+**Questions:** Not verified (not stated on the HashiCorp page)
+**Passing Score:** Not verified (not stated on the HashiCorp page)
+**Cost:** $70.50 USD, plus locally applicable taxes and fees; free retake not included
 **Validity:** 2 years
+**Format:** Multiple choice, online proctored, English
+**Product version tested:** Terraform 1.12
 **Difficulty:** ⭐⭐⭐
 
-## Exam Domains
+### Verified facts and sources (checked 2026-11-07)
 
-| Domain | Weight | Key Focus |
-|--------|--------|-----------|
-| Understand IaC concepts | 15% | IaC benefits, patterns, comparisons |
-| Understand the purpose of Terraform | 15% | Multi-cloud, state, workflow, providers |
-| Understand Terraform basics | 20% | HCL, resources, providers, dependencies |
-| Use Terraform outside of core workflow | 10% | Import, state commands, workspaces, debug |
-| Interact with Terraform modules | 10% | Sources, inputs/outputs, versioning, registry |
-| Use the core Terraform workflow | 15% | init, validate, plan, apply, destroy |
-| Implement and maintain state | 15% | Backends, locking, remote state, refresh |
+| Fact | Value | Source |
+|------|-------|--------|
+| Current version | 004 (the page title is "HashiCorp Certified: Terraform Associate (004)") | [Terraform Associate page](https://developer.hashicorp.com/certifications/terraform-associate) |
+| Duration, format, price, expiration | 1 hour, multiple choice, online proctored, $70.50 USD plus taxes, 2 years | Same page |
+| Terraform version tested | 1.12 | Same page |
+| Objectives | 8 objectives (list below), no weights published | Same page and [004 content list](https://developer.hashicorp.com/terraform/tutorials/certification-004/associate-review-004) |
+| New in 004 vs 003 | 4f, 4g, 4h, 8c | 004 content list |
+| 003 retirement date | **Not verified.** Not on the pages read. A search snippet reported 2026-01-07 | Check HashiCorp |
+| Question count, passing score | **Not verified.** The previous version of this guide listed 57 questions and 70 percent for 003 without a vendor source on the current pages | Check HashiCorp |
+
+## Exam Objectives (004)
+
+| # | Objective | Key Focus |
+|---|-----------|-----------|
+| 1 | IaC with Terraform | What IaC is, advantages, multi-cloud and hybrid workflows |
+| 2 | Terraform fundamentals | Providers (install, version, use, multiple), state |
+| 3 | Core Terraform workflow | init, validate, plan, apply, destroy, fmt |
+| 4 | Terraform configuration | Resource and data blocks, references, variables and outputs, complex types, expressions and functions, **dependencies and lifecycle rules**, **custom conditions**, **sensitive data, ephemeral values, Vault** |
+| 5 | Terraform modules | Sources, variable scope, usage, versions |
+| 6 | Terraform state management | Local backend, locking, remote state, drift |
+| 7 | Maintain infrastructure | Import, state inspection with the CLI, verbose logging |
+| 8 | HCP Terraform | Creating infrastructure, collaboration and governance, **workspaces and projects**, CLI integration |
+
+Bold marks content that is new in 004. Notes: [dependencies, conditions and ephemeral values](notes/dependencies-conditions-and-ephemeral-values.md) and [HCP Terraform](notes/hcp-terraform.md). The sections below are carried over from the 003 guide and were not re-verified line by line; the 004 content list shows objectives 1 to 3, 5 to 7 are largely unchanged.
 
 ## Infrastructure as Code Fundamentals
 
@@ -429,6 +446,9 @@ terraform {
 ```
 
 ## Exam Tips
+
+- 004 adds `depends_on` and `create_before_destroy`, custom conditions (variable validation, preconditions, postconditions, checks), ephemeral resources and write-only arguments, and HCP Terraform workspaces and projects. See the 004 notes before the exam.
+- No weights are published for 004, so cover all eight objectives.
 
 ### High-Value Topics (by weight)
 1. **Terraform basics (20%):** HCL syntax, resources, providers, dependencies

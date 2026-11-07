@@ -1,4 +1,8 @@
-# Terraform Associate - High-Yield Scenarios and Patterns
+---
+last-updated: 2026-11-07
+---
+
+# Terraform Associate (004) - High-Yield Scenarios and Patterns
 
 ## State Management Scenarios
 
@@ -236,3 +240,38 @@ resource "aws_instance" "app" {
 3. **Local vs Remote state:** Local for individual work, remote for team collaboration
 4. **Import block vs CLI import:** Import block for bulk/declarative imports, CLI for one-off imports
 5. **Provisioners vs native resources:** Always prefer native provider resources over provisioners
+
+## 004 Additions
+
+### Replacing a Resource Without Downtime
+**Scenario:** Changing the name of a load balancer target group forces replacement. Terraform destroys the old one first, and the listener briefly has no target.
+
+**Solution Pattern:**
+- **Rule:** set `lifecycle { create_before_destroy = true }` so the new object exists before the old one is removed
+- **Constraint:** the name must not collide while both exist, so use `name_prefix` where the resource supports it
+- **Note:** Terraform propagates the rule to resources the replaced one depends on
+
+### Rejecting a Bad Input Early
+**Scenario:** Engineers sometimes pass an AMI for the wrong CPU architecture, and the failure appears late as a boot problem.
+
+**Solution Pattern:**
+- **Input format:** a `validation` block on the variable rejects values that do not start with `ami-`
+- **Assumption about a data source:** a `precondition` in the resource's `lifecycle` block checks the architecture during planning
+- **Result guarantee:** a `postcondition` on the data source checks the returned tags; use `self`
+- **Non-blocking monitoring:** a `check` block warns without stopping the run
+
+### Keeping a Database Password Out of State
+**Scenario:** A security review finds the generated database password in the state file.
+
+**Solution Pattern:**
+- **Generate it as an `ephemeral` resource** (for example `ephemeral "random_password"`), which is not stored in state or plan files
+- **Pass it to a write-only argument** such as `password_wo`, with `password_wo_version` to signal a rotation
+- **Still protect state:** `sensitive = true` hides values from output but does not remove them from state
+
+### Splitting a Monolith Across Teams in HCP Terraform
+**Scenario:** One huge configuration is managed by three teams who block each other.
+
+**Solution Pattern:**
+- **Split** into networking, application and monitoring configurations, one workspace each
+- **Group** the workspaces in a project and grant each team access at the project or workspace level
+- **Connect** the application workspace to the networking workspace with a run trigger so it queues after a successful networking apply

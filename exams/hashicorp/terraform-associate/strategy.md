@@ -1,4 +1,10 @@
-# Terraform Associate (003) Study Strategy
+---
+last-updated: 2026-11-07
+---
+
+# Terraform Associate (004) Study Strategy
+
+> Version 004 publishes eight objectives with no weights. The new content versus 003 is lifecycle rules and `depends_on` (4f), custom conditions (4g), ephemeral values and write-only arguments (4h) and HCP Terraform workspaces and projects (8c). Budget time for those first if you studied from older material.
 
 ## Study Approach
 
@@ -44,8 +50,8 @@
 ## Comprehensive Study Resources
 
 ### Official Resources
-- **[Terraform Associate Study Guide](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-study-003)** - Official study guide from HashiCorp
-- **[Terraform Associate Exam Review](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003)** - Official exam review questions
+- **[Terraform Associate Study Guide](https://developer.hashicorp.com/terraform/tutorials/certification-004/associate-study-004)** - Official study guide from HashiCorp
+- **[Terraform Associate Exam Review](https://developer.hashicorp.com/terraform/tutorials/certification-004/associate-review-004)** - Official exam review questions
 - **[Terraform Documentation](https://developer.hashicorp.com/terraform/docs)** - Complete reference documentation
 - **[Terraform Tutorials](https://developer.hashicorp.com/terraform/tutorials)** - Hands-on learning paths
 - **[Terraform Registry](https://registry.terraform.io/)** - Providers, modules, and policies

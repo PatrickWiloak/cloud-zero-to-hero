@@ -1,74 +1,50 @@
-# HashiCorp Terraform Associate (003) Certification
+---
+last-updated: 2026-11-07
+difficulty: intermediate
+---
+
+# HashiCorp Terraform Associate (004) Certification
 
 ## Exam Overview
 
-The HashiCorp Terraform Associate (003) certification validates your knowledge of basic concepts and skills associated with HashiCorp Terraform. This certification is designed for cloud engineers, DevOps professionals, and infrastructure administrators who use Terraform to manage and automate infrastructure provisioning. The exam covers Infrastructure as Code (IaC) concepts, Terraform workflows, state management, modules, and configuration language fundamentals.
+The HashiCorp Certified: Terraform Associate (004) exam proves foundational Terraform knowledge and skills. HashiCorp describes the audience as a cloud engineer with foundational Terraform knowledge who can identify Terraform Enterprise features and distinguish them from the Community edition. The exam covers infrastructure as code concepts, providers and state, the core workflow, configuration language, modules, state management, maintenance tasks and HCP Terraform.
 
-**Exam Code:** Terraform Associate (003)
-**Exam Duration:** 60 minutes
-**Number of Questions:** 57 questions
-**Exam Format:** Multiple choice and fill-in-the-blank
-**Passing Score:** 70%
-**Cost:** $70.50 USD
-**Proctoring:** PSI online proctoring
-**Validity:** 2 years
-**Prerequisites:** None (recommended 6+ months hands-on Terraform experience)
+**Version 004 replaces 003.** HashiCorp's 004 content list names the changes from 003: four new topics (4f lifecycle rules `depends_on` and `create_before_destroy`, 4g custom conditions, 4h ephemeral values and write-only arguments, 8c HCP Terraform workspaces and projects), a test version of Terraform 1.12, and HCP Terraform content. The pages read do not state a retirement date for 003, and the 003 guide's old "last day" date (reported in January 2026 by a search snippet) is not confirmed. If you hold a 003 certification, HashiCorp's renewal section describes your options.
 
-## Exam Domains
+**Exam Code:** Terraform Associate (004)
+**Exam Duration:** 1 hour
+**Assessment type:** Multiple choice
+**Number of Questions:** Not verified (not on the HashiCorp page)
+**Passing Score:** Not verified (not on the HashiCorp page)
+**Format:** Online proctored
+**Cost:** $70.50 USD, plus locally applicable taxes and fees; free retake not included
+**Credential Expiration:** 2 years
+**Language:** English
+**Product version tested:** Terraform 1.12
+**Prerequisites:** Basic terminal skills and an understanding of on-premises and cloud architecture. Professional experience is recommended, but you can prepare by practicing the objectives in a personal demo setup
 
-### Domain 1: Understand Infrastructure as Code (IaC) concepts (15%)
-- Explain what IaC is
-- Describe advantages of IaC patterns
-- Understand key IaC principles (idempotency, declarative vs imperative)
-- Compare Terraform to other IaC tools (CloudFormation, Ansible, Pulumi)
+Source (read 2026-11-07): **[📖 Terraform Associate (004) certification page](https://developer.hashicorp.com/certifications/terraform-associate)** - Exam details and objectives
 
-### Domain 2: Understand the purpose of Terraform (15%)
-- Explain multi-cloud and provider-agnostic benefits
-- Explain the benefits of state
-- Describe Terraform workflow (Write, Plan, Apply)
-- Understand Terraform use cases
-- Describe how Terraform works with providers and plugins
+## Exam Objectives
 
-### Domain 3: Understand Terraform basics (20%)
-- Handle Terraform and provider installation and versioning
-- Describe plugin-based architecture
-- Write Terraform configuration using HCL
-- Understand Terraform settings, providers, and required_providers
-- Understand resource arguments, attributes, and meta-arguments
-- Use provisioners as a last resort
-- Describe built-in dependency management (implicit and explicit)
+HashiCorp's 004 page lists eight objectives and publishes **no percentage weights**. (The weights that appeared on the 003 outline, such as 20 percent for "Terraform basics", do not apply to 004.) Study all eight; the notes below map to them.
 
-### Domain 4: Use Terraform outside of core workflow (10%)
-- Describe when to use terraform import
-- Use terraform state command
-- Describe when to use terraform taint and terraform replace
-- Describe terraform workspace and its use cases
-- Describe Terraform debugging (TF_LOG)
+| # | Objective | Sub-objectives | Study notes |
+|---|-----------|----------------|-------------|
+| 1 | Infrastructure as Code (IaC) with Terraform | 1a what IaC is; 1b advantages; 1c multi-cloud, hybrid cloud and service-agnostic workflows | [IaC concepts](notes/iac-concepts-and-terraform-overview.md) |
+| 2 | Terraform fundamentals | 2a install and version providers; 2b how Terraform uses providers; 2c multiple providers; 2d how Terraform uses and manages state | [Providers and resources](notes/providers-and-resources.md), [State](notes/state-management.md) |
+| 3 | Core Terraform workflow | 3a workflow; 3b init; 3c validate; 3d plan; 3e apply; 3f destroy; 3g fmt | [Core workflow](notes/core-workflow-and-advanced-features.md) |
+| 4 | Terraform configuration | 4a resource and data blocks; 4b references; 4c variables and outputs; 4d complex types; 4e expressions and functions; **4f resource dependencies (`depends_on`, `create_before_destroy`)**; **4g custom conditions**; **4h sensitive data and secrets, including ephemeral values and Vault** | [HCL syntax](notes/hcl-syntax-and-configuration.md), [Dependencies, conditions and ephemeral values](notes/dependencies-conditions-and-ephemeral-values.md) |
+| 5 | Terraform modules | 5a sources; 5b variable scope; 5c using modules; 5d versions | [Modules](notes/modules.md) |
+| 6 | Terraform state management | 6a local backend; 6b locking; 6c remote state with the backend block; 6d drift and state | [State](notes/state-management.md) |
+| 7 | Maintain infrastructure with Terraform | 7a import; 7b inspect state with the CLI; 7c verbose logging | [Core workflow](notes/core-workflow-and-advanced-features.md), [State](notes/state-management.md) |
+| 8 | HCP Terraform | 8a create infrastructure; 8b collaboration and governance; **8c workspaces and projects**; 8d integration | [HCP Terraform](notes/hcp-terraform.md) |
 
-### Domain 5: Interact with Terraform modules (10%)
-- Contrast and use different module sources
-- Interact with module inputs and outputs
-- Describe variable scope within modules/child modules
-- Set module version
-- Use the Terraform Registry
+Bold items are new in 004. **[📖 Associate exam content list (004)](https://developer.hashicorp.com/terraform/tutorials/certification-004/associate-review-004)** - HashiCorp's objective-to-documentation mapping
 
-### Domain 6: Use the core Terraform workflow (15%)
-- Describe the Terraform workflow (init, validate, plan, apply, destroy)
-- Initialize a Terraform working directory (terraform init)
-- Validate a Terraform configuration (terraform validate)
-- Generate and review an execution plan (terraform plan)
-- Execute changes to infrastructure (terraform apply)
-- Destroy Terraform-managed infrastructure (terraform destroy)
+### What 004 dropped from the 003 outline
 
-### Domain 7: Implement and maintain state (15%)
-- Describe default local backend
-- Describe state locking
-- Handle backend and cloud integration configuration
-- Describe remote state storage mechanisms (S3, GCS, Consul, Terraform Cloud)
-- Understand state file purpose and function
-- Describe terraform refresh and its behavior
-- Describe backend authentication methods
-- Describe remote state data source
+The 004 objective list no longer names `terraform taint`/`replace`, CLI `terraform workspace` use cases, `terraform refresh`, remote state data sources or provisioners. Those topics remain valid Terraform knowledge and the notes still cover them, but they are no longer listed as objectives. `terraform refresh` is superseded by `terraform plan -refresh-only` (6d names refresh-only mode), and drift handling (6d) is the objective to study.
 
 ## Key Study Areas
 
@@ -146,12 +122,12 @@ The HashiCorp Terraform Associate (003) certification validates your knowledge o
 ## Comprehensive Study Resources
 
 ### Quick Links (Terraform Associate Specific)
-- **[Terraform Associate Exam Page](https://www.hashicorp.com/certifications/terraform-associate)** - Registration and exam details
+- **[Terraform Associate Exam Page](https://developer.hashicorp.com/certifications/terraform-associate)** - Registration and exam details
 - **[Terraform Documentation](https://developer.hashicorp.com/terraform/docs)** - Complete Terraform documentation
 - **[Terraform Tutorials](https://developer.hashicorp.com/terraform/tutorials)** - Official hands-on tutorials
 - **[Terraform Registry](https://registry.terraform.io/)** - Providers, modules, and policies
-- **[Terraform Associate Study Guide](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-study-003)** - Official study guide
-- **[Terraform Exam Review](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003)** - Official exam review
+- **[Terraform Associate Study Guide](https://developer.hashicorp.com/terraform/tutorials/certification-004/associate-study-004)** - Official study guide
+- **[Terraform Exam Review](https://developer.hashicorp.com/terraform/tutorials/certification-004/associate-review-004)** - Official exam review
 
 ### Recommended Courses
 - HashiCorp Learn Terraform tutorials (free)

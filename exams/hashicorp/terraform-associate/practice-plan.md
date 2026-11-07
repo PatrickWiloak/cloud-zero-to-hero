@@ -1,4 +1,8 @@
-# HashiCorp Terraform Associate (003) Study Plan
+---
+last-updated: 2026-11-07
+---
+
+# HashiCorp Terraform Associate (004) Study Plan
 
 ## 6-Week Intensive Study Schedule
 
@@ -110,7 +114,11 @@
 - [ ] Study terraform plan output interpretation
 - [ ] **Practice:** Debug a broken configuration using TF_LOG
 
-#### Day 3-4: Terraform Cloud Features
+#### Day 3-4: HCP Terraform (objective 8)
+- [ ] Read [the HCP Terraform note](notes/hcp-terraform.md): workspaces vs CLI workspaces, projects, run triggers, variable sets
+- [ ] Read [the 004 additions note](notes/dependencies-conditions-and-ephemeral-values.md)
+
+#### Day 3-4 (continued): Terraform Cloud hands-on
 - [ ] Set up Terraform Cloud free account
 - [ ] Study remote execution and state management
 - [ ] Learn team management and governance features
@@ -127,8 +135,8 @@
 ### Week 6: Final Review and Exam
 
 #### Day 1-2: Gap Analysis and Review
-- [ ] Review Domain 3 (Terraform basics - 20%) thoroughly
-- [ ] Review Domain 1 and 2 (IaC concepts and purpose - 30% combined)
+- [ ] Review objective 4 (Terraform configuration), the largest list of sub-objectives, including the 004 additions (dependencies and lifecycle rules, custom conditions, ephemeral values)
+- [ ] Review objectives 1 to 3 (IaC, fundamentals, core workflow)
 - [ ] Practice state management scenarios
 - [ ] Review module composition patterns
 - [ ] **Practice:** Write configurations from memory

@@ -1,6 +1,11 @@
-# HashiCorp Terraform Associate (003) - Practice Questions
+---
+last-updated: 2026-11-07
+difficulty: intermediate
+---
 
-25 scenario-based questions for Terraform Associate prep.
+# HashiCorp Terraform Associate (004) - Practice Questions
+
+32 scenario-based questions for Terraform Associate prep. Questions 1-25 cover the objectives carried over from 003. Questions 26-32 cover content that is new in 004 (lifecycle rules, custom conditions, ephemeral values, HCP Terraform workspaces and projects).
 
 > **Cert page:** [exams/hashicorp/terraform-associate/](../../exams/hashicorp/terraform-associate/)
 
@@ -453,3 +458,129 @@ D. Run `terraform plan` to see drift; either accept the change into config or `t
 - **<17:** Hands-on practice + re-read fact-sheet.
 
 Terraform Associate is multiple-choice, 60 minutes, ~57 questions. These reinforce concepts; for full coverage see HashiCorp Learn and the [exams/hashicorp/terraform-associate/](../../exams/hashicorp/terraform-associate/) materials.
+
+### Question 26
+**Scenario:** A team replaces an object that has a unique name constraint managed by Terraform. Replacement currently destroys the old object first and creates an outage. They want the new object created first and have used a name prefix to avoid collisions.
+
+A. Set create_before_destroy = true in the resource's lifecycle block
+B. Set prevent_destroy = true in the lifecycle block
+C. Add ignore_changes = all to the lifecycle block
+D. Add depends_on pointing at the old object
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** create_before_destroy reverses the default replace order, creating the replacement before destroying the existing object. depends_on controls ordering between resources, prevent_destroy rejects destroying plans, and ignore_changes suppresses diffs.
+</details>
+
+---
+
+### Question 27
+**Scenario:** A web instance needs an IAM policy attached before its software boots, but nothing in the instance block references the policy resource, so Terraform sometimes creates them in parallel. What is the correct fix?
+
+A. Wrap the policy in a precondition
+B. Move both resources to separate workspaces
+C. Add depends_on = [aws_iam_role_policy.app] to the instance
+D. Run terraform apply twice
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** depends_on declares a hidden dependency that Terraform cannot infer from references. Applying twice is not a design, a precondition validates assumptions rather than ordering, and splitting workspaces does not create an ordering within one configuration.
+</details>
+
+---
+
+### Question 28
+**Scenario:** Which statement about a check block is correct?
+
+A. A failed check stops the plan with an error, like a precondition
+B. A failed check reports a warning without blocking the run
+C. A check block can only be used inside a variable block
+D. A check block runs only during terraform init
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Check blocks validate that infrastructure works as expected without blocking operations; failures appear as warnings. Variable validation, preconditions and postconditions do block.
+</details>
+
+---
+
+### Question 29
+**Scenario:** A module author wants a clear error during planning if the selected AMI is not for the x86_64 architecture, before the instance is created. Which feature fits?
+
+A. terraform fmt
+B. An output with sensitive = true
+C. A postcondition on the aws_instance
+D. A precondition in the aws_instance lifecycle block referencing the AMI data source
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Preconditions are evaluated during planning and verify assumptions before an object is created. A postcondition runs after the object exists, fmt only formats code, and sensitive affects display.
+</details>
+
+---
+
+### Question 30
+**Scenario:** An engineer wants a generated database password to be used during apply without being stored in the state or plan files. Which approach does this?
+
+A. Write it to a .tfvars file committed to Git
+B. Mark the variable sensitive = true
+C. Generate it with an ephemeral resource and pass it to a write-only argument
+D. Store it in a local value
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Ephemeral resources and write-only arguments are not persisted in state or plan files. sensitive = true hides output but the value is still stored in state, and the other options expose or store the secret.
+</details>
+
+---
+
+### Question 31
+**Scenario:** After adding a write-only argument such as password_wo to a database resource, the team wants Terraform to apply a new password. Terraform did not store the old value. How is the change signaled?
+
+A. Change the companion version argument, for example increment password_wo_version
+B. Delete the state file
+C. Terraform detects the change automatically by hashing the password
+D. Run terraform refresh
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Because the value is never stored, Terraform cannot compare it. A companion version argument is changed to tell Terraform the value was updated.
+</details>
+
+---
+
+### Question 32
+**Scenario:** In HCP Terraform, an organization wants to group related workspaces and grant a team access to all of them, and have new workspaces inherit tags. What should they use?
+
+A. A Terraform CLI workspace
+B. A variable set
+C. A run trigger
+D. A project
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Projects group workspaces and carry team permissions and tags that workspaces created inside inherit. CLI workspaces are state files in one directory, variable sets share variables, and run triggers queue runs between workspaces.
+</details>
+
+---

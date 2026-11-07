@@ -1,15 +1,25 @@
 Question,Answer,Tags
-How long is the HashiCorp Terraform Associate (003) Certification exam?,60 minutes,exam-logistics
-How many questions are on the HashiCorp Terraform Associate (003) Certification exam?,57 questions,exam-logistics
-What is the passing score for HashiCorp Terraform Associate (003) Certification?,70%,exam-logistics
-What does the HashiCorp Terraform Associate (003) Certification exam cost?,$70.50 USD,exam-logistics
-How long is HashiCorp Terraform Associate (003) Certification valid for?,2 years,exam-logistics
+How long is the HashiCorp Terraform Associate (004) Certification exam?,1 hour,exam-logistics
+How many questions are on the HashiCorp Terraform Associate (004) Certification exam?,Not verified (not stated on the HashiCorp page),exam-logistics
+What is the passing score for HashiCorp Terraform Associate (004) Certification?,Not verified (not stated on the HashiCorp page),exam-logistics
+What does the HashiCorp Terraform Associate (004) Certification exam cost?,"$70.50 USD, plus locally applicable taxes and fees; free retake not included",exam-logistics
+How long is HashiCorp Terraform Associate (004) Certification valid for?,2 years,exam-logistics
 terraform init (core workflow and advanced features),prepares a working directory by installing providers and modules and configuring the backend.,"notes,core-workflow-and-advanced-features"
 terraform plan (core workflow and advanced features),"compares configuration, state and real infrastructure and shows the changes Terraform would make.","notes,core-workflow-and-advanced-features"
 terraform apply (core workflow and advanced features),"carries out the planned changes to create, update or destroy infrastructure.","notes,core-workflow-and-advanced-features"
 terraform validate (core workflow and advanced features),checks that the configuration is syntactically valid and internally consistent without contacting remote services.,"notes,core-workflow-and-advanced-features"
 Provisioner (core workflow and advanced features),"a block that runs a script on a local or remote machine as part of resource creation or destruction, and is a last resort.","notes,core-workflow-and-advanced-features"
 Sentinel (core workflow and advanced features),HashiCorp's policy-as-code framework used in HCP Terraform to enforce rules on runs.,"notes,core-workflow-and-advanced-features"
+Implicit dependency (dependencies conditions and ephemeral values),an ordering Terraform infers from one resource referring to another's attributes.,"notes,dependencies-conditions-and-ephemeral-values"
+depends_on (dependencies conditions and ephemeral values),a meta-argument that declares a dependency Terraform cannot infer from references.,"notes,dependencies-conditions-and-ephemeral-values"
+create_before_destroy (dependencies conditions and ephemeral values),a lifecycle rule that creates the replacement object before destroying the old one.,"notes,dependencies-conditions-and-ephemeral-values"
+prevent_destroy (dependencies conditions and ephemeral values),a lifecycle rule that makes Terraform reject any plan that would destroy the resource.,"notes,dependencies-conditions-and-ephemeral-values"
+Precondition (dependencies conditions and ephemeral values),"a custom condition checked during planning that must hold before a resource, data source or output is created.","notes,dependencies-conditions-and-ephemeral-values"
+Postcondition (dependencies conditions and ephemeral values),"a custom condition checked after a resource or data source is applied or read, referring to the object as self.","notes,dependencies-conditions-and-ephemeral-values"
+Check block (dependencies conditions and ephemeral values),"a top-level block that validates infrastructure without blocking the run, reporting failures as warnings.","notes,dependencies-conditions-and-ephemeral-values"
+Variable validation (dependencies conditions and ephemeral values),a validation block on an input variable that rejects values failing its condition.,"notes,dependencies-conditions-and-ephemeral-values"
+Ephemeral resource (dependencies conditions and ephemeral values),a temporary resource declared with an ephemeral block whose data is never stored in state or plan files.,"notes,dependencies-conditions-and-ephemeral-values"
+Write-only argument (dependencies conditions and ephemeral values),a resource argument whose value is used during the current operation and never stored in state or plan files.,"notes,dependencies-conditions-and-ephemeral-values"
 Input variable (hcl syntax and configuration),a declared parameter that lets callers customise a configuration or module without editing its code.,"notes,hcl-syntax-and-configuration"
 Output value (hcl syntax and configuration),a named value a module or configuration exposes after apply for users or other modules to read.,"notes,hcl-syntax-and-configuration"
 Local value (hcl syntax and configuration),"a named expression, declared in a locals block, that you reuse within a module.","notes,hcl-syntax-and-configuration"
@@ -17,6 +27,16 @@ Data source (hcl syntax and configuration),a read-only block that fetches inform
 depends_on (hcl syntax and configuration),a meta-argument that declares an explicit dependency Terraform cannot infer from references.,"notes,hcl-syntax-and-configuration"
 count and for_each (hcl syntax and configuration),meta-arguments that create multiple instances of a resource or module from one block.,"notes,hcl-syntax-and-configuration"
 Sensitive variable (hcl syntax and configuration),a variable marked sensitive = true so Terraform hides its value in plan and apply output.,"notes,hcl-syntax-and-configuration"
+HCP Terraform (hcp terraform),"HashiCorp's managed service that runs Terraform with shared state, remote operations, access control and governance.","notes,hcp-terraform"
+HCP Terraform workspace (hcp terraform),"the required unit holding the configuration, variables, state and run history for one collection of infrastructure.","notes,hcp-terraform"
+CLI workspace (hcp terraform),"a named state file within a single working directory, used to reuse one configuration for several environments.","notes,hcp-terraform"
+Remote operations (hcp terraform),plan and apply runs executed on HCP Terraform's own infrastructure rather than the local machine.,"notes,hcp-terraform"
+Project (hcp terraform),a folder in HCP Terraform that groups workspaces and Stacks and scopes team permissions and tags.,"notes,hcp-terraform"
+Run trigger (hcp terraform),a connection that queues a run in one workspace after a successful apply in a source workspace.,"notes,hcp-terraform"
+Variable set (hcp terraform),a reusable group of variables applied to multiple workspaces.,"notes,hcp-terraform"
+Health assessment (hcp terraform),HCP Terraform checks that include drift detection and continuous validation.,"notes,hcp-terraform"
+Dynamic provider credentials (hcp terraform),short-lived credentials HCP Terraform generates for a run instead of stored static keys.,"notes,hcp-terraform"
+Private registry (hcp terraform),an organization's own catalog of approved modules and providers.,"notes,hcp-terraform"
 Deprecated as standalone command (state management),use terraform plan -refresh-only,"notes,state-management"
 State file (state management),the terraform.tfstate record that maps your configuration to the real infrastructure objects Terraform manages.,"notes,state-management"
 Remote backend (state management),a backend that stores state in a shared remote location such as S3 or HCP Terraform instead of on local disk.,"notes,state-management"
