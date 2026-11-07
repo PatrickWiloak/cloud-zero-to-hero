@@ -65,7 +65,7 @@ Built for **every kind of technologist**, across 21 role-targeted learning paths
 
 **[→ cloud.noblerworks.com](https://cloud.noblerworks.com/)**
 
-Full-text search across all 1.8M words, dark mode, mobile-friendly.
+Full-text search across all 2.0M words, dark mode, mobile-friendly.
 
 </div>
 
@@ -142,7 +142,7 @@ A complete cloud learning resource. Whether you're starting fresh, building prod
 - ✅ **12 architecture patterns** with multi-cloud implementations
 - ✅ **9 hands-on projects** - 3-tier app, CI/CD, monitoring, Kubernetes, Terraform, serverless, DR drill, landing zone, GitOps with Argo CD
 - ✅ **7 certification roadmaps** by career path
-- ✅ **4 interview prep guides**
+- ✅ **6 interview prep guides**
 - ✅ **Migration, cost optimization, well-architected, networking and troubleshooting** deep-dives
 - ✅ **[Freshness ledger](./docs/freshness.md)** - per-cert last-verified dates
 - ✅ **Free tier guides** to minimize study costs
@@ -218,13 +218,13 @@ On the sibling sites: [Data Pipeline](https://data.noblerworks.com/resources/han
 ### **Deep Dive Guides**
 - **Migration:** [On-Prem to AWS](./resources/migration-guides/on-prem-to-aws.md) | [to Azure](./resources/migration-guides/on-prem-to-azure.md) | [to GCP](./resources/migration-guides/on-prem-to-gcp.md) | [Cloud-to-Cloud](./resources/migration-guides/cloud-to-cloud.md) | [Database (Data site)](https://data.noblerworks.com/resources/migration-guides/database-migration/)
 - **Well-Architected:** [AWS](./resources/well-architected/aws-well-architected.md) | [Azure](./resources/well-architected/azure-well-architected.md) | [GCP](./resources/well-architected/gcp-well-architected.md)
-- **Cost Optimization:** [AWS](./resources/cost-optimization/aws-cost-optimization.md) | [Azure](./resources/cost-optimization/azure-cost-optimization.md) | [GCP](./resources/cost-optimization/gcp-cost-optimization.md) | [FinOps Principles](./resources/cost-optimization/finops-principles.md)
-- **Troubleshooting:** [AWS](./resources/troubleshooting/aws-troubleshooting.md) | [Azure](./resources/troubleshooting/azure-troubleshooting.md) | [GCP](./resources/troubleshooting/gcp-troubleshooting.md) | [Kubernetes](./resources/troubleshooting/kubernetes-troubleshooting.md)
+- **Cost Optimization:** [AWS](./resources/cost-optimization/aws-cost-optimization.md) | [Azure](./resources/cost-optimization/azure-cost-optimization.md) | [GCP](./resources/cost-optimization/gcp-cost-optimization.md) | [Kubernetes](./resources/cost-optimization/kubernetes-cost-optimization.md) | [FinOps Principles](./resources/cost-optimization/finops-principles.md)
+- **Troubleshooting:** [AWS](./resources/troubleshooting/aws-troubleshooting.md) | [Azure](./resources/troubleshooting/azure-troubleshooting.md) | [GCP](./resources/troubleshooting/gcp-troubleshooting.md) | [Kubernetes](./resources/troubleshooting/kubernetes-troubleshooting.md) | [CI/CD](./resources/troubleshooting/cicd-pipeline-troubleshooting.md) | [Terraform state and drift](./resources/troubleshooting/terraform-state-and-drift-troubleshooting.md)
 - **Networking:** [Hybrid Connectivity](./resources/networking-deep-dives/hybrid-connectivity.md) | [Multi-Cloud](./resources/networking-deep-dives/multi-cloud-networking.md) | [DNS Deep Dive](./resources/networking-deep-dives/dns-deep-dive.md) | [Load Balancing](./resources/networking-deep-dives/load-balancing-deep-dive.md)
 - **Compliance** (SOC 2, HIPAA, PCI DSS, GDPR, FedRAMP) lives on the [Security site](https://security.noblerworks.com/resources/compliance-guides/).
 
 ### **Interview Prep**
-[Solutions Architect](./resources/interview-prep/solutions-architect-interview.md) | [DevOps](./resources/interview-prep/devops-interview.md) | [Cloud Engineer](./resources/interview-prep/cloud-engineer-interview.md) | [SRE](./resources/interview-prep/sre-interview.md)
+[Solutions Architect](./resources/interview-prep/solutions-architect-interview.md) | [DevOps](./resources/interview-prep/devops-interview.md) | [Cloud Engineer](./resources/interview-prep/cloud-engineer-interview.md) | [SRE](./resources/interview-prep/sre-interview.md) | [Platform Engineer](./resources/interview-prep/platform-engineer-interview.md) | [Kubernetes and Cloud-Native](./resources/interview-prep/kubernetes-cloud-native-interview.md)
 
 ### **Decision Matrices** - score-driven product picks
 [IaC tool](./resources/decision-matrix-iac-tool.md)
@@ -310,7 +310,7 @@ On the sibling sites: [Data Pipeline](https://data.noblerworks.com/resources/han
 - **Hands-on projects:** 9
 - **Topic indexes:** 7 (cross-pillar)
 - **Career roadmaps:** 7
-- **Interview prep guides:** 4
+- **Interview prep guides:** 6
 - **Migration guides:** 4
 
 ---

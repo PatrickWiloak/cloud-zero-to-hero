@@ -236,11 +236,11 @@ On the sibling sites: [Data Engineer](https://data.noblerworks.com/resources/cer
 ### Deep-Dive Guides
 - **Migration:** On-prem to AWS/Azure/GCP, cloud-to-cloud - [resources/migration-guides/](./resources/migration-guides/)
 - **Well-Architected:** AWS, Azure, GCP frameworks - [resources/well-architected/](./resources/well-architected/)
-- **Cost Optimization:** Per-cloud playbooks + FinOps principles - [resources/cost-optimization/](./resources/cost-optimization/)
-- **Troubleshooting:** AWS, Azure, GCP, Kubernetes - [resources/troubleshooting/](./resources/troubleshooting/)
+- **Cost Optimization:** Per-cloud playbooks + Kubernetes + FinOps principles - [resources/cost-optimization/](./resources/cost-optimization/)
+- **Troubleshooting:** AWS, Azure, GCP, Kubernetes, CI/CD, Terraform state - [resources/troubleshooting/](./resources/troubleshooting/)
 - **Networking Deep Dives:** Hybrid connectivity, multi-cloud, DNS, load balancing - [resources/networking-deep-dives/](./resources/networking-deep-dives/)
 - **Hands-on Projects:** 3-tier app, CI/CD, monitoring, Kubernetes cluster, Terraform infra, serverless, DR drill, landing zone, GitOps with Argo CD - [resources/hands-on-projects/](./resources/hands-on-projects/)
-- **Interview Prep:** Solutions Architect, DevOps, Cloud Engineer, SRE - [resources/interview-prep/](./resources/interview-prep/)
+- **Interview Prep:** Solutions Architect, DevOps, Cloud Engineer, SRE, Platform Engineer, Kubernetes - [resources/interview-prep/](./resources/interview-prep/)
 - **Compliance** (SOC 2, HIPAA, PCI DSS, GDPR, FedRAMP) - on the [Security site](https://security.noblerworks.com/resources/compliance-guides/)
 
 ### Practice & Strategy
