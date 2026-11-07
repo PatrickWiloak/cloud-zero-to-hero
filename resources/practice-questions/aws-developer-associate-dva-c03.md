@@ -32,7 +32,7 @@ D. Store orders in an S3 bucket and have billing list the bucket every second
 ### Question 2
 **Scenario:** A Lambda function consumes an SQS queue. When one message in a batch of ten fails, the whole batch returns to the queue and the nine good messages are processed again. What reduces the duplicate work?
 
-A. Set the batch size to 1 and disable retries on the queue
+A. Raise the queue's visibility timeout so that a failed batch stays hidden for longer before it is retried
 B. Switch the event source to an asynchronous invocation
 C. Increase the function memory
 D. Return batchItemFailures identifying only the failed message ids
@@ -42,7 +42,7 @@ D. Return batchItemFailures identifying only the failed message ids
 
 **Correct: D**
 
-**Why:** Partial batch responses let Lambda delete the successes and return only failed messages to the queue. More memory does not change retry behavior, and asynchronous invocation is not how an SQS event source mapping works.
+**Why:** Partial batch responses let Lambda delete the successes and return only failed messages to the queue. A longer visibility timeout only delays the retry of the whole batch, more memory does not change retry behavior, and asynchronous invocation is not how an SQS event source mapping works.
 </details>
 
 ---
@@ -140,7 +140,7 @@ D. A presigned URL with a 600 second expiry
 ### Question 8
 **Scenario:** An application needs to encrypt a 2 GB file with a KMS key. KMS Encrypt accepts only small payloads. What is the correct approach?
 
-A. Split the file into many 4 KB pieces, call Encrypt for each one and store the ciphertext pieces together
+A. Call Encrypt once with the whole 2 GB file after raising the payload limit in the KMS key policy
 B. Call GenerateDataKey, encrypt the file locally with the data key and store the encrypted key beside it
 C. Store the file unencrypted and encrypt the key
 D. Use a longer KMS key spec
@@ -150,7 +150,7 @@ D. Use a longer KMS key spec
 
 **Correct: B**
 
-**Why:** Envelope encryption uses a data key for the bulk data and KMS to protect that key. Chopping into 4 KB calls is impractical, and a longer key spec does not raise the payload limit.
+**Why:** Envelope encryption uses a data key for the bulk data and KMS to protect that key. The Encrypt payload limit is fixed by the service (4,096 bytes) and cannot be raised in a key policy, and a longer key spec does not raise it either.
 </details>
 
 ---

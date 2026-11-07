@@ -28,7 +28,7 @@ The current exam is **XK0-006 (V8)**, launched July 15, 2025. It is one exam, no
 | **Recommended experience** | 12 months hands-on with Linux servers; A+, Network+, Server+ or similar |
 | **Prerequisites** | None |
 | **Price** | Not verified (the CompTIA page links to Buy Now with no figure) |
-| **Validity** | Not verified for Linux+ on the page read; see [the fact sheet](fact-sheet.md#verified-facts-and-sources-checked-2026-11-07) |
+| **Validity** | Three years, renewable through CompTIA's CE program (CEU count for XK0-006 not verified); see [the fact sheet](fact-sheet.md#verified-facts-and-sources-checked-2026-11-07) |
 
 ## Exam Domains
 

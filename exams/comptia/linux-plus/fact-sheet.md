@@ -11,7 +11,7 @@ last-updated: 2026-11-07
 **Questions:** Maximum of 90 (multiple choice and performance-based)
 **Passing Score:** 720 (scale of 100-900)
 **Cost:** Not verified (no price on the CompTIA page)
-**Validity:** Not verified for Linux+ on the page read
+**Validity:** Three years, renewable through the CompTIA CE program (see the table below)
 **Delivery:** Not verified on the pages read
 **Languages:** English
 
@@ -29,7 +29,7 @@ last-updated: 2026-11-07
 | Accreditation | ISO 17024, accredited by ANSI | Objectives PDF |
 | Retirement | "Usually three years after launch," estimated 2028 | CompTIA Linux+ page |
 | Price | **Not verified.** The page shows Buy Now links with no figure | Check the CompTIA store for your region |
-| Validity and renewal | **Not verified.** The Linux+ page does not state it; CompTIA's Continuing Education page could not be read (404). CompTIA certifications are commonly described as valid for three years with CE, but that was not confirmed here | CompTIA CE program |
+| Validity and renewal | Linux+ is in the CE Program; CE requirements must be met "within three years of earning or renewing your certification." The CEU count for XK0-006 specifically was **not verified**; check your CompTIA Central account | [CompTIA CE Program FAQ](https://www.comptia.org/en-us/resources/ce/learn/comptia-continuing-education-program-faq/) |
 | XK0-005 retirement | A third-party guide reports January 13, 2026. **Not verified** on a CompTIA page | Not an official source |
 
 The objectives PDF is published on a CompTIA file host as two documents with different version numbers (3.0 and 5.0), same domain weights. This guide follows version 5.0.

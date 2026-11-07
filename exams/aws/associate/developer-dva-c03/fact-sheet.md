@@ -14,9 +14,9 @@ exam-version: DVA-C03
 **Questions:** 65 questions, 50 scored and 15 unscored (multiple choice and multiple response)
 **Passing Score:** 720 on a scaled score of 100-1,000
 **Cost:** 150 USD
-**Validity:** Not verified on the pages read
-**Delivery:** Not verified on the pages read
-**Languages:** Not verified on the pages read
+**Validity:** 3 years; recertify by passing the latest exam or earning DevOps Engineer - Professional ([AWS certification page](https://aws.amazon.com/certification/certified-developer-associate/))
+**Delivery:** Pearson VUE testing center or online proctored exam
+**Languages:** English, Japanese, Korean, Portuguese (Brazil), Simplified Chinese, Spanish (Latin America)
 
 ## Exam Domains
 

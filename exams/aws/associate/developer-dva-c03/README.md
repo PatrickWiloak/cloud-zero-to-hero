@@ -24,8 +24,8 @@ DVA-C03 validates the ability to develop, test, deploy and debug AWS cloud appli
 | **Question types** | Multiple choice and multiple response | Exam guide |
 | **Scoring** | Scaled 100-1,000; minimum passing score 720; compensatory (pass the exam overall, not each section) | Exam guide |
 | **Cost** | 150 USD (additional costs may apply) | AWS certification page |
-| **Delivery** | Not verified on the pages read | |
-| **Validity** | Not verified on the pages read | |
+| **Delivery** | Pearson VUE testing center or online proctored exam | AWS certification page |
+| **Validity** | 3 years; recertify by passing the latest exam version or earning DevOps Engineer - Professional | AWS certification page |
 
 ## Exam Domains
 

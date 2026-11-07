@@ -265,6 +265,7 @@ docker run -d -v appdata:/var/lib/data myapp:1.0
 `-p host:container` maps a port. `-v` maps a volume or a host directory. On SELinux systems, a bind mount often needs a label option so the container is allowed to read it: `-v /srv/web:/data:Z` relabels the content privately for this container, `:z` shares it among containers. Podman uses the same flag syntax: `podman run -d --name web -p 8080:80 nginx:1.27`.
 
 **[📖 docker container run](https://docs.docker.com/reference/cli/docker/container/run/)** - Run options including -p, -v, -e and --privileged
+**[📖 docker system prune](https://docs.docker.com/reference/cli/docker/system/prune/)** - What the command removes by default and what `-a` and `--volumes` add
 **[📖 podman-run](https://docs.podman.io/en/latest/markdown/podman-run.1.html)** - Podman's run options, including rootless behavior
 
 ### Container networks
@@ -280,7 +281,7 @@ docker run -d -v appdata:/var/lib/data myapp:1.0
 
 `docker network create appnet` makes a user-defined bridge on which containers resolve each other by name.
 
-**Privileged vs unprivileged.** `--privileged` gives a container almost all host capabilities and device access, which largely removes the isolation. Prefer unprivileged containers, a non-root `USER` and, with Podman, rootless mode. Cleaning up: `docker system prune` removes unused containers, networks and images.
+**Privileged vs unprivileged.** `--privileged` gives a container almost all host capabilities and device access, which largely removes the isolation. Prefer unprivileged containers, a non-root `USER` and, with Podman, rootless mode. Cleaning up: `docker system prune` removes stopped containers, unused networks, dangling images and unused build cache (not volumes; `-a` extends it to all unused images).
 
 ## Common exam traps
 

@@ -92,7 +92,7 @@ Resources:
 
 ### Containers
 
-Deploy containerized applications (3.3.2, new) with **Amazon ECS** (a **task definition** describes the containers, CPU, memory, roles and ports; a **service** keeps the desired number of tasks running) on **AWS Fargate** (serverless compute, no instances to manage) or EC2, or with **Amazon EKS** (Kubernetes **manifests**). The default ECS service deployment is a **rolling update**: new tasks start and old tasks stop in batches according to minimum healthy percent and maximum percent settings.
+Deploy containerized applications (3.3.2, new) with **Amazon ECS** (a **task definition** describes the containers, CPU, memory, roles and ports; a **service** keeps the desired number of tasks running) on **AWS Fargate** (serverless compute, no instances to manage) or EC2, or with **Amazon EKS** (Kubernetes **manifests**). An ECS service can use a **rolling update** (the `ECS` deployment type): the scheduler replaces running tasks with new ones, within the limits set by `minimumHealthyPercent` and `maximumPercent`.
 
 ### CodePipeline, CodeBuild, CodeDeploy
 
