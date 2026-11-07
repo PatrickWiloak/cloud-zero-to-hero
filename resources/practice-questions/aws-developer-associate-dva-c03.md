@@ -53,7 +53,7 @@ D. Return batchItemFailures identifying only the failed message ids
 A. Change to a high-cardinality partition key such as the order id
 B. Switch every read to strongly consistent
 C. Replace Query calls with Scan
-D. Add a local secondary index on the status
+D. Add a local secondary index on the status attribute to spread reads across more partitions
 
 <details>
 <summary>Answer</summary>
@@ -69,7 +69,7 @@ D. Add a local secondary index on the status
 **Scenario:** An asynchronous Lambda invocation fails after its retries. The team wants the failed event and error details delivered to an SQS queue for analysis. What should they configure?
 
 A. Provisioned concurrency
-B. An environment variable holding the queue url
+B. An environment variable holding the queue url that the function code reads when handling errors
 C. A Lambda destination for failures that targets the queue
 D. A larger function timeout
 
@@ -87,7 +87,7 @@ D. A larger function timeout
 **Scenario:** An application caches product data in ElastiCache and reads it first, loading from the database and storing the result only on a miss. What is the main drawback of this pattern?
 
 A. Reads can never hit the cache
-B. Every write is slower because it updates two stores
+B. Every write is slower because the application must update both the cache and the database each time
 C. Cached data can become stale until it expires or is invalidated
 D. The cache must hold the entire database
 
@@ -104,9 +104,9 @@ D. The cache must hold the entire database
 ### Question 6
 **Scenario:** A mobile app lets users sign in and then upload photos directly to an S3 bucket using their own temporary AWS credentials. Which combination provides this?
 
-A. A Cognito user pool for sign-in and a Cognito identity pool to exchange tokens for AWS credentials
+A. A Cognito user pool for sign-in plus an identity pool that exchanges tokens for AWS credentials
 B. An S3 bucket policy that allows public writes
-C. A single shared role with access keys stored in app resources
+C. A single shared role whose access keys are stored in the app resources and rotated with each release
 D. An IAM user per app user with access keys embedded in the app
 
 <details>
@@ -122,7 +122,7 @@ D. An IAM user per app user with access keys embedded in the app
 ### Question 7
 **Scenario:** A web app must let a browser download one private S3 object for the next 10 minutes without giving the user AWS credentials. What should the backend generate?
 
-A. A new IAM user with a console password
+A. A new IAM user with a console password and a policy that allows reading that one object
 B. A public-read ACL on the object
 C. A KMS data key for the user
 D. A presigned URL with a 600 second expiry
@@ -140,8 +140,8 @@ D. A presigned URL with a 600 second expiry
 ### Question 8
 **Scenario:** An application needs to encrypt a 2 GB file with a KMS key. KMS Encrypt accepts only small payloads. What is the correct approach?
 
-A. Split the file into many 4 KB pieces and call Encrypt for each
-B. Call GenerateDataKey, encrypt the file locally with the data key and store the encrypted data key with the file
+A. Split the file into many 4 KB pieces, call Encrypt for each one and store the ciphertext pieces together
+B. Call GenerateDataKey, encrypt the file locally with the data key and store the encrypted key beside it
 C. Store the file unencrypted and encrypt the key
 D. Use a longer KMS key spec
 
@@ -176,7 +176,7 @@ D. An interface VPC endpoint (AWS PrivateLink) for the service
 ### Question 10
 **Scenario:** A team wants a Lambda release where 10 percent of traffic goes to the new version for five minutes, with automatic rollback if an alarm fires, then the rest follows. What should they use?
 
-A. Two functions and a manual DNS switch
+A. Two functions and a manual DNS switch that moves all users to the new one after testing
 B. CodeDeploy with a canary configuration on a Lambda alias and an alarm
 C. Replace the function code in place
 D. A rolling update on an ECS service
@@ -195,7 +195,7 @@ D. A rolling update on an ECS service
 **Scenario:** A pipeline pushes container images to Amazon ECR and the registry fills with thousands of old images. What keeps the repository tidy without manual work?
 
 A. An ECR lifecycle policy that expires images by count or age
-B. Tagging every image latest
+B. Tagging every image latest so that each push overwrites and removes the earlier image
 C. Deleting the repository weekly
 D. Disabling image scanning
 
@@ -233,7 +233,7 @@ D. sam deploy --event events/order.json
 A. CloudWatch Logs Insights with a filter on @message and a limit
 B. X-Ray annotations
 C. AWS Config rules
-D. An SNS email subscription
+D. An SNS email subscription on the log group that sends each matching line as it arrives
 
 <details>
 <summary>Answer</summary>
@@ -284,7 +284,7 @@ D. A larger log retention period
 ### Question 16
 **Scenario:** Pods in a container service sometimes receive traffic before the application has finished loading its configuration. Which mechanism prevents this?
 
-A. A liveness probe with a shorter interval
+A. A liveness probe with a shorter interval so that unready Pods are restarted before they receive traffic
 B. A larger instance type
 C. Disabling health checks
 D. A readiness probe that reports ready only after startup completes

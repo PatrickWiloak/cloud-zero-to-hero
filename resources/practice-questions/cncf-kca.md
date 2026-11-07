@@ -28,7 +28,7 @@ D. They remain running; admission applies to new and changed requests, and the b
 **Scenario:** Which statement about Kubernetes admission control is correct?
 
 A. Validating admission runs first so that invalid objects never reach the mutating webhooks
-B. Admission also intercepts get, list and watch requests, which is how policies hide resources
+B. Admission also intercepts get, list and watch requests, which is how policies hide resources from users who lack permission
 C. Mutating admission runs first, then validating admission, and a rejection in either phase rejects the whole request
 D. Admission runs before authentication so that anonymous requests can be rejected by policy
 
@@ -45,7 +45,7 @@ D. Admission runs before authentication so that anonymous requests can be reject
 ### Question 3
 **Scenario:** What is a Kyverno rule?
 
-A. A cluster-wide setting stored in the kyverno ConfigMap that controls all policies
+A. A cluster-wide setting stored in the kyverno ConfigMap that controls how all policies are processed and cached
 B. One named unit inside a policy, with a match block and one of validate, mutate, generate or verifyImages
 C. A custom resource that stores the result of evaluating a policy against one resource
 D. A separate Deployment that runs one controller of the Kyverno installation
@@ -63,7 +63,7 @@ D. A separate Deployment that runs one controller of the Kyverno installation
 ### Question 4
 **Scenario:** What advantage do tags and digests give to image references, and why does verifyImages default mutateDigest to true?
 
-A. A digest can be moved to different content while a tag cannot, so tags are safer for production
+A. A digest can be moved to different content while a tag cannot, so tags are safer for production pipelines that need repeatable deploys
 B. A tag can be moved to different content while a digest cannot, so rewriting tags to digests makes the reference immutable
 C. Tags and digests are identical in meaning; the rewrite only shortens the reference for logging
 D. Digests are required by the Kubernetes API, so Pods with tags are rejected without the rewrite
@@ -119,8 +119,8 @@ D. helm install kyverno kyverno/kyverno -n kyverno --create-namespace
 
 A. Raise the webhookTimeout flag to 30 seconds so the single Pod has more time
 B. Set enableDefaultRegistryMutation to false so fewer requests reach the webhook
-C. Run multiple replicas of the admission controller (the HA page gives a minimum of three), configured per controller through Helm
-D. Run only the background controller with several replicas, since it serves the webhooks
+C. Run multiple replicas of the admission controller (three is the documented minimum), configured per controller in Helm
+D. Run only the background controller with several replicas, since that controller is the one that serves the admission webhooks and policy reports
 
 <details>
 <summary>Answer</summary>
@@ -135,7 +135,7 @@ D. Run only the background controller with several replicas, since it serves the
 ### Question 8
 **Scenario:** A mutate-existing policy needs to update Deployments, but the policy installs with a permissions error. What is the documented way to fix this?
 
-A. Edit the default kyverno:background-controller ClusterRole directly to add the verbs
+A. Edit the default kyverno:background-controller ClusterRole directly to add the verbs, then restart the background controller to pick them up
 B. Bind the admission controller ServiceAccount to cluster-admin
 C. Create a ClusterRole carrying the label rbac.kyverno.io/aggregate-to-background-controller: "true" with the needed verbs
 D. Add the verbs to the kyverno ConfigMap under the key extraPermissions
@@ -156,7 +156,7 @@ D. Add the verbs to the kyverno ConfigMap under the key extraPermissions
 A. Upgrading by changing the image tag is the supported minimal path for patch versions
 B. Bumping an image tag is not an upgrade, because new versions often change CRDs and other supporting resources
 C. With YAML manifests, direct in-place upgrades are the preferred approach
-D. Release notes only need to be read for the target version, never for skipped minor versions
+D. Release notes only need to be read for the target version, never for the minor versions skipped along the upgrade path
 
 <details>
 <summary>Answer</summary>
@@ -226,7 +226,7 @@ D. pass, fail, skip or warn
 **Scenario:** What is kyverno jp used for?
 
 A. Joining two policies into one merged policy file
-B. Producing a JSON patch for a mutate rule from a diff of two files
+B. Producing a JSON patch for a mutate rule from a diff of two files, so that policy authors can paste the result into patchesJson6902
 C. Evaluating and parsing JMESPath expressions, including Kyverno custom functions, to debug policy expressions
 D. Publishing policies to an OCI registry
 
@@ -298,7 +298,7 @@ D. Runs the policy once at install time and then disables it
 **Scenario:** An auditor wants to know which pre-existing resources violate a policy without blocking anything. Which setting makes sense?
 
 A. Set the rule to Enforce and set failurePolicy to Ignore
-B. Disable the admission controller and run only the cleanup controller
+B. Disable the admission controller and run only the cleanup controller, which then scans existing resources and writes the policy reports
 C. Add the cleanup.kyverno.io/ttl label to every resource
 D. Leave the rule in Audit and keep background scanning on, then read the policy reports
 
@@ -315,7 +315,7 @@ D. Leave the rule in Audit and keep background scanning on, then read the policy
 ### Question 18
 **Scenario:** What is the difference between pattern and deny in a validate rule?
 
-A. pattern blocks when matched; deny describes the desired shape
+A. pattern blocks when matched; deny describes the desired shape of the resource that a request must have to be admitted
 B. They are identical; deny is the older spelling
 C. pattern describes the desired resource shape; deny blocks when its conditions evaluate to true
 D. pattern is only for Pods and deny is only for Namespaces
@@ -406,7 +406,7 @@ D. They are deleted
 **Scenario:** What does orphanDownstreamOnPolicyDelete: true do for a synchronized data-source generate rule?
 
 A. Deletes the generated resources immediately when the trigger changes
-B. Prevents the policy from being deleted while downstream resources exist
+B. Prevents the policy from being deleted while any downstream resources it generated still exist in the cluster
 C. Keeps the generated downstream resources when the policy or rule is deleted
 D. Clones the downstream resources into a backup Namespace
 
@@ -478,7 +478,7 @@ D. globalReference, with kyverno.io/cached
 **Scenario:** Autogen did not create rules for Deployments even though the policy targets Pods. Which cause is documented?
 
 A. The policy sets failurePolicy to Fail
-B. The policy has a rule name longer than 63 characters
+B. The policy has a rule name longer than 63 characters, so the generated rule names exceed the Kubernetes name limit
 C. Deployments never receive autogenerated rules
 D. The match block uses names, selector or annotations, which makes Kyverno skip autogen
 
@@ -533,7 +533,7 @@ D. Kyverno mutates the resource until the expression is true
 
 A. Nothing; exceptions are honored cluster-wide by default
 B. The enablePolicyException flag set to true and the exceptionNamespace flag set
-C. A ClusterPolicy annotated with kyverno.io/allow-exceptions
+C. A ClusterPolicy annotated with kyverno.io/allow-exceptions that names the namespaces permitted to hold exceptions
 D. A rule in the ValidatingWebhookConfiguration listing each exception
 
 <details>
@@ -550,7 +550,7 @@ D. A rule in the ValidatingWebhookConfiguration listing each exception
 **Scenario:** Which statement about Kyverno policy reports is correct?
 
 A. They use the wgpolicyk8s.io API and show results for current resources only, with no history
-B. They keep a full audit history of every past admission decision
+B. They keep a full audit history of every past admission decision, so an auditor can replay what was allowed or denied
 C. They are only produced for validate rules in Enforce mode
 D. They are stored in etcd outside the Kubernetes API
 

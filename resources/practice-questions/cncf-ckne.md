@@ -10,9 +10,9 @@
 **Scenario:** Who assigns IP addresses to Pods, Services and Nodes in a Kubernetes cluster?
 
 A. All three by the kube-controller-manager
-B. Pods by the kubelet, Services by CoreDNS, Nodes by kube-proxy
+B. Pods by the kubelet from the node CIDR, Services by CoreDNS, and Nodes by kube-proxy once it registers them with the API server
 C. All three by the container runtime
-D. Pods by the network plugin, Services by the kube-apiserver, Nodes by the kubelet or cloud-controller-manager
+D. Pods by the network plugin, Services by the kube-apiserver, Nodes by the kubelet or cloud controller
 
 <details>
 <summary>Answer</summary>
@@ -82,7 +82,7 @@ D. host-local
 **Scenario:** Within the 10.96.0.0/16 Service range, how are static and dynamic ClusterIP bands arranged?
 
 A. A static band of 256 addresses at the start; dynamic allocation uses the upper band first
-B. A single band; all allocations are dynamic
+B. A single band across the whole /16; all allocations are dynamic and picked at random by the allocator
 C. The upper half is static and the lower half dynamic
 D. Static addresses are drawn only from the last /24
 
@@ -117,7 +117,7 @@ D. k8s.v1.cni.cncf.io/networks
 ### Question 7
 **Scenario:** A Pod with a Multus annotation macvlan-conf-1@macvlan1 is running. What would ip -d address show?
 
-A. Only eth0, because secondary networks are hidden
+A. Only eth0, because secondary networks are hidden from ip commands inside the Pod network namespace
 B. An interface named net0 only
 C. eth0 for the default network plus an interface named macvlan1
 D. A bridge named macvlan1 on the node only
@@ -153,8 +153,8 @@ D. A random port in 30000-32767
 ### Question 9
 **Scenario:** Which NodePort statement is correct?
 
-A. NodePorts are allocated from 1024-29999
-B. The port is allocated from the --service-node-port-range range (default 30000-32767) and every node listens on it
+A. NodePorts are allocated from 1024-29999, which is the range the API server reserves for Services by default
+B. The port comes from --service-node-port-range (default 30000-32767) and every node listens on it
 C. Only the node running the Pods listens on the NodePort
 D. NodePorts bypass kube-proxy entirely
 
@@ -172,7 +172,7 @@ D. NodePorts bypass kube-proxy entirely
 **Scenario:** How do you point a Service at an external database IP with no Pods?
 
 A. Create the Service without a selector and add an EndpointSlice labeled kubernetes.io/service-name
-B. Set type: ExternalIP on the Service
+B. Set type: ExternalIP on the Service and list the database address in spec.externalIPs for kube-proxy to route
 C. Create an Ingress with the IP
 D. Add the IP to the kube-proxy ConfigMap
 
@@ -189,7 +189,7 @@ D. Add the IP to the kube-proxy ConfigMap
 ### Question 11
 **Scenario:** What does an ExternalName Service do?
 
-A. Proxies traffic to the external host through kube-proxy
+A. Proxies traffic to the external host through kube-proxy using a cluster-local virtual IP address
 B. Creates a NodePort for the external host
 C. Allocates a ClusterIP for the external host
 D. Returns a CNAME record for the external hostname; no proxying is set up
@@ -207,7 +207,7 @@ D. Returns a CNAME record for the external hostname; no proxying is set up
 ### Question 12
 **Scenario:** What does the kube-proxy documentation recommend about the proxy mode?
 
-A. Always rely on the default so upgrades are automatic
+A. Always rely on the default so upgrades are automatic, since the project promises it will stay stable
 B. Use ipvs because iptables is deprecated on Linux
 C. Disable kube-proxy on all Linux clusters
 D. Set it explicitly, because the default may change in a future version
@@ -245,7 +245,7 @@ D. nftables
 
 A. A file in /etc/coredns on each node
 B. A ConfigMap named coredns in kube-system, under the Corefile key
-C. A Secret named coredns in kube-public
+C. A Secret named coredns in kube-public, mounted into the CoreDNS Pods as a file
 D. Inline in the kubelet configuration
 
 <details>
@@ -264,7 +264,7 @@ D. Inline in the kubelet configuration
 A. Add a consul.local:53 server block with forward . 10.150.0.1
 B. Change the kubernetes plugin line to include consul.local
 C. Add 10.150.0.1 to the Pod resolv.conf for every Pod manually
-D. Set ndots to 0
+D. Set ndots to 0 in the Corefile so that consul.local is sent to the upstream resolver
 
 <details>
 <summary>Answer</summary>
@@ -351,7 +351,7 @@ D. The end user
 ### Question 20
 **Scenario:** An HTTPRoute in namespace team-a cannot attach to a Gateway in namespace infra. What is the most likely default cause?
 
-A. HTTPRoutes can never reference a Gateway in another namespace
+A. HTTPRoutes can never reference a Gateway in another namespace under any listener configuration or ReferenceGrant
 B. The Gateway accepts Routes only from its own namespace unless allowedRoutes allows others
 C. The Gateway needs a GRPCRoute in the same namespace
 D. The route needs a BackendTLSPolicy
@@ -388,7 +388,7 @@ D. Only to foo-v1 because it is listed first
 **Scenario:** Which statement about Kubernetes NetworkPolicies is correct?
 
 A. They are enforced by kube-proxy on every cluster
-B. A deny rule in one policy overrides an allow in another
+B. A deny rule in one policy overrides an allow in another, so the policy that was applied first decides the outcome
 C. They apply at layer 7 to HTTP paths
 D. They have no effect unless the network plugin implements them, and multiple policies are additive
 
@@ -408,7 +408,7 @@ D. They have no effect unless the network plugin implements them, and multiple p
 A. Only B's ingress policy matters
 B. Only A's egress policy matters
 C. Both A's egress policy and B's ingress policy must allow it
-D. Neither; policies apply only to Services
+D. Neither; policies apply only to Services and are evaluated by the Service's kube-proxy rules
 
 <details>
 <summary>Answer</summary>
@@ -496,7 +496,7 @@ D. from.source.principals, which require mTLS
 **Scenario:** An ALLOW AuthorizationPolicy with no rules is applied to a workload. What happens?
 
 A. All requests are allowed
-B. Only mesh-internal requests are allowed
+B. Only requests that originate inside the mesh are allowed, because no rule matches external sources
 C. The policy is ignored
 D. It matches nothing, so all requests to the workload are denied
 
@@ -514,7 +514,7 @@ D. It matches nothing, so all requests to the workload are denied
 **Scenario:** Which Hubble command shows only dropped flows for a pod?
 
 A. hubble status --drops
-B. cilium monitor --pod <name> --json
+B. cilium monitor --pod <name> --json, filtered with jq to events whose verdict is dropped
 C. hubble observe --pod <name> --verdict DROPPED
 D. hubble get drops <name>
 
@@ -533,7 +533,7 @@ D. hubble get drops <name>
 
 A. Nothing; the proxy does everything
 B. Forward the tracing headers such as traceparent from incoming to outgoing requests
-C. Open a direct connection to the tracing backend
+C. Open a direct connection to the tracing backend and send its own spans with the proxy's trace ID
 D. Disable the sidecar
 
 <details>

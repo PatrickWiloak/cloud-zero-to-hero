@@ -10,7 +10,7 @@
 **Scenario:** Which runtime and package manager versions does the Backstage getting-started guide recommend?
 
 A. Node 14 with npm 6 and a global Yarn 1 install
-B. Any Node version with Bun, since Backstage ignores the runtime
+B. Any Node version with Bun, since Backstage ignores the runtime and does not check the engines field
 C. Python 3.12 with pip, because the backend is Python-based
 D. Node 22 or 24 (Active LTS) with Yarn 4.4.1 enabled through Corepack
 
@@ -135,7 +135,7 @@ D. Download a prebuilt image and mount app-config.yaml
 ### Question 8
 **Scenario:** From which directory should docker image build be run for the Backstage image, and why?
 
-A. packages/backend, because the Dockerfile is there
+A. packages/backend, because the Dockerfile is there and the build context is its parent folder
 B. packages/app, because the frontend is bundled first
 C. The repo root, because the build needs the root yarn.lock and package.json
 D. Any directory; Docker finds the files automatically
@@ -225,7 +225,7 @@ D. app-config.yaml
 ### Question 13
 **Scenario:** A value is set in both app-config.yaml and app-config.local.yaml. Which wins?
 
-A. The value in app-config.yaml, because it is the base
+A. The value in app-config.yaml, because it is the base file and local files only add new keys
 B. Neither; Backstage refuses to start
 C. The value in app-config.local.yaml, because local files load last
 D. Whichever file has the later modification time
@@ -298,7 +298,7 @@ D. yarn backstage-cli plugin:verify
 **Scenario:** According to the Docker page, which statement about authentication in containerized deployments is correct?
 
 A. Guest authentication is required for containers
-B. Authentication is disabled automatically when NODE_ENV=production
+B. Authentication is disabled automatically when NODE_ENV=production is set in the container
 C. Containers must use SQLite-backed sessions
 D. The default Guest auth provider is not intended for containerized environments
 
@@ -351,7 +351,7 @@ D. providesApis and consumesApis
 ### Question 20
 **Scenario:** What does the annotation backstage.io/techdocs-ref point to?
 
-A. The URL of the deployed TechDocs site
+A. The URL of the deployed TechDocs site, which the entity page links to from its Docs tab
 B. Where the TechDocs source lives, usually a path relative to catalog-info.yaml
 C. The Docker image that builds the docs
 D. The owner of the documentation
@@ -405,7 +405,7 @@ D. Component, API and Location
 ### Question 23
 **Scenario:** A team adds catalog.rules with allow: [Template] and finds their Components no longer ingest. Why?
 
-A. Templates and Components cannot coexist in one catalog
+A. Templates and Components cannot coexist in one catalog unless each kind has its own location
 B. Components require a separate provider for each owner
 C. Setting catalog.rules replaces the defaults, so Component was no longer listed
 D. Rules apply only to file-type locations
@@ -495,7 +495,7 @@ D. @backstage/plugin-catalog-backend-module-github
 ### Question 28
 **Scenario:** Which statement correctly places plugins in a Backstage repo?
 
-A. Frontend plugins are added to the root package.json; backend plugins to plugins/
+A. Frontend plugins are added to the root package.json; backend plugins to the plugins/ directory of the repo workspace
 B. Both kinds are added to packages/app
 C. Backend plugins run in the browser through a service worker
 D. Frontend UI plugins are added to the app package; backend plugins are added to the backend package

@@ -10,7 +10,7 @@
 **Scenario:** An Argo CD Application has syncPolicy.automated with prune: true and selfHeal: true. A developer deletes a manifest from Git and also edits a live Deployment with kubectl. What happens?
 
 A. The deleted manifest stays in the cluster and the live edit is kept
-B. Both changes are kept, and the Application shows OutOfSync until someone syncs manually
+B. Both changes are kept, and the Application shows OutOfSync until someone syncs it manually from the UI or CLI
 C. Argo CD pauses auto-sync until the live edit is committed to Git
 D. The resource removed from Git is deleted, and the live edit is reverted to the Git state
 
@@ -63,7 +63,7 @@ D. An Argo CD Application reference
 ### Question 4
 **Scenario:** A Flux Kustomization sets targetNamespace: apps, but the namespace does not exist. What happens?
 
-A. Flux creates the namespace automatically
+A. Flux creates the namespace automatically as part of applying the Kustomization with the targetNamespace
 B. The apply fails because the controller does not create the namespace
 C. The Kustomization falls back to the default namespace
 D. The namespace is created only when prune is true
@@ -82,7 +82,7 @@ D. The namespace is created only when prune is true
 **Scenario:** What does dependsOn do on a Flux Kustomization?
 
 A. Waits until the listed Kustomizations are Ready before applying
-B. Copies resources from another Kustomization
+B. Copies resources from another Kustomization into this one before applying them
 C. Orders manifests inside one directory
 D. Makes the Kustomization read-only
 
@@ -153,7 +153,7 @@ D. retries
 ### Question 9
 **Scenario:** An Argo Rollouts canary has steps setWeight: 10, pause: {}, setWeight: 50. What happens after the first step?
 
-A. It pauses for ten seconds and continues
+A. It pauses for ten seconds, matching the weight of the step, and then continues to 50 percent
 B. The rollout pauses until it is promoted manually
 C. It aborts and rolls back
 D. It jumps straight to 100 percent
@@ -171,8 +171,8 @@ D. It jumps straight to 100 percent
 ### Question 10
 **Scenario:** How does Flagger perform a canary on an existing Deployment?
 
-A. A Canary resource targets it; Flagger creates a primary Deployment and shifts traffic by stepWeight up to maxWeight, checking metrics
-B. It replaces the Deployment kind with a Rollout
+A. A Canary resource targets it; Flagger creates a primary Deployment and shifts traffic by stepWeight while checking metrics
+B. It replaces the Deployment kind with a Rollout resource and then shifts traffic with the Argo Rollouts controller and its analysis templates
 C. It edits the Deployment image tag directly in Git
 D. It scales the Deployment to zero and waits
 
@@ -189,7 +189,7 @@ D. It scales the Deployment to zero and waits
 ### Question 11
 **Scenario:** In a Flagger Canary, what does threshold control?
 
-A. The maximum traffic percentage sent to the canary
+A. The maximum traffic percentage sent to the canary before it is promoted to primary
 B. How often the analysis runs
 C. The number of replicas of the primary
 D. How many failed metric checks are allowed before rollback
@@ -262,7 +262,7 @@ D. They are kept and served from etcd
 **Scenario:** Which describes a Kubernetes operator?
 
 A. A custom resource definition paired with a controller that acts on those resources
-B. A cluster role with permission to edit any resource
+B. A cluster role with permission to edit any resource, bound to a ServiceAccount that automates day-two tasks
 C. A Helm chart repository
 D. An admission webhook that blocks invalid objects
 
@@ -333,7 +333,7 @@ D. mode: Sequential
 ### Question 19
 **Scenario:** A HorizontalPodAutoscaler targeting CPU utilization shows unknown metrics. Which causes should you check first?
 
-A. The HPA is in the wrong namespace than the Service
+A. The HPA is in a different namespace than the Service it should be scaling, so it cannot read its metrics
 B. Metrics Server is installed and the Pods set CPU requests
 C. The Deployment has too many replicas
 D. The cluster uses IPv6
@@ -354,7 +354,7 @@ D. The cluster uses IPv6
 A. The Pod is admitted with zero CPU
 B. The Pod is rejected unless a LimitRange supplies defaults
 C. The quota is ignored for that Pod
-D. The Pod is scheduled on any node regardless of quota
+D. The Pod is scheduled on any node regardless of quota, because quotas are only enforced at node level
 
 <details>
 <summary>Answer</summary>
@@ -371,7 +371,7 @@ D. The Pod is scheduled on any node regardless of quota
 
 A. Keeps the alert pending until the condition has held that long
 B. Sets how often the expression is evaluated
-C. Keeps the alert firing after the condition stops
+C. Keeps the alert firing after the condition stops, so that short recoveries do not resolve it
 D. Selects the Alertmanager receiver
 
 <details>
@@ -460,7 +460,7 @@ D. UNSET only
 **Scenario:** What does Linkerd do by default for traffic between meshed pods?
 
 A. Enables mTLS for TCP traffic automatically, with proxy certificates that rotate every 24 hours
-B. Leaves traffic in plaintext until a policy is applied
+B. Leaves traffic in plaintext until an operator applies a Server policy that requires encryption between the proxies
 C. Encrypts only HTTP traffic
 D. Requires manually issued certificates for each pod
 
@@ -478,7 +478,7 @@ D. Requires manually issued certificates for each pod
 **Scenario:** RBAC in Kubernetes is described how?
 
 A. Deny rules take precedence over allow rules
-B. Roles can be bound only to users, never ServiceAccounts
+B. Roles can be bound only to users and groups, never to ServiceAccounts in other namespaces
 C. ClusterRoles can be bound only cluster-wide
 D. Permissions are purely additive; there are no deny rules
 
@@ -533,7 +533,7 @@ D. audit
 
 A. trivy sbom --create IMAGE
 B. trivy image --format cyclonedx --output result.json IMAGE
-C. trivy image --sbom-only --xml IMAGE
+C. trivy image --sbom-only --xml IMAGE and then convert the output with cyclonedx-cli
 D. trivy fs --format cyclonedx-xml IMAGE
 
 <details>

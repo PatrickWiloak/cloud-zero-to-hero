@@ -33,7 +33,7 @@ D. VPC peering between all VPCs with security groups
 **Scenario:** On-premises servers must resolve names in a Route 53 private hosted zone, and VPC workloads must resolve names in the corporate domain. What should be configured?
 
 A. A Route 53 Resolver inbound endpoint and an outbound endpoint with a forwarding rule
-B. Public hosted zones for both domains
+B. Public hosted zones for both domains, with the internal records published so on-premises hosts can query them over the internet
 C. A Site-to-Site VPN, which automatically shares DNS
 D. Copy the private zone records into on-premises hosts files
 
@@ -50,7 +50,7 @@ D. Copy the private zone records into on-premises hosts files
 ### Question 3
 **Scenario:** A multi-tenant SaaS has a few large customers needing strict isolation and thousands of small customers where cost matters most. Which design is most appropriate?
 
-A. One AWS account and database per tenant for every tenant
+A. One AWS account and one dedicated database per tenant for every tenant, including the thousands of small customers that cannot justify the cost
 B. A single shared database with no tenant identifiers
 C. A separate AWS Region per tenant
 D. Pool shared resources with row-level tenant isolation for small tenants and silo dedicated resources for large tenants
@@ -125,7 +125,7 @@ D. A higher maximum session duration
 A. A CloudWatch alarm on resource creation
 B. An S3 bucket policy
 C. An SCP that denies actions when aws:RequestedRegion is not an approved Region, excluding global services
-D. An IAM policy in each account attached to administrators
+D. An IAM policy attached to the administrators in each account that denies any action outside the approved Regions
 
 <details>
 <summary>Answer</summary>
@@ -158,7 +158,7 @@ D. Make the S3 buckets public
 ### Question 9
 **Scenario:** A company must keep data confidential for 20 years and wants to prepare for future quantum-capable adversaries. Which concern does this raise?
 
-A. Increasing log retention
+A. Increasing log retention to 20 years so that every attacker's access attempt remains available for later review
 B. Disabling TLS
 C. Moving to larger EBS volumes
 D. Using quantum-resistant key encapsulation and signature algorithms such as ML-KEM and ML-DSA where supported
@@ -194,7 +194,7 @@ D. Security group rules
 ### Question 11
 **Scenario:** Private-subnet workloads transfer 30 TB per month to and from S3 through a NAT gateway, and the NAT data processing charge is the largest networking cost. What is the best reduction?
 
-A. Move the workloads to public subnets
+A. Move the workloads to public subnets so that S3 traffic bypasses the NAT gateway entirely
 B. Enable S3 Transfer Acceleration
 C. Create an S3 gateway VPC endpoint and route S3 traffic to it
 D. Add more NAT gateways
@@ -250,7 +250,7 @@ D. A Lifecycle rule moving everything to Glacier after one day
 
 A. Backup and restore
 B. Multi-site active/active
-C. Pilot light with manual rebuild of compute
+C. Pilot light with manual rebuild of compute when a disaster is declared in the second Region
 D. Warm standby with continuous data replication
 
 <details>
@@ -287,7 +287,7 @@ D. Storage Gateway volume sync
 A. Longer snapshot schedules
 B. Versioning only
 C. AWS Backup Vault Lock (and S3 Object Lock for S3 data)
-D. IAM policies denying delete to the administrator
+D. IAM policies denying delete to the administrator, applied through a permission boundary
 
 <details>
 <summary>Answer</summary>
@@ -305,7 +305,7 @@ D. IAM policies denying delete to the administrator
 A. AWS Config conformance packs only
 B. CloudFormation StackSets with service-managed permissions and automatic deployment
 C. A manual stack in each account
-D. A Lambda function that copies templates by hand
+D. A Lambda function that runs on a schedule and copies the template into every account it finds
 
 <details>
 <summary>Answer</summary>
@@ -322,8 +322,8 @@ D. A Lambda function that copies templates by hand
 
 A. Rebuild the code separately in each account
 B. Give developers production credentials
-C. Copy source into each account and build locally
-D. Promote the same built artifact through environments by assuming a deployment role in each target account
+C. Copy the source into each account and build it locally there, so that every environment has its own tested build
+D. Promote the same built artifact through environments by assuming a deployment role in each account
 
 <details>
 <summary>Answer</summary>
@@ -341,7 +341,7 @@ D. Promote the same built artifact through environments by assuming a deployment
 A. Add rate limits and a circuit breaker so remediation stops when failures persist
 B. Increase the Lambda memory
 C. Remove the alarm
-D. Run the Lambda in more Regions
+D. Run the Lambda in more Regions so that a single Region outage cannot stop the remediation
 
 <details>
 <summary>Answer</summary>
@@ -356,7 +356,7 @@ D. Run the Lambda in more Regions
 ### Question 20
 **Scenario:** A team wants to know whether real users in different countries see slow page loads, in addition to knowing whether the endpoint is up from a scheduled check. Which combination provides both?
 
-A. GuardDuty and Inspector
+A. GuardDuty for real user page loads and Inspector for scheduled endpoint availability checks
 B. VPC Flow Logs only
 C. CloudWatch RUM for real users and CloudWatch Synthetics canaries for scheduled checks
 D. CloudTrail and AWS Config

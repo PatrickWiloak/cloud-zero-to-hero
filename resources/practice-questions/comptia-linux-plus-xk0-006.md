@@ -89,7 +89,7 @@ D. netplan status
 A. cpio, which repairs damaged sectors while copying
 B. dd with default options, which stops at the first read error
 C. ddrescue, which continues past errors and logs the bad areas
-D. rsync -a, which copies the block device byte for byte
+D. rsync -a, which copies the block device byte for byte and skips unreadable sectors
 
 <details>
 <summary>Answer</summary>
@@ -140,7 +140,7 @@ D. chage -E with the end date on the account
 ### Question 8
 **Scenario:** After a unit file under /etc/systemd/system was edited, systemctl restart still runs the old configuration. What is missing?
 
-A. A reboot is the only way to apply unit file changes
+A. A reboot is the only way to apply unit file changes made under /etc/systemd/system
 B. systemctl daemon-reload so systemd re-reads unit files
 C. systemctl mask to clear the cached unit
 D. systemctl isolate multi-user.target
@@ -158,7 +158,7 @@ D. systemctl isolate multi-user.target
 ### Question 9
 **Scenario:** A Dockerfile sets ENTRYPOINT ["python"] and CMD ["main.py"]. An operator runs docker run myimage other.py. What executes?
 
-A. other.py as the program, because arguments replace ENTRYPOINT
+A. other.py as the program, because arguments given to docker run replace ENTRYPOINT as well as CMD
 B. The container fails because both instructions are set
 C. python main.py, because CMD cannot be overridden
 D. python other.py, because the run arguments replace CMD while ENTRYPOINT stays
@@ -179,7 +179,7 @@ D. python other.py, because the run arguments replace CMD while ENTRYPOINT stays
 A. The service name is wrong; https must be added as port 443
 B. The change was runtime-only and was not saved with --permanent
 C. firewalld requires a reboot to keep any rule
-D. The default zone must be changed to trusted for HTTPS
+D. The default zone must be changed to trusted before HTTPS is allowed through
 
 <details>
 <summary>Answer</summary>
@@ -195,7 +195,7 @@ D. The default zone must be changed to trusted for HTTPS
 **Scenario:** A web application on an SELinux-enforcing server cannot read content in /srv/web although file permissions allow it. What is the correct, persistent fix?
 
 A. semanage fcontext to record the httpd content type for the path, then restorecon
-B. chcon on the files, which survives a full filesystem relabel
+B. chcon on the files, which survives a full filesystem relabel and any restorecon run
 C. setenforce 0 and leave SELinux permissive
 D. chmod -R 777 /srv/web
 
@@ -357,7 +357,7 @@ D. df -i for inode exhaustion
 **Scenario:** An SLO of 99.9 percent is set for a service. Which statement describes it correctly?
 
 A. It is the list of devices an SNMP agent exposes
-B. It is the contractual commitment to customers, with penalties
+B. It is the contractual commitment to customers, with financial penalties if it is missed
 C. It is the internal target for a measured indicator such as request success rate
 D. It is the measurement itself, such as the count of failed requests
 
