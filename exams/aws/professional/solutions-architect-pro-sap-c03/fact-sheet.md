@@ -14,8 +14,9 @@ exam-version: SAP-C03
 **Questions:** 75 questions, 65 scored and 10 unscored (multiple choice and multiple response)
 **Passing Score:** 720 on a scaled score of 100-1,000
 **Cost:** 300 USD
-**Validity:** Not verified on the pages read
-**Delivery:** Not verified on the pages read
+**Validity:** 3 years; recertify by passing the latest version of the exam
+**Delivery:** Pearson VUE testing center or online proctored
+**Languages:** English, Japanese, Korean, Brazilian Portuguese, Simplified Chinese, Latin American Spanish
 
 ## Exam Domains
 
@@ -35,6 +36,8 @@ exam-version: SAP-C03
 | Pilot light | Tens of minutes / minutes | Low |
 | Warm standby | Minutes / seconds to minutes | Medium |
 | Multi-site active/active | Near zero / near zero | Highest |
+
+The whitepaper text confirms only the cost ordering and that active/active can reach near-zero recovery time; the hours/minutes ranges are indicative values from its strategy figure, which could not be read as text (unverified).
 
 ## Governance controls compared
 

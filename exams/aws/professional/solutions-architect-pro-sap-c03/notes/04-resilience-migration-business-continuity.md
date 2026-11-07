@@ -43,6 +43,8 @@ Disaster recovery is designed backward from two business numbers: **RTO** (recov
 | **Warm standby** | Minutes / seconds to minutes | Full-function but scaled-down copy | Medium |
 | **Multi-site active/active** | Near zero / near zero | Full production capacity serving traffic | Highest |
 
+The whitepaper text confirms the cost ordering and that active/active can reach near-zero recovery time; the other ranges are indicative values from its strategy figure, which could not be read as text (unverified). Treat them as ordering, not guarantees.
+
 - **Continuous replication** (4.2.2): **AWS Elastic Disaster Recovery** continuously replicates servers to a low-cost staging area and launches recovery instances when needed.
 - **Assessment and procedures** (4.2.3, 4.2.5): **AWS Resilience Hub** assesses an application against RTO/RPO targets and recommends improvements; Systems Manager runbooks codify recovery steps; test the plan regularly, because an untested plan is an assumption.
 - **Multi-Region failover** (4.2.4): replicate data (Aurora Global Database, DynamoDB global tables, S3 replication), detect failure with Route 53 health checks, route with Route 53 failover policies or **Global Accelerator**, and use **Amazon Application Recovery Controller** for routing controls and readiness checks that make failover deliberate and safe.

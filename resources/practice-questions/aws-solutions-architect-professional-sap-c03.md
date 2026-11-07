@@ -192,19 +192,19 @@ D. Security group rules
 ---
 
 ### Question 11
-**Scenario:** Private-subnet workloads transfer 30 TB per month to and from S3 through a NAT gateway, and the NAT data processing charge is the largest networking cost. What is the best reduction?
+**Scenario:** Workloads that must stay in private subnets (no public IPs, no internet gateway route) transfer 30 TB per month to and from S3 through a NAT gateway, and the NAT data processing charge is the largest networking cost. What is the best reduction?
 
-A. Move the workloads to public subnets so that S3 traffic bypasses the NAT gateway entirely
+A. Add a second NAT gateway in each Availability Zone so that S3 traffic is spread across more gateways
 B. Enable S3 Transfer Acceleration
 C. Create an S3 gateway VPC endpoint and route S3 traffic to it
-D. Add more NAT gateways
+D. Replace the NAT gateways with a larger NAT instance fleet that the team operates itself
 
 <details>
 <summary>Answer</summary>
 
 **Correct: C**
 
-**Why:** Gateway endpoints for S3 have no hourly or data processing charge and bypass the NAT gateway. More NAT gateways add cost, and public subnets weaken security.
+**Why:** Gateway endpoints for S3 have no hourly or data processing charge and bypass the NAT gateway. Extra NAT gateways or a self-run NAT fleet still process the traffic and add cost or operations.
 </details>
 
 ---

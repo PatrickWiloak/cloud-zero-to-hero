@@ -24,7 +24,9 @@ SAP-C03 validates advanced skills designing optimized AWS solutions based on the
 | **Question types** | Multiple choice and multiple response | Exam guide |
 | **Scoring** | Scaled 100-1,000; minimum passing score 720; compensatory | Exam guide |
 | **Cost** | 300 USD | AWS certification page |
-| **Delivery, validity, languages** | Not verified on the pages read | |
+| **Delivery** | Pearson VUE testing center or online proctored | AWS certification page |
+| **Validity** | 3 years; recertify by passing the latest version | AWS certification page |
+| **Languages** | English, Japanese, Korean, Brazilian Portuguese, Simplified Chinese, Latin American Spanish | AWS certification page |
 
 Out of scope per the guide: in-depth operating system knowledge; AI/ML model training, fine-tuning and data science workflows; security incident forensics and detailed threat investigation; application code development and debugging.
 
