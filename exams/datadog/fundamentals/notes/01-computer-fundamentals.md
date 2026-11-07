@@ -135,7 +135,7 @@ The **shell** is the text interface to the operating system. The skills the exam
 | See running processes | `ps aux`, `top` |
 | Test a web endpoint | `curl https://example.com` |
 | Set a variable for one command | `NAME=value command` |
-| Pipe output to another command | `command1 | command2` |
+| Pipe output to another command | `command1 \| command2` |
 
 Two ideas deserve emphasis. **Environment variables** are named values the shell passes to programs. The Agent reads many of its settings from variables whose names start with `DD_`, such as `DD_API_KEY` and `DD_SITE`, and an installation one-liner often sets them on the same line as the install command. And **exit codes**: a command returns `0` when it succeeded and a non-zero number when it did not, which is how scripts and checks know whether something worked.
 

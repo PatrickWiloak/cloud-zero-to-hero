@@ -8,7 +8,7 @@ How is the FinOps Certified Practitioner exam delivered?,Online proctored,exam-l
 FinOps (finops framework),a cloud financial management discipline and cultural practice that brings financial accountability to the variable spend model of cloud.,"notes,finops-framework"
 Inform phase (finops framework),"the FinOps phase where teams examine technology cost, usage and efficiency data (visibility and allocation).","notes,finops-framework"
 Optimize phase (finops framework),the FinOps phase that reduces cost through rate optimization and usage optimization.,"notes,finops-framework"
-Operate phase (finops framework),"the FinOps phase where teams implement the changes identified in Optimize and loop back to earlier phases (continuous improvement).","notes,finops-framework"
+Operate phase (finops framework),the FinOps phase where teams implement the changes identified in Optimize and loop back to earlier phases (continuous improvement).,"notes,finops-framework"
 Rate optimization (finops framework),"paying less for the same resources, for example through commitment discounts or spot capacity.","notes,finops-framework"
 Usage optimization (finops framework),"using fewer or more appropriate resources, for example by rightsizing or removing waste.","notes,finops-framework"
 Showback (finops framework),reporting cloud costs back to the teams that incurred them without billing them.,"notes,finops-framework"
