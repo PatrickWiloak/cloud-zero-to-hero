@@ -129,10 +129,7 @@ all 783 now repaired**, each replacement fetched and title-checked. The old-to-n
 - [x] ✅ 2026-10-22 judged the 10-19 run: opened #12 (no open issue existed, so the update path is still unrun); 3 real breaks fixed here, the rest moved to data/ai repos in the split.
 - [x] **Judge 2026-10-27:** the 10-26 Monday run rewrites #12 instead of opening #13 (`gh issue list --label link-check`). ✅ 2026-10-29: scheduled run 40320699752 opened no new issue (#13 is an unrelated PR); #12 was updated, then closed 10-27.
 - [ ] 🟡 Link-check noise: 130 of #12's 257 errors are `cloud.google.com` refusing the Actions runner ("Connection failed"); lower lychee concurrency for that host or exclude it. S.
-- [ ] 2026-11-22 **Spot-check the retired-product replacements** (11-06: PAS-C01 flagged, AWS page unlists it; no official dates read for OpsWorks or IBM Cloud Foundry, docs 404/JS-only; IBM notes still teach Watson + Cloud Foundry). These links now reach the successor product,
-- [ ] **Spot-check the retired-product replacements (by 2026-10-31).** These links now reach the successor product, ✏️ 2026-11-06: card-verify: the replaced links are still surrounded by notes that teach Watson and Cloud Foundry as current (`exams/ibm/cloud-advocate/notes/03-ai-devops-and-security.md:17`, `:14
-      but the surrounding notes may still teach the retired one: OpsWorks, IBM Watson and Cloud Foundry
-      (`exams/ibm`), AWS SAP specialty exam. The report lists every replacement.
+- [ ] 2026-11-22 Reword retired-product notes as retired/successor (spot-check FAILED 2026-11-07): IBM Cloud Functions, Cloud Foundry, Watson Translator/Visual Recognition, Log Analysis, Cert Manager, Watson->watsonx (6 `exams/ibm` files); OpsWorks (DOP/SAP-C02 fact sheets, roadmaps); PAS-C01 in README:160 / STUDY-HUB:158.
 - [ ] **Content checks the sweep surfaced** (links fixed, content may be stale):
   - 15 citations of retired IBM services now point at the official successors (listed in the report); the surrounding IBM notes may describe the retired products.
 - [ ] **62 URLs could not be checked** (bot protection or sign-in, mostly vendor cert pages and Cisco docs). Spot-check by hand; listed at the end of the report.
@@ -147,7 +144,7 @@ all 783 now repaired**, each replacement fetched and title-checked. The old-to-n
       (`mkdocs.yml` `extra.google_site_verification`) through the Site Verification API as the `nobler-reporting`
       service account (API enabled on project 822136630919 for this). Owners: that SA and pat@noblerworks.com.
       `sitemap.xml` submitted the same day.
-- [ ] **2026-11-01 check** (re-dated 2026-10-15 after the FAIL below; was 2026-10-12): Search Console → Sitemaps shows the sitemap as read (not pending) with ~2,000
+- [x] ✅ 2026-11-07 PASS (sitemap read 11-06, 1,073 URLs, 0 errors; home + `/STUDY-HUB/` "Submitted and indexed") **2026-11-01 check** (re-dated 2026-10-15 after the FAIL below; was 2026-10-12): Search Console → Sitemaps shows the sitemap as read (not pending) with ~2,000
       discovered URLs, and Pages → Indexed is above zero.
       ✏️ 2026-10-15 judged: 🟠 HALF - the sitemap (submitted 2026-09-29) is still `isPending: true`, never
       downloaded, 0 errors, so Google has discovered none of the 2,066 URLs from it. Indexed IS above zero: the home
