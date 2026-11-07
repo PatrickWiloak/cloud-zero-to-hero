@@ -207,9 +207,9 @@ The Operate phase focuses on running FinOps as a continuous practice with govern
 ## Key terms
 
 - **FinOps** - a cloud financial management discipline and cultural practice that brings financial accountability to the variable spend model of cloud.
-- **Inform phase** - the FinOps phase that creates visibility into cloud spending through allocation, reporting and benchmarking.
+- **Inform phase** - the FinOps phase where teams examine technology cost, usage and efficiency data (visibility and allocation).
 - **Optimize phase** - the FinOps phase that reduces cost through rate optimization and usage optimization.
-- **Operate phase** - the FinOps phase that puts governance, automation and continuous improvement in place.
+- **Operate phase** - the FinOps phase where teams implement the changes identified in Optimize and loop back to earlier phases (continuous improvement).
 - **Rate optimization** - paying less for the same resources, for example through commitment discounts or spot capacity.
 - **Usage optimization** - using fewer or more appropriate resources, for example by rightsizing or removing waste.
 - **Showback** - reporting cloud costs back to the teams that incurred them without billing them.

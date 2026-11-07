@@ -186,7 +186,7 @@ resource "aws_instance" "web" {
 
 ### State File Location
 - Default workspace: `terraform.tfstate`
-- Named workspaces: the local backend keeps them in a separate directory (commonly `terraform.tfstate.d/<workspace>/`; the directory name is not stated on the workspace or local backend pages, unverified)
+- Named workspaces: the local backend keeps them in a separate directory (in a directory called `terraform.tfstate.d`, per the [workspaces page](https://developer.hashicorp.com/terraform/cli/workspaces))
 
 ### CLI Workspaces vs Terraform Cloud Workspaces
 | Feature | CLI Workspaces | Cloud Workspaces |

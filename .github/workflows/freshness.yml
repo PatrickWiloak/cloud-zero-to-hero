@@ -1,0 +1,43 @@
+name: Freshness
+
+# Advisory report of cert guides and concept pages that are old or undated.
+# Never opens an issue. The only failing step is the 365-day strict check.
+on:
+  schedule:
+    - cron: '23 6 * * 1'
+  workflow_dispatch:
+    inputs:
+      days:
+        description: 'Report pages older than this many days'
+        default: '120'
+
+permissions:
+  contents: read
+
+jobs:
+  freshness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      - name: Self-test
+        run: python3 .github/scripts/check-freshness.py --self-test
+
+      - name: Report (advisory)
+        run: |
+          python3 .github/scripts/check-freshness.py --days "${{ inputs.days || '120' }}" --report freshness-report.md
+          cat freshness-report.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: freshness-report
+          path: freshness-report.md
+          if-no-files-found: ignore
+
+      - name: Fail on pages older than 365 days
+        run: python3 .github/scripts/check-freshness.py --days 365 --strict

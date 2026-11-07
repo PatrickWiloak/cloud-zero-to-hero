@@ -37,7 +37,7 @@ You cannot cut what you cannot attribute. OpenCost describes itself as "a vendor
 - Standardize labels (team, service, environment) and enforce them at admission. Unlabelled spend is shared overhead nobody owns.
 - Watch **idle cost**: capacity you pay for but no request uses.
 
-Kubecost is a commercial product built around the same allocation ideas. This guide did not fetch Kubecost's documentation, so check its current features and licensing on its own site before comparing.
+Kubecost is a commercial product built around the same allocation ideas. IBM announced on 17 September 2024 that it was acquiring Kubecost for its FinOps Suite ([IBM Newsroom](https://newsroom.ibm.com/blog-ibm-acquires-kubecost-to-broaden-hybrid-cloud-cost-management-capabilities)). The OpenCost site credits Kubecost as its creator and says OpenCost is a CNCF incubating project ([opencost.io](https://opencost.io/)). This guide did not read Kubecost's product docs, so check its current features and licensing on its own site before comparing.
 
 [**📖 OpenCost - Prometheus**](https://opencost.io/docs/installation/prometheus) - "Prometheus is a prerequisite for OpenCost installation."
 [**📖 OpenCost**](https://opencost.io/) - "OpenCost is a Cloud Native Computing Foundation incubating project."

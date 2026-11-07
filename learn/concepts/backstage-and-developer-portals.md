@@ -67,7 +67,7 @@ The sizes in the last column are judgement, not measured numbers. The usual fail
 
 ## How exams test it
 
-The Linux Foundation's [Certified Cloud Native Platform Engineering Associate (CNPA)](../../exams/kubernetes/cnpa/README.md) covers internal developer platforms; expect questions that map "service catalog", "templates" and "docs as code" to a developer portal.
+The Linux Foundation's [Certified Cloud Native Platform Engineering Associate (CNPA)](../../exams/kubernetes/cnpa/README.md) covers internal developer platforms. Per the [CNCF exam page](https://www.cncf.io/training/certification/cnpa/), Backstage is named once in the program description, and the domain closest to developer portals, "IDPs and Developer Experience", is 8% of the exam. Treat the portal as one topic among six domains, not the core.
 
 ## Go deeper
 

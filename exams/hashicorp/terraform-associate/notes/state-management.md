@@ -155,7 +155,7 @@ terraform {
 | S3 | `use_lockfile` (S3 lock file) or DynamoDB table (deprecated) | SSE (configurable) | Most common AWS backend |
 | GCS | Built-in | Built-in | Most common GCP backend |
 | Azure Blob | Built-in | Built-in | Most common Azure backend |
-| Consul | Built-in | Optional | HashiCorp service |
+| Consul | Built-in | Not stated; TLS to the agent is supported ([docs](https://developer.hashicorp.com/terraform/language/backend/consul)) | HashiCorp service |
 | Terraform Cloud | Built-in | Built-in | Recommended for teams |
 
 ## State Locking

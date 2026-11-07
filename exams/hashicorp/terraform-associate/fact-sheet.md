@@ -272,7 +272,7 @@ resource "aws_instance" "west_instance" {
 | S3 | Opt-in: `use_lockfile` (default false); DynamoDB locking is deprecated | Yes (SSE) | AWS |
 | GCS | Yes (built-in) | Yes (built-in) | GCP |
 | Azure Blob | Yes (built-in) | Yes (built-in) | Azure |
-| Consul | Yes (built-in, `lock` option on by default) | Not stated on the backend page | HashiCorp |
+| Consul | Yes (built-in, `lock` option on by default) | Not stated on the [Consul backend page](https://developer.hashicorp.com/terraform/language/backend/consul); it documents TLS to the agent (`scheme`, `ca_file`, `cert_file`) | HashiCorp |
 | Terraform Cloud | Yes (built-in) | Yes (built-in) | HashiCorp |
 
 - **[📖 Backend Configuration](https://developer.hashicorp.com/terraform/language/backend)** - Backend types and setup
@@ -362,7 +362,7 @@ terraform workspace show      # Show current workspace
 - Managing multiple environments (dev, staging, prod)
 - Each workspace has its own state file
 - Default workspace cannot be deleted
-- State for named workspaces is stored in a separate directory (commonly `terraform.tfstate.d/<workspace>/`, not stated on the pages read: unverified)
+- State for named workspaces is stored in a separate directory (in a directory called `terraform.tfstate.d`, per the [workspaces page](https://developer.hashicorp.com/terraform/cli/workspaces))
 - Access current workspace: `terraform.workspace`
 - **[📖 Workspaces](https://developer.hashicorp.com/terraform/language/state/workspaces)** - Workspace management
 

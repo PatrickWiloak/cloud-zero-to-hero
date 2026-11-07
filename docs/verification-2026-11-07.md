@@ -59,11 +59,10 @@ CI/CD: debug variables, cache rules (512-char key, 7 days, 10 GB, search order, 
 
 ## Still unverifiable
 
-- Kubecost: no vendor docs fetched; the page already says to check its site. Search results (third-party) say OpenCost is Kubecost's open source core and IBM acquired Kubecost in September 2024; not added to the page.
-- About 215 Key terms are generic definitions (Terraform, RHCSA, FinOps, Salesforce, OCI, IBM and similar) where the vendor page was unreadable (Salesforce returned 403, IBM Cloud pages 404 or thin, Google pages redirect) or the term is standard vocabulary; they were read for errors and none found beyond the fixes above. Not fetched: Salesforce Apex async terms, RHCSA/EX280 terms, FinOps Framework phases, Memorystore engines (Redis page fetched; Memcached/Valkey not stated there), Cloud Deploy, Binary Authorization, OCI Service Connector Hub.
-- IBM Activity Tracker deprecation dates come from a search summary of IBM documentation, not a fetched IBM page.
-- AWS OpsWorks Stacks end of life 26 May 2024 (SAP-C02/DOP-C02 notes, edited earlier today): the AWS blog linked from the notes gives no date; the date is confirmed only via a Terraform provider issue quoting AWS and a re:Post answer citing the AWS FAQ. IBM wording items remain open in TODO.md (Cloud Foundry, Watson, Certificate Manager).
-- Platform engineer interview: the answers are practice advice, not product facts; the CNPA exam coverage claim in the Backstage page was not checked against the CNCF curriculum.
+- About 215 Key terms are generic definitions (Terraform, RHCSA, FinOps, Salesforce, OCI, IBM and similar) where the vendor page was unreadable (Salesforce returned 403, IBM Cloud pages 404 or thin, Google pages redirect) or the term is standard vocabulary; they were read for errors and none found beyond the fixes above. Not fetched: Salesforce Apex async terms, RHCSA/EX280 terms beyond the sample objectives on the Red Hat EX200 page (that page lists ten categories with one example each, so most terms stay unchecked; EX280 not read), Memorystore engines (Redis page fetched; Memcached/Valkey not stated there).
+- IBM Activity Tracker deprecation dates: the IBM Cloud docs pages reachable on 2026-11-07 state no legacy deprecation date (the getting-started page does not mention one); still search-summary only.
+- AWS OpsWorks Stacks end of life 26 May 2024 (SAP-C02/DOP-C02/SOA-C03 notes): the OpsWorks user guide pages (welcome, EOL FAQ, related resources) return 404 now. The AWS General Reference "Services in Full Shutdown" table lists OpsWorks Stacks with End of Support Date May 1, 2024, which conflicts with 26 May. Guides left unchanged; decide which date to cite. IBM wording items remain open in TODO.md (Cloud Foundry, Watson, Certificate Manager).
+- Platform engineer interview: the answers are practice advice, not product facts.
 
 ## Cert guides pass
 
@@ -111,10 +110,28 @@ Logistics confirmed with no change: KCA, CBA, CNPE, CKNE (LF pages and CNCF curr
 
 ### Still unverifiable
 
-- Linux+: price and delivery (not on the CompTIA page), XK0-006 CEU count, XK0-005 retirement date (third-party), command usage read against man pages only.
-- Terraform: question count, passing score and 003 retirement date (not published); `terraform.tfstate.d/` name, plan symbol `<=`, Consul encryption.
+- Linux+: price and delivery (not on the CompTIA Linux+ page; how-to-get-certified and exam-objectives URLs return 404), XK0-006 CEU count (CE FAQ gives none), XK0-005 retirement date (third-party), command usage read against man pages only.
+- Terraform: question count, passing score and 003 retirement date (not on the HashiCorp certification pages, re-read 2026-11-07); plan symbol `<=`.
 - SAP-C03: DR RTO/RPO ranges (whitepaper figure is an image).
-- CBA: `createBackstageTheme` legacy status; frontend-plugin `yarn new` choice name; backend dir suffixes.
-- KCA: `serviceMonitor.enabled` mechanics, default `exceptionNamespace` and `resourceFilters`.
+- CBA: `createBackstageTheme` legacy status (the user-interface page does not mention it; it labels the MUI approach "Legacy" and uses `createUnifiedTheme`); backend dir suffixes. Frontend `yarn new` choice is `plugin` per the docs (already in the note).
+- KCA: default `resourceFilters` list (the customization page does not give a full default; it says Nodes, Events and more are skipped by default).
 - CKNE: egress default-deny blocking DNS is practice, not a page quote.
 - Generic Key terms in these guides were read for errors, not fetched.
+
+## Settled 2026-11-07 (second pass)
+
+Public pages only, no logins. Changes are to the guide named.
+
+| Page | Old | New | Source |
+|---|---|---|---|
+| terraform-associate fact-sheet, notes/core-workflow | `terraform.tfstate.d/` name "unverified" | Stated as fact: "For local state, Terraform stores the workspace states in a directory called `terraform.tfstate.d`" | https://developer.hashicorp.com/terraform/cli/workspaces |
+| terraform-associate fact-sheet, notes/state-management | Consul encryption "Not stated" / "Optional" | Page states TLS to the agent (`scheme`, `ca_file`, `cert_file`); says nothing about state encryption at rest | https://developer.hashicorp.com/terraform/language/backend/consul |
+| learn/concepts/backstage-and-developer-portals | CNPA "expect questions that map service catalog, templates, docs as code to a portal" | Backstage named once in program text; "IDPs and Developer Experience" is 8% of six domains | https://www.cncf.io/training/certification/cnpa/ |
+| kubernetes-cost-optimization | Kubecost docs not fetched, IBM deal from third-party search | IBM announced the Kubecost acquisition on 17 Sep 2024; OpenCost site credits Kubecost as creator, CNCF incubating; IBM page does not mention OpenCost or closing | https://newsroom.ibm.com/blog-ibm-acquires-kubecost-to-broaden-hybrid-cloud-cost-management-capabilities , https://opencost.io/ |
+| kca notes/06 | `serviceMonitor.enabled` mechanics unverified | Named on the monitoring page; needs prometheus-operator; no values example | https://kyverno.io/docs/monitoring/ |
+| kca fact-sheet, notes/02 | default `exceptionNamespace` | Confirmed: no default; required when `enablePolicyException` (default false) is true. No change needed | https://kyverno.io/docs/installation/customization/ |
+| finops notes/01, flashcards.csv | Inform: "allocation, reporting and benchmarking"; Operate: "governance, automation" | Inform: examine cost, usage and efficiency data; Operate: implement Optimize changes and loop back. Phase names confirmed (Inform, Optimize, Operate) | https://www.finops.org/framework/ , https://www.finops.org/framework/phases/ |
+
+Key terms checked, no change: Cloud Deploy (managed delivery service; pipeline, target, release, rollout) at https://docs.cloud.google.com/deploy/docs/overview ; Binary Authorization (attestations, policy, attestors) at https://docs.cloud.google.com/binary-authorization/docs/overview ; OCI Service Connector Hub (the page now calls it Connector Hub, formerly Service Connector Hub; source, tasks, target; Logging to Object Storage is a valid pair) at https://docs.oracle.com/en-us/iaas/Content/connector-hub/overview.htm ; RHCSA objectives page (ten categories) at https://www.redhat.com/en/services/training/ex200-red-hat-certified-system-administrator-rhcsa-exam .
+
+Left open (page unreadable or silent): Linux+ price, delivery, CEU count, XK0-005 retirement; Terraform 004 question count, passing score, 003 retirement; `createBackstageTheme` status; OpsWorks date (conflicting AWS pages); IBM Activity Tracker dates; Kyverno default `resourceFilters` list; SAP-C03 DR figure (image, skipped).

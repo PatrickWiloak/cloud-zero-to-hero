@@ -103,7 +103,7 @@ The exceptions page says the legacy `kyverno.io/v2` PolicyException "is deprecat
 Kyverno exposes Prometheus metrics, so a platform team can watch policy behavior and cost.
 
 - **Endpoint:** port `8000`, path `/metrics`. With Helm each controller can have a metrics Service; the admission controller's is `kyverno-svc-metrics`. The default type is `ClusterIP`, so only in-cluster scrapers reach it.
-- **Prometheus:** scrape the Service, or enable a ServiceMonitor through Helm (`serviceMonitor.enabled`).
+- **Prometheus:** scrape the Service, or enable a ServiceMonitor through Helm (`serviceMonitor.enabled`). The [monitoring page](https://kyverno.io/docs/monitoring/) names that value and says it needs prometheus-operator installed (kube-prometheus-stack includes it); it gives no values example.
 - **OpenTelemetry:** run a Collector that receives OTLP over gRPC on port 8000 and exposes a Prometheus endpoint on 9090; start Kyverno with `metricsPort` and `otelConfig=grpc`.
 
 | Metric | Type | Describes |
