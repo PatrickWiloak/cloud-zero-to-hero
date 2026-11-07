@@ -8,6 +8,7 @@ are fully under our control, so this check is blocking.
 Skips, because these are not real links:
   - fenced code blocks (``` and ~~~)
   - inline code spans (`like this`)
+  (HTML <a href="..."> anchors are validated exactly like markdown links)
   - external schemes (http, https, mailto, tel)
   - image and link targets containing < > placeholders, e.g. <topic>/<slug>.png
 
@@ -49,6 +50,8 @@ SKIP_PATHS = {os.path.join(".", ".site-src"), os.path.join(".", "site")}
 SKIP_FILES = {os.path.join(".", ".github", "site", "home.md")}
 EXTERNAL = re.compile(r"^(https?:|mailto:|tel:)")
 LINK = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
+# Plain HTML anchors, as used in the "Check yourself" answers: <a href="#frag">.
+HTML_LINK = re.compile(r"""<a\s[^>]*?\bhref\s*=\s*(["'])(.*?)\1""", re.IGNORECASE)
 FENCE = re.compile(r"^\s*(`{3,}|~{3,})(.*)$")
 QUOTE_PREFIX = re.compile(r"^(?:\s*>)+")
 INLINE_CODE = re.compile(r"`[^`]*`")
@@ -144,6 +147,13 @@ def strip_code(lines):
     """Yield (lineno, text) with fenced blocks blanked and inline code removed."""
     for i, line, in_code in code_state(lines):
         yield i, "" if in_code else INLINE_CODE.sub("", line)
+
+
+def link_targets(text):
+    """Return the raw link targets on one code-stripped line: markdown and <a href>."""
+    return [m.group(1) for m in LINK.finditer(text)] + [
+        m.group(2) for m in HTML_LINK.finditer(text)
+    ]
 
 
 def heading_ids(lines):
@@ -253,8 +263,7 @@ def main():
             with open(path, encoding="utf-8", errors="ignore") as fh:
                 lines = fh.readlines()
             for lineno, text in strip_code(lines):
-                for match in LINK.finditer(text):
-                    raw = match.group(1)
+                for raw in link_targets(text):
                     dest, frag = split_dest(raw)
                     if EXTERNAL.match(dest) or "<" in dest or "<" in frag:
                         continue
@@ -340,7 +349,34 @@ def self_test():
         if got != expected:
             bad += 1
             print(f"SELF-TEST FAIL: links in {text!r}: expected {expected}, got {got}")
-    total = len(cases) + len(link_cases)
+    html_cases = [
+        ('<a href="#how-a-lookup-works">x</a>', ["#how-a-lookup-works"]),           # same page
+        ("<a href='#bad-one'>x</a>", ["#bad-one"]),                                  # single quotes
+        ('<a class="c" href="other.md#sec">x</a>', ["other.md#sec"]),               # path + fragment
+        ('<a href="../x/y.md">x</a>', ["../x/y.md"]),                               # plain path
+        ('see `<a href="#no">x</a>` here', []),                                      # inline code
+        ('<a href="https://e.com/#a">x</a>', ["https://e.com/#a"]),                  # extracted, skipped by EXTERNAL
+    ]
+    for text, expected in html_cases:
+        got = link_targets(INLINE_CODE.sub("", text))
+        if got != expected:
+            bad += 1
+            print(f"SELF-TEST FAIL: html links in {text!r}: expected {expected}, got {got}")
+    fenced = ["```html\n", '<a href="#in-fence">x</a>\n', "```\n", '<a href="#out">x</a>\n']
+    got = [t for _, line in strip_code(fenced) for t in link_targets(line)]
+    if got != ["#out"]:
+        bad += 1
+        print(f"SELF-TEST FAIL: html href in a fence: expected ['#out'], got {got}")
+    # End to end: line numbers and anchor verdicts for good and bad same-page anchors.
+    page = ["## Real Heading\n", "\n", '<a href="#real-heading">ok</a>\n', '<a href="#nope">bad</a>\n']
+    known = heading_ids(page)
+    verdicts = [
+        (n, t[1:] in known) for n, line in strip_code(page) for t in link_targets(line)
+    ]
+    if verdicts != [(3, True), (4, False)]:
+        bad += 1
+        print(f"SELF-TEST FAIL: html anchor verdicts: got {verdicts}")
+    total = len(cases) + len(link_cases) + len(html_cases) + 2
     print(f"check-internal-links self-test: {total - bad}/{total} passed.")
     return 1 if bad else 0
 
