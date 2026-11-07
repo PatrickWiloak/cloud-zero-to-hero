@@ -4,11 +4,12 @@ Study guides for Kubernetes/CNCF in this repo. For the full picture across every
 
 <!-- BEGIN GENERATED: provider-certs - edit .github/scripts/build-provider-indexes.py, not this block -->
 
-11 certifications in this repo. Counts and statuses are generated from [docs/certs.json](../../docs/certs.json).
+12 certifications in this repo. Counts and statuses are generated from [docs/certs.json](../../docs/certs.json).
 
 | Cert | Code | Level | Status | Notes |
 |------|------|-------|--------|------:|
 | [Certified Argo Project Associate (CAPA)](capa/) | CAPA | Associate | Ready | 4 |
+| [Certified Backstage Associate (CBA)](cba/) | Not stated by the Linux Foundation page (it uses CBA as the purchase SKU) | Associate | Ready | 4 |
 | [Certified GitOps Associate (CGOA)](cgoa/) | CGOA | Associate | Ready | 4 |
 | [Cilium Certified Associate (CCA)](cca/) | CCA | Associate | Ready | 4 |
 | [Cloud Native Platform Engineering Associate (CNPA)](cnpa/) | CNPA | Associate | Ready | 4 |

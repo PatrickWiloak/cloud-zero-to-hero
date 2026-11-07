@@ -6,7 +6,7 @@ last-updated: 2026-07-29
 
 Which [hands-on projects](./README.md) back up which certification. Doing the lab is worth more than re-reading the notes: most of these exams test whether you have actually built the thing.
 
-23 of 76 cert guides have a matching lab. The rest have no lab yet - that is a gap, not a judgement about the cert. Labs are mapped by hand in each project's `certs:` frontmatter.
+23 of 77 cert guides have a matching lab. The rest have no lab yet - that is a gap, not a judgement about the cert. Labs are mapped by hand in each project's `certs:` frontmatter.
 
 <!-- BEGIN GENERATED: labs-by-cert - run .github/scripts/build-lab-map.py -->
 

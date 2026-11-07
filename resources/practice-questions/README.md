@@ -85,10 +85,11 @@ Scenario-based practice question banks, one per certification. Every bank follow
 - [Google Cloud Professional Machine Learning Engineer Certification](https://ai.noblerworks.com/certifications/practice-questions/gcp-machine-learning-engineer/)
 - [Google Cloud Professional Google Workspace Administrator Certification](./gcp-workspace-administrator.md)
 
-### Kubernetes (12)
+### Kubernetes (14)
 
 - [Certified Argo Project Associate (CAPA)](./cncf-capa.md)
 - [Cilium Certified Associate (CCA)](./cncf-cca.md)
+- [Certified Backstage Associate (CBA)](./cncf-cba.md)
 - [Certified GitOps Associate (CGOA)](./cncf-cgoa.md)
 - [Certified Kubernetes Administrator (CKA)](./kubernetes-cka.md)
 - [Certified Kubernetes Application Developer (CKAD)](./kubernetes-ckad.md)

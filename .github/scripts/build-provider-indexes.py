@@ -58,7 +58,7 @@ PROVIDER_HIGHLIGHTS = {
     "aws": "CLF-C02, SAA-C03, SOA-C03, DVA-C02, SAP-C02, DOP-C02, Advanced Networking (ANS-C01), SAP on AWS (PAS-C01), Quantum (QPC-C01); retired SOA-C02 retained",
     "azure": "AZ-900/104/204/305/400/700, MS-900, PL-100/200/900",
     "gcp": "Digital Leader, Associate Cloud Engineer, Cloud Architect, Cloud Developer, DevOps, Network Engineer, Workspace Admin",
-    "kubernetes": "KCNA, CKA, CKAD, plus Argo (CAPA), Cilium (CCA), GitOps (CGOA), Istio (ICA), Kyverno (KCA), OpenTelemetry (OTCA), Prometheus (PCA), Platform Engineering (CNPA)",
+    "kubernetes": "KCNA, CKA, CKAD, plus Argo (CAPA), Backstage (CBA), Cilium (CCA), GitOps (CGOA), Istio (ICA), Kyverno (KCA), OpenTelemetry (OTCA), Prometheus (PCA), Platform Engineering (CNPA)",
     "nvidia": "AI Infra & Ops, GenAI/LLM, Multimodal, Agentic AI, Networking, OpenUSD",
     "hashicorp": "Terraform Assoc + Pro, Consul, Packer, Nomad",
     "databricks": "Data Engineer (A/P), ML (A/P), GenAI Engineer, Lakehouse Admin",
