@@ -294,7 +294,7 @@ def build_hub_table(index):
     legend_text = (
         tracks_legend
         + "\n\n◇ = outline stage: README, fact-sheet, and practice plan are written; topic "
-        "notes are outlined but not yet drafted. See [TODO.md](./TODO.md) for the drafting "
+        "notes are outlined but not yet drafted. See [TODO.md](https://github.com/PatrickWiloak/cloud-zero-to-hero/blob/main/TODO.md) for the drafting "
         "queue."
     )
     return "\n".join(rows) + legend_text

@@ -173,7 +173,7 @@ Heading toward security, data or AI? The decision trees for those live on the [S
 | **VMware** | 1 | VCP-DCV (2V0-21.23) | [exams/vmware/](./exams/vmware/) |
 | **CERTIFICATIONS TOTAL** | **72** | across 16 providers | |
 
-◇ = outline stage: README, fact-sheet, and practice plan are written; topic notes are outlined but not yet drafted. See [TODO.md](./TODO.md) for the drafting queue.
+◇ = outline stage: README, fact-sheet, and practice plan are written; topic notes are outlined but not yet drafted. See [TODO.md](https://github.com/PatrickWiloak/cloud-zero-to-hero/blob/main/TODO.md) for the drafting queue.
 
 <!-- END GENERATED: provider-table -->
 
