@@ -119,7 +119,7 @@ The metrics page is inconsistent about `_total` suffixes (some sections omit the
 
 ### Controlling metric volume
 
-The `kyverno-metrics` ConfigMap has `namespaces.include` and `namespaces.exclude` (exclude wins), `bucketBoundaries` for histograms, and `metricsExposure` per metric: `enabled: false` turns a metric off, `disabledLabelDimensions` drops labels. Excluding Namespaces and dropping labels can substantially reduce memory use.
+The `kyverno-metrics` ConfigMap (set through the Helm `metricsConfig` values) has `namespaces.include` and `namespaces.exclude` (exclude wins), `bucketBoundaries` for histograms, and `metricsExposure` per metric: `enabled: false` turns a metric off, `disabledLabelDimensions` drops labels. Excluding Namespaces and dropping labels can substantially reduce memory use.
 
 **[📖 Kyverno monitoring](https://kyverno.io/docs/monitoring/)** - endpoint, metrics, ServiceMonitor, ConfigMap
 

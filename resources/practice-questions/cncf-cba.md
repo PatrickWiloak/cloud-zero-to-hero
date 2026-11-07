@@ -552,7 +552,7 @@ D. registerPlugin
 A. createUnifiedTheme
 B. createMuiTheme from App.tsx only
 C. buildTheme
-D. createBackstageTheme
+D. makeBackstageTheme
 
 <details>
 <summary>Answer</summary>

@@ -243,7 +243,7 @@ mutate:
       op: remove
 ```
 
-Path details from the docs: append to an array by ending the path with `/-`; escape `/` in a key as `~1` and `~` as `~0`. Variables are not supported in `patchesJson6902.path`.
+Path details from the docs: append to an array by ending the path with `/-`; escape `/` in a key as `~1` and `~` as `~0`. The variables page says variables are unsupported in `patchesJson6902.path`, but the mutate page's `foreach` examples use `{{elementIndex}}` in a path; the docs disagree, so do not rely on either.
 
 When to choose which: `patchStrategicMerge` reads like the resource and supports anchors; `patchesJson6902` is exact and can remove fields, which a merge patch cannot do cleanly.
 
@@ -358,7 +358,7 @@ Variables are written `{{ ... }}` and hold JMESPath. Built-ins from the variable
 - `serviceAccountName`, `serviceAccountNamespace`, `request.roles`, `request.clusterRoles`
 - `images` (registry, path, name, tag, digest, reference, referenceWithTag)
 
-Evaluation order: **match, then context, then preconditions, then the rule body.** Variables are not supported in `match`, `exclude` or `patchesJson6902.path`. Escape with a leading backslash to stop substitution. `$( ... )` references another field inside the same policy.
+Evaluation order, per the variables page: **match, then preconditions, then the rule body**, and context entries are resolved before preconditions because preconditions can use them. Variables are not supported in `match` or `exclude`; the variables page also lists `patchesJson6902.path` as unsupported, although the mutate page's `foreach` examples put `{{elementIndex}}` in a path, so treat that one as unclear. Escape with a leading backslash to stop substitution. `$( ... )` references another field inside the same policy.
 
 ### context: where outside data comes from
 

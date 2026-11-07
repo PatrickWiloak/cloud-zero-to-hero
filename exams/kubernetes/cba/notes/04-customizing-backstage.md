@@ -40,10 +40,10 @@ Both sides keep plugins isolated. "There can be no direct communication between 
 
 ### Creating one
 
-`yarn new` is the scaffolder. Select `frontend-plugin`, `backend-plugin` or `backend-module` as appropriate.
+`yarn new` is the scaffolder. The docs name the `backend-plugin` and `backend-module` choices; for a frontend plugin pick the matching entry in the prompt (the frontend guide says only "plugin").
 
-- Frontend plugins land in `plugins/<pluginId>`. Backend plugins land in `plugins/<pluginId>-backend`, and modules in `plugins/<pluginId>-backend-module-<moduleId>`.
-- Serve one plugin in isolation with `yarn start` inside its directory (faster startup and hot reload, for local development only). With the full app running, the default page is at `http://localhost:3000/my-plugin`.
+- A new frontend plugin lands in `plugins/<pluginId>` (frontend guide). The `-backend` and `-backend-module-` directory suffixes are the usual convention and were not confirmed on a fetched page.
+- Serve one plugin in isolation with `yarn start` inside its directory (faster startup and hot reload, for local development only). The frontend guide gives `/example` as the default page path and does not name a port; the plugin's own dev server prints its URL.
 
 ### A frontend plugin (new frontend system)
 
@@ -56,7 +56,7 @@ export const examplePlugin = createFrontendPlugin({
 });
 ```
 
-- The plugin ID is "a lowercase dash-separated string"; the exported instance is the camel-cased ID plus `Plugin`.
+- The plugin ID is "a lowercase dash-separated string"; the exported instance is conventionally the camel-cased ID plus `Plugin` (a convention, not stated on the page).
 - `src/index.ts` default-exports the plugin so integrators can install it without referencing it in code.
 - Extensions come from **blueprints**. `PageBlueprint` creates a standalone page; its `params` include `routeRef`, `path`, `title`, `icon` and a lazy `loader`. The title and icon populate the sidebar automatically.
 - Route references use `createRouteRef()` and are passed to the plugin's `routes` so integrators can bind external links.

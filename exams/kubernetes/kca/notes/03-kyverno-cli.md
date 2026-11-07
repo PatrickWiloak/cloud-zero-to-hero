@@ -25,7 +25,7 @@ Methods listed on the CLI page:
 | Binary | Download the archive from the GitHub releases page, extract it, copy `kyverno` onto your PATH |
 | From source | Clone `kyverno/kyverno`, run `make build-cli` (needs Go), move the built binary onto your PATH |
 
-The page also lists an AUR package and a GitHub Actions marketplace installer. The root command's subcommands are `apply`, `completion`, `create`, `docs`, `jp`, `json`, `migrate`, `test` and `version`. Experimental commands need `KYVERNO_EXPERIMENTAL=true`.
+The page also lists an AUR package and a GitHub Actions marketplace installer. The root command's subcommands are `apply`, `completion`, `create`, `docs`, `jp`, `json`, `migrate`, `test` and `version`.
 
 **[📖 Kyverno CLI overview](https://kyverno.io/docs/subprojects/kyverno-cli/)** - install methods and examples
 
