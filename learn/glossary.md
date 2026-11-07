@@ -46,6 +46,8 @@ Categories:
 
 <a id="term-iaas-infrastructure-as-a-service"></a>**IaaS (Infrastructure as a Service)** - You rent raw VMs, networks, and storage. You manage the OS and everything above it. Examples: EC2, Azure VMs, GCE.
 
+<a id="term-landing-zone"></a>**Landing zone** - The pre-built, governed starting point for a cloud estate: the accounts, identity, networking, logging and guardrails that exist before the first application arrives. See [Multi-account strategy and landing zones](concepts/multi-account-and-landing-zones.md).
+
 <a id="term-multi-cloud"></a>**Multi-cloud** - Using two or more public clouds (AWS + GCP, Azure + AWS, etc.) for workloads. Different from hybrid (which mixes on-prem and cloud).
 
 <a id="term-multi-tenant"></a>**Multi-tenant** - A single instance of software/infrastructure serves many customers, with isolation between them. Most SaaS is multi-tenant.
@@ -62,11 +64,17 @@ Categories:
 
 <a id="term-reserved-instance-reservation-committed-use-discount"></a>**Reserved Instance / Reservation / Committed Use Discount** - Pre-pay or commit to using a resource for 1-3 years in exchange for a big discount.
 
+<a id="term-rpo-recovery-point-objective"></a>**RPO (Recovery Point Objective)** - How much data you can afford to lose after a disaster, measured as time back to the last recoverable point. See [Disaster recovery: RPO and RTO](concepts/disaster-recovery-rpo-rto.md).
+
+<a id="term-rto-recovery-time-objective"></a>**RTO (Recovery Time Objective)** - How long you can afford to be down after a disaster before service is restored.
+
 <a id="term-saas-software-as-a-service"></a>**SaaS (Software as a Service)** - You use software over the internet; provider runs everything. Examples: Gmail, Salesforce, Slack, Notion.
 
 <a id="term-serverless"></a>**Serverless** - You write code; the platform runs it on demand and bills per execution. No servers for you to manage. Examples: Lambda, Cloud Functions, Cloud Run, Azure Functions.
 
 <a id="term-shared-responsibility-model"></a>**Shared responsibility model** - The cloud provider secures the cloud; you secure what you put **in** the cloud. Where the line is depends on the service (more services managed = less for you).
+
+<a id="term-spof-single-point-of-failure"></a>**SPOF (Single Point of Failure)** - Anything that, if it breaks, takes the whole system down. Remove them by having more than one of everything that matters. See [High availability and fault tolerance](concepts/high-availability-and-fault-tolerance.md).
 
 <a id="term-spot-preemptible-instance"></a>**Spot / Preemptible Instance** - A cheap VM the provider can reclaim with little notice. Good for fault-tolerant batch work, bad for stateful production.
 
@@ -300,6 +308,8 @@ Categories:
 
 <a id="term-rbac-role-based-access-control"></a>**RBAC (Role-Based Access Control)** - Permissions are grouped into roles; you assign roles to users.
 
+<a id="term-scp-service-control-policy"></a>**SCP (Service Control Policy)** - An AWS Organizations policy that sets the maximum permissions accounts can use. It never grants access; a user still needs an IAM allow and no SCP deny.
+
 <a id="term-secret"></a>**Secret** - Sensitive data (passwords, API keys, certificates) stored separately from code.
 
 <a id="term-secrets-manager"></a>**Secrets manager** - A service for storing and rotating secrets. AWS Secrets Manager, HashiCorp Vault, Azure Key Vault, GCP Secret Manager.
@@ -337,6 +347,8 @@ Categories:
 <a id="term-drift"></a>**Drift** - When live infrastructure no longer matches what's in code. Bad. IaC tools detect it.
 
 <a id="term-gitops"></a>**GitOps** - Git is the source of truth for infrastructure. Tools like ArgoCD or Flux sync the cluster to git.
+
+<a id="term-golden-path"></a>**Golden path** - The supported, opinionated way to do a common task, such as creating a new service with pipeline, dashboards and alerts included. Also called a paved road. See [Platform engineering explained](concepts/platform-engineering-explained.md).
 
 <a id="term-iac-infrastructure-as-code"></a>**IaC (Infrastructure as Code)** - Define infrastructure in text files, version it, deploy it. Terraform, CloudFormation, Bicep, Pulumi.
 
