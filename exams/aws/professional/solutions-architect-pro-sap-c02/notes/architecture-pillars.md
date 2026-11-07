@@ -63,7 +63,7 @@ The six pillars - Operational Excellence, Security, Reliability, Performance Eff
 - Multi-region active-active and active-passive patterns
 - Regional service quotas and capacity planning
 - Dependency isolation and bulkhead patterns
-- Circuit breaker implementations using AWS App Mesh
+- Circuit breaker implementations using a service mesh (App Mesh retired 2026-09-30)
 
 **Disaster Recovery Strategies**
 - Backup and Restore (RPO hours, RTO 24 hours): Automated backups to S3, snapshots
@@ -243,7 +243,7 @@ The six pillars - Operational Excellence, Security, Reliability, Performance Eff
 - Amazon DynamoDB or RDS for data persistence
 - AWS Step Functions for orchestration
 - API Gateway for synchronous API endpoints
-- AWS App Mesh for service mesh capabilities
+- Service mesh capabilities (AWS App Mesh retired 2026-09-30; ECS Service Connect on ECS)
 
 **Pros/Cons**
 - Pros: High scalability, fault isolation, technology diversity, independent deployment cycles

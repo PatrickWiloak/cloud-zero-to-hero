@@ -926,7 +926,7 @@ aws ssm start-session --target i-1234567890abcdef0
 - Mixed instances policy with Spot
 
 **Microservices Architecture**
-- Service mesh with App Mesh
+- Service mesh (App Mesh retired 2026-09-30; ECS Service Connect on ECS)
 - Service discovery with Cloud Map
 - Event-driven communication
 - Lambda vs. ECS vs. EKS for different services

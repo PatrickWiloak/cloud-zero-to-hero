@@ -623,9 +623,9 @@ Traffic Split → 90% → Stable Version
 ```
 
 #### Service Mesh Integration
-```
-ECS Services → AWS App Mesh → Service Discovery → Load Balancing
-```
+Use **ECS Service Connect** for service-to-service traffic in ECS. AWS App Mesh reached end of support on 2026-09-30 and AWS recommends migrating to Service Connect.
+
+**[📖 App Mesh end of support notice](https://docs.aws.amazon.com/app-mesh/latest/userguide/troubleshooting.html)** - AWS notice (App Mesh is history, not a current option)
 
 ## Security Considerations
 

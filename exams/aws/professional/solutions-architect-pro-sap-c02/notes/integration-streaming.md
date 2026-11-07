@@ -130,7 +130,7 @@ Professional architects must understand the trade-offs between synchronous and a
 - **Usage Plans and API Keys**: Monetization, quotas
 - **Use Cases**: Serverless APIs, microservices gateway, mobile backends
 
-**AWS App Mesh**
+**AWS App Mesh (retired, history only: end of support 2026-09-30; AWS recommends ECS Service Connect)**
 - **Service Mesh**: Manage microservices communication
 - **Observability**: Metrics, logs, traces for service-to-service traffic
 - **Traffic Control**: Routing, retries, timeouts, circuit breakers
@@ -907,7 +907,7 @@ aws datasync start-task-execution \
 - API Gateway advanced features (VPC Link, authorizers, usage plans)
 - Integration patterns (fan-out, buffering, orchestration)
 - AppFlow for SaaS integration
-- App Mesh for service mesh
+- Service mesh concepts (App Mesh retired 2026-09-30; ECS Service Connect is AWS's recommended replacement on ECS)
 
 ### Complex Scenarios to Master
 

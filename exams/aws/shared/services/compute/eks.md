@@ -20,7 +20,7 @@ Amazon Elastic Kubernetes Service (EKS) is a fully managed Kubernetes service th
 - **Networking**: VPC-native networking with AWS CNI
 - **Scaling**: Horizontal Pod Autoscaler and Cluster Autoscaler
 - **Monitoring**: Integration with CloudWatch Container Insights
-- **Service Mesh**: AWS App Mesh integration
+- **Service Mesh**: AWS App Mesh integration ended (end of support 2026-09-30); use an open-source mesh such as Istio or Linkerd (see [Service mesh explained](../../../../../learn/concepts/service-mesh-explained.md))
 - **GitOps**: Integration with AWS CodeCommit and third-party tools
 - **Fargate Support**: Serverless compute for pods
 - **Windows Support**: Windows container workloads
@@ -501,10 +501,9 @@ spec:
 
 ### Advanced Integrations
 
-1. **AWS App Mesh**
-   - Service mesh capabilities
-   - Traffic management
-   - Observability
+1. **AWS App Mesh (retired)**
+   - End of support 2026-09-30; do not start new work on it
+   - Kept only as history: it taught sidecar-proxy meshes (traffic management, observability)
    - Security policies
 
 2. **Amazon CloudWatch**
@@ -976,41 +975,12 @@ kubectl top nodes
 kubectl top pods --all-namespaces
 ```
 
-### Service Mesh with App Mesh
+### Service Mesh (App Mesh retired)
 
-```bash
-# Install App Mesh Controller
-helm repo add eks https://aws.github.io/eks-charts
-helm install appmesh-controller eks/appmesh-controller \
-  --namespace appmesh-system \
-  --create-namespace
+The App Mesh controller examples that stood here were removed: AWS App Mesh reached end of support on 2026-09-30.
 
-# Create mesh
-kubectl apply -f - <<EOF
-apiVersion: appmesh.k8s.aws/v1beta2
-kind: Mesh
-metadata:
-  name: production-mesh
-spec:
-  namespaceSelector:
-    matchLabels:
-      mesh: production-mesh
-EOF
+**[📖 App Mesh end of support notice](https://docs.aws.amazon.com/app-mesh/latest/userguide/troubleshooting.html)** - AWS notice
 
-# Create virtual service
-kubectl apply -f - <<EOF
-apiVersion: appmesh.k8s.aws/v1beta2
-kind: VirtualService
-metadata:
-  name: web-app
-  namespace: production
-spec:
-  awsName: web-app.production.svc.cluster.local
-  provider:
-    virtualRouter:
-      virtualRouterRef:
-        name: web-app
-EOF
-```
+For the concept, see [Service mesh explained](../../../../../learn/concepts/service-mesh-explained.md).
 
 This comprehensive EKS documentation provides detailed coverage for all AWS certification paths, including practical Kubernetes examples and real-world deployment scenarios.

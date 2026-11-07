@@ -463,10 +463,8 @@ spec:
    - Lifecycle policies
    - Cross-region replication
 
-4. **AWS App Mesh**
-   - Service mesh capabilities
-   - Traffic management
-   - Observability features
+4. **AWS App Mesh (retired)**
+   - End of support 2026-09-30; for ECS use Service Connect
    - Security policies
 
 5. **Amazon EventBridge**
