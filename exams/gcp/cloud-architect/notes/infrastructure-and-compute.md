@@ -2526,10 +2526,10 @@ Data Ingestion
 │       └── Partitioned and clustered tables
 │
 ├── Machine Learning
-│   ├── Vertex AI Workbench (Jupyter notebooks)
-│   ├── Vertex AI Training (custom models)
+│   ├── Agent Platform Workbench (formerly Vertex AI Workbench; Jupyter notebooks)
+│   ├── Agent Platform Training (formerly Vertex AI Training; custom models)
 │   │   └── A2 instances with GPUs (on-demand)
-│   └── Vertex AI Prediction (model serving)
+│   └── Agent Platform Prediction (formerly Vertex AI Prediction; model serving)
 │       └── Cloud Run (custom serving)
 │
 └── Visualization
@@ -2687,7 +2687,7 @@ Gaming Platform Architecture
 │
 ├── Analytics and Anti-Cheat
 │   ├── Game telemetry → Pub/Sub → Dataflow → BigQuery
-│   ├── Vertex AI (anomaly detection)
+│   ├── Agent Platform (formerly Vertex AI; anomaly detection)
 │   └── Cloud Functions (flag suspicious behavior)
 │
 └── Content Delivery

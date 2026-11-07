@@ -1277,7 +1277,7 @@ fields @timestamp, @message
 #### Configuration Management
 - [ ] Systems Manager Parameter Store vs Secrets Manager
 - [ ] Systems Manager State Manager for compliance
-- [ ] OpsWorks for Chef/Puppet
+- [ ] OpsWorks for Chef/Puppet (retired 26 May 2024; know the Systems Manager replacement)
 - [ ] AWS AppConfig for application configuration
 - [ ] Service Catalog for governance
 

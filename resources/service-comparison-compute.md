@@ -42,7 +42,7 @@ This guide provides a comprehensive comparison of compute services across AWS, G
 | **Serverless Pods** | Fargate | Autopilot | Virtual Kubelet, Azure Container Instances |
 | **Auto-scaling** | Cluster Autoscaler, Karpenter | Cluster Autoscaler (built-in) | Cluster Autoscaler |
 | **Networking** | Amazon VPC CNI | VPC-native, GKE Dataplane V2 | Azure CNI, kubenet |
-| **Service Mesh** | App Mesh | Anthos Service Mesh, Cloud Service Mesh | Open Service Mesh |
+| **Service Mesh** | ECS Service Connect (App Mesh retired 2026-09-30) | Anthos Service Mesh, Cloud Service Mesh | Open Service Mesh |
 | **GitOps** | Flux, Argo CD | Config Sync (Anthos) | GitOps with Flux |
 | **Multi-cluster** | EKS Anywhere | Anthos, GKE Enterprise | Azure Arc-enabled Kubernetes |
 | **Windows Support** | Yes | Yes | Yes |

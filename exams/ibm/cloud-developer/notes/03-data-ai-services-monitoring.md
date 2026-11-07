@@ -1116,6 +1116,8 @@ ibmcloud atracker event list \
 
 ### IBM Log Analysis (LogDNA)
 
+> **Retired service:** IBM Log Analysis (LogDNA) and IBM Cloud Activity Tracker are retired. IBM Cloud Logs provides replacement functions for both (per [IBM's Cloud Logs announcement](https://www.ibm.com/new/product-blog/ibm-cloud-logs-observability)). Read the Log Analysis material below as the legacy model and map it to IBM Cloud Logs.
+
 ```bash
 # Create Log Analysis instance
 ibmcloud resource service-instance-create \

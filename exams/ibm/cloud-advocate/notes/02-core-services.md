@@ -1167,6 +1167,8 @@ ibmcloud ce application logs --name myapp
 
 ### IBM Cloud Functions
 
+> **Legacy service:** IBM publishes migration guidance for moving off IBM Cloud Functions (OpenWhisk); its target is IBM Code Engine ([IBM: How to move from IBM Cloud Functions to IBM Code Engine](https://www.ibm.com/products/tutorials/how-to-move-from-ibm-cloud-functions-to-ibm-code-engine)). Treat the Cloud Functions material below as the legacy model.
+
 Event-driven serverless compute based on Apache OpenWhisk.
 
 **Key Features:**

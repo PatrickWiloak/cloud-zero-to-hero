@@ -41,7 +41,7 @@ Which approach is correct?
 
 A. Systems Manager Patch Manager with a Maintenance Window per OS group; VPC endpoints for SSM, EC2messages, SSM messages so private instances reach SSM without internet.
 B. Manual SSH/RDP and run yum update / Windows Update; track in a spreadsheet.
-C. AWS OpsWorks for Chef Automate; configure scheduled recipes for patching.
+C. AWS OpsWorks for Chef Automate (a retired service); configure scheduled recipes for patching.
 D. Third-party patch tool installed via UserData; aggregate logs in CloudWatch Logs.
 
 **Analysis**

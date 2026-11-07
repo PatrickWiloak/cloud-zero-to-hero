@@ -43,7 +43,7 @@ This guide compares container orchestration, managed Kubernetes, container regis
 |---------|---------|-----------|------------|
 | Default CNI | Amazon VPC CNI | Azure CNI / kubenet | GKE CNI (Dataplane V2) |
 | Network Policy | Calico (add-on) | Azure NPM / Calico | Native (Dataplane V2) |
-| Service Mesh | AWS App Mesh / Istio | Istio-based (add-on) | Anthos Service Mesh |
+| Service Mesh | ECS Service Connect / Istio | Istio-based (add-on) | Anthos Service Mesh |
 | Load Balancer | AWS ALB/NLB | Azure LB / App Gateway | Cloud Load Balancing |
 | Ingress Controller | AWS LB Controller | AGIC / NGINX | GKE Ingress Controller |
 | IPv6 Support | Dual-stack | Dual-stack | Dual-stack |
@@ -65,7 +65,7 @@ This guide compares container orchestration, managed Kubernetes, container regis
 
 | Feature | AWS EKS | Azure AKS | Google GKE |
 |---------|---------|-----------|------------|
-| Service Mesh | App Mesh, Istio add-on | Istio add-on | Anthos Service Mesh |
+| Service Mesh | ECS Service Connect, Istio | Istio add-on | Anthos Service Mesh |
 | GitOps | Flux (EKS add-on) | Flux (GitOps extension) | Config Sync |
 | Monitoring | Container Insights | Container Insights (Azure Monitor) | GKE Dashboard / Cloud Monitoring |
 | Cost Management | Kubecost integration | AKS Cost Analysis | GKE Cost Allocation |
@@ -130,7 +130,7 @@ This guide compares container orchestration, managed Kubernetes, container regis
 | Compliance | AWS-native controls | K8s policy engines |
 | Windows Containers | Supported | Supported |
 | Batch Workloads | ECS tasks | K8s Jobs/CronJobs |
-| Service Mesh | App Mesh / ECS Connect | Istio / Linkerd |
+| Service Mesh | ECS Service Connect | Istio / Linkerd |
 
 ### Serverless Container Comparison - Extended
 
@@ -155,7 +155,7 @@ This guide compares container orchestration, managed Kubernetes, container regis
 | Internal Load Balancing | Internal ALB/NLB | Internal LB | Internal TCP/UDP LB |
 | External Load Balancing | ALB/NLB | Azure LB / App Gateway | Global/Regional LB |
 | Network Policies | Security groups + Calico | NSG + Azure NPM / Calico | VPC firewall + Dataplane V2 |
-| Service Mesh | App Mesh / Istio | Open Service Mesh / Istio | Anthos Service Mesh |
+| Service Mesh | ECS Service Connect / Istio | Open Service Mesh / Istio | Anthos Service Mesh |
 
 ---
 

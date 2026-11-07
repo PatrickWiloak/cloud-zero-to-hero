@@ -214,7 +214,7 @@ flowchart TB
         ↑                                        ↑
         |                                        |
         +────────────── [Control Plane] ─────────+
-                     (Istio/App Mesh/Linkerd)
+                     (Istio/Linkerd)
                               |
                     [Configuration]
                     - Traffic policies
@@ -273,7 +273,7 @@ flowchart TB
 - **Resilience**: Circuit breakers, timeouts, fault injection
 
 #### Service Mesh Options
-- **AWS App Mesh**: Native AWS service mesh
+- **Amazon ECS Service Connect**: AWS-native service-to-service connectivity for ECS (AWS App Mesh's migration target; App Mesh support ended 2026-09-30)
 - **Istio**: Open-source, works on all clouds
 - **Linkerd**: Lightweight, CNCF graduated
 - **Consul Connect**: HashiCorp's service mesh
@@ -354,7 +354,7 @@ managedNodeGroups:
         albIngress: true
         cloudWatch: true
         autoScaler: true
-        appMesh: true
+        appMesh: true   # legacy eksctl addon policy; App Mesh is retired
         xRay: true
 
   - name: memory-optimized
@@ -489,7 +489,9 @@ spec:
           averageUtilization: 80
 ```
 
-#### AWS App Mesh Configuration
+#### AWS App Mesh Configuration (retired service, legacy example)
+
+> **Retired:** AWS ended support for App Mesh on 2026-09-30. The console and resources are no longer accessible. For ECS use Amazon ECS Service Connect; for EKS use Istio or Linkerd. The example below is kept only to read older configurations. **[📖 What is AWS App Mesh?](https://docs.aws.amazon.com/app-mesh/latest/userguide/what-is-app-mesh.html)** - end of support notice.
 
 ```yaml
 # app-mesh-virtual-service.yaml
@@ -1626,7 +1628,7 @@ const orders = await breaker.fire(userId);
 |-----------|-----|-------|-----|
 | Container Orchestration (3 nodes) | EKS: $73 + EC2: $200 | AKS: Free + VMs: $200 | GKE: $73 + VMs: $180 |
 | Load Balancer | ALB: $25 | App Gateway: $50 | HTTPS LB: $25 |
-| Service Mesh | App Mesh: Free | Istio: Free | Anthos SM: $150 |
+| Service Mesh | ECS Service Connect: no extra charge | Istio: Free | Anthos SM: $150 |
 | API Gateway (10M requests) | $35 | APIM Dev: $50 | $30 |
 | Container Registry | ECR: $10 | ACR: $5 | Artifact Registry: $10 |
 | Secrets Manager | $5 | Key Vault: $3 | Secret Manager: $3 |
@@ -2169,7 +2171,7 @@ Key principle: Design for failure, plan compensating actions
 ### AWS
 - [EKS Best Practices](https://aws.github.io/aws-eks-best-practices/)
 - [ECS Best Practices](https://docs.aws.amazon.com/AmazonECS/latest/bestpracticesguide/)
-- [AWS App Mesh](https://docs.aws.amazon.com/app-mesh/)
+- [AWS App Mesh (retired 2026-09-30)](https://docs.aws.amazon.com/app-mesh/latest/userguide/what-is-app-mesh.html)
 - [AWS Well-Architected - Microservices](https://docs.aws.amazon.com/whitepapers/latest/microservices-on-aws/microservices-on-aws.html)
 
 ### Azure

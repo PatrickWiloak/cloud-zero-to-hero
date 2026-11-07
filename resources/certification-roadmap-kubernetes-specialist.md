@@ -146,7 +146,7 @@ This roadmap guides you through Kubernetes and container-focused certifications,
 | Networking | VPC CNI | Azure CNI / kubenet | Dataplane V2 (Cilium) |
 | Identity | IRSA, Pod Identity | Workload Identity (Entra) | Workload Identity |
 | Scaling | Karpenter, Cluster Autoscaler | KEDA, Cluster Autoscaler | Autopilot, Node Auto-provisioning |
-| Service Mesh | App Mesh, Istio | Istio add-on | Anthos Service Mesh |
+| Service Mesh | Istio (App Mesh retired 2026-09-30) | Istio add-on | Anthos Service Mesh |
 | GitOps | Flux add-on | Flux (Arc) | Config Sync |
 | Policy | OPA Gatekeeper | Azure Policy | Policy Controller |
 

@@ -96,7 +96,7 @@ last-updated: 2026-05-03
 - **[📖 Kubernetes Service](https://cloud.ibm.com/docs/containers)**
 - **[📖 OpenShift on IBM Cloud](https://cloud.ibm.com/docs/openshift)**
 - **[📖 Code Engine](https://cloud.ibm.com/docs/codeengine)**
-- **[📖 Cloud Functions](https://cloud.ibm.com/docs/codeengine)**
+- **[📖 Code Engine](https://cloud.ibm.com/docs/codeengine)** (IBM's migration target from legacy Cloud Functions)
 - **[📖 Database Services](https://cloud.ibm.com/docs/overview?topic=overview-database)**
 - **[📖 Data Architecture](https://www.ibm.com/cloud/architecture/architectures/dataArchitecture)**
 - **[📖 Caching Strategies](https://cloud.ibm.com/docs/databases-for-redis)**
@@ -169,7 +169,7 @@ last-updated: 2026-05-03
 - **[📖 CDN with Cloud Internet Services](https://cloud.ibm.com/docs/cis?topic=cis-about-ibm-cloud-internet-services-cis)**
 - **[📖 Caching Best Practices](https://cloud.ibm.com/docs/databases-for-redis)**
 - **[📖 Monitoring](https://cloud.ibm.com/docs/monitoring)**
-- **[📖 Log Analysis](https://cloud.ibm.com/docs/cloud-logs)**
+- **[📖 IBM Cloud Logs](https://cloud.ibm.com/docs/cloud-logs)** (replaces the retired Log Analysis)
 
 ## Core Architecture Components
 
@@ -195,7 +195,7 @@ last-updated: 2026-05-03
 - **[📖 OpenShift](https://cloud.ibm.com/docs/openshift)**
 - **[📖 Satellite](https://cloud.ibm.com/docs/satellite)**
 - **[📖 Code Engine](https://cloud.ibm.com/docs/codeengine)**
-- **[📖 Cloud Functions](https://cloud.ibm.com/docs/codeengine)**
+- **[📖 Code Engine](https://cloud.ibm.com/docs/codeengine)** (IBM's migration target from legacy Cloud Functions)
 - **[📖 VMware Solutions](https://cloud.ibm.com/docs/vmwaresolutions)**
 
 ### Storage Architecture Options
@@ -232,7 +232,7 @@ last-updated: 2026-05-03
 
 ### Observability Services
 - **[📖 Monitoring](https://cloud.ibm.com/docs/monitoring)**
-- **[📖 Log Analysis](https://cloud.ibm.com/docs/cloud-logs)**
+- **[📖 IBM Cloud Logs](https://cloud.ibm.com/docs/cloud-logs)** (replaces the retired Log Analysis)
 - **[📖 Activity Tracker](https://cloud.ibm.com/docs/atracker)**
 
 ## Architecture Scenarios and Solutions

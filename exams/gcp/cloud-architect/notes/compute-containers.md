@@ -2044,7 +2044,7 @@ Training Pipeline:
 │   ├── Fallback: Compute Engine with T4 GPUs (on-demand)
 │   └── Checkpointing: Cloud Storage (every 10 minutes)
 ├── Model Registry: Artifact Registry
-└── Experiment Tracking: Vertex AI Experiments
+└── Experiment Tracking: Agent Platform Experiments (formerly Vertex AI Experiments)
 
 Inference Serving:
 ├── High-traffic models: GKE with L4 GPUs

@@ -496,7 +496,7 @@ This comprehensive roadmap guides DevOps Engineers and Site Reliability Engineer
 - CloudFormation, CDK (IaC)
 - IAM (Identity and Access)
 - CloudWatch, X-Ray (Monitoring)
-- Systems Manager, OpsWorks (Operations)
+- Systems Manager (Operations; OpsWorks is retired, end of life 26 May 2024)
 
 **DevOps Tools:**
 - CodeCommit, CodeBuild, CodeDeploy, CodePipeline
@@ -569,7 +569,7 @@ This comprehensive roadmap guides DevOps Engineers and Site Reliability Engineer
    - CloudFormation templates and stacks
    - AWS CDK (Cloud Development Kit)
    - Systems Manager Parameter Store
-   - OpsWorks for configuration management
+   - Systems Manager for configuration management (OpsWorks retired 26 May 2024)
    - Elastic Beanstalk for application deployment
 
 3. **Monitoring and Logging (15%)**

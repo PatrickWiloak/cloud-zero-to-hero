@@ -1,5 +1,7 @@
 # Solution Architecture Design - GCP Professional Cloud Architect
 
+> **Naming:** boxes that still say "Vertex AI" in the diagrams below mean Gemini Enterprise Agent Platform (renamed 2026-04-22; see [the AI note](./ai-gemini-and-agent-platform.md)).
+
 ## Overview
 
 This document covers solution architecture design principles, patterns, and methodologies for the Google Cloud Professional Cloud Architect certification. It focuses on designing robust, scalable, and cost-effective cloud solutions that meet business and technical requirements.
@@ -1115,7 +1117,7 @@ Real-time Sources          Stream Processing        Storage & Analytics
               └────────────────┘  └───────────────┘
                                           │
                                   ┌───────▼────────┐
-                                  │ Vertex AI      │
+                                  │ Agent Platform │
                                   │ (Recommender)  │
                                   └────────────────┘
 ```
@@ -1654,7 +1656,7 @@ Real-time Sources          Stream Processing        Storage & Analytics
       └───────┬────────┘          └─────────────────┘
               │
       ┌───────▼────────┐          ┌─────────────────┐
-      │  BigQuery      │          │  Vertex AI      │
+      │  BigQuery      │          │ Agent Platform  │
       │  - View analytics│         │  - Recommendations│
       │  - User behavior│          │  - Content discovery│
       └────────────────┘          └─────────────────┘

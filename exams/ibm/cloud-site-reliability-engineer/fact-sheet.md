@@ -49,8 +49,8 @@ last-updated: 2026-05-03
 **Monitoring Resources:**
 - **[📖 IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring)**
 - **[📖 Monitoring with Sysdig](https://cloud.ibm.com/docs/monitoring?topic=monitoring-getting-started)**
-- **[📖 Log Analysis](https://cloud.ibm.com/docs/cloud-logs)**
-- **[📖 Log Analysis with LogDNA](https://cloud.ibm.com/docs/cloud-logs)**
+- **[📖 IBM Cloud Logs](https://cloud.ibm.com/docs/cloud-logs)** (replaces the retired Log Analysis)
+- **[📖 IBM Cloud Logs](https://cloud.ibm.com/docs/cloud-logs)** (Log Analysis with LogDNA is retired)
 - **[📖 Activity Tracker](https://cloud.ibm.com/docs/atracker)**
 - **[📖 Flow Logs for VPC](https://cloud.ibm.com/docs/vpc?topic=vpc-flow-logs)**
 - **[📖 Prometheus on Kubernetes](https://cloud.ibm.com/docs/containers?topic=containers-health)**
@@ -245,7 +245,7 @@ last-updated: 2026-05-03
 
 ### Monitoring and Observability
 - **[📖 IBM Cloud Monitoring (Sysdig)](https://cloud.ibm.com/docs/monitoring)**
-- **[📖 IBM Cloud Log Analysis (LogDNA)](https://cloud.ibm.com/docs/cloud-logs)**
+- **[📖 IBM Cloud Logs](https://cloud.ibm.com/docs/cloud-logs)** (replaces retired Log Analysis / LogDNA)
 - **[📖 Activity Tracker](https://cloud.ibm.com/docs/atracker)**
 - **[📖 Event Notifications](https://cloud.ibm.com/docs/event-notifications)**
 
@@ -319,7 +319,7 @@ last-updated: 2026-05-03
 
 3. **Automated Response:**
    - Create Schematics actions for remediation
-   - Use Cloud Functions for automated fixes
+   - Use Code Engine for automated fixes (Cloud Functions is legacy)
    - Implement runbook automation
    - Auto-scaling based on metrics
 

@@ -953,6 +953,8 @@ architectural_components:
 ## Serverless Computing
 
 ### IBM Cloud Functions Architecture
+
+> **Legacy service:** IBM publishes migration guidance for moving off IBM Cloud Functions (OpenWhisk); its target is IBM Code Engine ([IBM: How to move from IBM Cloud Functions to IBM Code Engine](https://www.ibm.com/products/tutorials/how-to-move-from-ibm-cloud-functions-to-ibm-code-engine)). Treat the Cloud Functions material below as the legacy model.
 ```yaml
 # cloud-functions-architecture.yaml
 serverless_patterns:

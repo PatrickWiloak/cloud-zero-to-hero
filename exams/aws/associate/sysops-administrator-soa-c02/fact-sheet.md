@@ -153,12 +153,12 @@ exam-retires: 2025-09-29
 - **[📖 Deployment Policies](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.rolling-version-deploy.html)** - Deployment strategies
 - **[📖 .ebextensions](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/ebextensions.html)** - Configuration files
 
-**OpsWorks**
+**OpsWorks** (retired: end of life 26 May 2024; this exam version is retired too)
 - Chef and Puppet managed configuration
 - Stacks, layers, instances
 - Lifecycle events with recipes
-- **[📖 AWS OpsWorks](https://aws.amazon.com/blogs/mt/migrate-your-aws-opsworks-stacks-to-aws-systems-manager/)** - Configuration management
-- **[📖 OpsWorks Stacks](https://aws.amazon.com/blogs/mt/migrate-your-aws-opsworks-stacks-to-aws-systems-manager/)** - Stack configuration
+- **[📖 Migrate AWS OpsWorks Stacks to Systems Manager](https://aws.amazon.com/blogs/mt/migrate-your-aws-opsworks-stacks-to-aws-systems-manager/)** - Configuration management
+- **[📖 Migrate OpsWorks Stacks to Systems Manager](https://aws.amazon.com/blogs/mt/migrate-your-aws-opsworks-stacks-to-aws-systems-manager/)** - Stack configuration
 
 ### Security & Compliance (16%)
 

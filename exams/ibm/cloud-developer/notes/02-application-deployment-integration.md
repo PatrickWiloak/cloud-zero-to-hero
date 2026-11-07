@@ -778,6 +778,8 @@ helm uninstall myapp --namespace production
 
 ### IBM Cloud Functions (OpenWhisk)
 
+> **Legacy service:** IBM publishes migration guidance for moving off IBM Cloud Functions (OpenWhisk); its target is IBM Code Engine ([IBM: How to move from IBM Cloud Functions to IBM Code Engine](https://www.ibm.com/products/tutorials/how-to-move-from-ibm-cloud-functions-to-ibm-code-engine)). Treat the Cloud Functions material below as the legacy model.
+
 #### Action Deployment
 
 ```javascript

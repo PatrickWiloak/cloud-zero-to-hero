@@ -69,7 +69,7 @@ last-updated: 2026-05-03
 - **[📖 Kubernetes Service Documentation](https://cloud.ibm.com/docs/containers)**
 - **[📖 OpenShift Documentation](https://cloud.ibm.com/docs/openshift)**
 - **[📖 Code Engine Documentation](https://cloud.ibm.com/docs/codeengine)**
-- **[📖 Cloud Functions Documentation](https://cloud.ibm.com/docs/codeengine)**
+- **[📖 Code Engine](https://cloud.ibm.com/docs/codeengine)** (IBM's migration target from legacy Cloud Functions)
 - **[📖 Container Registry](https://cloud.ibm.com/docs/Registry)**
 - **[📖 Continuous Delivery](https://cloud.ibm.com/docs/ContinuousDelivery)**
 - **[📖 Toolchains](https://cloud.ibm.com/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started)**
@@ -263,7 +263,7 @@ last-updated: 2026-05-03
 
 **Resources:**
 - **[📖 Code Engine Tutorial](https://cloud.ibm.com/docs/codeengine?topic=codeengine-getting-started)**
-- **[📖 Cloud Functions Tutorial](https://cloud.ibm.com/docs/codeengine)**
+- **[📖 Code Engine](https://cloud.ibm.com/docs/codeengine)** (IBM's migration target from legacy Cloud Functions)
 - **[📖 Serverless Patterns](https://cloud.ibm.com/docs/codeengine)**
 
 ### Scenario 3: AI-Powered Application
@@ -466,7 +466,7 @@ assistant.set_service_url(os.environ.get('ASSISTANT_URL'))
 ### Debugging Tools
 - **[📖 Cloud Shell Debugging](https://cloud.ibm.com/docs/cloud-shell)**
 - **[📖 Kubernetes Logs](https://cloud.ibm.com/docs/containers?topic=containers-health)**
-- **[📖 Log Analysis](https://cloud.ibm.com/docs/cloud-logs)**
+- **[📖 IBM Cloud Logs](https://cloud.ibm.com/docs/cloud-logs)** (replaces the retired Log Analysis)
 - **[📖 Monitoring Dashboards](https://cloud.ibm.com/docs/monitoring)**
 - **[📖 Activity Tracker](https://cloud.ibm.com/docs/atracker)**
 

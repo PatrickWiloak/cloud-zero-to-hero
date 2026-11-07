@@ -130,7 +130,7 @@ last-updated: 2026-05-03
 - **[📖 Backup Services](https://cloud.ibm.com/docs/backup-recovery)**
 - **[📖 Auto Scale](https://cloud.ibm.com/docs/vpc?topic=vpc-creating-auto-scale-instance-group)**
 - **[📖 Monitoring](https://cloud.ibm.com/docs/monitoring)**
-- **[📖 Log Analysis](https://cloud.ibm.com/docs/cloud-logs)**
+- **[📖 IBM Cloud Logs](https://cloud.ibm.com/docs/cloud-logs)** (replaces the retired Log Analysis)
 - **[📖 Activity Tracker](https://cloud.ibm.com/docs/atracker)**
 
 ### 5. Cost Management and Optimization (10%)
@@ -173,7 +173,7 @@ last-updated: 2026-05-03
 - **[📖 IBM Cloud Kubernetes Service (IKS)](https://cloud.ibm.com/docs/containers)**
 - **[📖 Red Hat OpenShift on IBM Cloud](https://cloud.ibm.com/docs/openshift)**
 - **[📖 IBM Cloud Code Engine](https://cloud.ibm.com/docs/codeengine)**
-- **[📖 IBM Cloud Functions](https://cloud.ibm.com/docs/codeengine)**
+- **[📖 Code Engine](https://cloud.ibm.com/docs/codeengine)** (IBM's migration target from legacy Cloud Functions)
 - **[📖 Bare Metal Servers](https://cloud.ibm.com/docs/bare-metal)**
 
 ### Storage Services
