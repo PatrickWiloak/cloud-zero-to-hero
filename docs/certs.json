@@ -2137,8 +2137,8 @@
       "provider": "salesforce",
       "provider_name": "Salesforce",
       "slug": "administrator",
-      "name": "Salesforce Certified Administrator",
-      "exam_code": null,
+      "name": "Salesforce Certified Platform Administrator",
+      "exam_code": "Plat-Admn-201",
       "level": "unspecified",
       "status": "active",
       "duration": "105 minutes",
@@ -2158,7 +2158,7 @@
         "scenarios.md": true,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03",
+      "last_updated": "2026-11-06",
       "exam_version": null,
       "exam_retires": null
     },

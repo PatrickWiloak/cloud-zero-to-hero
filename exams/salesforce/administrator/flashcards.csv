@@ -1,6 +1,6 @@
 Question,Answer,Tags
-How long is the Salesforce Certified Administrator exam?,105 minutes,exam-logistics
-What does the Salesforce Certified Administrator exam cost?,$200 USD ($100 retake),exam-logistics
+How long is the Salesforce Certified Platform Administrator exam?,105 minutes,exam-logistics
+What does the Salesforce Certified Platform Administrator exam cost?,$200 USD ($100 retake),exam-logistics
 Standard (org setup and security),calendar-aligned (Jan/Apr/Jul/Oct quarter starts),"notes,org-setup-and-security"
 Custom (org setup and security),"non-standard fiscal periods (e.g., 4-4-5 retail calendar)","notes,org-setup-and-security"
 Salesforce (org setup and security),full CRM access,"notes,org-setup-and-security"

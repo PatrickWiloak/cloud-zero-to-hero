@@ -202,7 +202,7 @@ Scenario-based practice question banks, one per certification. Every bank follow
 
 ### Salesforce (3)
 
-- [Salesforce Certified Administrator](./salesforce-administrator.md)
+- [Salesforce Certified Platform Administrator](./salesforce-administrator.md)
 - [Salesforce Certified Platform Developer I (PD1)](./salesforce-platform-developer-1.md)
 - [Salesforce Certified Platform Developer II (PDII)](./salesforce-platform-developer-2.md)
 

@@ -52,7 +52,8 @@ Read-only fleet audit (9 agents, nothing changed). Each line: effort S (<half da
 - [x] 2026-10-22 Cert pages restructured to current guides: GH-200, GH-900, Cloud+, KCNA, SOA-C03, AZ-700, PCNE, Terraform Advanced.
 - [ ] 2026-11-15 Verify from-memory details flagged in the 2026-10-22 rewrites: PCNE gcloud flags (`--bgp-bps-*`, `firewall-rules migrate`, PBR next hop, Secure Web Proxy import) and Terraform Advanced OPA Rego sample (`notes/06-hcp-terraform.md`).
 - [ ] 2026-11-22 Reconcile README vs fact-sheet against vendor pages, not each other (11-06: both differ per exam across IBM x4, OCI x5, PL-900; codes also differ, Advocate -176/-170, SRE -173/-174; PL-900 still names Power Virtual Agents).
-- [ ] 2026-11-01 Check whether VCP-DCV 2V0-21.23 is superseded and Salesforce Administrator is now "Platform Administrator"; fix stale IBM doc links (`account-iamoverview`, `account-costs` 404).
+- [x] 2026-11-06 Salesforce Administrator renamed Platform Administrator (Plat-Admn-201) from the credential page.
+- [ ] 2026-11-22 Pat: in a browser, check VCP-DCV 2V0-21.23 is still current and find the new IBM links (`account-iamoverview`, `account-costs`). 11-06: Broadcom + IBM pages unreadable by tools.
 - [x] 2026-10-22 All 39 remaining 15-question banks expanded to 30 (new questions carry Key Concept links; Q1-15 in those banks do not).
 
 ## Content backlog (gap review 2026-10-16, ranked)

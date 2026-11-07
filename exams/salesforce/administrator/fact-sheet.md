@@ -1,12 +1,13 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-11-06
 ---
 
-# Salesforce Certified Administrator - Fact Sheet
+# Salesforce Certified Platform Administrator - Fact Sheet
 
 ## Quick Reference
 
-**Exam:** Salesforce Certified Administrator
+**Exam:** Salesforce Certified Platform Administrator
+**Code:** Plat-Admn-201
 **Cost:** $200 USD ($100 retake)
 **Format:** 60 multi-choice + multi-select
 **Duration:** 105 minutes

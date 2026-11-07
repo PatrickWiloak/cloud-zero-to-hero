@@ -8,7 +8,7 @@ Study guides for Salesforce in this repo. For the full picture across every prov
 
 | Cert | Code | Level | Status | Notes |
 |------|------|-------|--------|------:|
-| [Salesforce Certified Administrator](administrator/) | - | - | Ready | 5 |
+| [Salesforce Certified Platform Administrator](administrator/) | Plat-Admn-201 (formerly ADX-201) | - | Ready | 5 |
 | [Salesforce Certified Platform Developer I (PD1)](platform-developer-1/) | - | - | Ready | 5 |
 | [Salesforce Certified Platform Developer II (PDII)](platform-developer-2/) | - | - | Ready | 6 |
 

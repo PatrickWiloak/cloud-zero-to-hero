@@ -3,7 +3,7 @@ last-updated: 2026-10-22
 difficulty: beginner
 ---
 
-# Salesforce Certified Administrator - Practice Questions
+# Salesforce Certified Platform Administrator - Practice Questions
 
 30 questions across the administrator exam's main areas: configuration and setup, object manager and Lightning App Builder, process automation, data and analytics management, and the sales and service applications.
 

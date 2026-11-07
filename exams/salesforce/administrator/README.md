@@ -1,8 +1,10 @@
-# Salesforce Certified Administrator
+# Salesforce Certified Platform Administrator
 
 ## Overview
 
-The Salesforce Certified Administrator credential validates the ability to configure, manage, and customize a Salesforce org. It's the foundational Salesforce cert and a prerequisite for many advanced credentials (Advanced Administrator, Sales Cloud / Service Cloud Consultant, etc.).
+> Salesforce renamed this credential from "Salesforce Certified Administrator" (code ADX-201; checked on the credential page 2026-11-06).
+
+The Salesforce Certified Platform Administrator credential validates the ability to configure, manage, and customize a Salesforce org. It's the foundational Salesforce cert and a prerequisite for many advanced credentials (Advanced Administrator, Sales Cloud / Service Cloud Consultant, etc.).
 
 This is the most-requested Salesforce cert on job postings and the typical entry point into the Salesforce ecosystem.
 
@@ -12,7 +14,8 @@ This is the most-requested Salesforce cert on job postings and the typical entry
 
 | Detail | Info |
 |---|---|
-| **Exam Name** | Salesforce Certified Administrator |
+| **Exam Name** | Salesforce Certified Platform Administrator |
+| **Exam Code** | Plat-Admn-201 |
 | **Provider** | Salesforce |
 | **Format** | 60 multi-choice + multi-select questions |
 | **Duration** | 105 minutes |
@@ -21,7 +24,7 @@ This is the most-requested Salesforce cert on job postings and the typical entry
 | **Validity** | Maintenance via 3 free annual release exams (Spring/Summer/Winter), no expiration if maintained |
 | **Delivery** | Onsite or online proctored |
 
-**[📖 Salesforce Administrator Credential page](https://trailhead.salesforce.com/credentials/administrator)**
+**[📖 Salesforce Platform Administrator Credential page](https://trailhead.salesforce.com/credentials/administrator)**
 **[📖 Exam Guide PDF](https://trailhead.salesforce.com/help?article=Salesforce-Certified-Administrator-Exam-Guide)**
 
 ---
