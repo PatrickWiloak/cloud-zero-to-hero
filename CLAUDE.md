@@ -1,7 +1,7 @@
 # Cloud Zero to Hero - Project Instructions
 
 ## Overview
-A cloud learning resource - concepts, hands-on builds, deep references, and certification prep for cloud architects, DevOps, platform engineers and SREs. Covers certifications from AWS, Azure, GCP, Oracle (OCI), IBM Cloud, Kubernetes/CNCF, HashiCorp, GitHub, Red Hat, Linux Foundation, Cisco, CompTIA (A+, Network+, Cloud+), FinOps Foundation, Salesforce, ServiceNow and VMware. Cert and provider counts live in `docs/certs.json` (`totals`), not here - don't type them into this file. Certifications are one pillar; the repo also serves non-cert learners.
+A cloud learning resource - concepts, hands-on builds, deep references, and certification prep for cloud architects, DevOps, platform engineers and SREs. Covers certifications from AWS, Azure, GCP, Oracle (OCI), IBM Cloud, Kubernetes/CNCF, HashiCorp, GitHub, Red Hat, Linux Foundation, Cisco, CompTIA (A+, Network+, Cloud+, Linux+), FinOps Foundation, Salesforce, ServiceNow and VMware. Cert and provider counts live in `docs/certs.json` (`totals`), not here - don't type them into this file. Certifications are one pillar; the repo also serves non-cert learners.
 
 Data, security and AI content lives on the sibling sites - [Data](https://data.noblerworks.com/), [Security](https://security.noblerworks.com/) and [AI](https://ai.noblerworks.com/) Zero to Hero - and is linked with absolute URLs, never copied back. The shared family bar (announce block in `.github/site-overrides/main.html` + the CSS at the end of `.github/site/extra.css`) is identical in all four repos: edit all four together. The "which site?" page (`learn/which-site.md`; ai: `learn/start-here/which-site.md`) is also byte-identical in all four - edit all four together.
 

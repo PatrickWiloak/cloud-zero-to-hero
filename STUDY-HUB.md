@@ -165,13 +165,13 @@ Heading toward security, data or AI? The decision trees for those live on the [S
 | **Cisco** | 2 | CCNA (200-301), CCNP Enterprise ENCOR (350-401) | [exams/cisco/](./exams/cisco/) |
 | **Salesforce** | 3 | Administrator, Platform Developer I, Platform Developer II | [exams/salesforce/](./exams/salesforce/) |
 | **FinOps Foundation** | 4 | Practitioner, Engineer, Analyst, Professional | [exams/finops/](./exams/finops/) |
-| **CompTIA** | 3 | A+ (220-1201/1202), Cloud+ (CV0-004), Network+ (N10-009) | [exams/comptia/](./exams/comptia/) |
+| **CompTIA** | 4 | A+ (220-1201/1202), Cloud+ (CV0-004), Network+ (N10-009) | [exams/comptia/](./exams/comptia/) |
 | **Linux Foundation** | 2 | LFCS, LFCA | [exams/linux-foundation/](./exams/linux-foundation/) |
 | **Oracle Cloud (OCI)** | 5 | OCI Foundations, Architect Assoc + Pro, Developer Assoc, Operations Assoc | [exams/oracle/](./exams/oracle/) |
 | **IBM Cloud** | 4 | Advocate, Developer, Solution Architect, SRE | [exams/ibm/](./exams/ibm/) |
 | **ServiceNow** | 1 | Certified System Administrator | [exams/servicenow/](./exams/servicenow/) |
 | **VMware** | 1 | VCP-DCV (2V0-21.23) | [exams/vmware/](./exams/vmware/) |
-| **CERTIFICATIONS TOTAL** | **72** | across 16 providers | |
+| **CERTIFICATIONS TOTAL** | **73** | across 16 providers | |
 
 ◇ = outline stage: README, fact-sheet, and practice plan are written; topic notes are outlined but not yet drafted. See [TODO.md](https://github.com/PatrickWiloak/cloud-zero-to-hero/blob/main/TODO.md) for the drafting queue.
 

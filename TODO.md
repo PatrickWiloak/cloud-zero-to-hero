@@ -59,7 +59,7 @@ Read-only fleet audit (9 agents, nothing changed). Each line: effort S (<half da
 ## Content backlog (gap review 2026-10-16, ranked)
 
 1. **Outage postmortems** beside the 3 existing ones: CrowdStrike 2024 and the Oct 2025 AWS us-east-1 DNS event.
-2. **Cert gaps**: observability (Splunk/Elastic/Datadog), CNCF Backstage and Kyverno associates, plus the Linux+ item below.
+2. **Cert gaps**: observability (Splunk/Elastic/Datadog), CNCF Backstage and Kyverno associates, (Linux+ done 2026-11-07).
 3. **Concept pages**: day-one Python shipped 2026-11-07 (DR/RPO-RTO and environment variables 2026-10-21).
 
 ## Concept gap fill (2026-10-21)
@@ -193,13 +193,8 @@ all 783 now repaired**, each replacement fetched and title-checked. The old-to-n
 - [x] ~~CompTIA A+ (220-1201/1202)~~ ✅ done 2026-09-28 - the biggest-search-volume gap.
 - [ ] 2026-11-22 Pat (2 min, browser): **confirm the A+ voucher price** (11-06: store URL redirects away headless; third parties say $249-$274) on the CompTIA store (US) and replace the "not verified"
       line in `exams/comptia/a-plus/fact-sheet.md` (CompTIA renders prices client-side; no official figure was readable).
-- [ ] **Remaining high-search cert gap**: CompTIA **Linux+**.
-- [ ] **Patrick: start a fresh Claude session for the next cert guide** - **Linux+**. On 2026-09-29 a Linux+ attempt
-      was stopped by the safety check in the
-      same session as the CEH stops, most likely carried over from that session's history; nothing was written.
-      A new session does not carry that history. Prompt: "add the <cert> study guide to zero to hero, same shape as
-      A+ (see TODO.md)". Template is the A+ commit `94bd744` plus follow-up `105cd98` (lab map, flashcards). Do not
-      include CEH in that session.
+- [x] 2026-11-07 CompTIA **Linux+ (XK0-006, V8)** guide built from the official objectives PDF v5.0 and the CompTIA page: `exams/comptia/linux-plus/`, 5 notes, 20 questions, flashcards, lab map.
+- [ ] 2026-11-21 Pat (2 min, browser): confirm **Linux+ price and validity** on the CompTIA store/CE page (neither is on the Linux+ page; fact-sheet says "not verified"), and the XK0-005 retirement date (third party says 2026-01-13).
 - [ ] **Patrick: distribution** (stars come from here, not from SEO). Submit to awesome lists
       (awesome-certifications, awesome-aws, awesome-azure, awesome-kubernetes); post one
       useful page each to r/AWSCertifications, r/AzureCertification, r/CompTIA, r/kubernetes, linking back.
