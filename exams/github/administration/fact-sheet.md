@@ -11,7 +11,7 @@ last-updated: 2026-05-03
 **Format:** Multiple choice (65 questions)
 **Passing Score:** 70%
 **Cost:** $99 USD
-**Valid For:** 3 years
+**Valid For:** 2 years
 **Delivery:** Online proctored
 **Prerequisites:** None (GitHub Foundations recommended)
 

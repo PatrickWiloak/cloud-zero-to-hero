@@ -10,7 +10,7 @@ The GitHub Administration certification validates your ability to manage and adm
 - **Passing Score:** 70%
 - **Cost:** $99 USD
 - **Delivery:** Online proctored
-- **Validity:** 3 years
+- **Validity:** 2 years
 - **Prerequisites:** None (GitHub Foundations recommended)
 - **Retake Policy:** 24-hour wait for first retake, 14 days for subsequent
 
