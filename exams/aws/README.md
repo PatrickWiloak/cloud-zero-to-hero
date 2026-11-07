@@ -4,13 +4,14 @@ Study guides for AWS in this repo. For the full picture across every provider, s
 
 <!-- BEGIN GENERATED: provider-certs - edit .github/scripts/build-provider-indexes.py, not this block -->
 
-10 certifications in this repo. Counts and statuses are generated from [docs/certs.json](../../docs/certs.json).
+11 certifications in this repo. Counts and statuses are generated from [docs/certs.json](../../docs/certs.json).
 
 | Cert | Code | Level | Status | Notes |
 |------|------|-------|--------|------:|
 | [AWS Cloud Practitioner (CLF-C02)](foundational/cloud-practitioner-clf-c02/) | CLF-C02 | Foundational | Ready | 9 |
 | [AWS Certified CloudOps Engineer - Associate (SOA-C03)](associate/cloudops-engineer-soa-c03/) | SOA-C03 | Associate | Ready | 6 |
 | [AWS Certified Developer - Associate (DVA-C02)](associate/developer-dva-c02/) | DVA-C02 | Associate | Ready | 4 |
+| [AWS Certified Developer - Associate (DVA-C03)](associate/developer-dva-c03/) | DVA-C03 | Associate | Ready | 4 |
 | [AWS Certified Solutions Architect - Associate (SAA-C03)](associate/solutions-architect-saa-c03/) | SAA-C03 | Associate | Ready | 10 |
 | [AWS Certified SysOps Administrator - Associate (SOA-C02)](associate/sysops-administrator-soa-c02/) | SOA-C02 | Associate | Retired | 4 |
 | [AWS Certified DevOps Engineer - Professional (DOP-C02)](professional/devops-engineer-pro-dop-c02/) | DOP-C02 | Professional | Ready | 3 |
