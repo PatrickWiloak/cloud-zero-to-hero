@@ -56,7 +56,7 @@ The docs state this removes only the lock and does not modify infrastructure. Be
 **Do not** use `-lock=false` to get around a lock in a shared workspace. The docs describe it as dangerous if others might run commands at the same time.
 
 ### S3 backend locking
-The S3 backend documents `use_lockfile = true` (a `.tflock` object in the bucket) as the recommended locking, and `dynamodb_table` (partition key `LockID`, type String) as deprecated and planned for removal in a future minor version. You can set both while migrating. The role needs `s3:GetObject`, `s3:PutObject` and `s3:DeleteObject` on the lock file, so a permissions error on lock creation usually means a missing IAM action.
+The S3 backend documents `use_lockfile = true` (a `.tflock` object in the bucket; defaults to `false`) as the replacement for `dynamodb_table` (partition key `LockID`, type String), which it marks deprecated and planned for removal in a future minor version. You can set both while migrating. The role needs `s3:GetObject`, `s3:PutObject` and `s3:DeleteObject` on the lock file, so a permissions error on lock creation usually means a missing IAM action.
 
 ```hcl
 terraform {
@@ -195,11 +195,11 @@ removed {
 }
 ```
 
-Per the docs, `destroy = false` removes the resource from state without destroying the real object. (The docs page shows the syntax; the `destroy = false` example above is built from that syntax.) Delete the resource block from the config in the same change.
+Per the docs, "Set `destroy` to `false` to remove the resource from state without destroying the actual resource." The docs page's own example uses `destroy = true`; the `destroy = false` block above is built from its syntax. Remove the resource block from the config in the same change (the page does not state this requirement).
 
 ### CLI alternative
 ```bash
-terraform state rm --dry-run aws_instance.example
+terraform state rm -dry-run aws_instance.example
 terraform state rm aws_instance.example
 ```
 

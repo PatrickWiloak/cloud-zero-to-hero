@@ -30,7 +30,7 @@ Pair it with the [platform engineer roadmap](../certification-roadmap-platform-e
 - Good defaults beat long documentation.
 
 ### Measure the platform
-- Delivery speed and stability: deployment frequency, lead time, change failure rate, time to restore (the four DORA metrics).
+- Delivery speed and stability: change lead time, deployment frequency, failed deployment recovery time, change fail rate and deployment rework rate (DORA's current five metrics; older material lists four, with "time to restore" or MTTR in place of recovery time and no rework rate). [**📖 DORA metrics**](https://dora.dev/guides/dora-metrics/)
 - Platform health: adoption, time to first deploy for a new service, support requests per team, and developer satisfaction surveys.
 
 ---

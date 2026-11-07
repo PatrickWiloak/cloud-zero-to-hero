@@ -81,6 +81,8 @@ The faulting module ran in the kernel at early boot, so a bad read became a cras
 
 ## Cert mapping
 
+The mapping below is this site's own editorial judgment, not from the RCA; the CKA / CKS row in particular is a conceptual stretch.
+
 | Cert | Domains tested by this incident |
 |---|---|
 | **AWS DevOps Engineer Pro (DOP-C02)** | Deployment strategies, change management, canary and rollback |

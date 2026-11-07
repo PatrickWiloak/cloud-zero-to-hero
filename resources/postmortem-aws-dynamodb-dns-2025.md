@@ -97,6 +97,8 @@ NLB's health-check failover removed capacity during a partial failure. AWS added
 
 ## Cert mapping
 
+The mapping below is this site's own editorial judgment, not from AWS's summary; the CKA / CKS row in particular is a conceptual stretch.
+
 | Cert | Domains tested by this incident |
 |---|---|
 | **AWS Solutions Architect Pro (SAP-C02)** | Multi-region resilience, dependency mapping, DR strategy |

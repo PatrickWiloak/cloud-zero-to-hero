@@ -53,7 +53,7 @@ The verifier checks that a program is safe to run, not that it does something se
 
 Cilium, bcc and bpftrace are higher-level tools on top of eBPF. Libraries such as libbpf, the eBPF Go library, aya and libbpf-rs load and manage programs.
 
-In Kubernetes, this is why "Cilium replaces kube-proxy" and "sidecar-free service mesh" appear in conversations: the work a sidecar proxy does per pod can sometimes be done once per node in the kernel. See [Service mesh explained](./service-mesh-explained.md).
+In Kubernetes, this is why "Cilium replaces kube-proxy" and "sidecar-free service mesh" appear in conversations (the eBPF page lists a talk titled "Liberating Kubernetes from kube-proxy and iptables"; it does not state the sidecar-free claim, which is a vendor claim not checked here): the work a sidecar proxy does per pod can sometimes be done once per node in the kernel. See [Service mesh explained](./service-mesh-explained.md).
 
 ## What it is not
 

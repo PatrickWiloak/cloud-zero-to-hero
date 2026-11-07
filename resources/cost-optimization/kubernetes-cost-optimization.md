@@ -39,7 +39,8 @@ You cannot cut what you cannot attribute. OpenCost describes itself as "a vendor
 
 Kubecost is a commercial product built around the same allocation ideas. This guide did not fetch Kubecost's documentation, so check its current features and licensing on its own site before comparing.
 
-[**📖 OpenCost documentation**](https://opencost.io/docs/) - overview, installation guide and Prometheus configuration. The page fetched does not state whether Prometheus is required or whether OpenCost is a CNCF project; confirm in the installation guide.
+[**📖 OpenCost - Prometheus**](https://opencost.io/docs/installation/prometheus) - "Prometheus is a prerequisite for OpenCost installation."
+[**📖 OpenCost**](https://opencost.io/) - "OpenCost is a Cloud Native Computing Foundation incubating project."
 
 ---
 
@@ -86,7 +87,7 @@ spec:
     updateMode: "Off"
 ```
 
-The fetched page was truncated before the details of the `Recreate`, `InPlace` and `Auto` modes, so read the full page before relying on them. Do not run VPA and HPA on the same metric for the same workload without reading the docs on how they interact (not covered by the pages fetched here).
+Per the docs, `Recreate` evicts Pods whose requests differ significantly from the recommendation and the VPA admission controller applies the new requests to the replacement. `InPlaceOrRecreate` resizes without a restart when possible and otherwise falls back to eviction. `InPlace` is alpha (VPA 1.7.0, Kubernetes 1.33 or later, feature gates on). `Auto` is deprecated since VPA 1.4.0. Do not run VPA and HPA on the same metric for the same workload without reading the docs on how they interact (the Kubernetes VPA page has no guidance on this).
 
 [**📖 Kubernetes - Resource management for Pods and containers**](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/) - requests, limits, enforcement.
 [**📖 Kubernetes - Pod QoS classes**](https://kubernetes.io/docs/concepts/workloads/pods/pod-qos/) - class definitions.
@@ -107,10 +108,12 @@ For CPU utilization targets, the controller calculates utilization as a percenta
 Cost link: inflated requests make HPA scale out later or on misleading percentages, so fix requests first.
 
 ```bash
-kubectl autoscale deployment my-app --cpu-percent=50 --min=2 --max=10
+kubectl autoscale deployment my-app --cpu=50% --min=2 --max=10
 ```
 
-(The Kubernetes page fetched did not include this command; it is the standard `kubectl autoscale` form. Check `kubectl autoscale --help` on your version.)
+(`--cpu` takes a percentage of requested CPU or a quantity such as `500m`; `--max` is required. Older kubectl releases used `--cpu-percent`, which the current reference does not list.)
+
+[**📖 kubectl autoscale**](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_autoscale/) - flags and examples.
 
 [**📖 Kubernetes - Horizontal Pod Autoscaling**](https://kubernetes.io/docs/concepts/workloads/autoscaling/horizontal-pod-autoscale/) - algorithm, requests and metrics.
 
@@ -158,7 +161,9 @@ Consolidation evicts Pods, so set **PodDisruptionBudgets** and enough replicas, 
 [**📖 Karpenter - Disruption**](https://karpenter.sh/docs/concepts/disruption/) - consolidation, expiration, drift, budgets.
 
 ### Cluster Autoscaler
-The pages fetched for this guide did not cover Cluster Autoscaler's settings. Read its own documentation (linked from the Kubernetes node autoscaling page) before tuning scale-down behavior.
+Per the Cluster Autoscaler FAQ, a node becomes a scale-down candidate when the sum of its pods' CPU and memory requests is below `--scale-down-utilization-threshold` (default 0.5), its pods can move elsewhere, and it lacks the `cluster-autoscaler.kubernetes.io/scale-down-disabled` annotation. A node unneeded for `--scale-down-unneeded-time` (default 10m) is removed. It measures requests, not real usage.
+
+[**📖 Cluster Autoscaler FAQ**](https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/FAQ.md) - scale-down conditions and defaults.
 
 ---
 

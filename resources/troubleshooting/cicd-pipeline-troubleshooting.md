@@ -92,9 +92,11 @@ Common failures, per GitHub's concept page:
 - **Other claims differ** (`ref`, `repository`, `environment`, `aud`).
 - **Subject format changed.** The page says repositories created after July 15, 2026 use an immutable default subject format that includes owner and repository IDs, so older trust conditions will not match those repositories.
 
-Check the exact claim values in the failing job, then compare them to the role's trust policy. The workflow also needs permission to request the token; the permission key is in GitHub's OIDC reference, which this guide did not fetch, so confirm it there.
+Check the exact claim values in the failing job, then compare them to the role's trust policy. The job also needs permission to request the token: `permissions: id-token: write` at job or workflow level (a read-only default token cannot mint the JWT).
 
 [**📖 GitHub Docs - OpenID Connect**](https://docs.github.com/en/actions/concepts/security/openid-connect) - concept page; the reference is linked from it.
+
+[**📖 GitHub Docs - OIDC reference**](https://docs.github.com/en/actions/reference/security/oidc) - the `id-token: write` permission and the July 15, 2026 subject-format note.
 
 ---
 
@@ -126,7 +128,7 @@ Caching rules from GitHub's documentation (`actions/cache`):
 - Entries not accessed for over 7 days are removed. The default limit is 10 GB per repository; the oldest by last access are evicted first.
 
 ```yaml
-- uses: actions/cache@v4
+- uses: actions/cache@v6
   with:
     path: ~/.npm
     key: npm-${{ hashFiles('**/package-lock.json') }}
@@ -134,7 +136,9 @@ Caching rules from GitHub's documentation (`actions/cache`):
       npm-
 ```
 
-(The `actions/cache` major version in this example is not verified against the docs fetched; check the current version in the action's repository.)
+(`actions/cache@v6` is the version in the action's README usage examples as of 2026-11-07; the README warns that deprecated older versions fail, so do not stay on v1 or v2.)
+
+[**📖 actions/cache**](https://github.com/actions/cache) - usage examples and version notes.
 
 Other speed-ups: run independent jobs in parallel with `needs:` only where order matters, skip jobs by path filter, and build container images with layer caching.
 

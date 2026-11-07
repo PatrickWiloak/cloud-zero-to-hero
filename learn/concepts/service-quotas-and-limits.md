@@ -53,7 +53,7 @@ From the AWS terminology list:
 
 ## Asking for more
 
-In the console, pick the service and quota, then choose Request quota increase. AWS says increases take time to review and process, and support may approve, deny or partially approve. You can also use the API or the CLI. This example is from the AWS CLI documentation (not run here: it files a real request in a real account):
+In the console, pick the service and quota, then choose Request quota increase. AWS says increases take time to review and process, and support may approve, deny or partially approve. You can also use the API or the CLI. This example is from the AWS CLI documentation, where quota `L-20F13EBD` is "Running Dedicated c5n Hosts" (not run here: it files a real request in a real account):
 
 ```bash
 aws service-quotas request-service-quota-increase \

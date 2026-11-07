@@ -122,7 +122,7 @@ Three habits worth keeping:
 
 ## 6. Call a cloud SDK
 
-Every cloud has an SDK, which is an API client packaged as a library: `boto3` for AWS, `azure-*` packages for Azure, `google-cloud-*` for Google Cloud. This asks AWS who you are, the safest first call because it changes nothing:
+Every cloud has an SDK, which is an API client packaged as a library: `boto3` for AWS, `azure-*` packages for Azure (management libraries are `azure-mgmt-*`), `google-cloud-*` for Google Cloud. This asks AWS who you are, the safest first call because it changes nothing:
 
 ```python
 import boto3
@@ -162,7 +162,7 @@ That error is the most common first-day failure. Fix it by setting `AWS_PROFILE`
 
 - `python3 -m venv` plus `pip` (the system Python on the test machine had no pip in its venvs; `uv` was used instead).
 - The Windows activation line.
-- The Azure and Google Cloud SDK package names are from general knowledge and were not installed or checked against docs.
+- The Azure and Google Cloud SDK packages were not installed. Their naming patterns are checked against the docs: Azure management libraries all begin `azure-mgmt-` ([Azure libraries for Python](https://learn.microsoft.com/en-us/azure/developer/python/sdk/azure-sdk-overview)), and Google Cloud libraries generally use `google-cloud-<service>`, e.g. `google-cloud-storage` ([Google Cloud Python reference](https://docs.cloud.google.com/python/docs/reference)).
 
 ## Go deeper
 
