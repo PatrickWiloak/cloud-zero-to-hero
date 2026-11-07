@@ -3,7 +3,7 @@ How long is the CompTIA Linux+ (XK0-006) exam?,90 minutes,exam-logistics
 How many questions are on the CompTIA Linux+ (XK0-006) exam?,Maximum of 90 (multiple choice and performance-based),exam-logistics
 What is the passing score for CompTIA Linux+ (XK0-006)?,720 (scale of 100-900),exam-logistics
 What does the CompTIA Linux+ (XK0-006) exam cost?,Not verified (no price on the CompTIA page),exam-logistics
-How long is CompTIA Linux+ (XK0-006) valid for?,Not verified for Linux+ on the page read,exam-logistics
+How long is CompTIA Linux+ (XK0-006) valid for?,"Three years, renewable through the CompTIA CE program (see the table below)",exam-logistics
 How is the CompTIA Linux+ (XK0-006) exam delivered?,Not verified on the pages read,exam-logistics
 initrd (system management),"the initial RAM disk, a small temporary root filesystem the kernel uses to load the drivers needed to mount the real root filesystem.","notes,system-management"
 PXE (system management),"the Preboot Execution Environment, which lets a machine boot over the network instead of from a local disk.","notes,system-management"

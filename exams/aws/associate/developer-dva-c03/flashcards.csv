@@ -3,8 +3,8 @@ How long is the AWS Certified Developer - Associate (DVA-C03) exam?,130 minutes,
 How many questions are on the AWS Certified Developer - Associate (DVA-C03) exam?,"65 questions, 50 scored and 15 unscored (multiple choice and multiple response)",exam-logistics
 What is the passing score for AWS Certified Developer - Associate (DVA-C03)?,"720 on a scaled score of 100-1,000",exam-logistics
 What does the AWS Certified Developer - Associate (DVA-C03) exam cost?,150 USD,exam-logistics
-How long is AWS Certified Developer - Associate (DVA-C03) valid for?,Not verified on the pages read,exam-logistics
-How is the AWS Certified Developer - Associate (DVA-C03) exam delivered?,Not verified on the pages read,exam-logistics
+How long is AWS Certified Developer - Associate (DVA-C03) valid for?,3 years; recertify by passing the latest exam or earning DevOps Engineer - Professional (AWS certification page),exam-logistics
+How is the AWS Certified Developer - Associate (DVA-C03) exam delivered?,Pearson VUE testing center or online proctored exam,exam-logistics
 Loose coupling (development with aws services),a design in which components interact through a managed intermediary so each can scale and fail independently.,"notes,development-with-aws-services"
 Visibility timeout (development with aws services),the period after an SQS message is received during which other consumers cannot receive it.,"notes,development-with-aws-services"
 Dead-letter queue (development with aws services),a queue that receives messages or events that could not be processed successfully after the allowed attempts.,"notes,development-with-aws-services"
