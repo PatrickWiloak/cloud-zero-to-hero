@@ -3,8 +3,8 @@ How long is the AWS Certified Solutions Architect - Professional (SAP-C03) exam?
 How many questions are on the AWS Certified Solutions Architect - Professional (SAP-C03) exam?,"75 questions, 65 scored and 10 unscored (multiple choice and multiple response)",exam-logistics
 What is the passing score for AWS Certified Solutions Architect - Professional (SAP-C03)?,"720 on a scaled score of 100-1,000",exam-logistics
 What does the AWS Certified Solutions Architect - Professional (SAP-C03) exam cost?,300 USD,exam-logistics
-How long is AWS Certified Solutions Architect - Professional (SAP-C03) valid for?,Not verified on the pages read,exam-logistics
-How is the AWS Certified Solutions Architect - Professional (SAP-C03) exam delivered?,Not verified on the pages read,exam-logistics
+How long is AWS Certified Solutions Architect - Professional (SAP-C03) valid for?,3 years; recertify by passing the latest version of the exam,exam-logistics
+How is the AWS Certified Solutions Architect - Professional (SAP-C03) exam delivered?,Pearson VUE testing center or online proctored,exam-logistics
 Idempotent consumer (architecture design built for the cloud),a message handler that produces the same result when it receives the same message more than once.,"notes,architecture-design-built-for-the-cloud"
 Event bus (architecture design built for the cloud),"an EventBridge router that receives events and forwards them to targets by matching rules, including across accounts and Regions.","notes,architecture-design-built-for-the-cloud"
 Step Functions Standard workflow (architecture design built for the cloud),"a long-running, auditable workflow type that can run up to one year.","notes,architecture-design-built-for-the-cloud"
