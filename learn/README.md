@@ -27,7 +27,7 @@ If you **do** want certifications, head back to the **[Study Hub](../STUDY-HUB.m
 - **[Day One](./day-one/)** - terminal, git, HTTP, servers, environment variables, systemd and a first Docker container. The pages assume nothing. If you've never opened a terminal, start here.
 
 ### 💡 Bite-size concept pages
-- **[Concepts](./concepts/)** - 32 topic pages, 5-10 min each. Cloud primitives (regions, VPC, K8s, serverless), DevOps (CI/CD, Terraform, deployment strategies), networking (DNS, CDNs, load balancing), operations (autoscaling, caching, observability, cost), reliability (high availability, disaster recovery) and platform work (IaC, GitOps, service mesh, landing zones).
+- **[Concepts](./concepts/)** - 37 topic pages, 5-10 min each. Cloud primitives (regions, VPC, K8s, serverless), DevOps (CI/CD, Terraform, deployment strategies), networking (DNS, CDNs, load balancing), operations (autoscaling, caching, observability, cost), reliability (high availability, disaster recovery) and platform work (IaC, GitOps, service mesh, landing zones).
 
 ### 🛤️ Structured learning paths
 - **[Cloud from Scratch](./cloud-from-scratch.md)** - 8-phase path from "what is cloud?" to designing real systems

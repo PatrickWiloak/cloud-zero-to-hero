@@ -133,7 +133,7 @@ See the **[CHANGELOG](./CHANGELOG.md)** for the rolling history. Recent batches:
 A complete cloud learning resource. Whether you're starting fresh, building production systems, or chasing certifications:
 
 - ✅ **[Day One on-ramp](./learn/day-one/)** - terminal, git, HTTP, servers
-- ✅ **[32 concept pages](./learn/concepts/)** - cloud computing, regions, VPCs, DNS, CDNs, load balancing, containers, Kubernetes, serverless, Terraform, CI/CD, observability, cost, storage types, high availability, disaster recovery, API gateways, landing zones, IaC, GitOps, service mesh, platform engineering, edge
+- ✅ **[37 concept pages](./learn/concepts/)** - cloud computing, regions, VPCs, DNS, CDNs, load balancing, containers, Kubernetes, serverless, Terraform, CI/CD, observability, cost, storage types, high availability, disaster recovery, API gateways, landing zones, IaC, GitOps, service mesh, platform engineering, edge
 - ✅ **[Cloud from Scratch](./learn/cloud-from-scratch.md)** - a structured 8-phase path
 - ✅ **72 certification study guides** across 16 providers, 6,000+ embedded vendor doc links
 - ✅ **[7 cross-pillar topic indexes](./topics/)** - Kubernetes, networking, serverless, observability, SRE, platform engineering, FinOps (find everything by topic, not provider)
@@ -303,7 +303,7 @@ On the sibling sites: [Data Pipeline](https://data.noblerworks.com/resources/han
 - **Certifications:** 72
 - **Documentation links:** 6,000+
 - **Providers:** 16
-- **Concept pages:** 32
+- **Concept pages:** 37
 - **Service comparisons:** 7
 - **CLI cheat sheets:** 9
 - **Architecture patterns:** 12
@@ -323,7 +323,7 @@ cloud-zero-to-hero/
 ├── STUDY-HUB.md (full per-provider navigation)
 ├── CHANGELOG.md
 ├── learn/                # plain-English learning content
-│   ├── concepts/         # 32 bite-size concept pages
+│   ├── concepts/         # 37 bite-size concept pages
 │   ├── day-one/          # absolute-beginner on-ramp
 │   ├── cloud-from-scratch.md
 │   └── glossary.md

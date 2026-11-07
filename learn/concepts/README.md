@@ -48,6 +48,7 @@ If you want exam coverage, head back to the [Study Hub](../../STUDY-HUB.md).
 | [API gateways explained](./api-gateways-explained.md) | You're deciding between a load balancer and an API gateway |
 | [Managed databases explained](./managed-databases-explained.md) | You're weighing RDS or Cloud SQL against running the database yourself |
 | [Edge computing explained](./edge-computing-explained.md) | "Run it at the edge" keeps coming up and you want to know where the edge is |
+| [WebAssembly at the edge](./webassembly-at-the-edge.md) | Someone said "Wasm" about edge functions and you want the gist |
 | [Multi-account strategy and landing zones](./multi-account-and-landing-zones.md) | One account has stopped being enough |
 | [Well-Architected explained](./well-architected-explained.md) | You want the shared checklist behind every provider's architecture advice |
 | [Cloud cost basics](./cloud-cost-basics.md) | The bill went up and nobody decided to spend more |
@@ -68,6 +69,10 @@ If you want exam coverage, head back to the [Study Hub](../../STUDY-HUB.md).
 | [Infrastructure as Code explained](./infrastructure-as-code-explained.md) | You want the tool-neutral idea: declarative vs imperative, state, drift |
 | [GitOps explained](./gitops-explained.md) | You want to deploy by merging a pull request |
 | [Platform engineering explained](./platform-engineering-explained.md) | "Internal developer platform" and "golden paths" need a plain answer |
+| [Backstage and developer portals](./backstage-and-developer-portals.md) | You keep hearing "developer portal" next to "platform" |
+| [eBPF explained](./ebpf-explained.md) | Cilium, "sidecar-free" and kernel-level tracing keep coming up |
+| [OpenTofu vs Terraform](./opentofu-vs-terraform.md) | You need to know why there are two and which to use |
+| [Service quotas and limits](./service-quotas-and-limits.md) | A launch failed with a limit error and you want to avoid a repeat |
 | [CI/CD explained](./cicd-explained.md) | "Pipelines" is hand-waved everywhere; you want specifics |
 | [Observability basics](./observability-basics.md) | "Logs vs metrics vs traces" needs a one-page answer |
 | [Idempotency explained](./idempotency-explained.md) | You're worried about retries doing things twice |
