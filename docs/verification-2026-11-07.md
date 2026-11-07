@@ -64,3 +64,57 @@ CI/CD: debug variables, cache rules (512-char key, 7 days, 10 GB, search order, 
 - IBM Activity Tracker deprecation dates come from a search summary of IBM documentation, not a fetched IBM page.
 - AWS OpsWorks Stacks end of life 26 May 2024 (SAP-C02/DOP-C02 notes, edited earlier today): the AWS blog linked from the notes gives no date; the date is confirmed only via a Terraform provider issue quoting AWS and a re:Post answer citing the AWS FAQ. IBM wording items remain open in TODO.md (Cloud Foundry, Watson, Certificate Manager).
 - Platform engineer interview: the answers are practice advice, not product facts; the CNPA exam coverage claim in the Backstage page was not checked against the CNCF curriculum.
+
+## Cert guides pass
+
+Second pass over the cert guides added 2026-11-07: exam logistics re-fetched from each certifier, every question-bank key and distractor checked against vendor docs, and notes claims with numbers, flags or named behavior classified. Counts are approximate claim-level tallies.
+
+| Guide | Verified | Fixed | Unverifiable | Wrong keys | Distractors made unambiguous |
+|---|---|---|---|---|---|
+| Linux+ XK0-006 | 55 | 2 | 3 | 0 of 20 | 0 |
+| AWS DVA-C03 | 70 | 5 | 1 | 0 of 16 | 2 (Q2, Q8) |
+| AWS SAP-C03 | 190 | 5 | 1 | 0 | 1 (Q11) |
+| Terraform Associate 004 | 75 | 27 | 6 | 0 (4 explanations fixed) | 0 |
+| CNCF KCA | 140 | 4 | 2 | 0 of 32 | 0 |
+| CNCF CBA | 112 | 4 | 3 | 0 of 31 | 1 (Q31) |
+| CNCF CNPE | 75 | 2 | 0 | 0 of 30 | 0 |
+| CNCF CKNE | 110 | 6 | 1 | 0 of 30 | 0 |
+
+### Fixes
+
+| Page | Old | New | Source |
+|---|---|---|---|
+| linux-plus fact-sheet, README | Validity not verified | 3 years, renewable via CE; CEU count still not verified | https://www.comptia.org/en-us/resources/ce/learn/comptia-continuing-education-program-faq/ |
+| linux-plus notes/02 | `docker system prune` removes unused containers, networks, images | Stopped containers, unused networks, dangling images, build cache; not volumes | https://docs.docker.com/reference/cli/docker/system/prune/ |
+| dva fact-sheet, README | Delivery, languages, validity not verified | Pearson VUE or online; 6 languages; 3 years | https://aws.amazon.com/certification/certified-developer-associate/ |
+| dva notes/03 | ECS rolling update is "the default" | "can use"; the page does not say default | https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-type-ecs.html |
+| dva bank Q2, Q8 | Distractors arguably correct (batch size 1; 4 KB chunks) | Replaced; KMS Encrypt limit of 4,096 bytes stated | https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html |
+| sap fact-sheet, README | Delivery, validity, languages not verified | Filled in | https://aws.amazon.com/certification/certified-solutions-architect-professional/ |
+| sap fact-sheet, notes/04 | DR RTO/RPO ranges as fact | Marked unverified | https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html |
+| sap bank Q11 | Distractor "move to public subnets" defensible | Scenario and distractors tightened | https://docs.aws.amazon.com/vpc/latest/privatelink/gateway-endpoints.html |
+| terraform fact-sheet, hcl notes | Variable precedence had env vars highest | default < env < tfvars < tfvars.json < auto.tfvars < -var/-var-file | https://developer.hashicorp.com/terraform/language/values/variables |
+| terraform (many) | S3 backend needs DynamoDB for locking | Opt-in `use_lockfile` (default false); `dynamodb_table` deprecated | https://developer.hashicorp.com/terraform/language/backend/s3 |
+| terraform state notes | Local backend no locking; Azure blob lease | Local locks via system APIs; Azure native Blob capabilities | https://developer.hashicorp.com/terraform/language/backend/local |
+| terraform notes | 003 domain weights, "3000+ providers", PSI named, "57 questions" | Removed (004 publishes no weights; counts not on pages) | https://developer.hashicorp.com/certifications/infrastructure-automation |
+| terraform modules, core-workflow, data sources, provisioners, dependencies | Registry `version` required; `-reconfigure` discards state; condition timings; provisioner claims | Corrected to docs wording | https://developer.hashicorp.com/terraform/language/block/module , https://developer.hashicorp.com/terraform/language/expressions/custom-conditions |
+| terraform bank Q1 | `terraform refresh` syncs state | `plan -refresh-only`; refresh deprecated | https://developer.hashicorp.com/terraform/cli/commands/refresh |
+| kca notes/03 | `KYVERNO_EXPERIMENTAL=true` | Removed | https://kyverno.io/docs/subprojects/kyverno-cli/ |
+| kca notes/05 | Evaluation order match, context, preconditions | match, preconditions, body; context resolves before preconditions | https://kyverno.io/docs/policy-types/cluster-policy/variables/ |
+| kca notes/05 | Variables unsupported in patchesJson6902 path (flat) | Docs disagree; both stated | https://kyverno.io/docs/policy-types/cluster-policy/mutate/ |
+| kca notes/06 | `kyverno-metrics` ConfigMap keys | Set via Helm `metricsConfig` | https://kyverno.io/docs/monitoring/ |
+| cba notes/04 | `yarn new` choices, plugin dir names, default page URL | Only what docs name; rest marked convention | https://backstage.io/docs/frontend-system/building-plugins/index |
+| cba bank Q31 | D `createBackstageTheme` possibly valid | `makeBackstageTheme` (legacy status from recollection, not fetched) | https://backstage.io/docs/conf/user-interface/ |
+| ckne notes 01-04 | Pod CIDR flags, `kubectl debug`, tcpdump flags, kube-proxy mode, Cilium global annotation, NetworkPolicy semantics "not covered" | Sourced (`service.cilium.io/global`, `--cluster-cidr`, `--node-cidr-mask-size`, `endPort`); tcpdump `-nn` changed to `-n` | https://docs.cilium.io/en/stable/network/clustermesh/global-services/ , https://kubernetes.io/docs/concepts/services-networking/network-policies/ , https://kubernetes.io/docs/reference/kubectl/generated/kubectl_debug/ |
+| cnpe notes 02-03 | `dynamicStableScale` needs a traffic router; XRD `scope` without version | Only `setCanaryScale` needs one; `scope` is `apiextensions.crossplane.io/v2` | https://argo-rollouts.readthedocs.io/en/stable/features/canary/ , https://docs.crossplane.io/latest/composition/composite-resource-definitions/ |
+
+Logistics confirmed with no change: KCA, CBA, CNPE, CKNE (LF pages and CNCF curriculum PDFs), SAP-C03 and DVA-C03 numbers and dates, Terraform 1 hour, $70.50, 2 years.
+
+### Still unverifiable
+
+- Linux+: price and delivery (not on the CompTIA page), XK0-006 CEU count, XK0-005 retirement date (third-party), command usage read against man pages only.
+- Terraform: question count, passing score and 003 retirement date (not published); `terraform.tfstate.d/` name, plan symbol `<=`, Consul encryption.
+- SAP-C03: DR RTO/RPO ranges (whitepaper figure is an image).
+- CBA: `createBackstageTheme` legacy status; frontend-plugin `yarn new` choice name; backend dir suffixes.
+- KCA: `serviceMonitor.enabled` mechanics, default `exceptionNamespace` and `resourceFilters`.
+- CKNE: egress default-deny blocking DNS is practice, not a page quote.
+- Generic Key terms in these guides were read for errors, not fetched.

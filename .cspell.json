@@ -20,6 +20,8 @@
     "/PascalCase/"
   ],
   "words": [
+    "Terratest",
+    "untaint",
     "ABAC",
     "ACCOUNTADMIN",
     "Accreditations",
