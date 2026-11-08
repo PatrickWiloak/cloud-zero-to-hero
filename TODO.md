@@ -472,6 +472,6 @@ Plan: [docs/content-gaps-2026-11-07.md](docs/content-gaps-2026-11-07.md). Wave 1
 
 - [x] 2026-11-07 Wave 2 (all but Python): postmortems CrowdStrike 2024 + AWS DynamoDB DNS Oct 2025 (from vendor reports), platform engineer + Kubernetes interview guides, CI/CD + Terraform state troubleshooting, Kubernetes cost page. Day-one Python still open above.
 - [ ] Wave 3: concept pages - eBPF, Backstage/developer portals, OpenTofu vs Terraform, service quotas, Wasm at the edge.
-- [ ] 2026-11-07 Wave 4: flashcard decks built for 18 of 21 guides (Terraform Associate, RHCSA, AZ-400, ANS-C01, GCP DevOps and 13 more). Left: AZ-204, Consul Associate, PL-100 are retired, so no deck unless kept as reference; labs for certs with none.
+- [ ] Wave 4: flashcard decks built for 18 of 21 guides (Terraform Associate, RHCSA, AZ-400, ANS-C01, GCP DevOps and 13 more). Left: AZ-204, Consul Associate, PL-100 are retired, so no deck unless kept as reference; labs for certs with none.
 - [ ] 2026-11-22 Open verification leftovers (ledger `docs/verification-2026-11-07.md`, "Settled" section lists the rest): OpsWorks date (AWS pages disagree: 26 May vs 1 May 2024), IBM Activity Tracker dates, RHCSA/EX280 and Salesforce Key terms.
 - [ ] 2026-11-21 Open cert facts (ledger "Still unverifiable"): Linux+ price/delivery/CEUs/XK0-005 retirement; Terraform 004 questions, passing score, 003 retirement; `createBackstageTheme` status; Kyverno default `resourceFilters`; SAP-C03 DR figure.
