@@ -9,7 +9,7 @@ Working task list for **cloud-zero-to-hero** (Cloud Zero to Hero, https://cloud.
 - [x] 2026-11-07 Cross-site learning paths (7 routes, `learn/learning-paths.md`, byte-identical in all four repos, linked from which-site, learn hub and home). Not pushed or deployed: ships with the train.
 - [ ] 2026-12-07 re-verify every link in `learn/learning-paths.md` against each repo's `git ls-files` (script: loop the URLs through the four trees) and the matching certs against current exam codes.
 - [x] 2026-11-07 'Check yourself' sections (3-4 questions, collapsed `<details markdown="1">` answers) added to all 37 `learn/concepts/` pages.
-- [ ] 2026-11-07 Port the same 'Check yourself' sections to the sibling sites' concept pages (data-zero-to-hero, security-zero-to-hero, ai-zero-to-hero); same markup, answers drawn only from each page's own text.
+- [x] 2026-11-07 Port the same 'Check yourself' sections to the sibling sites' concept pages (data-zero-to-hero, security-zero-to-hero, ai-zero-to-hero); same markup, answers drawn only from each page's own text. ✅ 2026-11-08: already on every concept page: data 29/29, security 34/34, ai 38/38; answers not re-verified.
 - [x] 2026-11-07 Heading-anchor validation folded into `check-internal-links.py` and `check-code-fences.py` added (ported from data-zero-to-hero); both blocking in `structure-validate.yml`. 784 anchors, 0 broken, 0 unclosed fences; ids match the strict build's on all 1,064 comparable pages.
 - [x] 2026-10-27 PR #13 closed with thanks: freemium product link, out of scope per CONTRIBUTING (marketing / paid ads).
 - [x] 2026-10-27 Link check #12: real 404s fixed (SAP, Power Platform blog, 4 renamed NVIDIA slugs on ai.); the rest is CI-side connection noise.
