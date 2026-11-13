@@ -4,6 +4,9 @@ Working task list for **cloud-zero-to-hero** (Cloud Zero to Hero, https://cloud.
 
 ---
 
+## ✍️ Content refill (loop content-refill; nobler-os docs/LOOPS.md)
+- [ ] 2026-11-15 Pat: first `content-z2h-cloud` run (Sundays, pilot since 2026-11-13) drafts into `drafts/`, never built; publish or delete each per [drafts/README.md](drafts/README.md).
+
 ## Community (2026-10-27)
 
 - [x] 2026-11-07 Cross-site learning paths (7 routes, `learn/learning-paths.md`, byte-identical in all four repos, linked from which-site, learn hub and home). Not pushed or deployed: ships with the train.

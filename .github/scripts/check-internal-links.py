@@ -42,7 +42,10 @@ SKIP_DIRS = {".git", "node_modules", ".github/scripts/__pycache__"}
 # Build output. Present after a local site build, absent in CI, and a complete
 # second copy of the tree - so walking it double-counts every link and reports a
 # different total depending on whether someone has run the site build.
-SKIP_PATHS = {os.path.join(".", ".site-src"), os.path.join(".", "site")}
+SKIP_PATHS = {os.path.join(".", ".site-src"), os.path.join(".", "site"),
+              # Loop drafts (nobler-os content-refill, 2026-11-13): never built, and their links are written
+              # for where they will live once published, so they resolve only after the move. See drafts/README.md.
+              os.path.join(".", "drafts")}
 
 # The site's landing page template. Its links are written relative to the stage
 # root, where the build renders it as README.md, not relative to the directory it
