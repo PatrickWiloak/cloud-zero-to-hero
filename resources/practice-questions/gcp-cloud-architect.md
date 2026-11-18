@@ -853,7 +853,7 @@ D. Train a custom model from scratch on supplier data
 ### Question 47
 **Scenario:** Cymbal Retail customers should find products by describing them in natural language, and the team wants a managed solution.
 
-A. Agent Search for commerce (Discovery AI) behind a conversational agent
+A. AI Commerce Search (Discovery AI) behind a conversational agent
 B. A custom ranking model on GPUs, trained on click data and served from a self-managed endpoint behind the storefront
 C. A custom keyword query against the relational database, with a synonym table kept by hand
 D. A Cloud Storage bucket of static product pages that customers browse by category and brand
@@ -934,7 +934,7 @@ D. Disable logging to protect privacy
 **Scenario:** Altostrat Media needs Kubernetes both on-premises and in Google Cloud, managed centrally with the same policies.
 
 A. One VM per service in each location, with the same policy files copied across by hand
-B. GKE Enterprise fleets with Config Sync and Policy Controller
+B. GKE fleets (with Google Distributed Cloud on-prem) using Config Sync and Policy Controller
 C. Separate manually managed clusters in each location, with the same YAML policies applied by hand after each change
 D. Cloud Functions everywhere, with no Kubernetes on the on-premises sites
 
@@ -966,7 +966,7 @@ D. EU regions, Assured Workloads for the EU, a resource-location org policy, and
 **Scenario:** KnightMotives wants to monetize data by sharing curated datasets with partners without copying them.
 
 A. Email CSV exports to partners each month, protected with a password sent separately, so every partner gets a copy
-B. BigQuery with Analytics Hub listings
+B. BigQuery sharing (formerly Analytics Hub) listings
 C. Public Cloud Storage buckets of CSV exports
 D. Give partners project owner access on the data project
 
@@ -975,7 +975,7 @@ D. Give partners project owner access on the data project
 
 **Correct: B**
 
-**Why:** Analytics Hub shares BigQuery datasets as governed listings with access control and without copies. Public buckets and owner roles are unsafe.
+**Why:** BigQuery sharing (formerly Analytics Hub) shares BigQuery datasets as governed listings with access control and without copies. Public buckets and owner roles are unsafe.
 </details>
 
 ### Question 55
@@ -1228,7 +1228,7 @@ D. Copy the files with rsync over the Interconnect from one admin workstation du
 A. Train a custom moderation model on GPUs from labeled examples of Altostrat's own historical content
 B. Have a team of moderators watch every upload before it is published, around the clock
 C. Filter on keywords in titles, descriptions and tags supplied by uploaders before publishing
-D. Pre-trained detection (Video Intelligence, Gemini safety settings) with humans reviewing borderline cases
+D. Gemini multimodal classification with safety settings, plus Vision SafeSearch on thumbnails, with humans reviewing borderline cases
 
 <details>
 <summary>Answer</summary>
@@ -1836,14 +1836,14 @@ D. Remote desktop into a hardened jump host at headquarters, then open the tools
 A. Copy every dataset into one bucket with public read access so partners can find it
 B. Track datasets, owners and quality in a shared spreadsheet maintained by each business unit
 C. Let each business unit keep its own warehouse and sell its own data independently
-D. Dataplex catalog, lineage and quality, with Sensitive Data Protection for de-identification
+D. Knowledge Catalog (formerly Dataplex) catalog, lineage and quality, with Sensitive Data Protection
 
 <details>
 <summary>Answer</summary>
 
 **Correct: D**
 
-**Why:** Governance must come before monetization: Dataplex catalogs and governs data where it already lives, and Sensitive Data Protection finds and masks personal data. A public bucket breaks the security requirement.
+**Why:** Governance must come before monetization: Knowledge Catalog (formerly Dataplex Universal Catalog) catalogs and governs data where it already lives, and Sensitive Data Protection finds and masks personal data. A public bucket breaks the security requirement.
 </details>
 
 ### Question 109

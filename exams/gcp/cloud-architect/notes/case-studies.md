@@ -40,10 +40,10 @@ The current exam guide lists four case studies that questions may refer to. This
 | Requirement | Design direction |
 |---|---|
 | Hybrid ingestion, secure and fast | Cloud Interconnect (Dedicated or Partner) with HA VPN as backup |
-| Kubernetes in both places, central management | GKE Enterprise / fleets, Config Sync and policy for consistency |
+| Kubernetes in both places, central management | GKE fleets (fleet management is part of GKE) with Google Distributed Cloud on-prem, Config Sync and Policy Controller for consistency |
 | CI/CD for containers | Cloud Build and Cloud Deploy to GKE, Artifact Registry, Binary Authorization |
 | Lower storage cost | Cloud Storage classes plus Autoclass or lifecycle rules (Standard to Nearline/Coldline/Archive by access pattern) |
-| Metadata from media | Gemini multimodal models, Video Intelligence, Speech-to-Text, Vision |
+| Metadata from media | Gemini multimodal models (video, audio and images), Speech-to-Text, Vision |
 | Summaries and chat support | Gemini via the Agent Platform, Agent Builder / conversational agents, grounded in the catalog |
 | Harmful content filtering | Gemini safety settings, Model Armor on prompts and responses, Vision SafeSearch |
 | Auditable, explainable AI | Cloud Audit Logs, prompt and response logging, model monitoring, Explainable AI where models are custom, documented human review |
@@ -88,8 +88,8 @@ flowchart LR
 | Attributes and descriptions from supplier text and images | Gemini multimodal models on the Agent Platform, structured output (JSON schema) |
 | Image variations and edits | Imagen / image generation and editing models |
 | Review before the catalog updates | HITL: a review app (Cloud Run) with approve, reject, edit. Workflows or Pub/Sub for the pipeline. Only approved items write to the catalog |
-| Natural language product discovery | Agent Search (formerly Vertex AI Search) for commerce (the Discovery AI product the case names) behind a conversational agent |
-| Virtual agents on web, app, and phone | Conversational Agents / Customer Engagement Suite replacing IVR menus, with handoff to a human agent |
+| Natural language product discovery | AI Commerce Search (formerly Vertex AI Search for commerce, now in Gemini Enterprise for Customer Experience), the Discovery AI product the case names, behind a conversational agent |
+| Virtual agents on web, app, and phone | Gemini Enterprise for Customer Experience (formerly Customer Engagement Suite) virtual agents replacing IVR menus, with handoff to a human agent |
 | Databases to the cloud | Database Migration Service: MySQL and SQL Server to Cloud SQL, Redis to Memorystore, MongoDB to a managed Mongo-compatible option |
 | SFTP and batch ETL | Cloud Storage with SFTP-capable transfer, Storage Transfer Service, Dataflow or Cloud Composer for pipelines, Datastream for change data capture |
 | Data silos | BigQuery as the unified customer and catalog store |
@@ -108,7 +108,7 @@ flowchart LR
   IMG --> STG
   STG --> HITL["Review app on Cloud Run<br/>behind IAP"]
   HITL -- "approved only" --> CAT["Catalog<br/>Cloud SQL"]
-  CAT --> SRCH["Agent Search for commerce"]
+  CAT --> SRCH["AI Commerce Search"]
   SRCH --> AGT["Conversational agent<br/>web, app, phone"]
   AGT -- "handoff" --> HUM["Human agent"]
   CAT -- "Datastream CDC" --> BQ["BigQuery<br/>customer 360"]
@@ -130,7 +130,7 @@ flowchart LR
 |---|---|
 | Leave colocation, deadline set by the lease | Phased migration with Migration Center for discovery and TCO. Lift and shift VMs (Migrate to Virtual Machines) first, containers to GKE, databases with Database Migration Service |
 | Legacy insurer links stay on-premises | Hybrid: Cloud Interconnect (redundant, 99.99% topology) plus HA VPN backup |
-| Consistent container platform | GKE regional clusters, fleets, Config Sync, Policy Controller, GKE Enterprise for multi-environment |
+| Consistent container platform | GKE regional clusters, fleets, Config Sync, Policy Controller, Google Distributed Cloud for on-prem environments |
 | 99.9% availability | Regional (multi-zone) GKE and managed instance groups, Cloud SQL HA or Spanner, global external load balancer. Multi-region only if the DR plan requires it |
 | Fast onboarding of insurers | Apigee or Cloud Endpoints for APIs, Pub/Sub and Dataflow ingestion, Cloud Storage landing for files, reusable Terraform modules |
 | Users in Active Directory | Cloud Identity with federation / Workforce Identity Federation, or Managed Service for Microsoft Active Directory |
@@ -176,11 +176,11 @@ flowchart LR
 
 | Requirement | Design direction |
 |---|---|
-| Hybrid and plants | Cloud Interconnect or Partner Interconnect for plants, Cross-Cloud Network, SD-WAN partners. GKE Enterprise for consistent clusters |
+| Hybrid and plants | Cloud Interconnect or Partner Interconnect for plants, Cross-Cloud Network, SD-WAN partners. GKE fleets for consistent clusters |
 | Outdated mainframe and ERP | Phased modernization: Mainframe modernization options (rehost, replatform, refactor), keep running during transition, wrap with APIs (Apigee) |
 | Vehicle telemetry at scale | Pub/Sub ingestion, Dataflow, Bigtable or BigQuery, edge processing in the vehicle for low latency |
 | Rural connectivity | Design for intermittent links: on-device inference, store and forward, sync when connected |
-| Data silos and monetization | BigQuery data platform, Dataplex governance, Analytics Hub for sharing data products, Sensitive Data Protection for de-identification |
+| Data silos and monetization | BigQuery data platform, Knowledge Catalog (formerly Dataplex Universal Catalog) governance, BigQuery sharing (formerly Analytics Hub) for data products, Sensitive Data Protection for de-identification |
 | AI infrastructure and simulation | AI Hypercomputer: GPUs and TPUs on GKE, Dynamic Workload Scheduler for capacity, large-scale simulation on batch |
 | EU data protection | EU regions, Assured Workloads for EU, data residency and org policy location constraints, CMEK or External Key Manager, DLP, audit |
 | Security after breaches | Security Command Center, VPC Service Controls, BeyondCorp / Context-Aware Access for staff, incident response plan, SIEM (Google Security Operations), training |
@@ -195,8 +195,8 @@ flowchart LR
   VEH["Vehicles<br/>on-device AI, store and forward"] -- "when connected" --> PS["Pub/Sub"]
   PS --> DF["Dataflow"]
   DF --> BT["Bigtable<br/>telemetry serving"]
-  DF --> BQ["BigQuery data platform<br/>Dataplex governance"]
-  BQ --> AH["Analytics Hub<br/>data products"]
+  DF --> BQ["BigQuery data platform<br/>Knowledge Catalog governance"]
+  BQ --> AH["BigQuery sharing<br/>data products"]
   subgraph OnPrem["Plants and HQ - hybrid"]
     MF["Mainframe supply chain"]
     ERP["ERP"]
@@ -233,16 +233,16 @@ One line per constraint and the design move it calls for. These feed this cert's
 - **Altostrat: masters read yearly, must stay retrievable** - Lifecycle rule to Archive class. Millisecond reads; 365-day minimum and retrieval fees fit rare access.
 - **Altostrat: unpredictable access, cut storage cost** - Autoclass on the bucket: moves each object between classes by its own access pattern.
 - **Altostrat: daily TB-scale ingestion from on-prem** - Redundant Dedicated (or Partner) Interconnect, HA VPN as backup. Transfer Appliance only for one-off bulk.
-- **Altostrat: Kubernetes on-prem and cloud, one control** - GKE Enterprise fleet with on-prem clusters (Google Distributed Cloud), Config Sync and Policy Controller.
-- **Altostrat: harmful content detection with little custom ML** - Pre-trained detection (Video Intelligence explicit content, Gemini safety settings, Vision SafeSearch) plus human review of borderline cases.
+- **Altostrat: Kubernetes on-prem and cloud, one control** - GKE fleet with on-prem clusters (Google Distributed Cloud), Config Sync and Policy Controller.
+- **Altostrat: harmful content detection with little custom ML** - Gemini multimodal classification with safety settings, Vision SafeSearch for images, plus human review of borderline cases.
 - **Altostrat: auditable and explainable AI** - Log prompts, responses and model version; Data Access audit logs; record decisions in BigQuery; Explainable AI for custom models; human review.
 - **Altostrat: 24/7 chatbot that does not invent facts** - Conversational agent grounded (RAG) on an Agent Search data store of catalog and help content.
 - **Altostrat: viewer sign-in with Google and third-party IdPs** - Identity Platform (customer identity). Cloud Identity / Workforce Identity Federation are for staff.
 - **Cymbal: the one rule for gen AI output** - Nothing reaches the live catalog until an associate approves, rejects or edits it (human-in-the-loop).
 - **Cymbal: attributes must match catalog structure** - Gemini controlled generation with a response schema (enums of allowed values per category) plus few-shot examples.
 - **Cymbal: image variations, background changes, text overlays** - Imagen generation and editing on the Agent Platform. Vision API only analyzes images.
-- **Cymbal: natural language product discovery, managed** - Agent Search (formerly Vertex AI Search) for commerce, the Discovery AI product, behind the conversational agent.
-- **Cymbal: replace IVR and manual order entry** - Conversational Agents (Customer Engagement Suite) on web, app and phone, calling order APIs, with live-agent handoff.
+- **Cymbal: natural language product discovery, managed** - AI Commerce Search (formerly Vertex AI Search for commerce), the Discovery AI product, behind the conversational agent.
+- **Cymbal: replace IVR and manual order entry** - Virtual agents in Gemini Enterprise for Customer Experience (formerly Customer Engagement Suite) on web, app and phone, calling order APIs, with live-agent handoff.
 - **Cymbal: millions of SKUs to enrich, latency not critical** - Batch inference jobs from Cloud Storage or BigQuery; online calls only for urgent items.
 - **Cymbal: database targets** - MySQL and SQL Server to Cloud SQL via Database Migration Service; Redis to Memorystore; MongoDB to Firestore with MongoDB compatibility or MongoDB Atlas.
 - **Cymbal: SFTP and batch ETL** - Land files in Cloud Storage, trigger Dataflow or Cloud Run per object via Eventarc, dead-letter bad files.
@@ -265,7 +265,7 @@ One line per constraint and the design move it calls for. These feed this cert's
 - **KnightMotives: unreliable build-to-order** - Autoscaled stateless front end on Cloud Run or GKE; Spanner for consistent orders and inventory.
 - **KnightMotives: EU residency enforcement** - Org policy resource locations constraint (EU only) plus Assured Workloads; CMEK or EKM for key control.
 - **KnightMotives: plants and other clouds** - Partner Interconnect and Network Connectivity Center for plants; Cross-Cloud Interconnect to the other cloud.
-- **KnightMotives: monetize data safely** - Dataplex governance first, then Analytics Hub listings; Sensitive Data Protection for de-identification.
+- **KnightMotives: monetize data safely** - Knowledge Catalog (formerly Dataplex) governance first, then BigQuery sharing (formerly Analytics Hub) listings; Sensitive Data Protection for de-identification.
 - **KnightMotives: security framework after breaches** - Security Command Center, Google SecOps SIEM/SOAR playbooks, incident drills, staff training, zero-trust access via IAP.
 - **KnightMotives: cheap simulation at scale** - Batch or GKE on Spot VMs with GPUs/TPUs and checkpointing; Dynamic Workload Scheduler for planned runs.
 
