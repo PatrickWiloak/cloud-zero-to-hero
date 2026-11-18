@@ -1,6 +1,6 @@
 # Google Cloud Professional Cloud Architect Practice Questions
 
-66 scenario-based questions: the original 40 weighted by exam domain, plus 26 on the current case studies, AI and operations.
+109 scenario-based questions: the original 40 weighted by exam domain, 26 on the current case studies, AI and operations, and 43 more on the four case studies.
 
 ## Exam Domain Breakdown
 Weights are from the current exam guide (checked 2026-10-14). Questions 1-40 follow the earlier layout and are grouped under the six sections, and questions 41-66 cover the four current case studies, AI, and operations topics across sections.
@@ -14,6 +14,7 @@ Weights are from the current exam guide (checked 2026-10-14). Questions 1-40 fol
 | Manage implementation | ~12.5% | 31-34 |
 | Ensure solution and operations excellence | ~12.5% | 35-40 |
 | Case studies, AI and operations (mixed) | - | 41-66 |
+| Case studies set 2 (Altostrat, Cymbal, EHR, KnightMotives) | 20-30% of the exam | 67-109 |
 
 > **Cert page:** [exams/gcp/cloud-architect/](../../exams/gcp/cloud-architect/)
 
@@ -1169,6 +1170,700 @@ D. Pilot light with core data replicated but no compute provisioned, so servers 
 **Why:** Warm standby meets a minutes-level RTO at moderate cost. Backup and restore is too slow, a pilot light must build compute after failover so it misses 15 minutes, and active-active costs more than the stated budget.
 </details>
 
+## Case Studies Set 2 (Questions 67-109)
+
+Ten or eleven questions per current case study, written against Google's v6.1 case text on 2026-11-18. Each tests one constraint from the case. The same questions are in the interactive case quiz of the AWS to Google Cloud study guide.
+
+### Question 67
+**Scenario:** Altostrat keeps original master files of every broadcast. They are read less than once a year but must stay retrievable within seconds when legal asks. Recent content is read constantly. What is the lowest-cost design that keeps availability?
+
+A. Keep masters in Standard class and delete the transcoded copies after one year to cut the total object count
+B. Lifecycle rule moving masters to Archive class after 30 days; current content stays Standard
+C. Move every object, hot and cold, to Nearline so the whole library has one predictable storage price
+D. Copy the masters to Persistent Disk snapshots in a second region and delete them from Cloud Storage
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Archive class costs the least to store and still serves reads in milliseconds. Its 365-day minimum and retrieval fees suit files read about once a year. The access pattern is known, so a lifecycle rule fits (Autoclass is for unpredictable patterns). Keeping masters in Standard pays hot-storage prices for cold data, and Nearline is the wrong price point for both hot and cold data.
+</details>
+
+### Question 68
+**Scenario:** Altostrat's on-premises ingestion system sends several terabytes of new media to Cloud Storage every day, and the case asks for secure, high-performance hybrid connectivity. What should they use?
+
+A. A single Cloud VPN tunnel from the ingestion site, sized up by adding more media servers behind it
+B. Transfer Appliance shipped every week, with uploads queued on-premises between shipments
+C. Uploads over the public internet using parallel composite uploads and resumable transfers
+D. Redundant Dedicated Interconnect, with HA VPN as backup
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Daily continuous ingestion at TB scale needs a private, high-bandwidth link, and redundancy keeps it reliable (reliability is a top priority). One VPN tunnel caps throughput and is a single point of failure. Transfer Appliance suits one-off bulk moves, not a daily feed.
+</details>
+
+### Question 69
+**Scenario:** The legacy on-premises archive (about 400 TB) is slated to move to Google Cloud soon. The Interconnect is already busy with daily ingestion. What is the best plan?
+
+A. Leave the archive on-premises indefinitely and give cloud applications access to it over HA VPN
+B. Transfer Appliance for the bulk copy, then Storage Transfer Service for changes, into Archive class
+C. Rewrite the archive application to run on GKE first, then move the data once the new app is live
+D. Copy the files with rsync over the Interconnect from one admin workstation during off-peak hours
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** The case says these systems are slated for migration, so keeping them forever is wrong. A bulk offline copy avoids saturating the busy link, and Storage Transfer Service with on-prem agents catches up on changes. Archive class keeps the cost low.
+</details>
+
+### Question 70
+**Scenario:** Altostrat must automatically detect and filter inappropriate content in uploaded video and audio, with as little custom machine learning as possible.
+
+A. Train a custom moderation model on GPUs from labeled examples of Altostrat's own historical content
+B. Have a team of moderators watch every upload before it is published, around the clock
+C. Filter on keywords in titles, descriptions and tags supplied by uploaders before publishing
+D. Pre-trained detection (Video Intelligence, Gemini safety settings) with humans reviewing borderline cases
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Pre-trained APIs and Gemini safety filters meet the requirement with no model to build. Routing only uncertain cases to people keeps the human cost low. Keyword filtering misses what is actually in the media.
+</details>
+
+### Question 71
+**Scenario:** Altostrat wants a 24/7 support chatbot that answers questions about its own catalog and policies without inventing facts. What is the right approach?
+
+A. Fine-tune a model each month on all catalog and help content and serve it without retrieval
+B. A rule-based decision tree that maps each known question to a fixed answer written by support staff
+C. An agent grounded on an Agent Search data store of the catalog and help content
+D. Prompt a general-purpose model with a long system prompt describing the company, with no data access
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Grounding (retrieval-augmented generation) keeps answers tied to current company content and cuts hallucination. Fine-tuning alone goes stale and still invents facts. A decision tree does not meet the natural language requirement.
+</details>
+
+### Question 72
+**Scenario:** Every new podcast or video should get a summary and metadata within minutes of upload, at the scale of the whole library. Which design fits Altostrat's existing environment?
+
+A. Object-finalized event via Eventarc to a Cloud Run function that calls Gemini and writes to BigQuery
+B. A nightly cron job on a Compute Engine VM that lists every object in the bucket and processes new ones
+C. A Dataproc cluster that runs a Spark job once a week across the whole media library
+D. Editors write each summary by hand in a shared spreadsheet that is loaded into BigQuery
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Altostrat already uses Cloud Run functions for event-driven tasks, so this is the least change. It reacts within minutes and scales with uploads. A nightly listing is slow and gets more expensive as the library grows.
+</details>
+
+### Question 73
+**Scenario:** Altostrat must modernize CI/CD for containers with a centralized management platform, deploying to GKE in the cloud and to on-premises clusters.
+
+A. Install Jenkins separately in each cluster, with each team owning the pipeline for its own cluster
+B. Engineers run kubectl apply from their laptops with a shared kubeconfig for every cluster
+C. Cloud Build pushes custom VM images to Compute Engine, and instance groups roll them out per site
+D. Cloud Build and Artifact Registry, Cloud Deploy across fleet clusters, Binary Authorization
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Cloud Deploy gives one place to define the delivery pipeline and promote releases across targets. Fleet membership lets it reach on-prem clusters too. Binary Authorization adds supply-chain control. Per-cluster Jenkins is the opposite of centralized.
+</details>
+
+### Question 74
+**Scenario:** Altostrat runs Prometheus on its clusters and Cloud Monitoring elsewhere, with alerts by email. Reliability is a top priority. What should they change first?
+
+A. Keep both systems and send each alert email to a wider distribution list so more people see it
+B. Managed Service for Prometheus into Cloud Monitoring, SLO burn-rate alerts that page
+C. Add alerts for every CPU spike above 50% on every node so problems are caught earlier
+D. Retire Prometheus, stop collecting custom application metrics, and rely only on default metrics
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Managed Service for Prometheus keeps their PromQL and exporters while centralizing the data. SLO burn-rate alerts with paging route the few alerts that matter to someone who acts. More email and noisier alerts make alert fatigue worse.
+</details>
+
+### Question 75
+**Scenario:** Content strategists want to see which topics are trending across viewing data and AI-extracted metadata, using SQL and dashboards. What should Altostrat use?
+
+A. Export the viewing and metadata tables nightly to Cloud SQL and run the trend queries there
+B. Load the data into Bigtable and query it from a spreadsheet through a connector
+C. BigQuery with Looker dashboards, plus BigQuery ML or Gemini in BigQuery
+D. Build a custom analytics engine on GKE that reads the raw objects from Cloud Storage
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** BigQuery is already their primary warehouse, so this is the least change and needs no servers. Cloud SQL and Bigtable are built for serving transactions and lookups, not ad-hoc analytics at this scale.
+</details>
+
+### Question 76
+**Scenario:** Altostrat's consumer apps let viewers sign in with Google and with other third-party identity providers. Which service fits customer sign-in?
+
+A. Identity Platform, with Google and third-party identity providers enabled
+B. Create a Cloud Identity account for every viewer so the console can manage them centrally
+C. Workforce Identity Federation with each third-party provider configured as a workforce pool
+D. A dedicated IAM service account per viewer, with keys issued to the mobile and web apps
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Identity Platform is built for an app's end users and supports many external IdPs. Cloud Identity and Workforce Identity Federation are for staff, and service accounts are for workloads.
+</details>
+
+### Question 77
+**Scenario:** Altostrat wants to simplify infrastructure management for new GKE workloads so that teams deploy fast without tuning node pools. What fits the executive priority of reliability and cost?
+
+A. Self-managed Kubernetes on Compute Engine with Terraform templates shared across teams
+B. GKE Autopilot clusters: Google manages nodes, billing is per pod request
+C. GKE Standard clusters with large fixed node pools sized for the busiest hour of the year
+D. Move each workload to its own Compute Engine VM managed by a managed instance group
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Autopilot removes node management and uses Google's hardening and scaling defaults, and you pay for what pods request instead of idle nodes. Peak-sized fixed pools waste money, and self-managed Kubernetes adds operational work.
+</details>
+
+### Question 78
+**Scenario:** Cymbal's generated attributes must fit the existing catalog structure: each category has a fixed set of attribute names and allowed values. How should the Gemini call be set up?
+
+A. Ask Gemini for free-text attributes, then parse them into catalog fields with regular expressions
+B. Controlled generation with a response schema (enums per category) plus few-shot examples
+C. Train a new language model from scratch on Cymbal's existing catalog and supplier feeds
+D. Run Vision API label detection on supplier images and store the returned labels as attributes
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** A response schema forces valid structured output, so values always match the catalog. Few-shot examples improve accuracy. Free-text parsing is brittle, and labels alone cannot produce category-specific attributes.
+</details>
+
+### Question 79
+**Scenario:** Cymbal needs product image variations from one base photo: other colors, new backgrounds and text overlays. Which tool fits?
+
+A. Vision API object localization to find the product, then crop it onto stock backgrounds
+B. A Gemini text model that writes a description of each variant for the product page
+C. Book a studio photo shoot for each color and background variant before the product launches
+D. Imagen generation and editing on the Agent Platform
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Imagen supports editing a base image, including background changes and recoloring. The Vision API analyzes images and cannot create them, and new photo shoots are the manual cost the case wants to remove.
+</details>
+
+### Question 80
+**Scenario:** Associates need a UI to approve, reject or modify gen AI suggestions. Only Cymbal staff may reach it, and the team does not want to build its own login system. What is the best design?
+
+A. A review web app on Cloud Run behind IAP that writes only approved items to the catalog
+B. A public web page protected by one shared password that is rotated each quarter
+C. Email each batch of suggestions to associates as a CSV, and load their replies into the catalog
+D. Let associates edit the production catalog database directly with a SQL client
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** IAP adds identity-based access with no app-side login code, and Cloud Run keeps it serverless. Writing only approved items preserves the human-in-the-loop step. Direct database edits skip both review and audit.
+</details>
+
+### Question 81
+**Scenario:** Enrichment must run over millions of existing SKUs once, then over each day's new supplier items. Latency does not matter for the backlog. What is the most cost-effective way to call the model?
+
+A. Synchronous online calls from a single Compute Engine VM, processing one item at a time
+B. Batch inference jobs, with online calls only for urgent new items
+C. Provision dedicated GPUs and host an open model full time for both the backlog and new items
+D. Have associates write descriptions for the backlog while the model handles only new items
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Batch inference is cheaper per request and built for large offline jobs, and it avoids online rate limits. Hosting a model full time pays for idle capacity. One-at-a-time calls from one VM do not scale to millions.
+</details>
+
+### Question 82
+**Scenario:** Cymbal's conversational shopping agent sometimes recommends products that are out of stock or do not exist. What is the best fix?
+
+A. Raise the model temperature so the agent offers a wider variety of products in its answers
+B. Remove product names from the agent's answers and link only to category pages
+C. Ground the agent on the commerce search index of the live catalog and inventory
+D. Fine-tune the model once on last year's full catalog and redeploy it before the holiday season
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Grounding on current catalog data makes the agent recommend only real, available products. A model fine-tuned once goes stale, and a higher temperature makes hallucination worse.
+</details>
+
+### Question 83
+**Scenario:** Cymbal runs Microsoft SQL Server for order data and wants a managed service with minimal downtime during migration. What should they use?
+
+A. Rewrite the order application for Spanner first, then migrate the data with a custom ETL job
+B. Run SQL Server on Compute Engine yourself and copy changes with manual log shipping
+C. Export every table to CSV during a weekend outage and import the files into the new database
+D. Database Migration Service to Cloud SQL for SQL Server
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Database Migration Service supports SQL Server as a source and Cloud SQL for SQL Server as a target, so the move is managed with little downtime. Rewriting for Spanner is a large change the case does not need. Self-managed keeps the admin cost the case wants to cut.
+</details>
+
+### Question 84
+**Scenario:** Cymbal's Redis cache holds sessions and hot catalog lookups. What gives the least operational overhead in Google Cloud?
+
+A. Memorystore for Redis
+B. Redis on a self-managed Compute Engine VM with a startup script and nightly snapshots
+C. Store cache entries as small objects in a regional Cloud Storage bucket
+D. A single-node Bigtable instance with one column family for sessions and lookups
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Memorystore is managed, Redis-compatible and offers HA, so the application changes very little. Cloud Storage latency is too high for a cache, and a VM brings back patching and failover work.
+</details>
+
+### Question 85
+**Scenario:** Suppliers send nightly SFTP files that feed batch ETL, which causes delays and manual error handling. Cymbal cannot force every supplier to change at once. What modernizes the flow with the least disruption?
+
+A. Require every supplier to build and call a streaming API before the next selling season
+B. Keep the nightly batch and hire more operations staff to fix failed files each morning
+C. Land files in Cloud Storage, trigger processing per object via Eventarc, dead-letter bad files
+D. Have suppliers email files to an operations inbox that staff upload into the catalog by hand
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Suppliers keep sending files, but processing becomes event-driven and automatic, and failed files are caught for review instead of breaking the batch. Forcing all suppliers to change at once is unrealistic.
+</details>
+
+### Question 86
+**Scenario:** Customer chats with virtual agents may contain names, addresses and card numbers. Cymbal wants to analyze the transcripts while meeting security and compliance requirements. What should they do?
+
+A. Store raw transcripts in a bucket readable by the whole analytics team so nothing is lost
+B. Turn off all logging of virtual agent conversations so no personal data is ever stored
+C. Encrypt the transcripts with a customer-managed key and then destroy the key after 30 days
+D. Model Armor on the agent, Sensitive Data Protection de-identification before BigQuery
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** De-identification keeps the analytic value while removing sensitive data. Model Armor guards the live agent against prompt attacks and data leakage. Turning off logging removes the auditability and insight the business needs.
+</details>
+
+### Question 87
+**Scenario:** Data silos stop Cymbal from seeing the whole customer journey across MySQL, SQL Server and MongoDB. Analysts need near-real-time data. What should they build?
+
+A. Datastream CDC from the operational databases into BigQuery
+B. Nightly point-to-point exports between every pair of databases so each has a full copy
+C. Consolidate all of the databases into one very large Cloud SQL instance for every workload
+D. Load all operational data into Bigtable and use it as the analytics warehouse
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Datastream streams changes with low impact on the sources, and BigQuery joins them for analytics. Point-to-point exports multiply the silos, and a single OLTP database is not an analytics engine.
+</details>
+
+### Question 88
+**Scenario:** Cymbal monitors with Grafana, Nagios and Elastic and wants proactive monitoring with less tooling to run. Teams like their Grafana dashboards. What should they do?
+
+A. Keep running Grafana, Nagios and Elastic on Compute Engine VMs, managed by the current team
+B. Cloud Monitoring and Logging with Managed Service for Prometheus, Grafana kept as a front end
+C. Replace live monitoring with a daily email report of system health sent to each team
+D. Move Nagios into a GKE cluster so it scales with the number of checks
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** This consolidates the data in managed services and removes self-hosted tools to run, while teams keep the dashboards they know. Moving Nagios to GKE keeps the tool sprawl.
+</details>
+
+### Question 89
+**Scenario:** The lease on one of EHR's colocation facilities is about to expire. Its workloads are a mix of VMs and containers. What should they do first?
+
+A. Refactor every application to Cloud Run before moving anything, so nothing is moved twice
+B. Sign a new multi-year lease on the facility to buy time for a full redesign
+C. Move only the databases to Cloud SQL now and leave the applications in the colocation site
+D. Lift and shift VMs with Migrate to Virtual Machines and containers to GKE; modernize later
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** The lease sets a hard date, so the fastest low-risk move comes first and modernization follows. Refactoring everything first puts the deadline at risk, and splitting apps from their databases adds latency and risk.
+</details>
+
+### Question 90
+**Scenario:** EHR must maintain and manage multiple container-based environments (dev, test, prod) consistently, because outages came from misconfigured systems. What should they use?
+
+A. Configure each cluster by hand from a detailed runbook, reviewed by a second engineer
+B. Run every environment and every customer in one shared cluster to reduce the number of clusters
+C. A fleet with Config Sync from Git and Policy Controller guardrails
+D. Use a different Kubernetes distribution for each environment, chosen by each team
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** GitOps with Config Sync makes every cluster match the repository and corrects drift. Policy Controller blocks unsafe configuration before it lands. That addresses the misconfiguration outages in the executive statement directly.
+</details>
+
+### Question 91
+**Scenario:** EHR wants to onboard new insurance providers as quickly as possible through secure, standard APIs with keys, quotas and analytics. What fits?
+
+A. Apigee API products that each new insurer subscribes to
+B. Build a dedicated VPN tunnel and a custom integration for each new insurance provider
+C. Issue read-only database credentials to each insurer so they can pull the data they need
+D. Exchange files over SFTP and have staff review and load each insurer's files by hand
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Apigee turns onboarding into issuing credentials for an existing API product, and adds security, quotas and usage analytics. Per-insurer custom work is slow, and database credentials are a compliance risk.
+</details>
+
+### Question 92
+**Scenario:** EHR must create interfaces to ingest and process clinical data from new providers in healthcare formats such as HL7v2 and FHIR. What is the best managed choice?
+
+A. Write a custom parser on a Compute Engine VM for each message format and provider
+B. Cloud Healthcare API HL7v2 and FHIR stores, with Pub/Sub notifications
+C. Keep the raw messages in Memorystore so downstream services can read them quickly
+D. Load the raw messages straight into Cloud SQL tables designed for each provider
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** The Healthcare API ingests and stores healthcare standards natively, publishes change notifications, and works with de-identification and BigQuery export. Custom parsers add the administration cost the case wants to reduce.
+</details>
+
+### Question 93
+**Scenario:** EHR's compliance lead asks what is needed to run protected health information on Google Cloud under HIPAA. What is the best answer?
+
+A. Nothing extra: Google Cloud holds a HIPAA certification, so every workload on it is compliant
+B. Encrypt health data with an application-level key stored in the code repository
+C. Keep all health data on-premises and move only the non-clinical applications to Google Cloud
+D. Sign the BAA, use covered products for PHI, add VPC SC, CMEK, audit logs and least privilege
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** There is no HIPAA certification. Compliance is shared: the BAA covers specific products, and the customer configures the controls. Keeping everything on-premises contradicts the case, which chose Google Cloud to replace colocation.
+</details>
+
+### Question 94
+**Scenario:** EHR wants to predict industry trends from provider data without exposing patient identities to analysts. What should they do?
+
+A. Grant the analysts read access to the production FHIR store so they work with complete data
+B. De-identify into a separate BigQuery dataset, then use BigQuery ML and Looker
+C. Email weekly extracts of provider data to the analytics team as encrypted spreadsheets
+D. Copy the production data into a personal project where data scientists can build models freely
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** De-identification keeps the trend value and removes identities, and a separate dataset limits who sees what. BigQuery ML lets analysts build predictions in SQL. The other options spread PHI.
+</details>
+
+### Question 95
+**Scenario:** EHR must reduce latency for customers in several countries while keeping its regional application design. What helps most?
+
+A. A global external Application Load Balancer with regional backends, plus Cloud CDN
+B. Move the application to one zonal VM with a much larger machine type and faster disks
+C. Ask customers outside the home country to connect through a corporate VPN
+D. DNS round-robin across the public IP addresses of servers in several regions
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** The global load balancer uses one anycast IP, ends connections at Google's edge, and routes to the nearest healthy backend. Cloud CDN serves static assets from the edge. A bigger VM does nothing for distance.
+</details>
+
+### Question 96
+**Scenario:** EHR must adapt its disaster recovery plan. The target for patient databases is an RPO of minutes and an RTO under an hour if a region fails, at reasonable cost. What fits?
+
+A. Nightly exports of each database to a Cloud Storage bucket in the same region
+B. Active-active multi-region Spanner for every database, including the small internal ones
+C. Cloud SQL HA plus a cross-region read replica to promote, and backups
+D. No separate DR design, because the 99.9% availability target already covers a regional failure
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** HA covers zone failures, and a cross-region replica gives minute-level RPO and a fast promotion for regional failure. Same-region exports lose the region with the data. Multi-region Spanner everywhere costs far more than these targets need.
+</details>
+
+### Question 97
+**Scenario:** Outages were caused by systems that were configured differently by hand. EHR also needs to dynamically scale and provision new environments. What practice fits?
+
+A. A wiki page listing the manual steps to build each environment, kept up to date by the platform team
+B. Clone production for each new environment by copying its VM disks and editing the settings
+C. Let each team create and configure its own projects freely, with a monthly review
+D. Terraform modules in a CI pipeline with policy checks, so every environment comes from reviewed code
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Reviewed, repeatable code produces identical environments on demand and stops drift. Policy checks catch unsafe changes before they apply. Manual steps are the cause of the outages in the executive statement.
+</details>
+
+### Question 98
+**Scenario:** Traffic spikes have caused outages. Customer-facing apps run on GKE. What should EHR add?
+
+A. Horizontal Pod Autoscaling plus the cluster autoscaler (or Autopilot), tuned by load tests
+B. Fixed-size clusters sized for average traffic, with an on-call engineer adding nodes during spikes
+C. Return errors to some requests during spikes with a rate limit on the load balancer
+D. Replace the node pool with a single much larger node to handle the peak
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Pods and nodes then scale with demand, which addresses the capacity outages. Load testing makes sure the scaling settings are right. Sizing for the average fails at the peak.
+</details>
+
+### Question 99
+**Scenario:** Millions of vehicles send telemetry, but rural connectivity drops for hours. KnightMotives must not lose data. What ingestion design fits?
+
+A. Vehicles call a REST API synchronously and drop readings when the call fails
+B. Each vehicle streams directly into BigQuery with no local buffer, retrying three times
+C. Buffer on the vehicle, upload to Pub/Sub when connected, Dataflow into Bigtable and BigQuery
+D. Send compressed telemetry by SMS to a gateway at headquarters that forwards it to the cloud
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Store and forward on the vehicle survives outages. Pub/Sub absorbs bursts when many cars reconnect at once. Dataflow handles late and out-of-order data, Bigtable serves the high-volume telemetry, and BigQuery holds it for analytics.
+</details>
+
+### Question 100
+**Scenario:** New in-vehicle AI features must work in real time even in rural areas with no signal. Where should inference run?
+
+A. Only in a Google Cloud region, called from the vehicle over the cellular network
+B. On the vehicle with a compact model, updated from the cloud when connected
+C. On servers installed at each dealership, reached over the dealer's local network
+D. On the mainframe at headquarters, through a new API exposed to the vehicles
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Real-time features cannot depend on a link that is often down, so inference runs at the edge. The cloud trains and distributes models and collects data when a connection exists. Dealers have no budget for equipment.
+</details>
+
+### Question 101
+**Scenario:** The supply chain runs on an outdated mainframe and the ERP makes promotions hard to launch. KnightMotives wants to modernize gradually. What is the best first step?
+
+A. Rewrite the mainframe in one big-bang project and switch over on a single weekend
+B. Freeze all changes to the supply chain until a new ERP has been selected and bought
+C. Lift the mainframe workload as-is onto a single large Compute Engine VM
+D. Apigee in front of the mainframe and ERP, data to BigQuery, replace functions one at a time
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** An API facade lets new apps use legacy functions now, and data replication unlocks analytics. Pieces can then be replaced one by one (strangler pattern), which matches the requirement to modernize gradually. A big-bang rewrite is the highest risk.
+</details>
+
+### Question 102
+**Scenario:** The online build-to-order system is unreliable, and dealers in many countries need accurate, consistent inventory and orders. What fits best?
+
+A. A stateless, autoscaled front end on Cloud Run or GKE with Spanner for orders and inventory
+B. One Cloud SQL instance in a single zone without HA, with daily backups
+C. A shared spreadsheet that dealers and the factory update with each order
+D. Separate databases per country, synchronized with each other in a nightly batch
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Spanner gives strongly consistent, highly available transactions across regions, so dealers see the same inventory. The autoscaled front end handles peaks. Nightly sync creates the stale data that strains the dealer relationship.
+</details>
+
+### Question 103
+**Scenario:** After past data breaches, KnightMotives needs centralized threat detection across its cloud estate and a tested incident response process. What should they adopt?
+
+A. Antivirus and disk encryption on every employee laptop, managed from a central console
+B. Security Command Center, Google SecOps SIEM/SOAR playbooks, incident drills and training
+C. Turn off Data Access audit logs to reduce noise so analysts can focus on real alerts
+D. Add a firewall rule that denies all ingress traffic to every project
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** This covers the case's three security asks: a framework for detection, an incident response plan run through playbooks, and awareness training. Disabling logs removes the evidence needed for detection and response.
+</details>
+
+### Question 104
+**Scenario:** Data for the emerging autonomous platform must stay in the EU, and no team should be able to create resources elsewhere by mistake. What enforces this?
+
+A. A written data residency policy on the internal wiki that teams must acknowledge
+B. A label on each resource that marks it as EU data, checked in a quarterly audit
+C. Org policy resource locations constraint (EU only) on the folder, with Assured Workloads
+D. Ask engineers to choose an EU region in the console each time they create a resource
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** An organization policy blocks resource creation outside allowed locations for the whole folder, and Assured Workloads adds data-residency and personnel controls. Labels and wiki pages enforce nothing.
+</details>
+
+### Question 105
+**Scenario:** Manufacturing plants need better connectivity to headquarters and to Google Cloud. Several plants are in places where only carriers reach. What fits?
+
+A. Partner Interconnect per plant, with Network Connectivity Center as the hub
+B. A consumer broadband line at each plant, with no backup connection
+C. Dedicated Interconnect at every plant, including plants far from any Google facility
+D. Ship hard drives from each plant to headquarters every day for upload
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Partner Interconnect works where you cannot reach a Google colocation facility, and Network Connectivity Center joins many sites in a hub-and-spoke design. Dedicated Interconnect needs a physical presence in a supported facility.
+</details>
+
+### Question 106
+**Scenario:** Some KnightMotives applications already run on another major public cloud and must reach Google Cloud privately at high bandwidth. What should they use?
+
+A. Route all traffic from the other cloud through the headquarters data center and its Interconnect
+B. Connect over the public internet with TLS between the two clouds' public endpoints
+C. Classic VPN tunnels with static routes between the two clouds
+D. Cross-Cloud Interconnect between Google Cloud and the other provider
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Cross-Cloud Interconnect is a dedicated physical link between Google and another cloud, with no on-prem hop. Routing through HQ adds latency and makes HQ a single point of failure.
+</details>
+
+### Question 107
+**Scenario:** Dealer staff and employees need access to internal web tools from anywhere. After past breaches, KnightMotives wants no broad VPN access and wants device checks. What fits?
+
+A. A shared VPN account for all dealer staff, with the password changed each quarter
+B. IAP with context-aware access (Chrome Enterprise Premium), using identity and device posture
+C. Publish the tools on the internet and allow only the IP ranges of known dealerships
+D. Remote desktop into a hardened jump host at headquarters, then open the tools from there
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Zero-trust access checks each request by user and device, and grants access per application instead of to the whole network. It works in a browser, so dealers need no new equipment. Shared VPN accounts are the kind of weakness that leads to breaches.
+</details>
+
+### Question 108
+**Scenario:** KnightMotives' data is siloed across plants, vehicles and business units. Before monetizing it, they must know what data exists, who owns it and its quality, with strict privacy. What should they use?
+
+A. Copy every dataset into one bucket with public read access so partners can find it
+B. Track datasets, owners and quality in a shared spreadsheet maintained by each business unit
+C. Let each business unit keep its own warehouse and sell its own data independently
+D. Dataplex catalog, lineage and quality, with Sensitive Data Protection for de-identification
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Governance must come before monetization: Dataplex catalogs and governs data where it already lives, and Sensitive Data Protection finds and masks personal data. A public bucket breaks the security requirement.
+</details>
+
+### Question 109
+**Scenario:** The autonomous simulation environment runs thousands of independent, restartable simulation jobs. Cost matters, since data monetization must fund new technology. What compute fits best?
+
+A. On-demand VMs reserved for peak capacity all year so simulations never wait
+B. Run the simulations on the existing on-premises mainframe during off-peak hours
+C. Batch or GKE jobs on Spot VMs (GPUs where needed), with checkpointing
+D. One very large VM that runs the simulation jobs one after another
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Independent, restartable jobs suit Spot capacity, which is far cheaper than on-demand. Checkpointing limits lost work when a VM is preempted. Reserving peak capacity all year wastes money.
+</details>
+
+---
+
 ## Answer Key
 
 | Question | Answer | Domain |
@@ -1239,3 +1934,46 @@ D. Pilot light with core data replicated but no compute provisioned, so servers 
 | 64 | B | Case study / AI / Ops |
 | 65 | B | Case study / AI / Ops |
 | 66 | B | Case study / AI / Ops |
+| 67 | B | Case study: Altostrat Media |
+| 68 | D | Case study: Altostrat Media |
+| 69 | B | Case study: Altostrat Media |
+| 70 | D | Case study: Altostrat Media |
+| 71 | C | Case study: Altostrat Media |
+| 72 | A | Case study: Altostrat Media |
+| 73 | D | Case study: Altostrat Media |
+| 74 | B | Case study: Altostrat Media |
+| 75 | C | Case study: Altostrat Media |
+| 76 | A | Case study: Altostrat Media |
+| 77 | B | Case study: Altostrat Media |
+| 78 | B | Case study: Cymbal Retail |
+| 79 | D | Case study: Cymbal Retail |
+| 80 | A | Case study: Cymbal Retail |
+| 81 | B | Case study: Cymbal Retail |
+| 82 | C | Case study: Cymbal Retail |
+| 83 | D | Case study: Cymbal Retail |
+| 84 | A | Case study: Cymbal Retail |
+| 85 | C | Case study: Cymbal Retail |
+| 86 | D | Case study: Cymbal Retail |
+| 87 | A | Case study: Cymbal Retail |
+| 88 | B | Case study: Cymbal Retail |
+| 89 | D | Case study: EHR Healthcare |
+| 90 | C | Case study: EHR Healthcare |
+| 91 | A | Case study: EHR Healthcare |
+| 92 | B | Case study: EHR Healthcare |
+| 93 | D | Case study: EHR Healthcare |
+| 94 | B | Case study: EHR Healthcare |
+| 95 | A | Case study: EHR Healthcare |
+| 96 | C | Case study: EHR Healthcare |
+| 97 | D | Case study: EHR Healthcare |
+| 98 | A | Case study: EHR Healthcare |
+| 99 | C | Case study: KnightMotives Automotive |
+| 100 | B | Case study: KnightMotives Automotive |
+| 101 | D | Case study: KnightMotives Automotive |
+| 102 | A | Case study: KnightMotives Automotive |
+| 103 | B | Case study: KnightMotives Automotive |
+| 104 | C | Case study: KnightMotives Automotive |
+| 105 | A | Case study: KnightMotives Automotive |
+| 106 | D | Case study: KnightMotives Automotive |
+| 107 | B | Case study: KnightMotives Automotive |
+| 108 | D | Case study: KnightMotives Automotive |
+| 109 | C | Case study: KnightMotives Automotive |

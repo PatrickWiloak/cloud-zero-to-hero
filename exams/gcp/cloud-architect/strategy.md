@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-10-14
+last-updated: 2026-11-18
 ---
 
 # GCP Professional Cloud Architect (PCA) - Exam Strategy
@@ -54,7 +54,7 @@ last-updated: 2026-10-14
 The PCA case studies are published ahead of time (four in the current guide: Altostrat Media, Cymbal Retail, EHR Healthcare, KnightMotives Automotive) - questions for each case study reference specific constraints in the company's Existing Environment and Business Requirements sections. Read the case study once carefully; for each subsequent question, jump back to the relevant constraint.
 
 Common case study traps:
-- "Legacy systems will not move" (EHR Healthcare, Altostrat) - answers that migrate them fail; integrate over hybrid connectivity
+- "Legacy systems will not move" (EHR Healthcare only) - answers that migrate them fail; integrate over hybrid connectivity. Altostrat's legacy is slated to migrate soon, and KnightMotives replaces its legacy gradually
 - "Alerts are ignored" - fix routing, ownership and SLO-based alerting, not more email
 - "No budget for new equipment" (KnightMotives dealers) - browser-based or SaaS, no on-site hardware
 - "Humans must review AI output" (Cymbal) - keep a human-in-the-loop step before writes to the catalog
