@@ -193,6 +193,7 @@ all 783 now repaired**, each replacement fetched and title-checked. The old-to-n
       API as `nobler-reporting`. Next (Pat, 2026-10-28, browser): resubmit the sitemap and Request indexing on
       `/STUDY-HUB/`; re-check 2026-11-01.
 - [ ] **Patrick: unblock site analytics (2 steps, ~3 min), then hand back to Claude.** The site has no analytics
+      ✏️ 2026-11-19: now covers all 7 noblerworks.com subdomains (cloud, data, ai, security, forbidden, wargames, ironsight); SA re-tested, still 403 creating a property. Their Search Console rows are on the Growth Board meanwhile.
       at all; the only visitor numbers are GitHub's 14-day repo traffic. Plan agreed 2026-09-28: GA4 behind
       Material's cookie consent banner (feeds the Nobler OS dashboard) **plus** Cloudflare Web Analytics
       (cookieless, no banner, the honest full count - GA undercounts EU visitors who decline).
