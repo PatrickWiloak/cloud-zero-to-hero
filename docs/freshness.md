@@ -32,8 +32,8 @@ Each row shows when a page was last verified against its source of truth.
 | gcp/cloud-digital-leader | 2026-05-03 | [exams/gcp/cloud-digital-leader](../exams/gcp/cloud-digital-leader/) |
 | gcp/cloud-engineer | 2026-05-03 | [exams/gcp/cloud-engineer](../exams/gcp/cloud-engineer/) |
 | github/administration | 2026-05-03 | [exams/github/administration](../exams/github/administration/) |
-| hashicorp/nomad-associate | 2026-05-03 | [exams/hashicorp/nomad-associate](../exams/hashicorp/nomad-associate/) |
-| hashicorp/packer-associate | 2026-05-03 | [exams/hashicorp/packer-associate](../exams/hashicorp/packer-associate/) |
+| hashicorp/nomad | 2026-05-03 | [exams/hashicorp/nomad](../exams/hashicorp/nomad/) |
+| hashicorp/packer | 2026-05-03 | [exams/hashicorp/packer](../exams/hashicorp/packer/) |
 | hashicorp/terraform-associate | 2026-05-03 | [exams/hashicorp/terraform-associate](../exams/hashicorp/terraform-associate/) |
 | ibm/cloud-advocate | 2026-05-03 | [exams/ibm/cloud-advocate](../exams/ibm/cloud-advocate/) |
 | ibm/cloud-developer | 2026-05-03 | [exams/ibm/cloud-developer](../exams/ibm/cloud-developer/) |

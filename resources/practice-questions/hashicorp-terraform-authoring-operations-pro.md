@@ -557,6 +557,6 @@ D. Store the keys in a public repository's secrets
 
 - [Terraform Professional cert page](../../exams/hashicorp/terraform-authoring-operations-pro/) - notes, practice plan, strategy
 - [Terraform Associate practice questions](./hashicorp-terraform-associate.md) - the prerequisite level
-- [Packer Associate practice questions](./hashicorp-packer-associate.md) - the image half of the workflow
+- [Packer Associate practice questions](./hashicorp-packer.md) - the image half of the workflow
 - [Terraform explained](../../learn/concepts/terraform-explained.md) - IaC in plain English
 - **[📖 Terraform documentation](https://developer.hashicorp.com/terraform/docs)** - primary source

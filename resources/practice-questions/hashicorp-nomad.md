@@ -7,7 +7,7 @@ difficulty: intermediate
 
 30 questions for Nomad practice across architecture, job specification, scheduling, operations, and integration with Consul and Vault.
 
-> **Study track:** [exams/hashicorp/nomad-associate/](../../exams/hashicorp/nomad-associate/)
+> **Study track:** [exams/hashicorp/nomad/](../../exams/hashicorp/nomad/)
 
 ---
 
@@ -583,7 +583,7 @@ D. Copy the gossip encryption key, which also acts as the first ACL token
 
 ## Where to go deeper
 
-- [Nomad Associate cert page](../../exams/hashicorp/nomad-associate/) - notes, practice plan, strategy
+- [Nomad Associate cert page](../../exams/hashicorp/nomad/) - notes, practice plan, strategy
 - [Consul Associate practice questions](./hashicorp-consul-associate.md) - the discovery layer Nomad integrates with
 - [CKA practice questions](./kubernetes-cka.md) - the other orchestrator, for comparison
 - **[📖 Nomad documentation](https://developer.hashicorp.com/nomad/docs)** - primary source

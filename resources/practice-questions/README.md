@@ -121,8 +121,8 @@ Scenario-based practice question banks, one per certification. Every bank follow
 
 - [HashiCorp Boundary Associate Certification](https://security.noblerworks.com/resources/practice-questions/hashicorp-boundary-associate/)
 - [HashiCorp Consul Associate (003) Certification](./hashicorp-consul-associate.md)
-- [HashiCorp Nomad (study track)](./hashicorp-nomad-associate.md)
-- [HashiCorp Packer (study track)](./hashicorp-packer-associate.md)
+- [HashiCorp Nomad (study track)](./hashicorp-nomad.md)
+- [HashiCorp Packer (study track)](./hashicorp-packer.md)
 - [HashiCorp Terraform Associate (004) Certification](./hashicorp-terraform-associate.md)
 - [HashiCorp Certified: Terraform Authoring and Operations Advanced](./hashicorp-terraform-authoring-operations-pro.md)
 - [HashiCorp Vault Associate (003) Certification](https://security.noblerworks.com/resources/practice-questions/hashicorp-vault-associate/)

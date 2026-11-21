@@ -7,7 +7,7 @@ difficulty: intermediate
 
 30 questions for Packer practice across templates, builders, provisioners, post-processors, variables, and HCP Packer.
 
-> **Study track:** [exams/hashicorp/packer-associate/](../../exams/hashicorp/packer-associate/)
+> **Study track:** [exams/hashicorp/packer/](../../exams/hashicorp/packer/)
 
 ---
 
@@ -583,7 +583,7 @@ D. Store the keys in the image itself so later builds can read them from there
 
 ## Where to go deeper
 
-- [Packer Associate cert page](../../exams/hashicorp/packer-associate/) - notes, practice plan, strategy
+- [Packer Associate cert page](../../exams/hashicorp/packer/) - notes, practice plan, strategy
 - [Terraform Associate practice questions](./hashicorp-terraform-associate.md) - the deployment half of the workflow
 - [Terraform explained](../../learn/concepts/terraform-explained.md) - IaC in plain English
 - **[📖 Packer documentation](https://developer.hashicorp.com/packer/docs)** - primary source

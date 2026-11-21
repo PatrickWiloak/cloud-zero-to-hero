@@ -1457,13 +1457,13 @@
       "exam_retires": "2026-07-15"
     },
     {
-      "id": "hashicorp/nomad-associate",
+      "id": "hashicorp/nomad",
       "provider": "hashicorp",
       "provider_name": "HashiCorp",
-      "slug": "nomad-associate",
+      "slug": "nomad",
       "name": "HashiCorp Nomad Study Track",
       "exam_code": null,
-      "level": "associate",
+      "level": "unspecified",
       "status": "track",
       "duration": null,
       "questions": null,
@@ -1473,7 +1473,7 @@
       "delivery": null,
       "format": null,
       "languages": null,
-      "path": "exams/hashicorp/nomad-associate",
+      "path": "exams/hashicorp/nomad",
       "notes_count": 6,
       "files": {
         "README.md": true,
@@ -1487,13 +1487,13 @@
       "exam_retires": null
     },
     {
-      "id": "hashicorp/packer-associate",
+      "id": "hashicorp/packer",
       "provider": "hashicorp",
       "provider_name": "HashiCorp",
-      "slug": "packer-associate",
+      "slug": "packer",
       "name": "HashiCorp Packer Study Track",
       "exam_code": null,
-      "level": "associate",
+      "level": "unspecified",
       "status": "track",
       "duration": null,
       "questions": null,
@@ -1503,7 +1503,7 @@
       "delivery": null,
       "format": null,
       "languages": null,
-      "path": "exams/hashicorp/packer-associate",
+      "path": "exams/hashicorp/packer",
       "notes_count": 6,
       "files": {
         "README.md": true,

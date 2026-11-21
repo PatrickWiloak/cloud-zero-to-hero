@@ -354,3 +354,45 @@ def on_page_context(context, page, config, nav, **kwargs):
         # "</" inside a <script> would end it early.
         page.meta["jsonld"] = json.dumps(doc, ensure_ascii=False).replace("</", "<\\/")
     return context
+
+
+# Renamed paths (2026-11-21): old URL prefix -> new prefix. Search engines and old links
+# still hit the old URLs, so every built page under a new prefix gets a stub at the
+# old one: a meta refresh plus a canonical link (GitHub Pages has no server redirects).
+MOVED = {
+    "exams/hashicorp/packer-associate/": "exams/hashicorp/packer/",
+    "exams/hashicorp/nomad-associate/": "exams/hashicorp/nomad/",
+    "resources/practice-questions/hashicorp-packer-associate/": "resources/practice-questions/hashicorp-packer/",
+    "resources/practice-questions/hashicorp-nomad-associate/": "resources/practice-questions/hashicorp-nomad/",
+}
+
+_STUB = (
+    '<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Moved</title>'
+    '<link rel="canonical" href="{url}"><meta name="robots" content="noindex">'
+    '<meta http-equiv="refresh" content="0; url={url}"></head>'
+    '<body><p>This page moved to <a href="{url}">{url}</a>.</p></body></html>'
+)
+
+
+def redirect_stubs(site_dir: Path, site_url: str) -> list[Path]:
+    """Write a stub at each old path for every index.html under a moved prefix. Returns the stubs."""
+    base = site_url.rstrip("/") + "/"
+    written = []
+    for old, new in MOVED.items():
+        root = site_dir / new
+        if not root.is_dir():
+            raise RuntimeError(f"redirect target {new} was not built - update MOVED in site_hooks.py")
+        for page in root.rglob("index.html"):
+            rel = page.relative_to(root).parent.as_posix()
+            tail = "" if rel == "." else rel + "/"
+            stub = site_dir / old / tail / "index.html"
+            if stub.exists():
+                raise RuntimeError(f"{old}{tail} is a real page again - drop it from MOVED")
+            stub.parent.mkdir(parents=True, exist_ok=True)
+            stub.write_text(_STUB.format(url=base + new + tail), encoding="utf-8")
+            written.append(stub)
+    return written
+
+
+def on_post_build(config, **kwargs):
+    redirect_stubs(Path(config["site_dir"]), config["site_url"] or "/")
