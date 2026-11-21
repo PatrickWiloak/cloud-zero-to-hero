@@ -27,10 +27,11 @@ ship cloud-zero-to-hero --no-deploy        # the push deploys the site
 
 ## Q-001: HashiCorp provider page - which exam first
 
-- status: approved
+- status: done
 - added: 2026-11-19
 - source: Search Console, last 28 days: /exams/hashicorp has 31844 impressions, position 5.9, 0 clicks
 - allow: `exams/hashicorp/README.md`
+- result: 2026-11-21 loop/queue-q-001 (not pushed) - done-when + gate passed, reviewer approved: Matches the spec, only the allowed file changed, every table value matches the guide READMEs, links resolve, no em dashe
 
 ### Spec
 
