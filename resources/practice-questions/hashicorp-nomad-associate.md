@@ -3,11 +3,11 @@ last-updated: 2026-10-22
 difficulty: intermediate
 ---
 
-# HashiCorp Nomad Associate - Practice Questions
+# HashiCorp Nomad - Practice Questions
 
-30 questions for Nomad Associate prep across architecture, job specification, scheduling, operations, and integration with Consul and Vault.
+30 questions for Nomad practice across architecture, job specification, scheduling, operations, and integration with Consul and Vault.
 
-> **Cert page:** [exams/hashicorp/nomad-associate/](../../exams/hashicorp/nomad-associate/)
+> **Study track:** [exams/hashicorp/nomad-associate/](../../exams/hashicorp/nomad-associate/)
 
 ---
 

@@ -75,3 +75,34 @@ Cover, using only facts stated in `exams/github/foundations/README.md`, `exams/g
 - `python3 .github/scripts/build-provider-indexes.py --check`
 - `python3 .github/scripts/check-internal-links.py`
 - `bash .github/scripts/validate-frontmatter.sh`
+
+## Q-003: HashiCorp Vault Associate study guide
+
+- status: approved
+- added: 2026-11-21
+- after: Q-001
+- source: HashiCorp's certifications page (developer.hashicorp.com/certifications, read 2026-11-21) lists Vault Associate (Vault 1.19 tested); the repo has no Vault guide while its Packer and Nomad guides were relabelled study tracks (no exam)
+- allow: `exams/hashicorp/vault-associate/**`, `exams/hashicorp/README.md`, `docs/certs.json`, `README.md`, `STUDY-HUB.md`, `docs/freshness.md`
+
+### Spec
+
+Create `exams/hashicorp/vault-associate/` in the house shape of `exams/hashicorp/terraform-associate/` (read it first): `README.md`, `fact-sheet.md` (frontmatter `last-updated: 2026-11-21`), `notes/` with one file per exam objective group, `practice-plan.md`, `scenarios.md` (at least 8 scenarios in the existing format) and `strategy.md`. Then run `python3 .github/scripts/build-certs-index.py`, `python3 .github/scripts/build-provider-indexes.py`, `python3 .github/scripts/build-flashcards.py` and `python3 .github/scripts/check-readme-counts.py --fix` so the generated files and counts follow.
+
+Every exam fact (exam name and version, objectives and their numbering, duration, question count or format, cost, validity, delivery, Vault version tested) must come from HashiCorp's own pages on developer.hashicorp.com: fetch the certifications page and the Vault Associate exam page and its objectives/content list. Write "not stated by HashiCorp" for any logistics value those pages do not give; never estimate domain weights. Technical notes may use developer.hashicorp.com/vault/docs. Put each vendor URL you used in the README under "Official resources".
+
+Q-001 adds a line to `exams/hashicorp/README.md` saying the repo has no Vault guide yet: change that line so it links the new guide and only says the Vault Operations Advanced and Terraform Infrastructure Engineer Professional exams have no guide yet.
+
+### Done when
+
+- `test -f exams/hashicorp/vault-associate/README.md`
+- `test -f exams/hashicorp/vault-associate/fact-sheet.md`
+- `test -f exams/hashicorp/vault-associate/scenarios.md`
+- `grep -qF 'developer.hashicorp.com/certifications' exams/hashicorp/vault-associate/README.md`
+- `grep -qF 'vault-associate/' exams/hashicorp/README.md`
+- `bash .github/scripts/validate-cert-structure.sh`
+- `python3 .github/scripts/build-certs-index.py --check`
+- `python3 .github/scripts/build-provider-indexes.py --check`
+- `python3 .github/scripts/build-flashcards.py --check`
+- `python3 .github/scripts/check-readme-counts.py --check`
+- `python3 .github/scripts/check-internal-links.py`
+- `bash .github/scripts/validate-frontmatter.sh`

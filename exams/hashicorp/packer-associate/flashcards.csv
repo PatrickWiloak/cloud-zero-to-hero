@@ -1,10 +1,4 @@
 Question,Answer,Tags
-How long is the HashiCorp Packer Associate (003) Certification exam?,60 minutes,exam-logistics
-How many questions are on the HashiCorp Packer Associate (003) Certification exam?,57,exam-logistics
-What is the passing score for HashiCorp Packer Associate (003) Certification?,Approximately 70% (HashiCorp does not publish exact cut score),exam-logistics
-What does the HashiCorp Packer Associate (003) Certification exam cost?,$70.50 USD,exam-logistics
-How long is HashiCorp Packer Associate (003) Certification valid for?,2 years,exam-logistics
-How is the HashiCorp Packer Associate (003) Certification exam delivered?,"Online proctored (PSI), multiple-choice and multi-select",exam-logistics
 Packer (packer fundamentals),a HashiCorp tool that builds identical machine images for multiple platforms from a single template.,"notes,packer-fundamentals"
 Template (packer fundamentals),"the HCL2 configuration that tells Packer what to build, how to provision it and what to do with the result.","notes,packer-fundamentals"
 Source block (packer fundamentals),"a block that defines a reusable builder configuration, such as an Amazon EBS or Docker source.","notes,packer-fundamentals"

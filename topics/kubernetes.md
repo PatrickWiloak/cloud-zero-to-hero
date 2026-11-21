@@ -85,7 +85,7 @@ flowchart TB
 
 **Adjacent**
 - [HashiCorp Consul Associate](../exams/hashicorp/consul-associate/) - service mesh alternative
-- [HashiCorp Nomad Associate](../exams/hashicorp/nomad-associate/) - non-K8s scheduler
+- [HashiCorp Nomad study track](../exams/hashicorp/nomad-associate/) - non-K8s scheduler (no current exam)
 - [Cisco CCNA](../exams/cisco/ccna-200-301/) - the underlying network you'll debug
 
 ---

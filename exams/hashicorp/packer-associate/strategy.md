@@ -1,36 +1,8 @@
-# Packer Associate - Exam Strategy
+# Packer - Common Traps
 
-This is a 60-minute multiple choice exam with 57 questions. That works out to just over a minute per question. The test rewards broad familiarity more than depth on any single feature. You cannot look things up. Speed and confidence matter.
+> **This is a self-directed study track, not a certification guide.** HashiCorp's [certifications page](https://developer.hashicorp.com/certifications) (checked 2026-11-21) lists no Packer exam, only Terraform and Vault exams. Earlier versions of this guide quoted a cost, question count, passing score and domain weights for a "Packer Associate" exam; none of those had a vendor source, so they are removed. The notes, scenarios and labs still teach Packer as it is used in practice.
 
-## The Week Before
-
-- Confirm the PSI system check passes on your machine at least 2 days before.
-- Ensure the testing space is quiet, well-lit, and free of clutter (PSI will ask to see your workspace via webcam).
-- Sleep normally. Cramming the night before is counterproductive.
-- Do one full mock exam and review weak areas.
-
-## The Day Of
-
-- Eat a real meal 60 to 90 minutes before. Avoid heavy caffeine right before.
-- Run through your notes files for a final skim of CLI commands and plugin names.
-- Close all applications except the browser. Disable notifications.
-- Take a bathroom break immediately before check-in. You cannot pause the exam.
-
-## Time Budget
-
-- 57 questions in 60 minutes = 63 seconds per question average.
-- Budget: first pass 45 minutes at ~47 seconds per question; second pass 15 minutes for flagged items.
-- If a question consumes 90 seconds and you are not close, flag and move on.
-
-## Question-Taking Process
-
-For every question, in order:
-
-1. **Read the question twice** before looking at the answers.
-2. **Identify the domain** (builder, provisioner, post-processor, HCL, HCP, CLI). This frames the answer space.
-3. **Eliminate clearly wrong answers first.** Usually 1 or 2 distractors are obvious.
-4. **Match the remaining answers against your memory.** Pick the most specific correct option.
-5. **Flag if uncertain and move on.** Do not grind.
+The mistakes people make most often with Packer, and how to tell the options apart.
 
 ## Common Trap Patterns
 
@@ -81,15 +53,6 @@ Pauses the build for SSH debugging. Only active when `PACKER_LOG` debugging is e
 ### HCP Packer Channels
 A channel is a named pointer to an iteration (like a git branch pointing to a commit). Promoting = reassigning the pointer. Consumers reference channels, not iteration IDs directly.
 
-## Question Types to Expect
-
-- **"What does command X do?"** Know each subcommand's effect.
-- **"Which builder for scenario Y?"** Map scenarios to builders.
-- **"Order these lifecycle steps."** Parse > validate > build > provision > post-process.
-- **"Which post-processor produces Z?"** Map artifacts to post-processors.
-- **"What HCL block fixes this error?"** Know `required_plugins`, `source`, `build`, `variable`, `locals`.
-- **"Which environment variable authenticates HCP Packer?"** `HCP_CLIENT_ID`, `HCP_CLIENT_SECRET`.
-
 ## Syntax Traps
 
 **required_plugins goes inside a packer block**
@@ -120,38 +83,3 @@ Don't confuse with Terraform conventions (same here actually, but watch for subt
 - `file(path)` reads a file
 - `fileset(path, pattern)` lists files matching glob
 
-## Elimination Strategy
-
-If you have no idea, eliminate:
-
-- Options with syntax that is clearly Terraform-only (e.g., `resource "aws_..."` does not belong in Packer)
-- Options that reference deprecated JSON syntax when the question uses HCL
-- Options that name a builder for the wrong cloud
-- Options with obvious typos (HashiCorp rarely puts typos in correct answers)
-
-Then guess from the remaining 2. Never leave blank.
-
-## Mental State
-
-- This is an associate-level exam. Trust your preparation.
-- If you hit a hard question, flag and move on. Don't let it eat your time.
-- Come back at the end with fresh eyes.
-
-## Tactical Tips
-
-- **First pass fast:** answer every question you are confident on; flag uncertain ones.
-- **Second pass:** revisit flagged questions. Often later questions give hints to earlier ones.
-- **Third pass (if time):** re-read flagged questions once more.
-- **Never change a confident answer based on second-guessing.** Change only if you see a specific error.
-
-## After Submitting
-
-- Results appear immediately or within minutes.
-- If you pass, you receive a Credly badge email.
-- If you do not pass, you get a domain breakdown showing your weakest area.
-
-## Post-Certification
-
-- Certification valid 2 years.
-- Add to LinkedIn and your resume immediately.
-- Consider pairing with Terraform Associate for the full IaC credential set.

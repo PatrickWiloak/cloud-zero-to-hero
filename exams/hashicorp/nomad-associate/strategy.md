@@ -1,35 +1,8 @@
-# Nomad Associate - Exam Strategy
+# Nomad - Common Traps
 
-60 minutes, 57 questions, multiple-choice and multi-select. About 63 seconds per question on average. Pace is important; lingering on one hard question costs you two easy ones.
+> **This is a self-directed study track, not a certification guide.** HashiCorp's [certifications page](https://developer.hashicorp.com/certifications) (checked 2026-11-21) lists no Nomad exam, only Terraform and Vault exams. Earlier versions of this guide quoted a cost, question count, passing score and domain weights for a "Nomad Associate" exam; none of those had a vendor source, so they are removed. The notes, scenarios and labs still teach Nomad as it is used in practice.
 
-## The Week Before
-
-- Run PSI system check 48+ hours out.
-- Confirm testing space is quiet and clutter-free.
-- Normal sleep; don't cram.
-- One full timed mock, review gaps.
-
-## The Day Of
-
-- Real meal 60-90 min out.
-- Close all apps and notifications.
-- Bathroom break right before check-in.
-- Water nearby.
-
-## Time Budget
-
-- 57 questions / 60 minutes = 63 sec/q average
-- First pass: ~45 minutes at 47 sec/q; flag and skip hard ones
-- Second pass: 12 minutes on flagged
-- Final 3 minutes: verify all answered
-
-## Question Approach
-
-1. Read carefully. Identify the ask.
-2. Identify the domain (arch, jobspec, scheduling, networking, storage, ACL).
-3. Eliminate clearly wrong answers.
-4. Pick the most specific of the remaining.
-5. Flag if unsure, move on.
+The mistakes people make most often with Nomad, and how to tell the options apart.
 
 ## Common Trap Patterns
 
@@ -114,7 +87,7 @@ Memorize these.
 
 A job belongs to one region and one namespace.
 
-## Frequently Tested Topics
+## Questions worth answering
 
 - Which files are auto-loaded? (Nomad reads `-config` directory recursively)
 - What does `nomad job plan` do? (Dry run, shows diff and scheduling result)
@@ -123,46 +96,3 @@ A job belongs to one region and one namespace.
 - How does service mesh work with Consul Connect? (Sidecar proxy injected per task)
 - When is preemption used? (Higher-priority jobs can evict lower-priority)
 
-## Answer Patterns That Are Often Wrong
-
-- Options mentioning Kubernetes concepts (kubelet, pod, ingress controller directly) in Nomad context
-- Options suggesting YAML as Nomad's config (HCL and JSON only)
-- Options claiming `raw_exec` is safe default (it's disabled by default)
-- Options confusing system with service jobs
-
-## Answer Patterns That Are Often Right
-
-- Options specifying "HCL" or "HCL2" for config format
-- Options mentioning Consul for service discovery by default
-- Options highlighting the scheduler's bin-packing behavior
-- Options referencing Raft for server consensus
-
-## Multi-Select Considerations
-
-Some questions ask for all correct answers. Evaluate each option independently. Typically 2-3 correct out of 4-5.
-
-## Reading Difficult Questions
-
-Focus on:
-
-- **Goal:** what outcome is desired
-- **Constraint:** what must/must not happen
-- **Environment:** OSS vs Enterprise, with/without Consul, with/without Vault
-
-## Mental State
-
-- This is Associate-level. You studied; trust it.
-- Flag and move on when stuck; fresh eyes help on pass 2.
-- Don't change confident answers unless you see a specific error.
-
-## After Submitting
-
-- Results often within minutes.
-- Credly badge email for pass.
-- Fail? Review domain breakdown for retake focus.
-
-## Post-Certification
-
-- Update LinkedIn and resume.
-- Deploy a real Nomad cluster at work or home to cement skills.
-- Consider Consul Associate next.

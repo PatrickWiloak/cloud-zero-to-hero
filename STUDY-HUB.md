@@ -159,7 +159,7 @@ Heading toward security, data or AI? The decision trees for those live on the [S
 | **Azure** | 10 | AZ-900/104/204/305/400/700, MS-900, PL-100/200/900 | [exams/azure/](./exams/azure/) |
 | **GCP** | 7 | Digital Leader, Associate Cloud Engineer, Cloud Architect, Cloud Developer, DevOps, Network Engineer, Workspace Admin | [exams/gcp/](./exams/gcp/) |
 | **Kubernetes/CNCF** | 14 | KCNA, CKA, CKAD, CKNE, plus Argo (CAPA), Backstage (CBA), Cilium (CCA), GitOps (CGOA), Istio (ICA), Kyverno (KCA), OpenTelemetry (OTCA), Prometheus (PCA), Platform Engineering (CNPA), Platform Engineer (CNPE) | [exams/kubernetes/](./exams/kubernetes/) |
-| **HashiCorp** | 5 | Terraform Assoc + Pro, Consul, Packer, Nomad | [exams/hashicorp/](./exams/hashicorp/) |
+| **HashiCorp** | 3 | Terraform Assoc + Advanced, Consul (retired) (+2 study tracks) | [exams/hashicorp/](./exams/hashicorp/) |
 | **GitHub** | 3 | Foundations, Actions, Administration | [exams/github/](./exams/github/) |
 | **Red Hat** | 2 | RHCSA (EX200), OpenShift Administrator (EX280) | [exams/redhat/](./exams/redhat/) |
 | **Cisco** | 2 | CCNA (200-301), CCNP Enterprise ENCOR (350-401) | [exams/cisco/](./exams/cisco/) |
@@ -173,7 +173,9 @@ Heading toward security, data or AI? The decision trees for those live on the [S
 | **VMware** | 1 | VCP-DCV (2V0-21.23) | [exams/vmware/](./exams/vmware/) |
 | **Splunk** | 1 | Core Certified User | [exams/splunk/](./exams/splunk/) |
 | **Datadog** | 1 | Fundamentals | [exams/datadog/](./exams/datadog/) |
-| **CERTIFICATIONS TOTAL** | **81** | across 18 providers | |
+| **CERTIFICATIONS TOTAL** | **79** | across 18 providers | |
+
+The Certs column counts real exams. This repo also carries 2 self-directed study tracks, which are study guides spanning several exams or none, not certifications in their own right.
 
 ◇ = outline stage: README, fact-sheet, and practice plan are written; topic notes are outlined but not yet drafted. See [TODO.md](https://github.com/PatrickWiloak/cloud-zero-to-hero/blob/main/TODO.md) for the drafting queue.
 

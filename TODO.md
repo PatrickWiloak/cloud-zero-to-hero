@@ -48,7 +48,7 @@ Read-only fleet audit (9 agents, nothing changed). Each line: effort S (<half da
 
 ## Retired-exam sweep (2026-10-16)
 
-- [ ] 2026-11-21 HashiCorp lists no Packer, Nomad or Consul exam (developer.hashicorp.com/certifications), yet `docs/certs.json` marks Packer + Nomad Ready and the guides quote cost/duration: decide retire vs relabel as study notes; Vault x2 + Terraform Infra Eng Pro have no guide (QUEUE Q-001 respecified).
+- [x] 2026-11-21 Packer + Nomad relabelled Study track (HashiCorp lists no such exam; fake cost/questions/weights removed); Vault Associate guide queued as QUEUE Q-003. Vault Ops Advanced + Terraform Infra Eng Pro: wait for Search Console demand.
 
 - [x] 2026-10-16 Checked every Azure guide against Microsoft's [retired-exams page](https://learn.microsoft.com/en-us/credentials/support/retired-certification-exams): nine were retired but unflagged. Now marked RETIRED with `exam-retires:` (status flips to Retired in `certs.json` and the provider tables): MS-900 (2026-03-31), DP-100 (06-01), AI-102 (06-30), AI-900 (06-30), AZ-204 (07-31), AZ-500 (08-31), PL-200 (08-31), plus DP-203 (2025-03-31, date from Microsoft Q&A and third-party posts, not the page) and PL-100 (2024-06-30). The only Azure exam on Microsoft's "retiring in 12 months" list is MS-102, which the repo does not cover.
 - [ ] **Successors not built or verified.** Third-party posts report AZ-204 -> AI-200; confirm on learn.microsoft.com before writing any guide. Retired guides (MS-900, AZ-204, PL-100, PL-200) still have practice banks, flashcards and `labs-by-cert` entries; decide whether to keep them as reference or prune.

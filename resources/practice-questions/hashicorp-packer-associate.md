@@ -3,11 +3,11 @@ last-updated: 2026-10-22
 difficulty: intermediate
 ---
 
-# HashiCorp Packer Associate (003) - Practice Questions
+# HashiCorp Packer - Practice Questions
 
-30 questions for Packer Associate prep across templates, builders, provisioners, post-processors, variables, and HCP Packer.
+30 questions for Packer practice across templates, builders, provisioners, post-processors, variables, and HCP Packer.
 
-> **Cert page:** [exams/hashicorp/packer-associate/](../../exams/hashicorp/packer-associate/)
+> **Study track:** [exams/hashicorp/packer-associate/](../../exams/hashicorp/packer-associate/)
 
 ---
 

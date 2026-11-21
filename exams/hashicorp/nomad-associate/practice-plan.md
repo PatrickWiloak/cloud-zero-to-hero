@@ -1,4 +1,4 @@
-# Nomad Associate - Practice Plan
+# Nomad - Practice Plan
 
 A 4-week plan at 8 to 10 hours per week. Compress to 3 weeks with existing Nomad experience; extend to 5 to 6 weeks if new to orchestrators.
 
@@ -89,7 +89,7 @@ A 4-week plan at 8 to 10 hours per week. Compress to 3 weeks with existing Nomad
 - You know bridge vs host vs CNI networking
 - You can mount a host volume into a task
 
-## Week 4: ACLs, Federation, Ops, Exam Prep
+## Week 4: ACLs, Federation, Ops
 
 **Reading**
 - Notes file `06-acl-security-and-federation.md`
@@ -110,10 +110,9 @@ A 4-week plan at 8 to 10 hours per week. Compress to 3 weeks with existing Nomad
 - Configure Nomad's `vault {}` stanza
 - Write a jobspec with `vault { policies = [...] }` and a template that reads a secret
 
-**Exam prep**
+**Self-check**
 - Work every scenario in `scenarios.md` before reading answers
 - Build 25 flashcards from fact-sheet (drivers, job types, ports, capabilities)
-- Two 60-minute timed mock sessions
 - Review weakest domain in depth
 
 ## Daily Drills (week 4, 15 minutes)
@@ -123,19 +122,6 @@ A 4-week plan at 8 to 10 hours per week. Compress to 3 weeks with existing Nomad
 - Recite Nomad default ports
 - Parse 3 constraint or grant strings
 - Explain Consul Connect sidecar setup
-
-## Mock Exam Structure
-
-Build a 57-question drill across domains:
-
-- 11 architecture
-- 14 job specs
-- 11 scheduling
-- 9 networking
-- 6 storage
-- 6 ACLs/federation
-
-Strict 60-minute timing. Review every wrong answer against notes.
 
 ## Hands-on Lab Environment Checklist
 
@@ -147,16 +133,9 @@ Strict 60-minute timing. Review every wrong answer against notes.
 - [ ] Host volume mounted and data persists
 - [ ] ACL bootstrap done; token-scoped access tested
 
-## Final 3 Days
-
-- Day 3: Full mock exam; review top 3 weak areas
-- Day 2: Re-read those notes files and `strategy.md`
-- Day 1: Light review, rest, early sleep
-
-## Beyond the Associate
+## Next steps
 
 Natural follow-ups:
 
-- Consul Associate (deep service mesh understanding)
 - Vault Associate (secrets management for Nomad workloads)
 - Terraform Associate (provision Nomad clusters as code)

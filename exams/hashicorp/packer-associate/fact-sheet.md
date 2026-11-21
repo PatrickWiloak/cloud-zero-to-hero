@@ -1,29 +1,14 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-11-21
 ---
 
-# Packer Associate (003) - Fact Sheet
+# Packer - Fact Sheet
 
-## Exam Logistics
+> **This is a self-directed study track, not a certification guide.** HashiCorp's [certifications page](https://developer.hashicorp.com/certifications) (checked 2026-11-21) lists no Packer exam, only Terraform and Vault exams. Earlier versions of this guide quoted a cost, question count, passing score and domain weights for a "Packer Associate" exam; none of those had a vendor source, so they are removed. The notes, scenarios and labs still teach Packer as it is used in practice.
 
-| Attribute | Value |
-|-----------|-------|
-| Exam name | HashiCorp Certified: Packer Associate (003) |
-| Delivery | Online proctored (PSI), multiple-choice and multi-select |
-| Duration | 60 minutes |
-| Number of questions | 57 |
-| Passing score | Approximately 70% (HashiCorp does not publish exact cut score) |
-| Cost | $70.50 USD |
-| Language | English |
-| Validity | 2 years |
-| Retake wait | 14 days first retake, 30 days second, 1 year third |
-| Recommended experience | 6+ months with Packer, comfort with at least one cloud |
+## Topic areas
 
-## Exam Domains and Weights
-
-Weights below are realistic estimates aligned with HashiCorp's published objectives.
-
-### Domain 1: Packer Fundamentals (approximately 15%)
+### Domain 1: Packer Fundamentals
 
 - What Packer is and what problem it solves (immutable infrastructure, golden images)
 - Packer vs Terraform, Packer vs configuration management (Ansible/Chef/Puppet)
@@ -31,7 +16,7 @@ Weights below are realistic estimates aligned with HashiCorp's published objecti
 - Packer CLI: `packer init`, `fmt`, `validate`, `build`, `inspect`, `hcl2_upgrade`, `plugins`
 - Installing Packer and managing versions
 
-### Domain 2: Plugins: Builders, Provisioners, Post-Processors (approximately 25%)
+### Domain 2: Plugins: Builders, Provisioners, Post-Processors
 
 - Plugin architecture: external plugins pulled via `packer init`
 - Key builders: amazon-ebs, amazon-ebssurrogate, amazon-chroot, amazon-instance, azure-arm, googlecompute, vsphere-iso, docker, qemu, virtualbox-iso, hyperv-iso, null
@@ -40,7 +25,7 @@ Weights below are realistic estimates aligned with HashiCorp's published objecti
 - When to use each
 - Ordering and pipelines
 
-### Domain 3: HCL2 Configuration Authoring (approximately 20%)
+### Domain 3: HCL2 Configuration Authoring
 
 - File layout: `.pkr.hcl` files, `packer {}` block, `source` blocks, `build` blocks, `variable` and `local` blocks
 - Variable types: string, number, bool, list, map, object
@@ -51,7 +36,7 @@ Weights below are realistic estimates aligned with HashiCorp's published objecti
 - Required plugins block with version constraints
 - `hcl2_upgrade` for migrating JSON to HCL
 
-### Domain 4: HCP Packer and Artifact Management (approximately 15%)
+### Domain 4: HCP Packer and Artifact Management
 
 - HCP Packer overview: image registry, channels, iterations
 - `hcp-packer-registry` post-processor
@@ -60,7 +45,7 @@ Weights below are realistic estimates aligned with HashiCorp's published objecti
 - Ancestry and compliance views
 - Revoking iterations
 
-### Domain 5: CI/CD and Multi-Cloud (approximately 15%)
+### Domain 5: CI/CD and Multi-Cloud
 
 - Running Packer in GitHub Actions, GitLab CI, Jenkins
 - Parallel builds across multiple clouds from one template
@@ -68,7 +53,7 @@ Weights below are realistic estimates aligned with HashiCorp's published objecti
 - Versioning images (manifest post-processor, tag conventions)
 - Using Packer with Terraform (build image, then provision)
 
-### Domain 6: Security and Credentials (approximately 10%)
+### Domain 6: Security and Credentials
 
 - Sensitive variables (`sensitive = true`)
 - Environment variables for credentials (`AWS_ACCESS_KEY_ID`, `GOOGLE_APPLICATION_CREDENTIALS`, etc.)
@@ -297,13 +282,13 @@ resource "aws_instance" "web" {
 
 ## Legacy JSON vs HCL2
 
-The JSON template format is deprecated. All new exam content is HCL2. If you encounter JSON templates, use `packer hcl2_upgrade template.json` to convert. Key differences:
+The JSON template format is deprecated. All current Packer configuration is HCL2. If you encounter JSON templates, use `packer hcl2_upgrade template.json` to convert. Key differences:
 
 - HCL2 uses `source` and `build` blocks; JSON used `builders` and `provisioners` arrays
 - HCL2 supports `locals`, `dynamic` blocks, and richer functions
 - HCL2 has `required_plugins` with version constraints
 
-## Frequently Asked Exam Topics
+## Topics worth extra time
 
 - How are plugins installed? (`packer init`)
 - What is the difference between `only` and `except`? (Run or skip specific builds)

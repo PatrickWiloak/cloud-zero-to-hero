@@ -1,4 +1,4 @@
-# Packer Associate - Practice Plan
+# Packer - Practice Plan
 
 A 3-week plan assuming 8 to 10 hours per week. Extend to 4 weeks if new to Packer; compress to 2 weeks if you already build production images regularly.
 
@@ -56,7 +56,7 @@ A 3-week plan assuming 8 to 10 hours per week. Extend to 4 weeks if new to Packe
 - You understand what each post-processor adds to the pipeline
 - You can read a `manifest.json` and explain what it contains
 
-## Week 3: HCP Packer, Multi-Cloud, CI/CD, Exam Prep
+## Week 3: HCP Packer, Multi-Cloud, CI/CD
 
 **Reading**
 - Notes file `05-multi-cloud-images.md`
@@ -79,16 +79,11 @@ A 3-week plan assuming 8 to 10 hours per week. Extend to 4 weeks if new to Packe
 - Add an `azure-arm` or `googlecompute` source to the same build
 - Run `packer build` and confirm images in both clouds
 
-**Mock exam**
+**Self-check**
 - Take a 60-minute untimed review of `scenarios.md`
 - Identify any weak topics from the fact sheet
 - Re-read relevant notes files
 
-**Final 3 days**
-- Review all notes files quickly
-- Do two timed 60-minute practice sessions using `scenarios.md` as Q bank
-- Read `strategy.md`
-- Ensure exam-day logistics are ready
 
 ## Daily Drills (15 minutes during week 3)
 
@@ -96,19 +91,6 @@ A 3-week plan assuming 8 to 10 hours per week. Extend to 4 weeks if new to Packe
 - Name 5 builders, 3 provisioners, 3 post-processors
 - Explain variable precedence (CLI > env > var-file > default)
 - Explain the difference between `only` and `except`
-
-## Mini Mock Exam Structure
-
-Build your own 57-question drill from the scenarios and fact sheet. Distribute by domain weight:
-
-- 9 questions on fundamentals (CLI, lifecycle)
-- 14 on plugins (builders, provisioners, post-processors)
-- 11 on HCL2 authoring
-- 9 on HCP Packer
-- 9 on CI/CD and multi-cloud
-- 5 on security and credentials
-
-Time yourself strictly. Do not look up answers during the drill. Grade and review after.
 
 ## Hands-on Lab Environment Checklist
 
@@ -120,19 +102,11 @@ Time yourself strictly. Do not look up answers during the drill. Grade and revie
 - [ ] You have registered an image in HCP Packer
 - [ ] You have a working CI pipeline that runs validate on PR
 
-## Final Week Tactics
+## Next steps
 
-- Day 3: final mock exam, review gaps
-- Day 2: read notes files once more, rest of day off
-- Day 1: rest, no studying, early sleep
-- Exam day: light breakfast, quiet room, no last-minute cramming
-
-## Beyond the Associate
-
-If you plan to pursue the HashiCorp automation track, pair this with:
+Pair this with HashiCorp exams that exist today:
 
 - Terraform Associate or Professional
 - Vault Associate (for credential management in build pipelines)
-- Consul Associate (service discovery for built images)
 
-Packer slots naturally between Terraform (infrastructure) and runtime configuration (Ansible/Chef/cloud-init). Understanding the full stack makes the cert more useful.
+Packer slots naturally between Terraform (infrastructure) and runtime configuration (Ansible/Chef/cloud-init). Understanding the full stack makes each tool more useful.

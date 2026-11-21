@@ -1,26 +1,14 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-11-21
 ---
 
-# Nomad Associate - Fact Sheet
+# Nomad - Fact Sheet
 
-## Exam Logistics
+> **This is a self-directed study track, not a certification guide.** HashiCorp's [certifications page](https://developer.hashicorp.com/certifications) (checked 2026-11-21) lists no Nomad exam, only Terraform and Vault exams. Earlier versions of this guide quoted a cost, question count, passing score and domain weights for a "Nomad Associate" exam; none of those had a vendor source, so they are removed. The notes, scenarios and labs still teach Nomad as it is used in practice.
 
-| Attribute | Value |
-|-----------|-------|
-| Exam name | HashiCorp Certified: Nomad Associate |
-| Delivery | Online proctored (PSI), multi-choice and multi-select |
-| Duration | 60 minutes |
-| Number of questions | 57 |
-| Passing score | ~70% (HashiCorp reports pass or fail) |
-| Cost | $70.50 USD |
-| Language | English |
-| Validity | 2 years |
-| Recommended experience | 3-6 months with Nomad, Linux and Docker basics |
+## Topic areas
 
-## Domains and Weights (estimated)
-
-### Domain 1: Architecture and Cluster Concepts (~20%)
+### Domain 1: Architecture and Cluster Concepts
 
 - Servers and clients
 - Raft consensus and leader election
@@ -30,7 +18,7 @@ last-updated: 2026-05-03
 - Scheduler internals (reconciler, planner)
 - HCP Nomad vs self-managed
 
-### Domain 2: Job Specifications (HCL) (~25%)
+### Domain 2: Job Specifications (HCL)
 
 - Jobs, groups, tasks structure
 - Job types: `service`, `batch`, `system`, `sysbatch`
@@ -45,7 +33,7 @@ last-updated: 2026-05-03
 - Constraints and affinities
 - Spreads
 
-### Domain 3: Scheduling and Allocations (~20%)
+### Domain 3: Scheduling and Allocations
 
 - Bin-packing (default)
 - Spread scheduling
@@ -58,7 +46,7 @@ last-updated: 2026-05-03
 - Preemption
 - Task groups and scaling
 
-### Domain 4: Networking and Service Discovery (~15%)
+### Domain 4: Networking and Service Discovery
 
 - Network modes: `host`, `bridge`, `none`, CNI
 - Static and dynamic ports
@@ -69,7 +57,7 @@ last-updated: 2026-05-03
 - Consul Connect / service mesh sidecars
 - Ingress with Consul or Traefik
 
-### Domain 5: Storage and Volumes (~10%)
+### Domain 5: Storage and Volumes
 
 - Ephemeral disk
 - Host volumes (pre-declared on the client)
@@ -78,7 +66,7 @@ last-updated: 2026-05-03
 - `mount` block in task
 - Volume lifecycle: register, create, claim, release
 
-### Domain 6: ACL Security and Federation (~10%)
+### Domain 6: ACL Security and Federation
 
 - Bootstrap ACL
 - Tokens: management, client
@@ -420,7 +408,7 @@ template {
 
 Nomad fetches a Vault token for the task, rotates it, revokes on stop.
 
-## Enterprise Features (not Associate-required but worth knowing)
+## Enterprise Features (worth knowing)
 
 - Namespaces (now in OSS 1.0+)
 - Sentinel policy integration
@@ -447,7 +435,7 @@ Nomad bundles a web UI at `http://<server>:4646/ui/`:
 | 4647 | RPC (server to server, client to server) |
 | 4648 | Serf gossip (WAN + LAN) |
 
-## Quick-Fire Exam Facts
+## Quick-fire facts
 
 - Raft quorum requires (N/2)+1 servers for an N-server cluster
 - Recommended server counts: 3 or 5 (odd numbers)

@@ -1,10 +1,4 @@
 Question,Answer,Tags
-How long is the HashiCorp Nomad Associate Certification exam?,60 minutes,exam-logistics
-How many questions are on the HashiCorp Nomad Associate Certification exam?,57,exam-logistics
-What is the passing score for HashiCorp Nomad Associate Certification?,~70% (HashiCorp reports pass or fail),exam-logistics
-What does the HashiCorp Nomad Associate Certification exam cost?,$70.50 USD,exam-logistics
-How long is HashiCorp Nomad Associate Certification valid for?,2 years,exam-logistics
-How is the HashiCorp Nomad Associate Certification exam delivered?,"Online proctored (PSI), multi-choice and multi-select",exam-logistics
 Server agent (nomad architecture),"a Nomad agent that maintains cluster state, takes part in Raft and makes scheduling decisions.","notes,nomad-architecture"
 Client agent (nomad architecture),a Nomad agent that registers with the servers and runs the tasks allocated to its node.,"notes,nomad-architecture"
 Raft (nomad architecture),the consensus protocol Nomad servers use to replicate state and elect a leader.,"notes,nomad-architecture"

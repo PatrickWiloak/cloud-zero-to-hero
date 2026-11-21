@@ -60,7 +60,7 @@ PROVIDER_HIGHLIGHTS = {
     "gcp": "Digital Leader, Associate Cloud Engineer, Cloud Architect, Cloud Developer, DevOps, Network Engineer, Workspace Admin",
     "kubernetes": "KCNA, CKA, CKAD, CKNE, plus Argo (CAPA), Backstage (CBA), Cilium (CCA), GitOps (CGOA), Istio (ICA), Kyverno (KCA), OpenTelemetry (OTCA), Prometheus (PCA), Platform Engineering (CNPA), Platform Engineer (CNPE)",
     "nvidia": "AI Infra & Ops, GenAI/LLM, Multimodal, Agentic AI, Networking, OpenUSD",
-    "hashicorp": "Terraform Assoc + Pro, Consul, Packer, Nomad",
+    "hashicorp": "Terraform Assoc + Advanced, Consul (retired)",
     "databricks": "Data Engineer (A/P), ML (A/P), GenAI Engineer, Lakehouse Admin",
     "snowflake": "SnowPro Core + 3 Advanced (Architect, Data Eng, Admin)",
     "github": "Foundations, Actions, Administration",
