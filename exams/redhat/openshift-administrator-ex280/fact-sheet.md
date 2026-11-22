@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-11-22
 ---
 
 # OpenShift Administrator (EX280) - Fact Sheet
@@ -8,14 +8,15 @@ last-updated: 2026-05-03
 
 **Exam Code:** EX280
 **Duration:** 3 hours
-**Format:** Performance-based hands-on tasks on a live OpenShift 4.x cluster
-**Passing Score:** 210/300 (70%)
-**Cost:** $500 USD
-**Validity:** 3 years
+**Format:** Performance-based hands-on tasks on a live cluster; the exam page names Red Hat OpenShift Container Platform 4.22 (read 2026-11-22)
+**Passing Score:** 210/300 (70%) (not stated on the EX280 page; widely reported)
+**Cost:** $500 USD (US list; not stated on the EX280 page, check it)
+**Validity:** 3 years (not stated on the EX280 page)
+**Objective groups (exam page):** Manage OpenShift Container Platform; Declarative resource management; Deploy applications; Manage authentication and authorization; Configure network security; Enable developer self-service; Manage OpenShift operators; Configure application security
 **Open documentation:** `oc explain`, web console, cluster resources
 
 **[📖 Official EX280 page](https://www.redhat.com/en/services/training/red-hat-certified-openshift-administrator-exam)**
-**[📖 OpenShift 4.14 Documentation](https://docs.redhat.com/en/documentation/openshift_container_platform/4.14)**
+**[📖 OpenShift 4.22 Documentation](https://docs.redhat.com/en/documentation/openshift_container_platform/4.22)**
 **[📖 Latest OpenShift Docs](https://docs.openshift.com/)**
 
 ---

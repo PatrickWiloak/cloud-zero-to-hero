@@ -21,7 +21,7 @@ This cert is the canonical credential for OpenShift platform administrators and 
 | **Cost** | $500 USD |
 | **Validity** | 3 years |
 | **Delivery** | Individual exam (online via Red Hat Remote Exam) or testing center |
-| **OpenShift Version** | OpenShift 4.x (current exam reflects 4.14+ features) |
+| **OpenShift Version** | OpenShift Container Platform 4.22 (EX280 page, read 2026-11-22); notes were written against 4.14 |
 | **Prerequisites** | RHCSA strongly recommended; experience with Linux containers |
 
 **[📖 Official EX280 page](https://www.redhat.com/en/services/training/red-hat-certified-openshift-administrator-exam)**

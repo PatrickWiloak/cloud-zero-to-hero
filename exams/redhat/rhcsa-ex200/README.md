@@ -21,7 +21,7 @@ This cert is the foundation of the Red Hat certification path and a prerequisite
 | **Cost** | $500 USD (varies by region) |
 | **Validity** | 3 years |
 | **Delivery** | Individual exam (in-person testing center) or Remote (RHU Individual Exam) |
-| **Current RHEL Version** | RHEL 9 (latest exam objectives reflect RHEL 9.x) |
+| **Current RHEL Version** | RHEL 10 (the EX200 page says the exam "is based on Red Hat Enterprise Linux 10", read 2026-11-22; these notes were written for RHEL 9) |
 | **Prerequisites** | None formally; recommended Red Hat System Administration I (RH124) and II (RH134) courses or equivalent |
 
 **[📖 Official RHCSA page](https://www.redhat.com/en/services/certification/rhcsa)**

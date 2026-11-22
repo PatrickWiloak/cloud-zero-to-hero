@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-11-22
 ---
 
 # RHCSA (EX200) - Fact Sheet
@@ -8,16 +8,17 @@ last-updated: 2026-05-03
 
 **Exam Code:** EX200
 **Duration:** 3 hours
-**Format:** Performance-based hands-on tasks on a live RHEL 9 system
-**Passing Score:** 210 / 300 (70%)
-**Cost:** $500 USD
-**Validity:** 3 years
+**Format:** Performance-based hands-on tasks on a live system. The exam page now says the exam "is based on Red Hat Enterprise Linux 10" (read 2026-11-22); these notes were written for RHEL 9, so check each task against the RHEL 10 docs
+**Passing Score:** 210 / 300 (70%) (not stated on the EX200 page; widely reported)
+**Cost:** $500 USD (US list; the EX200 page prices by region, check it)
+**Validity:** 3 years (not stated on the EX200 or RHCSA page)
 **Open documentation during exam:** `man`, `info`, `--help`, `/usr/share/doc/`
 **Internet access during exam:** No
 
 **[📖 Official RHCSA page](https://www.redhat.com/en/services/certification/rhcsa)**
 **[📖 Exam objectives](https://www.redhat.com/en/services/training/ex200-red-hat-certified-system-administrator-rhcsa-exam)**
-**[📖 RHEL 9 Documentation](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9)**
+**[📖 RHEL 10 Documentation](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10)**
+**[📖 RHEL 9 Documentation](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9)** - what these notes were written against
 
 ---
 
