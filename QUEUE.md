@@ -134,3 +134,39 @@ Exam facts come only from Splunk's own pages: the Power User certification page,
 - `python3 .github/scripts/check-readme-counts.py --check`
 - `python3 .github/scripts/check-internal-links.py`
 - `bash .github/scripts/validate-frontmatter.sh`
+
+## Q-005: Elastic Certified Observability Engineer study guide
+
+- status: approved
+- added: 2026-11-22
+- source: TODO.md "Elastic Certified Observability Engineer SKIPPED"; the exam page (elastic.co/training/elastic-certified-observability-engineer-exam) renders client-side, so it was read in a headless browser on 2026-11-22 and the facts are copied into the spec below
+- allow: `exams/elastic/**`, `docs/certs.json`, `README.md`, `STUDY-HUB.md`, `docs/freshness.md`
+
+### Spec
+
+Create `exams/elastic/README.md` (provider page, same shape as `exams/splunk/README.md`) and `exams/elastic/observability-engineer/` in the house shape of `exams/splunk/core-user/`: `README.md`, `fact-sheet.md` (frontmatter `last-updated` = build date), `notes/` with one file per objective group below (in-depth teaching prose, not cheat-sheet bullets), `practice-plan.md`, `scenarios.md` (at least 8, existing format) and `strategy.md`. Then run `python3 .github/scripts/build-certs-index.py`, `python3 .github/scripts/build-provider-indexes.py`, `python3 .github/scripts/build-flashcards.py` and `python3 .github/scripts/check-readme-counts.py --fix`.
+
+Exam facts as read on 2026-11-22 (cite the exam page URL; WebFetch returns no body for it, do not try to re-read it): duration 3 hours; cost USD 500; language English; no requirements; Elastic "highly encourages" the Elastic Observability Engineer course or self-paced learning plan; candidates "should be able to complete all of the following exam objectives with only the assistance of Elastic documentation" (hands-on). Question/task count, passing score, validity and stack version are not stated: write "not stated by Elastic". Objective groups, verbatim:
+- Uptime: configure and run Heartbeat to determine the uptime of a process or service; use Heartbeat to determine if a service is reachable via ICMP, TCP or HTTP; use the Uptime app in Kibana to monitor uptime and availability.
+- Metrics: install the Elastic Agent to collect metrics; enable and configure integrations to collect a service's metrics; use the Metrics app to analyze metrics; use the Metrics app to enable and analyze the predefined ML jobs.
+- Logging: install the Elastic Agent to collect logs; enable and configure integrations to collect a service's logs; configure integrations to tail a custom log file; use the Logs app to analyze log events; use the Logs app to enable and analyze the predefined ML jobs.
+- APM: use the APM app to analyze APM data; use the User Experience (RUM) app to analyze RUM data; edit and configure the APM integration.
+- Structuring and Processing Data: edit or define an ingest pipeline in Kibana; configure the custom logs integration to use an ingest pipeline; define pipelines using processors including append, convert, date, dissect, dot expander, geoip, grok, fail, json, remove, rename, set and split.
+- Working with Observability Data: find anomalies with the predefined ML jobs; define an ML job on observability data; define or edit an ILM policy; define an alert with Kibana Alerts; build dashboards from observability data.
+
+Technical notes may use elastic.co/docs and elastic.co/guide. Where the current docs have renamed or replaced an app the objectives name (for example the Uptime app vs Synthetics), say so and teach both, since the stack version is unknown.
+
+### Done when
+
+- `test -f exams/elastic/README.md`
+- `test -f exams/elastic/observability-engineer/README.md`
+- `test -f exams/elastic/observability-engineer/fact-sheet.md`
+- `test -f exams/elastic/observability-engineer/scenarios.md`
+- `grep -qF 'elastic-certified-observability-engineer-exam' exams/elastic/observability-engineer/README.md`
+- `bash .github/scripts/validate-cert-structure.sh`
+- `python3 .github/scripts/build-certs-index.py --check`
+- `python3 .github/scripts/build-provider-indexes.py --check`
+- `python3 .github/scripts/build-flashcards.py --check`
+- `python3 .github/scripts/check-readme-counts.py --check`
+- `python3 .github/scripts/check-internal-links.py`
+- `bash .github/scripts/validate-frontmatter.sh`
