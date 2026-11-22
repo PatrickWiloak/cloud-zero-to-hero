@@ -53,10 +53,11 @@ Respecified 2026-11-21: the first version asked for a Packer/Nomad decision list
 
 ## Q-002: GitHub provider page - which GH exam first
 
-- status: approved
+- status: done
 - added: 2026-11-19
 - source: Search Console, last 28 days: /exams/github has 8919 impressions, position 6.2, 0 clicks
 - allow: `exams/github/README.md`
+- result: 2026-11-22 loop/queue-q-002 (not pushed) - done-when + gate passed, reviewer approved: Every claim in the new section traces to the three GitHub READMEs, it sits only above the generated block in the allowli
 
 ### Spec
 
