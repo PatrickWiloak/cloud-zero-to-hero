@@ -199,11 +199,13 @@ options ndots:5
 
 Which Pods receive Service traffic is decided by EndpointSlices. A Pod that is not ready is not an endpoint, and its DNS record is withheld (unless `publishNotReadyAddresses=True`). Readiness is therefore how you control endpoint availability.
 
-From the probes task page (which shows `tcpSocket` and gRPC probes, `initialDelaySeconds`, `periodSeconds` and startup probes) and general practice:
+From the probes task page (which shows `tcpSocket` and gRPC probes, `initialDelaySeconds`, `periodSeconds` and startup probes; the three points below re-checked against it on 2026-11-22):
 
 - A failing **readiness probe** marks the Pod not ready and removes its IP from Service endpoints without restarting the container.
 - Probe types: `httpGet`, `tcpSocket`, `exec` and `grpc`; tuning fields include `initialDelaySeconds`, `periodSeconds`, `timeoutSeconds`, `successThreshold` and `failureThreshold`.
 - A **startup probe** holds off liveness and readiness checks for slow-starting containers.
+
+**[📖 Configure liveness, readiness and startup probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)** - probe types, tuning fields, what a failure does
 
 For a task like "traffic reaches Pods that are still starting," add or fix the readiness probe. For "a Service has no endpoints," compare the Service `selector` with the Pod labels and check readiness.
 
