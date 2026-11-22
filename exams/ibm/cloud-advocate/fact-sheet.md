@@ -66,7 +66,7 @@ last-updated: 2026-05-03
 - **[📖 IBM Cloud Console](https://cloud.ibm.com/)**
 - **[📖 IBM Cloud Catalog](https://cloud.ibm.com/catalog)**
 - **[📖 Account Management](https://cloud.ibm.com/docs/account)**
-- **[📖 IAM Overview](https://cloud.ibm.com/docs/account?topic=account-iamoverview)**
+- **[📖 IAM Overview](https://cloud.ibm.com/docs/iam?topic=iam-iamoverview)**
 - **[📖 Resource Groups](https://cloud.ibm.com/docs/account?topic=account-rgs)**
 - **[📖 Virtual Servers](https://cloud.ibm.com/docs/virtual-servers)**
 - **[📖 Kubernetes Service](https://cloud.ibm.com/docs/containers)**
@@ -142,13 +142,13 @@ last-updated: 2026-05-03
 - Spending notifications and alerts
 
 **Cost Management Resources:**
-- **[📖 Billing and Usage](https://cloud.ibm.com/docs/account?topic=account-costs)**
+- **[📖 Billing and Pricing Charges](https://cloud.ibm.com/docs/account?topic=account-billing-pricing-charges)**
 - **[📖 Pricing](https://www.ibm.com/cloud/pricing)**
 - **[📖 Cost Estimator](https://cloud.ibm.com/estimator)**
-- **[📖 Managing Costs](https://cloud.ibm.com/docs/account?topic=account-costs)**
+- **[📖 Viewing Usage and Cost Analysis](https://cloud.ibm.com/docs/account?topic=account-viewingusage)**
 - **[📖 Resource Tagging](https://cloud.ibm.com/docs/account?topic=account-tag)**
-- **[📖 Spending Notifications](https://cloud.ibm.com/docs/account?topic=account-costs)**
-- **[📖 Usage Reports](https://cloud.ibm.com/docs/account?topic=account-costs)**
+- **[📖 Spending Notifications (billing FAQ)](https://cloud.ibm.com/docs/account?topic=account-billusagefaqs#spending-notification)**
+- **[📖 Usage Reports](https://cloud.ibm.com/docs/account?topic=account-understand-reports)**
 
 ### 6. Migration and Modernization (10%)
 - Cloud migration strategies (rehost, replatform, refactor)

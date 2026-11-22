@@ -78,7 +78,7 @@ Read-only fleet audit (9 agents, nothing changed). Each line: effort S (<half da
 - [ ] 2026-11-29 Verify from-memory details flagged in the 2026-10-22 rewrites: PCNE gcloud flags (`--bgp-bps-*`, `firewall-rules migrate`, PBR next hop, Secure Web Proxy import) and Terraform Advanced OPA Rego sample (`notes/06-hcp-terraform.md`).
 - [ ] 2026-11-22 Reconcile README vs fact-sheet against vendor pages, not each other (11-06: both differ per exam across IBM x4, OCI x5, PL-900; codes also differ, Advocate -176/-170, SRE -173/-174; PL-900 still names Power Virtual Agents).
 - [x] 2026-11-06 Salesforce Administrator renamed Platform Administrator (Plat-Admn-201) from the credential page.
-- [ ] 2026-11-22 Pat: in a browser, check VCP-DCV 2V0-21.23 is still current and find the new IBM links (`account-iamoverview`, `account-costs`). 11-06: Broadcom + IBM pages unreadable by tools.
+- [x] 2026-11-22 VCP-DCV + IBM links ✅ 2026-11-22 Broadcom page (headless browser) still lists 2V0-21.23 (vSphere 8.x Professional); IBM links re-pointed from the ibm-cloud-docs source: iam-iamoverview, account-billing-pricing-charges, -viewingusage, -billusagefaqs, -understand-reports.
 - [x] 2026-10-22 All 39 remaining 15-question banks expanded to 30 (new questions carry Key Concept links; Q1-15 in those banks do not).
 
 ## Content backlog (gap review 2026-10-16, ranked)
@@ -224,9 +224,9 @@ all 783 now repaired**, each replacement fetched and title-checked. The old-to-n
 - [x] ✅ 2026-10-31 submitted via API (read, 1,075 URLs, 0 errors); 2026-11-01 Patrick (moved from 10-28): Search Console `sc-domain:noblerworks.com` -> submit `https://cloud.noblerworks.com/sitemap.xml`.
 - [x] ~~CompTIA A+ (220-1201/1202)~~ ✅ done 2026-09-28 - the biggest-search-volume gap.
 - [ ] 2026-11-22 Pat (2 min, browser): **confirm the A+ voucher price** (11-06: store URL redirects away headless; third parties say $249-$274) on the CompTIA store (US) and replace the "not verified"
-      line in `exams/comptia/a-plus/fact-sheet.md` (CompTIA renders prices client-side; no official figure was readable).
+      line in `exams/comptia/a-plus/fact-sheet.md` (CompTIA renders prices client-side; no official figure was readable). ✏️ 2026-11-22 re-tried with a headless browser: shop.comptia.org product pages still redirect to comptia.org; still needs you.
 - [x] 2026-11-07 CompTIA **Linux+ (XK0-006, V8)** guide built from the official objectives PDF v5.0 and the CompTIA page: `exams/comptia/linux-plus/`, 5 notes, 20 questions, flashcards, lab map.
-- [ ] 2026-11-21 Pat (2 min, browser): confirm **Linux+ price and validity** on the CompTIA store/CE page (neither is on the Linux+ page; fact-sheet says "not verified"), and the XK0-005 retirement date (third party says 2026-01-13).
+- [ ] 2026-11-21 Pat (2 min, browser): confirm **Linux+ price and validity** on the CompTIA store/CE page (neither is on the Linux+ page; fact-sheet says "not verified"), and the XK0-005 retirement date (third party says 2026-01-13). ✏️ 2026-11-22 headless browser: Linux+ page matches fact-sheet (XK0-006, 90 Qs max, 90 min, 720, English, est. retire 2028) but shows no price; shop.comptia.org voucher page redirects headless. Still needs you.
 - [ ] **Patrick: distribution** (stars come from here, not from SEO). Submit to awesome lists
       (awesome-certifications, awesome-aws, awesome-azure, awesome-kubernetes); post one
       useful page each to r/AWSCertifications, r/AzureCertification, r/CompTIA, r/kubernetes, linking back.
