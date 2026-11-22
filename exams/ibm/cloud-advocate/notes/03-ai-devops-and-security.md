@@ -1,4 +1,4 @@
-# IBM Cloud Advocate (C1000-176): AI, DevOps, and Security
+# IBM Cloud Advocate (C1000-142, retired): AI, DevOps, and Security
 
 ## Table of Contents
 1. [Watson AI Services](#watson-ai-services)

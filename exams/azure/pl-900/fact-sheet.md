@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-11-22
 ---
 
 # PL-900: Microsoft Power Platform Fundamentals - Comprehensive Fact Sheet
@@ -8,24 +8,26 @@ last-updated: 2026-05-03
 
 **PL-900** validates foundational knowledge of Microsoft Power Platform capabilities and business value. This exam is designed for candidates who aspire to improve productivity by understanding Power Platform capabilities, creating simple solutions, and connecting services.
 
-**Exam Details:**
-- **Duration:** 60 minutes
-- **Questions:** 40-60 questions
-- **Passing Score:** 700/1000
-- **Cost:** $99 USD
-- **Format:** Multiple choice, drag-and-drop, case studies
-- **Languages:** English, Japanese, Chinese (Simplified), Korean, German, French, Spanish, Portuguese (Brazil), Arabic (Saudi Arabia), Russian, Indonesian (Indonesia), Italian
+**Exam Details:** (checked 2026-11-22)
+- **Duration:** 45 minutes ([certification page](https://learn.microsoft.com/en-us/credentials/certifications/power-platform-fundamentals/))
+- **Questions:** Not stated by Microsoft
+- **Passing Score:** 700 or greater ([study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/pl-900))
+- **Cost:** Priced by the country or region where it is proctored (certification page)
+- **Format:** Proctored; Microsoft's exam sandbox shows the question types
+- **Languages:** English, Spanish, German, Chinese (Simplified), French, Korean, Japanese, Portuguese (Brazil), Russian, Arabic (Saudi Arabia), Chinese (Traditional), Italian
+- **Next update:** English exam changes on December 18, 2026 (certification page)
 
 ---
 
-## Core Exam Domains
+## Core Exam Domains (skills measured as of July 24, 2026)
 
-1. **Describe the business value of Power Platform (15-20%)**
-2. **Identify foundational components of Power Platform (15-20%)**
-3. **Demonstrate capabilities of Power BI (15-20%)**
-4. **Demonstrate capabilities of Power Apps (15-20%)**
-5. **Demonstrate capabilities of Power Automate (15-20%)**
-6. **Demonstrate capabilities of Power Virtual Agents (10-15%)**
+1. **Describe the business value of Microsoft Power Platform (5-10%)**
+2. **Manage the Microsoft Power Platform environment (20-25%)**
+3. **Demonstrate the capabilities of Power Apps (20-25%)**
+4. **Demonstrate the capabilities of Power Automate (20-25%)**
+5. **Describe features and capabilities of agents in Microsoft Copilot Studio (20-25%)**
+
+> **The sections below predate this outline.** Power BI (section 5) and building Power Pages sites are no longer in the skills measured; Power Virtual Agents (section 6) is now Microsoft Copilot Studio, and the exam now asks about agents, knowledge sources, tools (including MCP servers), channels and Agent 365. See the [README](./README.md#exam-domains) for the full objective list.
 
 ---
 
@@ -44,7 +46,7 @@ last-updated: 2026-05-03
 - **Power BI** - Business analytics and visualization
 - **Power Apps** - Low-code application development
 - **Power Automate** - Workflow automation and process automation
-- **Power Virtual Agents** - No-code chatbot creation
+- **Copilot Studio** (formerly Power Virtual Agents) - building agents
 - **Power Pages** - Low-code websites and portals
 - **Dataverse** - Unified data storage and management
 
@@ -178,7 +180,7 @@ last-updated: 2026-05-03
 
 ---
 
-## 5. Power BI
+## 5. Power BI (not in the July 2026 outline)
 
 ### Core Concepts
 
@@ -232,7 +234,7 @@ last-updated: 2026-05-03
 
 ---
 
-## 6. Power Virtual Agents
+## 6. Power Virtual Agents (now Copilot Studio)
 
 ### Chatbot Basics
 

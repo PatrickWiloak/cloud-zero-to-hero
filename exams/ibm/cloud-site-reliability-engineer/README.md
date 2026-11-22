@@ -1,4 +1,8 @@
-# IBM Cloud Site Reliability Engineer (SRE)
+# IBM Cloud Site Reliability Engineer (SRE) - RETIRED
+
+## Important Notice
+
+**This exam was retired: IBM withdrew the certification on December 31, 2025, and the credential expired on September 30, 2026** ([IBM certification page](https://www.ibm.com/training/certification/ibm-certified-associate-sre-cloud-v2-C9005500), read 2026-11-22). This guide now describes a withdrawn exam and is kept as IBM Cloud background reading; there is no exam to book. The page read is IBM Certified Associate SRE - Cloud v2 (exam C1000-169); IBM's Professional Developer v6 PLUS Professional SRE v2 pairing is also listed as withdrawn.
 
 The IBM Cloud Site Reliability Engineer certification validates skills in operating, monitoring, and ensuring the reliability of production systems on IBM Cloud. This certification demonstrates expertise in implementing SRE practices, automation, observability, incident management, and performance optimization using IBM Cloud services.
 
@@ -13,17 +17,15 @@ The IBM Cloud Site Reliability Engineer certification validates skills in operat
 - [Infrastructure Operations](notes/01-infrastructure-operations.md)
 - [Monitoring Observability](notes/02-monitoring-observability.md)
 - [Reliability Performance](notes/03-reliability-performance.md)
-## 🎯 Exam Details
+## 🎯 Exam Details (IBM page, read 2026-11-22)
 
-- **Exam Code**: C1000-173 (Note: Check IBM for current exam code)
+- **Certification**: IBM Certified Professional SRE - Cloud v2 (page not read; see notice)
+- **Exam Code**: Not confirmed. IBM's Associate SRE - Cloud v2 page gives C1000-169; the Professional SRE v2 page was not read. The C1000-173 and C1000-174 codes this guide used are unsourced
+- **Status**: Withdrawn 2025-12-31; credential expired 2026-09-30
 - **Duration**: 90 minutes
-- **Number of Questions**: 60 questions
-- **Passing Score**: 70% (42 out of 60 questions)
-- **Question Types**: Multiple choice, multiple select, scenario-based
-- **Cost**: $200 USD
-- **Validity**: Recertification recommended every 3 years
-- **Language**: Available in multiple languages
-- **Delivery**: Pearson VUE (online proctored or test center)
+- **Number of Questions**: 65 (Associate SRE v2)
+- **Passing Score**: 45 of 65 correct (Associate SRE v2)
+- **Cost, validity, languages, delivery**: Not stated on the IBM page read
 
 ## 📖 Exam Domains
 

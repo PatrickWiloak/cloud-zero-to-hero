@@ -1,4 +1,4 @@
-# IBM Cloud Advocate (C1000-176): Core Services
+# IBM Cloud Advocate (C1000-142, retired): Core Services
 
 ## Table of Contents
 1. [Compute Services](#compute-services)

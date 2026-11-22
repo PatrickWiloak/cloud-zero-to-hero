@@ -1,4 +1,8 @@
-# IBM Certified Application Developer - Cloud Platform v4
+# IBM Certified Application Developer - Cloud Platform v4 - RETIRED
+
+## Important Notice
+
+**This exam was retired: IBM withdrew the certification on December 31, 2025, and the credential expired on September 30, 2026** ([IBM certification page](https://www.ibm.com/training/certification/ibm-certified-professional-developer-cloud-v6-C9005400), read 2026-11-22). This guide now describes a withdrawn exam and is kept as IBM Cloud background reading; there is no exam to book. This guide's earlier code C1000-171 is not the code on IBM's page.
 
 The IBM Cloud Application Developer certification validates skills in developing, deploying, and managing cloud-native applications on IBM Cloud. This certification demonstrates proficiency in using IBM Cloud development services, APIs, DevOps tools, and best practices for building modern applications.
 
@@ -13,17 +17,15 @@ The IBM Cloud Application Developer certification validates skills in developing
 - [Cloud Native Development](notes/01-cloud-native-development.md)
 - [Application Deployment Integration](notes/02-application-deployment-integration.md)
 - [Data AI Services Monitoring](notes/03-data-ai-services-monitoring.md)
-## 🎯 Exam Details
+## 🎯 Exam Details (IBM page, read 2026-11-22)
 
-- **Exam Code**: C1000-171
+- **Certification**: IBM Certified Professional Developer - Cloud v6
+- **Exam Code**: C1000-166 (IBM Cloud Professional Developer v6)
+- **Status**: Withdrawn 2025-12-31; credential expired 2026-09-30
 - **Duration**: 90 minutes
-- **Number of Questions**: 60 questions
-- **Passing Score**: 70% (42 out of 60 questions)
-- **Question Types**: Multiple choice, multiple select
-- **Cost**: $200 USD
-- **Validity**: Recertification recommended every 3 years
-- **Language**: Available in multiple languages
-- **Delivery**: Pearson VUE (online proctored or test center)
+- **Number of Questions**: 65
+- **Passing Score**: 40 of 65 correct
+- **Cost, validity, languages, delivery**: Not stated on the IBM page read
 
 ## 📖 Exam Domains
 

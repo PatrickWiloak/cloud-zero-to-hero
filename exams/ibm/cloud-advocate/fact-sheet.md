@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-11-22
 ---
 
 # IBM Cloud Advocate Certification - Fact Sheet
@@ -7,15 +7,13 @@ last-updated: 2026-05-03
 ## Quick Reference
 
 - **Certification:** IBM Certified Advocate - Cloud v2
-- **Exam Code:** C1000-170
+- **Status:** Retired. IBM withdrew the certification on 2025-12-31 and the credential expired on 2026-09-30 ([IBM page](https://www.ibm.com/training/certification/ibm-certified-advocate-cloud-v2-C9003700), read 2026-11-22)
+- **Exam Code:** C1000-142 (IBM Cloud Advocate v2)
 - **Duration:** 90 minutes
-- **Questions:** 60 multiple choice
-- **Passing Score:** 70%
-- **Cost:** $200 USD
-- **Language:** English
-- **Delivery:** Pearson VUE (online or test center)
+- **Questions:** 65
+- **Passing Score:** 39 of 65 correct
+- **Cost, language, delivery:** Not stated on the IBM page read
 - **Prerequisites:** None (recommended 6-12 months IBM Cloud experience)
-- **Recertification:** Every 3 years
 - **Target Audience:** Cloud advocates, technical marketers, pre-sales engineers, solution consultants
 
 ## Official Resources

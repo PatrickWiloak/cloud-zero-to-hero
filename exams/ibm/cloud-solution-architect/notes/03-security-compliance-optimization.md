@@ -1,4 +1,4 @@
-# IBM Cloud Solution Architect (C1000-175) - Security, Compliance & Optimization
+# IBM Cloud Professional Architect (C1000-172, retired) - Security, Compliance & Optimization
 
 ## Table of Contents
 - [Enterprise Security Architecture](#enterprise-security-architecture)

@@ -1,4 +1,8 @@
-# IBM Certified Solution Architect - Cloud Architect v6
+# IBM Certified Solution Architect - Cloud Architect v6 - RETIRED
+
+## Important Notice
+
+**This exam was retired: IBM withdrew the certification on December 31, 2025, and the credential expired on September 30, 2026** ([IBM certification page](https://www.ibm.com/training/certification/ibm-certified-professional-architect-cloud-v6-C9005800), read 2026-11-22). This guide now describes a withdrawn exam and is kept as IBM Cloud background reading; there is no exam to book. IBM lists no replacement credential.
 
 The IBM Cloud Solution Architect certification validates advanced skills in designing, planning, and architecting cloud solutions on IBM Cloud. This certification demonstrates expertise in creating scalable, secure, and resilient architectures using IBM Cloud services and hybrid cloud patterns.
 
@@ -13,17 +17,15 @@ The IBM Cloud Solution Architect certification validates advanced skills in desi
 - [Architecture Design Patterns](notes/01-architecture-design-patterns.md)
 - [Advanced Services Integration](notes/02-advanced-services-integration.md)
 - [Security Compliance Optimization](notes/03-security-compliance-optimization.md)
-## 🎯 Exam Details
+## 🎯 Exam Details (IBM page, read 2026-11-22)
 
-- **Exam Code**: C1000-172
-- **Duration**: 120 minutes
-- **Number of Questions**: 60 questions
-- **Passing Score**: 70% (42 out of 60 questions)
-- **Question Types**: Multiple choice, multiple select, scenario-based
-- **Cost**: $200 USD
-- **Validity**: Recertification recommended every 3 years
-- **Language**: Available in multiple languages
-- **Delivery**: Pearson VUE (online proctored or test center)
+- **Certification**: IBM Certified Professional Architect - Cloud v6
+- **Exam Code**: C1000-172 (IBM Cloud Professional Architect v6)
+- **Status**: Withdrawn 2025-12-31; credential expired 2026-09-30
+- **Duration**: 90 minutes
+- **Number of Questions**: 64
+- **Passing Score**: 39 of 64 correct
+- **Cost, validity, languages, delivery**: Not stated on the IBM page read
 
 ## 📖 Exam Domains
 

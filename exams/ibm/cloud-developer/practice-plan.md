@@ -746,7 +746,7 @@ ibmcloud fn rule create myRule myTrigger hello
 **Current**: IBM Cloud Developer (C1000-177)
 
 **Next Steps**:
-1. IBM Cloud Solution Architect (C1000-175)
+1. IBM Cloud Professional Architect (C1000-172, retired)
 2. IBM Cloud Security Engineer (C1000-178)
 3. IBM Cloud Site Reliability Engineer (C1000-179)
 4. Specialized certifications (AI, Data, etc.)

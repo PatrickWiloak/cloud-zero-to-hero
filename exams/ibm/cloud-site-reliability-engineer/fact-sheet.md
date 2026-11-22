@@ -1,21 +1,19 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-11-22
 ---
 
 # IBM Cloud Site Reliability Engineer Certification - Fact Sheet
 
 ## Quick Reference
 
-- **Certification:** IBM Certified Site Reliability Engineer (SRE) - Cloud v2
-- **Exam Code:** C1000-174
+- **Certification:** IBM Certified Professional SRE - Cloud v2 (page not read; see notice)
+- **Status:** Retired. IBM withdrew the certification on 2025-12-31 and the credential expired on 2026-09-30 ([IBM page](https://www.ibm.com/training/certification/ibm-certified-associate-sre-cloud-v2-C9005500), read 2026-11-22)
+- **Exam Code:** Not confirmed. IBM's Associate SRE - Cloud v2 page gives C1000-169; the Professional SRE v2 page was not read. The C1000-173 and C1000-174 codes this guide used are unsourced
 - **Duration:** 90 minutes
-- **Questions:** 60 multiple choice
-- **Passing Score:** 70%
-- **Cost:** $200 USD
-- **Language:** English
-- **Delivery:** Pearson VUE (online or test center)
+- **Questions:** 65 (Associate SRE v2)
+- **Passing Score:** 45 of 65 correct (Associate SRE v2)
+- **Cost, language, delivery:** Not stated on the IBM page read
 - **Prerequisites:** None (recommended 2+ years SRE/DevOps experience)
-- **Recertification:** Every 3 years
 - **Target Audience:** Site reliability engineers, DevOps engineers, operations engineers, platform engineers
 
 ## Official Resources

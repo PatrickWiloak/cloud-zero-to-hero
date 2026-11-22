@@ -4,116 +4,64 @@
 
 The Power Platform Fundamentals certification validates foundational knowledge of the core components of the Microsoft Power Platform and their business value. This exam is intended for candidates who aspire to improve productivity by automating business processes, analyzing data to produce business insights, and acting more effectively by creating simple app experiences.
 
-**Exam Details:**
+**Exam Details:** (checked 2026-11-22 against the [certification page](https://learn.microsoft.com/en-us/credentials/certifications/power-platform-fundamentals/) and [study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/pl-900))
 - **Exam Code:** PL-900
-- **Duration:** 60 minutes
-- **Number of Questions:** 40-60 questions
-- **Passing Score:** 700 out of 1000
-- **Question Types:** Multiple choice, multiple select, drag and drop, hot area, case studies
-- **Cost:** $99 USD
-- **Prerequisites:** None (basic understanding of business processes helpful)
+- **Duration:** 45 minutes (certification page)
+- **Number of Questions:** Not stated by Microsoft
+- **Passing Score:** 700 or greater (study guide)
+- **Question Types:** Not listed for this exam; Microsoft's exam sandbox shows the possible types
+- **Cost:** Priced by the country or region where it is proctored (USD 99 in the US is a commonly quoted figure, not read on the page)
+- **Prerequisites:** None
+- **Outline:** skills measured as of July 24, 2026. The certification page says the English exam will be updated again on December 18, 2026; re-check the study guide before booking.
+
+> **Notes lag the outline.** The July 2026 outline dropped Power BI and Power Pages and added Copilot Studio agents. The notes in this folder still follow the older outline: treat `power-bi-capabilities.md` as background only, and read "Power Virtual Agents" as Copilot Studio (Microsoft's new name for it).
 
 ## Exam Domains
 
-### 1. Describe the Business Value of the Microsoft Power Platform (15-20%)
-- **Business Value of Power Platform**
-  - Power Platform components and their purposes
-  - Business value of extending business solutions
-  - Business value of Power Platform with Microsoft 365 apps and services
-  - Business value of Power Platform with Dynamics 365 apps
-  - Business value of Power Platform with Azure services
-- **Power Platform Administration and Security**
-  - Power Platform security model
-  - Environments and data gateways
-  - Privacy and accessibility guidelines
+From the [study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/pl-900) (skills measured as of July 24, 2026).
 
-### 2. Identify Foundational Components of Microsoft Power Platform (15-20%)
-- **Power Platform Architecture**
-  - Dataverse as the foundation
-  - Connectors and their purposes
-  - AI Builder capabilities
-- **Common Data Service/Dataverse**
-  - Tables, columns, and relationships
-  - Business rules and process flows
-  - Security roles and sharing
+### 1. Describe the business value of Microsoft Power Platform (5-10%)
+- Value of Power Apps, Power Automate, Dataverse, connectors, Power Pages, generative AI features, and Copilot Studio agents
 
-### 3. Demonstrate the Capabilities of Power BI (25-30%)
-- **Power BI Components**
-  - Power BI Desktop, Service, and Mobile
-  - Power BI building blocks (datasets, reports, dashboards, workspaces)
-- **Data Analysis and Visualization**
-  - Connecting to data sources
-  - Creating and sharing reports and dashboards
-  - Building basic visualizations
-  - Using natural language to explore data (Q&A)
-- **Power BI Service Features**
-  - Workspaces and collaboration
-  - Apps and content packs
-  - Row-level security
-  - Scheduled refresh and gateways
+### 2. Manage the Microsoft Power Platform environment (20-25%)
+- **Dataverse:** traditional databases vs Dataverse; tables, columns and relationships; forms and views; business logic including Power Fx; using AI to create and edit tables
+- **Administration and governance:** environments; the security model; data privacy and accessibility; monitoring and analytics; ALM with Power Platform pipelines
 
-### 4. Demonstrate the Capabilities of Power Apps (25-30%)
-- **Power Apps Types**
-  - Canvas apps vs model-driven apps
-  - Power Apps portals
-- **Building Power Apps**
-  - Creating canvas apps from templates, data, or blank
-  - Creating model-driven apps
-  - Sharing and publishing apps
-- **Power Apps Integration**
-  - Connecting to data sources
-  - Using Power Apps with other Power Platform components
-  - Common connectors and their uses
+### 3. Demonstrate the capabilities of Power Apps (20-25%)
+- **Capabilities and use cases:** canvas apps, model-driven apps, Plan designer, code apps
+- **Building basic apps:** using AI to create canvas and model-driven apps; AI-powered apps with the vibe experience
 
-### 5. Demonstrate the Capabilities of Power Automate (10-15%)
-- **Power Automate Types**
-  - Cloud flows (automated, instant, scheduled)
-  - Desktop flows (RPA)
-  - Business process flows
-- **Building Flows**
-  - Creating flows from templates
-  - Using triggers and actions
-  - Flow sharing and management
-- **Power Automate Integration**
-  - Integration with Power Apps and Power BI
-  - Approval workflows
-  - Document generation and processing
+### 4. Demonstrate the capabilities of Power Automate (20-25%)
+- **Use cases:** cloud and desktop flows; approvals, Teams, Outlook, SharePoint, Forms and document automation
+- **Building basic flows:** connector triggers and actions; using AI to create and modify cloud and desktop flows
 
-### 6. Demonstrate the Capabilities of Power Virtual Agents (10-15%)
-- **Power Virtual Agents Capabilities**
-  - Creating chatbots without code
-  - Publishing bots to multiple channels
-  - Bot analytics and performance monitoring
-- **Building Chatbots**
-  - Topics and trigger phrases
-  - Conversation flow design
-  - Using entities and variables
-  - Integration with other Power Platform components
+### 5. Describe features and capabilities of agents in Microsoft Copilot Studio (20-25%)
+- **Building agents:** use cases; conversation paths with topics; knowledge sources; tools, including MCP servers and agent flows; publishing to channels
+- **Managing agents:** Microsoft Agent 365; monitoring usage and adoption; agent evaluations
 
 ## Study Tips
 
 ### Recommended Study Timeline: 4-6 weeks
 1. **Week 1:** Power Platform overview and business value
-2. **Week 2:** Power BI capabilities and data visualization
-3. **Week 3:** Power Apps development and types
-4. **Week 4:** Power Automate and Power Virtual Agents
+2. **Week 2:** Dataverse, environments, security and governance
+3. **Week 3:** Power Apps types and building apps with AI
+4. **Week 4:** Power Automate and Copilot Studio agents
 5. **Week 5-6:** Integration scenarios and practice tests
 
 ### Key Study Resources
 - **Microsoft Learn Learning Paths:**
   - Get started with Power Platform
-  - Create and use analytics reports with Power BI
   - Create a canvas app in Power Apps
   - Create a model-driven application in Power Apps
   - Automate a business process using Power Automate
-  - Create bots with Power Virtual Agents
+  - Build agents in Microsoft Copilot Studio (formerly Power Virtual Agents)
 
 ### Hands-on Practice
 - Sign up for Power Platform trial
-- Create basic Power BI reports and dashboards
+- Explore an environment in the Power Platform admin center
 - Build simple canvas and model-driven apps
 - Create automated flows with Power Automate
-- Design basic chatbots with Power Virtual Agents
+- Build a basic agent in Copilot Studio with a topic and a knowledge source
 - Explore Dataverse and data connectivity
 
 ### Exam Strategy
@@ -126,7 +74,7 @@ The Power Platform Fundamentals certification validates foundational knowledge o
 ### Common Gotchas
 - Distinguish between canvas apps and model-driven apps
 - Understand different types of Power Automate flows
-- Know Power BI licensing requirements
+- Know what an environment is and how Dataverse security roles apply
 - Understand Dataverse vs external data sources
 - Be familiar with connector limitations and capabilities
 
@@ -144,17 +92,12 @@ For detailed information on courses, practice tests, hands-on labs, communities,
 - Pro tips and budget-friendly study strategies
 
 ### Quick Links (PL-900 Specific)
-- **[PL-900 Official Exam Page](https://learn.microsoft.com/en-us/certifications/exams/pl-900/)** - Registration and exam details
+- **[PL-900 Official Exam Page](https://learn.microsoft.com/en-us/credentials/certifications/power-platform-fundamentals/)** - Registration and exam details
 - **[Microsoft Learn - PL-900 Learning Path](https://learn.microsoft.com/en-us/certifications/power-platform-fundamentals/)** - FREE official study path
 - **[Azure Documentation](https://docs.microsoft.com/en-us/azure/)** - Complete Azure documentation
 - **[Azure Free Account](https://azure.microsoft.com/en-us/free/)** - $200 free credit for hands-on practice
 
 ## Key Components Quick Reference
-
-### Power BI
-- **Purpose:** Business analytics and data visualization
-- **Key Features:** Interactive reports, dashboards, natural language queries
-- **Use Cases:** KPI monitoring, data analysis, self-service BI
 
 ### Power Apps
 - **Canvas Apps:** Flexible, pixel-perfect apps for any device
@@ -166,9 +109,9 @@ For detailed information on courses, practice tests, hands-on labs, communities,
 - **Desktop Flows:** Robotic Process Automation (RPA)
 - **Business Process Flows:** Guided business processes
 
-### Power Virtual Agents
-- **Purpose:** No-code chatbot creation
-- **Key Features:** Natural language understanding, multi-channel deployment
+### Copilot Studio (formerly Power Virtual Agents)
+- **Purpose:** Building and managing agents
+- **Key Features:** Topics, knowledge sources, tools (including MCP servers and agent flows), publishing to channels, evaluations
 - **Use Cases:** Customer service, FAQ automation, internal help desk
 
 ### Dataverse

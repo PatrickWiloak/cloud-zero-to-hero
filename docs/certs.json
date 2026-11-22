@@ -792,7 +792,7 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03",
+      "last_updated": "2026-11-22",
       "exam_version": null,
       "exam_retires": null
     },
@@ -986,7 +986,7 @@
       "level": "foundational",
       "status": "active",
       "duration": "Maximum seat time of 2 hours",
-      "questions": "75 scored plus 15 unscored pre-test questions (exam guide dated July 2022)",
+      "questions": "75 scored plus 15 unscored pre-test questions (exam guide dated August 2026)",
       "passing_score": "Not publicly disclosed by Datadog",
       "cost": "USD 100 per exam (listed 2026-11-07)",
       "validity": "3 years from the date of certification; renew by retaking the exam",
@@ -1002,7 +1002,7 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-11-07",
+      "last_updated": "2026-11-22",
       "exam_version": null,
       "exam_retires": null
     },
@@ -1584,7 +1584,7 @@
       "name": "IBM Cloud Advocate",
       "exam_code": null,
       "level": "unspecified",
-      "status": "active",
+      "status": "retired",
       "duration": null,
       "questions": null,
       "passing_score": null,
@@ -1602,7 +1602,7 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03",
+      "last_updated": "2026-11-22",
       "exam_version": null,
       "exam_retires": null
     },
@@ -1614,7 +1614,7 @@
       "name": "IBM Certified Application Developer - Cloud Platform v4",
       "exam_code": null,
       "level": "unspecified",
-      "status": "active",
+      "status": "retired",
       "duration": null,
       "questions": null,
       "passing_score": null,
@@ -1632,7 +1632,7 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03",
+      "last_updated": "2026-11-22",
       "exam_version": null,
       "exam_retires": null
     },
@@ -1644,7 +1644,7 @@
       "name": "IBM Cloud Site Reliability Engineer (SRE)",
       "exam_code": null,
       "level": "unspecified",
-      "status": "active",
+      "status": "retired",
       "duration": null,
       "questions": null,
       "passing_score": null,
@@ -1662,7 +1662,7 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03",
+      "last_updated": "2026-11-22",
       "exam_version": null,
       "exam_retires": null
     },
@@ -1674,7 +1674,7 @@
       "name": "IBM Certified Solution Architect - Cloud Architect v6",
       "exam_code": null,
       "level": "unspecified",
-      "status": "active",
+      "status": "retired",
       "duration": null,
       "questions": null,
       "passing_score": null,
@@ -1692,7 +1692,7 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03",
+      "last_updated": "2026-11-22",
       "exam_version": null,
       "exam_retires": null
     },
@@ -1946,8 +1946,8 @@
       "level": "unspecified",
       "status": "active",
       "duration": "2 hours",
-      "questions": "Not stated for the exam (\"multiple tasks\"); the exam simulator has 20 questions",
-      "passing_score": "Not stated on the Linux Foundation page",
+      "questions": "15-20 performance-based tasks (LF candidate instructions); the exam simulator has 20 questions",
+      "passing_score": "64% (LF CNPE FAQ)",
       "cost": "USD 445 exam only; USD 625 with the THRIVE-ONE annual subscription (listed 2026-11-07)",
       "validity": "2 years",
       "delivery": null,
@@ -1962,7 +1962,7 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-11-07",
+      "last_updated": "2026-11-22",
       "exam_version": null,
       "exam_retires": null
     },
@@ -2185,8 +2185,8 @@
       "exam_code": "1Z0-1072-24",
       "level": "associate",
       "status": "active",
-      "duration": "105 minutes",
-      "questions": "60 questions",
+      "duration": "90 minutes (1Z0-1072-26, per Oracle MyLearn, read 2026-11-22)",
+      "questions": "60 questions (-24 figure; not re-read for -26, whose details need an Oracle sign-in)",
       "passing_score": "68%",
       "cost": "$150 USD",
       "validity": "18 months (non-renewing)",
@@ -2202,7 +2202,7 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03",
+      "last_updated": "2026-11-22",
       "exam_version": null,
       "exam_retires": null
     },

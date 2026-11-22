@@ -1,4 +1,8 @@
-# IBM Cloud Advocate
+# IBM Cloud Advocate - RETIRED
+
+## Important Notice
+
+**This exam was retired: IBM withdrew the certification on December 31, 2025, and the credential expired on September 30, 2026** ([IBM certification page](https://www.ibm.com/training/certification/ibm-certified-advocate-cloud-v2-C9003700), read 2026-11-22). This guide now describes a withdrawn exam and is kept as IBM Cloud background reading; there is no exam to book. IBM's other entry credential, Technical Advocate - Cloud v5 (exam C1000-170: 64 questions, 42 to pass, 90 minutes), was withdrawn on the same date. This guide's earlier codes C1000-176 and C1000-170 were both wrong for the Advocate exam.
 
 The IBM Cloud Advocate certification validates foundational knowledge of IBM Cloud services, solutions, and use cases. This entry-level certification demonstrates understanding of cloud computing concepts and the ability to advocate for IBM Cloud solutions to business and technical stakeholders.
 
@@ -13,17 +17,15 @@ The IBM Cloud Advocate certification validates foundational knowledge of IBM Clo
 - [Cloud Fundamentals And IBM Cloud Overview](notes/01-cloud-fundamentals-and-ibm-cloud-overview.md)
 - [Core Services](notes/02-core-services.md)
 - [AI Devops And Security](notes/03-ai-devops-and-security.md)
-## 🎯 Exam Details
+## 🎯 Exam Details (IBM page, read 2026-11-22)
 
-- **Exam Code**: C1000-176
+- **Certification**: IBM Certified Advocate - Cloud v2
+- **Exam Code**: C1000-142 (IBM Cloud Advocate v2)
+- **Status**: Withdrawn 2025-12-31; credential expired 2026-09-30
 - **Duration**: 90 minutes
-- **Number of Questions**: 60 questions
-- **Passing Score**: 70% (42 out of 60 questions)
-- **Question Types**: Multiple choice, multiple select
-- **Cost**: $200 USD
-- **Validity**: Lifetime (no expiration)
-- **Language**: Available in multiple languages
-- **Delivery**: Pearson VUE (online proctored or test center)
+- **Number of Questions**: 65
+- **Passing Score**: 39 of 65 correct
+- **Cost, validity, languages, delivery**: Not stated on the IBM page read
 
 ## 📖 Exam Topics
 

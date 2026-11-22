@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-11-22
 ---
 
 # OCI Architect Associate (1Z0-1072-24) - Fact Sheet
@@ -7,8 +7,8 @@ last-updated: 2026-05-03
 ## Quick Reference
 
 **Exam Code:** 1Z0-1072-24
-**Duration:** 105 minutes
-**Questions:** 60 questions
+**Duration:** 90 minutes (1Z0-1072-26, per [Oracle MyLearn](https://mylearn.oracle.com/ou/learning-path/become-an-oci-architect-associate-2026/162234), read 2026-11-22)
+**Questions:** 60 questions (-24 figure; not re-read for -26, whose details need an Oracle sign-in)
 **Passing Score:** 68%
 **Cost:** $150 USD
 **Validity:** 18 months (non-renewing)

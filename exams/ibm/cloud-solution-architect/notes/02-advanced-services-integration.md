@@ -1,4 +1,4 @@
-# IBM Cloud Solution Architect (C1000-175) - Advanced Services & Integration
+# IBM Cloud Professional Architect (C1000-172, retired) - Advanced Services & Integration
 
 ## Table of Contents
 - [AI and Watson Services](#ai-and-watson-services)

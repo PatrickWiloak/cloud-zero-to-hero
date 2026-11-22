@@ -15,8 +15,8 @@ The OCI Architect Associate certification validates skills in designing and impl
 - [Database Security Operations](notes/03-database-security-operations.md)
 ## 🎯 Exam Details
 
-- **Exam Code**: 1Z0-1072-24
-- **Duration**: 105 minutes
+- **Exam Code**: 1Z0-1072-24 (this guide's version). The current exam is **1Z0-1072-26** ([Oracle MyLearn learning path](https://mylearn.oracle.com/ou/learning-path/become-an-oci-architect-associate-2026/162234), read 2026-11-22); question count and passing score for -26 need an Oracle sign-in and were not read
+- **Duration**: 90 minutes for 1Z0-1072-26 (MyLearn); the 105 minutes listed here before was for -24 and is unsourced
 - **Number of Questions**: 60 questions
 - **Passing Score**: 68%
 - **Question Types**: Multiple choice, multiple select

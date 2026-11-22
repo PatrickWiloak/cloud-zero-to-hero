@@ -1,21 +1,19 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-11-22
 ---
 
 # IBM Cloud Solution Architect Certification - Fact Sheet
 
 ## Quick Reference
 
-- **Certification:** IBM Certified Solution Architect - Cloud v2
-- **Exam Code:** C1000-172
+- **Certification:** IBM Certified Professional Architect - Cloud v6
+- **Status:** Retired. IBM withdrew the certification on 2025-12-31 and the credential expired on 2026-09-30 ([IBM page](https://www.ibm.com/training/certification/ibm-certified-professional-architect-cloud-v6-C9005800), read 2026-11-22)
+- **Exam Code:** C1000-172 (IBM Cloud Professional Architect v6)
 - **Duration:** 90 minutes
-- **Questions:** 60 multiple choice
-- **Passing Score:** 70%
-- **Cost:** $200 USD
-- **Language:** English
-- **Delivery:** Pearson VUE (online or test center)
+- **Questions:** 64
+- **Passing Score:** 39 of 64 correct
+- **Cost, language, delivery:** Not stated on the IBM page read
 - **Prerequisites:** None (recommended 3+ years architecture experience)
-- **Recertification:** Every 3 years
 - **Target Audience:** Cloud architects, solution architects, technical architects, enterprise architects
 
 ## Official Resources

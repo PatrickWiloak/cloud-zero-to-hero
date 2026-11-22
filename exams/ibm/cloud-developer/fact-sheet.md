@@ -1,21 +1,19 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-11-22
 ---
 
 # IBM Cloud Developer Certification - Fact Sheet
 
 ## Quick Reference
 
-- **Certification:** IBM Certified Developer - Cloud v2
-- **Exam Code:** C1000-171
+- **Certification:** IBM Certified Professional Developer - Cloud v6
+- **Status:** Retired. IBM withdrew the certification on 2025-12-31 and the credential expired on 2026-09-30 ([IBM page](https://www.ibm.com/training/certification/ibm-certified-professional-developer-cloud-v6-C9005400), read 2026-11-22)
+- **Exam Code:** C1000-166 (IBM Cloud Professional Developer v6)
 - **Duration:** 90 minutes
-- **Questions:** 60 multiple choice
-- **Passing Score:** 70%
-- **Cost:** $200 USD
-- **Language:** English
-- **Delivery:** Pearson VUE (online or test center)
+- **Questions:** 65
+- **Passing Score:** 40 of 65 correct
+- **Cost, language, delivery:** Not stated on the IBM page read
 - **Prerequisites:** None (recommended 12-24 months development experience)
-- **Recertification:** Every 3 years
 - **Target Audience:** Cloud developers, application developers, software engineers, DevOps engineers
 
 ## Official Resources

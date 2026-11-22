@@ -8,9 +8,11 @@ Study guides for IBM Cloud in this repo. For the full picture across every provi
 
 | Cert | Code | Level | Status | Notes |
 |------|------|-------|--------|------:|
-| [IBM Certified Application Developer - Cloud Platform v4](cloud-developer/) | - | - | Ready | 3 |
-| [IBM Certified Solution Architect - Cloud Architect v6](cloud-solution-architect/) | - | - | Ready | 3 |
-| [IBM Cloud Advocate](cloud-advocate/) | - | - | Ready | 3 |
-| [IBM Cloud Site Reliability Engineer (SRE)](cloud-site-reliability-engineer/) | - | - | Ready | 3 |
+| [IBM Certified Application Developer - Cloud Platform v4](cloud-developer/) | - | - | Retired | 3 |
+| [IBM Certified Solution Architect - Cloud Architect v6](cloud-solution-architect/) | - | - | Retired | 3 |
+| [IBM Cloud Advocate](cloud-advocate/) | - | - | Retired | 3 |
+| [IBM Cloud Site Reliability Engineer (SRE)](cloud-site-reliability-engineer/) | - | - | Retired | 3 |
+
+**Retired** - the exam is no longer offered. The guide is kept for anyone holding the credential, and points to its replacement.
 
 <!-- END GENERATED: provider-certs -->

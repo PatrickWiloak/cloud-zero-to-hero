@@ -1,4 +1,4 @@
-# IBM Cloud Advocate (C1000-176): Cloud Fundamentals and IBM Cloud Overview
+# IBM Cloud Advocate (C1000-142, retired): Cloud Fundamentals and IBM Cloud Overview
 
 ## Table of Contents
 1. [Cloud Computing Fundamentals](#cloud-computing-fundamentals)
@@ -1190,6 +1190,6 @@ ibmcloud resource service-instance-delete my-cloudant
 
 ## Conclusion
 
-Success in the IBM Cloud Advocate (C1000-176) exam requires a solid understanding of cloud computing fundamentals combined with specific knowledge of the IBM Cloud platform, its services, and tools. Focus on hands-on practice with the IBM Cloud Console and CLI, understand the account management and resource organization concepts, and familiarize yourself with IBM Cloud's key differentiators in the market.
+Success in the IBM Cloud Advocate (C1000-142, retired) exam requires a solid understanding of cloud computing fundamentals combined with specific knowledge of the IBM Cloud platform, its services, and tools. Focus on hands-on practice with the IBM Cloud Console and CLI, understand the account management and resource organization concepts, and familiarize yourself with IBM Cloud's key differentiators in the market.
 
 Remember that this is an advocate-level certification, so you should be able to articulate the value of IBM Cloud to others and understand when and why to use different services and features. Good luck with your exam preparation!

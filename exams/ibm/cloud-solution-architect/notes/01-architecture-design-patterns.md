@@ -1,4 +1,4 @@
-# IBM Cloud Solution Architect (C1000-175) - Architecture & Design Patterns
+# IBM Cloud Professional Architect (C1000-172, retired) - Architecture & Design Patterns
 
 ## Table of Contents
 - [Architectural Principles](#architectural-principles)

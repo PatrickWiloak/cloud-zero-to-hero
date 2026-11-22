@@ -1,4 +1,4 @@
-# IBM Cloud Solution Architect (C1000-175) - Practice Plan
+# IBM Cloud Professional Architect (C1000-172, retired) - Practice Plan
 
 ## Study Timeline: 8-10 Weeks
 

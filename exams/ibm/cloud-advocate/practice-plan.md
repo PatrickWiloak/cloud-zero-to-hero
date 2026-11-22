@@ -1,11 +1,11 @@
-# IBM Cloud Advocate (C1000-176) - 8-Week Practice Plan
+# IBM Cloud Advocate (C1000-142, retired) - 8-Week Practice Plan
 
 ## Overview
 
-This 8-week structured study plan is designed to prepare you for the IBM Cloud Advocate (C1000-176) certification exam. The plan combines theoretical study with hands-on labs and practice exercises to ensure comprehensive preparation.
+This 8-week structured study plan is designed to prepare you for the IBM Cloud Advocate (C1000-142, retired) certification exam. The plan combines theoretical study with hands-on labs and practice exercises to ensure comprehensive preparation.
 
 **Exam Details:**
-- **Exam Code**: C1000-176
+- **Exam Code**: C1000-142 (retired 2025-12-31; see the README notice)
 - **Duration**: 90 minutes
 - **Questions**: 60-70 questions
 - **Passing Score**: ~70%
