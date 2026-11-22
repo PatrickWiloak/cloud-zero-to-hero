@@ -100,7 +100,7 @@ Read-only fleet audit (9 agents, nothing changed). Each line: effort S (<half da
 - [x] 2026-11-07 App Mesh (end of support 2026-09-30, confirmed on AWS docs) dropped from the mesh rows in `resources/`. 
 - [x] 2026-11-07 App Mesh relabelled retired in `exams/aws/shared/services/compute/{ecs,eks,fargate}.md` and the SAP-C02 notes (architecture-pillars, compute-containers, integration-streaming); cited to AWS's end-of-support notice.
 - [x] 2026-11-07 Wave 3 shipped: concept pages for eBPF, Backstage, OpenTofu vs Terraform, service quotas, WebAssembly at the edge; day-one `python-for-cloud.md` (samples run in a uv venv; pip/venv commands cited, not run).
-- [ ] 2026-11-22 IBM wording (Cloud Foundry, Watson Language Translator/Visual Recognition, Certificate Manager -> Secrets Manager, Watson -> watsonx) still unverified: cloud.ibm.com docs return 404/empty to tools on 2026-11-07. Pat: read the pages in a browser, then fix `exams/ibm/cloud-developer`, `cloud-advocate`, `cloud-solution-architect`.
+- [ ] 2026-11-22 IBM wording (Cloud Foundry, Watson Language Translator/Visual Recognition, Certificate Manager -> Secrets Manager, Watson -> watsonx) still unverified: cloud.ibm.com docs return 404/empty to tools on 2026-11-07. Pat: read the pages in a browser, then fix `exams/ibm/cloud-developer`, `cloud-advocate`, `cloud-solution-architect`. ✏️ 2026-11-22 (Claude) Translator + Activity Tracker now IBM-sourced, retired-service callouts added (see "Reword retired-product notes"); ibm-cloud-docs GitHub repos are readable where cloud.ibm.com is not.
 
 ## GCP exam refresh (2026-10-14)
 
