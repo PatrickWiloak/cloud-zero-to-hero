@@ -1,7 +1,7 @@
 Question,Answer,Tags
 How long is the Certified Cloud Native Platform Engineer (CNPE) exam?,2 hours,exam-logistics
-How many questions are on the Certified Cloud Native Platform Engineer (CNPE) exam?,"Not stated for the exam (""multiple tasks""); the exam simulator has 20 questions",exam-logistics
-What is the passing score for Certified Cloud Native Platform Engineer (CNPE)?,Not stated on the Linux Foundation page,exam-logistics
+How many questions are on the Certified Cloud Native Platform Engineer (CNPE) exam?,15-20 performance-based tasks (LF candidate instructions); the exam simulator has 20 questions,exam-logistics
+What is the passing score for Certified Cloud Native Platform Engineer (CNPE)?,64% (LF CNPE FAQ),exam-logistics
 What does the Certified Cloud Native Platform Engineer (CNPE) exam cost?,USD 445 exam only; USD 625 with the THRIVE-ONE annual subscription (listed 2026-11-07),exam-logistics
 How long is Certified Cloud Native Platform Engineer (CNPE) valid for?,2 years,exam-logistics
 Platform engineering (platform architecture and infrastructure),building the shared infrastructure and self-service tooling that application teams consume.,"notes,platform-architecture-and-infrastructure"

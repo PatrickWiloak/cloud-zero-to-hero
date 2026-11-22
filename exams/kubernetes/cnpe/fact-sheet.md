@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-11-07
+last-updated: 2026-11-22
 difficulty: advanced
 reading-time: 6 min
 ---
@@ -13,13 +13,13 @@ reading-time: 6 min
 **Level:** Intermediate experience level (per the LF page)
 **Duration:** 2 hours
 **Format:** Online, proctored, performance-based: tasks solved in a Linux-based remote desktop using the terminal and web-based interfaces
-**Questions:** Not stated for the exam ("multiple tasks"); the exam simulator has 20 questions
-**Passing Score:** Not stated on the Linux Foundation page
+**Questions:** 15-20 performance-based tasks (LF candidate instructions); the exam simulator has 20 questions
+**Passing Score:** 64% (LF CNPE FAQ)
 **Cost:** USD 445 exam only; USD 625 with the THRIVE-ONE annual subscription (listed 2026-11-07)
 **Valid For:** 2 years
 **Prerequisites:** None; the page lists the experience level as Intermediate and says CNPE pairs well with other credentials (CKA is one of them)
 
-### Verified facts and sources (checked 2026-11-07)
+### Verified facts and sources (checked 2026-11-07; LF candidate docs read 2026-11-22)
 
 | Fact | Value | Source |
 |------|-------|--------|
@@ -29,7 +29,10 @@ reading-time: 6 min
 | Retake, eligibility | One retake included; 12-month exam eligibility | LF CNPE page |
 | Simulator | Two Killer.sh simulation attempts; the simulation has 20 questions and gives graded results | LF CNPE page |
 | Prerequisites | None; CKA is suggested as a complement, not required | LF CNPE page |
-| Question count, passing score, exam code, Kubernetes version, allowed docs | Not stated | LF CNPE page |
+| Task count, Kubernetes version, allowed docs | 15-20 performance-based tasks; Kubernetes v1.37; kubernetes.io/docs, kubernetes.io/blog and task-specific docs in the exam's Quick Reference box | [LF Important Instructions: CNPE](https://docs.linuxfoundation.org/tc-docs/certification/important-instructions-cnpe) |
+| Passing score | 64% | [LF CNPE FAQ](https://docs.linuxfoundation.org/tc-docs/certification/frequently-asked-questions-cnpe) |
+| Tools that may appear | Argo, Crossplane, Flagger, Flux, Gatekeeper, Grafana, Istio, Jaeger, Kyverno, Linkerd, OPA, OpenCost, OpenTelemetry, Prometheus, Tekton ("examples", not a fixed list) | LF Important Instructions: CNPE |
+| Exam code | Not stated | LF CNPE page |
 | Domains and weights | 15 / 25 / 25 / 20 / 15 | [CNCF curriculum](https://github.com/cncf/curriculum) (`CNPE_Curriculum.pdf`) and the LF page agree |
 
 > **Verify before booking.** Prices and policies change. Confirm on the official page. Items marked "not stated" were not on the pages read, so this guide does not guess them.

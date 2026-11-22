@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-11-07
+last-updated: 2026-11-22
 difficulty: advanced
 reading-time: 4 min
 ---
@@ -18,11 +18,11 @@ reading-time: 4 min
 
 ## Practice finding, not remembering
 
-The curriculum says candidates complete tasks "using unfamiliar tools by relying on help and documentation available in the exam." Train the skill the exam tests: given a tool you have never used, find a working example in its documentation, adapt it and verify it. Which documentation sites the exam permits is not stated on the LF page, so confirm in the candidate instructions.
+The curriculum says candidates complete tasks "using unfamiliar tools by relying on help and documentation available in the exam." Train the skill the exam tests: given a tool you have never used, find a working example in its documentation, adapt it and verify it. The candidate instructions (read 2026-11-22) allow kubernetes.io/docs, kubernetes.io/blog and the task-specific docs in each task's Quick Reference box, so practise finding answers from a tool's own docs rather than from search results.
 
 ## Time
 
-Two hours for multiple tasks, count not published. Practice triage: do the tasks you can finish fast first, flag the ones that need reading, and never leave a task half applied without noting it.
+Two hours for 15-20 tasks (LF candidate instructions), pass mark 64%. Practice triage: do the tasks you can finish fast first, flag the ones that need reading, and never leave a task half applied without noting it.
 
 ## Verify every task
 

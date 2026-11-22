@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-11-07
+last-updated: 2026-11-22
 difficulty: advanced
 reading-time: 5 min
 ---
@@ -14,8 +14,8 @@ The curriculum says you will use "unfamiliar tools by relying on help and docume
 
 - **Exam Code:** Not stated by the Linux Foundation page (it uses CNPE as the purchase SKU)
 - **Duration:** 2 hours
-- **Questions:** Not stated for the exam ("multiple tasks"); the exam simulator has 20 questions
-- **Passing Score:** Not stated on the Linux Foundation page
+- **Questions:** 15-20 performance-based tasks; the exam simulator has 20 questions
+- **Passing Score:** 64%
 - **Cost:** USD 445 exam only; USD 625 with the THRIVE-ONE annual subscription (listed 2026-11-07)
 - **Validity:** 2 years
 - **Prerequisites:** None; the page lists the experience level as Intermediate and says CNPE pairs well with other credentials (CKA is one of them)
@@ -41,7 +41,7 @@ Argo, Crossplane, Flagger, Flux, Gatekeeper, Grafana, Istio, Jaeger, Kyverno, Li
 
 ## A note on how these notes were built
 
-This is a performance-based exam, so the notes are task-oriented. YAML was syntax-checked with a parser; nothing was applied to a cluster, because none was available. Commands are quoted from vendor docs and marked as not run. Which documentation sites the exam lets you open is **not stated** on the LF page; check the candidate instructions before you book.
+This is a performance-based exam, so the notes are task-oriented. YAML was syntax-checked with a parser; nothing was applied to a cluster, because none was available. Commands are quoted from vendor docs and marked as not run. The candidate instructions allow kubernetes.io/docs, kubernetes.io/blog and the task-specific docs linked in each task's Quick Reference box, on a Kubernetes v1.37 environment ([LF Important Instructions: CNPE](https://docs.linuxfoundation.org/tc-docs/certification/important-instructions-cnpe), read 2026-11-22); re-check before you book.
 
 ## Study sequence
 
@@ -51,7 +51,7 @@ This is a performance-based exam, so the notes are task-oriented. YAML was synta
 4. Progressive delivery: a canary Rollout and a Flagger Canary.
 5. Observability: an alerting rule, a Collector pipeline, the DORA metrics.
 6. Security: PeerAuthentication, a Role and binding, an audit policy, one policy engine.
-7. Time yourself: the exam gives 2 hours for multiple tasks, and the LF simulator has 20 questions.
+7. Time yourself: the exam gives 2 hours for 15-20 tasks, and the LF simulator has 20 questions.
 
 Schedule in the [practice plan](./practice-plan.md).
 
