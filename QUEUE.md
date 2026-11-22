@@ -106,3 +106,31 @@ Q-001 adds a line to `exams/hashicorp/README.md` saying the repo has no Vault gu
 - `python3 .github/scripts/check-readme-counts.py --check`
 - `python3 .github/scripts/check-internal-links.py`
 - `bash .github/scripts/validate-frontmatter.sh`
+
+## Q-004: Splunk Core Certified Power User study guide
+
+- status: approved
+- added: 2026-11-22
+- source: TODO.md "Other Splunk and Datadog exams not built" (Power User first); Splunk page (splunk.com/en_us/training/certification-track/splunk-core-certified-power-user.html, read 2026-11-22): 65 multiple-choice questions, 60 minutes, USD 130, entry level, no prerequisites, Pearson VUE
+- allow: `exams/splunk/power-user/**`, `exams/splunk/README.md`, `exams/splunk/core-user/fact-sheet.md`, `docs/certs.json`, `README.md`, `STUDY-HUB.md`, `docs/freshness.md`
+
+### Spec
+
+Create `exams/splunk/power-user/` in the house shape of `exams/splunk/core-user/` (read it first): `README.md`, `fact-sheet.md` (frontmatter `last-updated` = build date), `notes/` with one file per blueprint domain group (in-depth teaching prose, not bullet cheat sheets), `practice-plan.md`, `scenarios.md` (at least 8 in the existing format) and `strategy.md`. Then run `python3 .github/scripts/build-certs-index.py`, `python3 .github/scripts/build-provider-indexes.py`, `python3 .github/scripts/build-flashcards.py` and `python3 .github/scripts/check-readme-counts.py --fix`.
+
+Exam facts come only from Splunk's own pages: the Power User certification page, its test blueprint (splunk.com/en_us/pdfs/training/splunk-test-blueprint-power-user.pdf; domains and weights from it, never estimated) and the FAQ (splunk.com/en_us/training/faq.html: 3-year life cycle, 7-day retake wait). Write "not stated by Splunk" for passing score, exam code and languages unless a page gives them. Technical notes may use docs.splunk.com / help.splunk.com. Put each vendor URL used under "Official resources". In `exams/splunk/core-user/fact-sheet.md`, change the "Same ladder, next step" line to link the new guide.
+
+### Done when
+
+- `test -f exams/splunk/power-user/README.md`
+- `test -f exams/splunk/power-user/fact-sheet.md`
+- `test -f exams/splunk/power-user/scenarios.md`
+- `grep -qF 'splunk-test-blueprint-power-user.pdf' exams/splunk/power-user/README.md`
+- `grep -qF 'power-user/' exams/splunk/core-user/fact-sheet.md`
+- `bash .github/scripts/validate-cert-structure.sh`
+- `python3 .github/scripts/build-certs-index.py --check`
+- `python3 .github/scripts/build-provider-indexes.py --check`
+- `python3 .github/scripts/build-flashcards.py --check`
+- `python3 .github/scripts/check-readme-counts.py --check`
+- `python3 .github/scripts/check-internal-links.py`
+- `bash .github/scripts/validate-frontmatter.sh`

@@ -69,7 +69,7 @@ Read-only fleet audit (9 agents, nothing changed). Each line: effort S (<half da
 - [x] 2026-11-21 Splunk guide: FAQs + blueprint ✅ 2026-11-22 FAQ gives 3-yr validity, 7-day retake wait, 6-attempt cap (added to fact-sheet); blueprint weights unchanged (PDF 2026-10-08); passing score and languages still unpublished.
 - [ ] 2026-11-21 Datadog guide: the exam guide PDF is dated July 2022 and publishes no weights; confirm question counts and outline against the current Webassessor exam page (needs a login). Exam code not stated anywhere read.
 - [ ] 2026-11-21 Elastic Certified Observability Engineer SKIPPED: elastic.co exam page renders no objectives (client-side, 404 on old URLs) and the certification overview lists four exams without format or domains. Patrick: read https://www.elastic.co/training/elastic-certified-observability-engineer-exam in a browser; if objectives and format are visible, build the guide. Prep-day PDF says hands-on, performance-based; stack version unknown.
-- [ ] 2026-11-21 Other Splunk and Datadog exams not built: Splunk Core Certified Power User (next rung), Datadog Log Management, APM and Distributed Tracing, Cloud SIEM for AWS, Database Monitoring (Fundamentals). Do Power User first if a second Splunk guide is wanted.
+- [x] 2026-11-21 Other Splunk/Datadog exams ✅ 2026-11-22 Power User queued as QUEUE.md Q-004 (65 Qs, 60 min, $130; blueprint URL in spec) for the queue loop. Datadog Log Mgmt, APM, Cloud SIEM, DBM still unbuilt: queue one when Fundamentals gets traffic.
 
 ## Stale cert-page domains (found 2026-10-22, bank expansion)
 
