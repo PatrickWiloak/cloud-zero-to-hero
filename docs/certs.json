@@ -2517,12 +2517,12 @@
       "status": "active",
       "duration": "60 minutes total seat time, which includes 3 minutes to review the exam agreement",
       "questions": "60",
-      "passing_score": "Not stated on the pages read",
+      "passing_score": "Not stated on the certification page, the blueprint or the FAQ (checked 2026-11-22)",
       "cost": "USD 130 per exam attempt (listed 2026-11-07)",
-      "validity": "Not stated on the pages read",
+      "validity": "3 years from the date of your highest certification exam passed (Splunk FAQ, 2026-11-22)",
       "delivery": null,
       "format": "Multiple choice, delivered by Pearson VUE",
-      "languages": "Not stated on the pages read",
+      "languages": "Not stated on the certification page, the blueprint or the FAQ (checked 2026-11-22)",
       "path": "exams/splunk/core-user",
       "notes_count": 6,
       "files": {
@@ -2532,7 +2532,7 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-11-07",
+      "last_updated": "2026-11-22",
       "exam_version": null,
       "exam_retires": null
     },

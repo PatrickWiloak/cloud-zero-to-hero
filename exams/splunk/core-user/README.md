@@ -15,9 +15,9 @@ If you have never seen Splunk, this is the right first step. If you already writ
 - **Exam Code:** Not stated by Splunk
 - **Duration:** 60 minutes total seat time (includes 3 minutes for the exam agreement)
 - **Questions:** 60 multiple choice
-- **Passing Score:** Not stated on the pages read
+- **Passing Score:** Not published (certification page, blueprint and FAQ checked 2026-11-22)
 - **Cost:** USD 130 per attempt (listed 2026-11-07)
-- **Validity:** Not stated on the pages read
+- **Validity:** 3 years from your highest Splunk certification exam passed ([Splunk FAQ](https://www.splunk.com/en_us/training/faq.html), 2026-11-22)
 - **Prerequisites:** None
 - **Format:** Multiple choice, delivered by Pearson VUE
 

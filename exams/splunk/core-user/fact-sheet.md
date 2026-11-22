@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-11-07
+last-updated: 2026-11-22
 difficulty: beginner
 reading-time: 5 min
 ---
@@ -14,11 +14,11 @@ reading-time: 5 min
 **Duration:** 60 minutes total seat time, which includes 3 minutes to review the exam agreement
 **Format:** Multiple choice, delivered by Pearson VUE
 **Questions:** 60
-**Passing Score:** Not stated on the pages read
+**Passing Score:** Not stated on the certification page, the blueprint or the FAQ (checked 2026-11-22)
 **Cost:** USD 130 per exam attempt (listed 2026-11-07)
-**Valid For:** Not stated on the pages read
+**Valid For:** 3 years from the date of your highest certification exam passed (Splunk FAQ, 2026-11-22)
 **Prerequisites:** None (no prerequisite exams)
-**Languages:** Not stated on the pages read
+**Languages:** Not stated on the certification page, the blueprint or the FAQ (checked 2026-11-22)
 
 ### Verified facts and sources (checked 2026-11-07)
 
@@ -30,7 +30,11 @@ reading-time: 5 min
 | Prerequisites | None | page and blueprint |
 | Domains and weights | 8 domains, listed below | test blueprint (PDF read with a text extractor) |
 | Registration | Candidates use Cisco's registration, exam history and support | Splunk certification page |
-| Passing score, validity, retake policy, languages | Not stated | Not on the pages read; the page links separate FAQs that were not read |
+| Validity | 3-year life cycle from the date of the highest certification exam passed; if it lapses you restart at Power User | [Splunk training and certification FAQ](https://www.splunk.com/en_us/training/faq.html) (read 2026-11-22) |
+| Retakes | Wait 7 days after a first fail; later retakes wait longer; Splunk may deny a retake beyond the sixth attempt | Splunk FAQ |
+| Vouchers | Bought from Pearson VUE; its voucher store has a 5-exam bundle for USD 500 | Splunk FAQ |
+| Passing score, languages | Not stated | Not on the certification page, blueprint or FAQ (2026-11-22) |
+| Blueprint check | Same 8 domains and weights on 2026-11-22 (PDF dated 2026-10-08) | test blueprint |
 
 > **Verify before booking.** Splunk certification moved to Cisco's systems, and the blueprint says its guidelines may change at any time without notice. Confirm price, policy and the current blueprint on the official page. Items marked "not stated" were not on the pages read, so this guide does not guess them.
 
