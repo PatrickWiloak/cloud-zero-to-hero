@@ -18,7 +18,7 @@ Study guides for AWS in this repo. For the full picture across every provider, s
 | [AWS Certified Solutions Architect - Professional (SAP-C02)](professional/solutions-architect-pro-sap-c02/) | SAP-C02 | Professional | Ready | 9 |
 | [AWS Certified Solutions Architect - Professional (SAP-C03)](professional/solutions-architect-pro-sap-c03/) | SAP-C03 | Professional | Ready | 5 |
 | [AWS Certified Advanced Networking - Specialty (ANS-C01)](specialty/advanced-networking-ans-c01/) | ANS-C01 | Specialty | Ready | 3 |
-| [AWS Certified SAP on AWS - Specialty (PAS-C01)](specialty/sap-on-aws-pas-c01/) | PAS-C01 | Specialty | Ready | 3 |
+| [AWS Certified SAP on AWS - Specialty (PAS-C01)](specialty/sap-on-aws-pas-c01/) | PAS-C01 | Specialty | Retired | 3 |
 | [AWS Quantum Practitioner (QPC-C01) - Anticipated Study Track](specialty/quantum-practitioner-qpc-c01/) | QPC-C01 | Specialty | Anticipated | 6 |
 
 **Retired** - the exam is no longer offered. The guide is kept for anyone holding the credential, and points to its replacement.

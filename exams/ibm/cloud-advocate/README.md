@@ -239,7 +239,7 @@ The IBM Cloud Advocate certification validates foundational knowledge of IBM Clo
   - Code coverage tracking
 
 #### Application Runtimes
-- **Cloud Foundry**
+- **Cloud Foundry** (retired; IBM's [migration guide](https://cloud.ibm.com/docs/codeengine?topic=codeengine-migrate-cf-ce-getstart) moves apps to Code Engine)
   - Platform for deploying apps
   - Buildpacks for multiple languages
   - Auto-scaling and health management

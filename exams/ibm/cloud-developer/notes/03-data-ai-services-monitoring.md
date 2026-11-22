@@ -660,6 +660,9 @@ analyzeText(text).then(result => {
 
 ### Watson Language Translator
 
+> **Retired service.** IBM's Language Translator API page says the tile was removed for new customers on 10 June 2023, End of Support was 10 June 2024, and the service was "withdrawn entirely" on 10 December 2024 ([IBM API docs](https://cloud.ibm.com/apidocs/language-translator), read 2026-11-22). Learn it only because older exam items may still name it; a new build would use watsonx.ai models instead.
+
+
 ```javascript
 // watson-translator.js
 const LanguageTranslatorV3 = require('ibm-watson/language-translator/v3');
@@ -839,7 +842,10 @@ async function synthesizeWithSSML(outputFile) {
 }
 ```
 
-### Watson Visual Recognition (Replaced by Watson Studio)
+### Watson Visual Recognition (retired 2021)
+
+> **Retired service.** Visual Recognition stopped taking new instances on 7 January 2021 and ended on 1 December 2021 (dates from secondary sources; no IBM page stating them could be read on 2026-11-22). The code below is kept for older exam items only.
+
 
 ```javascript
 // watson-visual.js

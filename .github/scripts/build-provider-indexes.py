@@ -55,7 +55,7 @@ STATUS_LABEL = {
 # A sample of what the provider covers, not an exhaustive list - the Certs column
 # carries the total, and both tables say so underneath.
 PROVIDER_HIGHLIGHTS = {
-    "aws": "CLF-C02, SAA-C03, SOA-C03, DVA-C02, SAP-C02, DOP-C02, Advanced Networking (ANS-C01), SAP on AWS (PAS-C01), Quantum (QPC-C01); retired SOA-C02 retained",
+    "aws": "CLF-C02, SAA-C03, SOA-C03, DVA-C02/C03, SAP-C03, DOP-C02, Advanced Networking (ANS-C01), Quantum (QPC-C01); retired SOA-C02 and SAP on AWS (PAS-C01) retained",
     "azure": "AZ-900/104/204/305/400/700, MS-900, PL-100/200/900",
     "gcp": "Digital Leader, Associate Cloud Engineer, Cloud Architect, Cloud Developer, DevOps, Network Engineer, Workspace Admin",
     "kubernetes": "KCNA, CKA, CKAD, CKNE, plus Argo (CAPA), Backstage (CBA), Cilium (CCA), GitOps (CGOA), Istio (ICA), Kyverno (KCA), OpenTelemetry (OTCA), Prometheus (PCA), Platform Engineering (CNPA), Platform Engineer (CNPE)",

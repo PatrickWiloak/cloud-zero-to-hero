@@ -144,7 +144,7 @@ The IBM Cloud Solution Architect certification validates advanced skills in desi
 - **Security Services**
   - Security and Compliance Center (SCC)
   - Secrets Manager for secrets lifecycle
-  - Certificate Manager for SSL/TLS certs
+  - Certificate Manager for SSL/TLS certs (retired; certificates now live in Secrets Manager)
   - Cloud Security Advisor (deprecated, use SCC)
   - Vulnerability Advisor for container images
 
