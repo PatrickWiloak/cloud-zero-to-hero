@@ -92,7 +92,7 @@ In reports, a matched exception turns a `fail` into `skip`.
 
 ### The CEL replacement
 
-The exceptions page says the legacy `kyverno.io/v2` PolicyException "is deprecated as of Kyverno v1.19 and will be removed in v1.20." The replacement is a PolicyException in `policies.kyverno.io/v1` (introduced in 1.14), for `ValidatingPolicy`, `ImageValidatingPolicy` and `GeneratingPolicy`. It uses `spec.policyRefs` to name the policy and `spec.matchConditions` with CEL; if a condition is `true`, the referenced rule is skipped. Skipped rules appear in reports as `result: skip`, with the rule name `exception` and the exception name in `properties.exceptions`.
+The exceptions page says the legacy `kyverno.io/v2` PolicyException "is deprecated as of Kyverno v1.19 and will be removed in v1.20." That happened: v1.20.0 (2026-11-12) no longer executes legacy PolicyExceptions, per the upgrading page. The replacement is a PolicyException in `policies.kyverno.io/v1` (introduced in 1.14), for `ValidatingPolicy`, `ImageValidatingPolicy` and `GeneratingPolicy`. It uses `spec.policyRefs` to name the policy and `spec.matchConditions` with CEL; if a condition is `true`, the referenced rule is skipped. Skipped rules appear in reports as `result: skip`, with the rule name `exception` and the exception name in `properties.exceptions`.
 
 **[📖 PolicyExceptions](https://kyverno.io/docs/exceptions/)** - legacy and CEL forms, flags, reports
 

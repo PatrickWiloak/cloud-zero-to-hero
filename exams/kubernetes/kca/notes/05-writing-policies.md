@@ -433,7 +433,7 @@ spec:
 - `deletionPropagationPolicy` accepts `Foreground`, `Background` or `Orphan`.
 - The cleanup controller follows least privilege and may need extra RBAC (note 02).
 - **TTL label:** add `cleanup.kyverno.io/ttl` to any resource Kyverno can delete, with an ISO 8601 time or a relative duration like `5m`, `4h`, `1d`, and it is deleted with no policy at all. The check interval is the `ttlReconciliationInterval` flag, default `1m`.
-- **Deprecation:** the docs say `CleanupPolicy` and `ClusterCleanupPolicy` are deprecated as of v1.19 and will be removed in v1.20; the CEL-based **DeletingPolicy** (`policies.kyverno.io/v1`, with `schedule`, `matchConstraints`, `conditions`, `deletionPropagationPolicy`) replaces them.
+- **Deprecation:** `CleanupPolicy` and `ClusterCleanupPolicy` were deprecated in v1.19, and v1.20.0 (2026-11-12) no longer executes them (the API stays so you can list and delete them); the CEL-based **DeletingPolicy** (`policies.kyverno.io/v1`, with `schedule`, `matchConstraints`, `conditions`, `deletionPropagationPolicy`) replaces them.
 
 **[📖 Cleanup policies](https://kyverno.io/docs/policy-types/cleanup-policy/)** - schedule, TTL label, deprecation
 

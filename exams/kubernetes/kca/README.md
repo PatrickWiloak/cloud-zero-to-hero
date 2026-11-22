@@ -38,7 +38,9 @@ Writing Policies is a third of the exam. Add Installation and Fundamentals and y
 
 ## A version warning
 
-The Kyverno documentation read on 2026-11-07 marks `ClusterPolicy`, `Policy`, `CleanupPolicy` and the legacy `PolicyException` as deprecated as of v1.19, with removal planned for v1.20, in favor of CEL-based types (`ValidatingPolicy`, `MutatingPolicy`, `ImageValidatingPolicy`, `DeletingPolicy`). The curriculum still lists classic topics such as preconditions, autogen and JSON patches beside CEL. These notes teach both. Confirm the Kyverno version the exam targets before you rely on one style.
+Kyverno v1.19 (August 2026) deprecated `ClusterPolicy`, `Policy`, `CleanupPolicy`/`ClusterCleanupPolicy` and the legacy `kyverno.io` `PolicyException` in favor of CEL-based types (`ValidatingPolicy`, `MutatingPolicy`, `GeneratingPolicy`, `ImageValidatingPolicy`, `DeletingPolicy`). Kyverno v1.20.0 (released 2026-11-12) no longer executes the legacy types: their APIs stay readable so you can list, export and delete them, but they are not enforced, and a Helm upgrade stops if any exist unless you set `upgrade.acknowledgeLegacyPoliciesNotEnforced=true` (checked 2026-11-22 on the upgrading page). The curriculum still lists classic topics such as preconditions, autogen and JSON patches beside CEL. These notes teach both, because the exam may still be written against an older release. Confirm the Kyverno version the exam targets before you rely on one style.
+
+**[📖 Upgrading Kyverno](https://kyverno.io/docs/installation/upgrading/)** - what v1.20 does with legacy policies
 
 ## Study sequence
 
