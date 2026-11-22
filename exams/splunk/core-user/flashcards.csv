@@ -1,9 +1,9 @@
 Question,Answer,Tags
 How long is the Splunk Core Certified User exam?,"60 minutes total seat time, which includes 3 minutes to review the exam agreement",exam-logistics
 How many questions are on the Splunk Core Certified User exam?,60,exam-logistics
-What is the passing score for Splunk Core Certified User?,Not stated on the pages read,exam-logistics
+What is the passing score for Splunk Core Certified User?,"Not stated on the certification page, the blueprint or the FAQ (checked 2026-11-22)",exam-logistics
 What does the Splunk Core Certified User exam cost?,USD 130 per exam attempt (listed 2026-11-07),exam-logistics
-How long is Splunk Core Certified User valid for?,Not stated on the pages read,exam-logistics
+How long is Splunk Core Certified User valid for?,"3 years from the date of your highest certification exam passed (Splunk FAQ, 2026-11-22)",exam-logistics
 Forwarder (basics and basic searching),a component installed on a data source that collects data and sends it to an indexer.,"notes,basics-and-basic-searching"
 Indexer (basics and basic searching),the component that processes incoming data and stores it in indexes so it can be searched.,"notes,basics-and-basic-searching"
 Search head (basics and basic searching),"the component that hosts the web interface, takes searches and gathers results from indexers.","notes,basics-and-basic-searching"

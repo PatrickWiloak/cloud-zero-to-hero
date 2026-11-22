@@ -1,8 +1,8 @@
 Question,Answer,Tags
 How long is the Red Hat Certified Specialist in OpenShift Administration (EX280) exam?,3 hours,exam-logistics
-What is the passing score for Red Hat Certified Specialist in OpenShift Administration (EX280)?,210/300 (70%),exam-logistics
-What does the Red Hat Certified Specialist in OpenShift Administration (EX280) exam cost?,$500 USD,exam-logistics
-How long is Red Hat Certified Specialist in OpenShift Administration (EX280) valid for?,3 years,exam-logistics
+What is the passing score for Red Hat Certified Specialist in OpenShift Administration (EX280)?,210/300 (70%) (not stated on the EX280 page; widely reported),exam-logistics
+What does the Red Hat Certified Specialist in OpenShift Administration (EX280) exam cost?,"$500 USD (US list; not stated on the EX280 page, check it)",exam-logistics
+How long is Red Hat Certified Specialist in OpenShift Administration (EX280) valid for?,3 years (not stated on the EX280 page),exam-logistics
 Project (projects quotas rbac),an OpenShift namespace with extra annotations that isolates a set of resources for a user or team.,"notes,projects-quotas-rbac"
 ResourceQuota (projects quotas rbac),"an object that caps the total resources, such as CPU, memory or object counts, that a project can use.","notes,projects-quotas-rbac"
 LimitRange (projects quotas rbac),an object that sets default and maximum resource requests and limits for containers in a project.,"notes,projects-quotas-rbac"

@@ -1,8 +1,8 @@
 Question,Answer,Tags
 How long is the Red Hat Certified System Administrator (RHCSA) - EX200 exam?,3 hours,exam-logistics
-What is the passing score for Red Hat Certified System Administrator (RHCSA) - EX200?,210 / 300 (70%),exam-logistics
-What does the Red Hat Certified System Administrator (RHCSA) - EX200 exam cost?,$500 USD,exam-logistics
-How long is Red Hat Certified System Administrator (RHCSA) - EX200 valid for?,3 years,exam-logistics
+What is the passing score for Red Hat Certified System Administrator (RHCSA) - EX200?,210 / 300 (70%) (not stated on the EX200 page; widely reported),exam-logistics
+What does the Red Hat Certified System Administrator (RHCSA) - EX200 exam cost?,"$500 USD (US list; the EX200 page prices by region, check it)",exam-logistics
+How long is Red Hat Certified System Administrator (RHCSA) - EX200 valid for?,3 years (not stated on the EX200 or RHCSA page),exam-logistics
 MBR (storage filesystems),"max 4 primary partitions, 2 TB limit. Use for legacy BIOS systems.","notes,storage-filesystems"
 GPT (storage filesystems),"many partitions, no size limit. Default on modern UEFI systems.","notes,storage-filesystems"
 Physical volume (PV) (storage filesystems),a disk or partition initialised for use by LVM.,"notes,storage-filesystems"
