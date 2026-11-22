@@ -36,7 +36,13 @@ Customizing Backstage is the largest domain at 32%. Development workflow, infras
 
 ## A version warning
 
-The Backstage docs describe a **new frontend system** and a **legacy** one, and several pages are marked legacy. The notes show both. Check which one the exam targets before you book.
+The Backstage docs describe a **new frontend system** and a **legacy** one, and several pages are marked legacy. The notes show both.
+
+Neither the LF CBA page nor the CNCF curriculum PDF says which one the exam targets (both checked 2026-11-22). The curriculum PDF was last changed on 2024-10-22, when every new app used the legacy system; the new system became the `create-app` default only in Backstage v1.49.0 (March 2026), with a `--legacy` flag for the old one. So expect questions written for the legacy system (`App.tsx` routes, `createPlugin`), and learn the new system as well in case the item bank has been refreshed.
+
+**[📖 CBA curriculum (CNCF)](https://github.com/cncf/curriculum/blob/master/CBA_Curriculum.pdf)** - the four domains and their skills
+
+**[📖 Backstage v1.49.0 release notes](https://backstage.io/docs/releases/v1.49.0/)** - new frontend system becomes the default
 
 ## Study sequence
 
