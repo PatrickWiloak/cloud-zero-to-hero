@@ -15,6 +15,7 @@ Mutating admission (fundamentals of kyverno),"the first admission phase, where r
 Validating admission (fundamentals of kyverno),"the second admission phase, where requests are accepted or rejected without change.","notes,fundamentals-of-kyverno"
 Webhook (fundamentals of kyverno),an HTTP callback the API server makes to an external service during admission.,"notes,fundamentals-of-kyverno"
 Digest (fundamentals of kyverno),"an immutable content hash of an image, as opposed to a movable tag.","notes,fundamentals-of-kyverno"
+resourceFilters (installation configuration upgrades),"[kind,namespace,name] entries the admission webhook skips. Wildcards work. Changes apply at runtime.","notes,installation-configuration-upgrades"
 excludeGroups (installation configuration upgrades),"default system:serviceaccounts:kube-system,system:nodes.","notes,installation-configuration-upgrades"
 excludeUsernames (installation configuration upgrades),default !system:kube-scheduler (a ! prefix negates).,"notes,installation-configuration-upgrades"
 webhooks (installation configuration upgrades),a JSON namespaceSelector; by default it excludes kube-system and kyverno.,"notes,installation-configuration-upgrades"

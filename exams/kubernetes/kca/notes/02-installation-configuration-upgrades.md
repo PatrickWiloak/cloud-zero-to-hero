@@ -85,12 +85,14 @@ With Helm you do not edit the Deployment by hand; you set chart values and the c
 
 Behavior that is not a flag lives in the `kyverno` ConfigMap `data` keys:
 
-- **`resourceFilters`** - `[kind,namespace,name]` entries the admission webhook skips. Wildcards work. Changes apply at runtime. The v1.20.0 Helm chart's default list (`config.resourceFilters` in `charts/kyverno/values.yaml`) skips `Event`, `Node`, `APIService`, `TokenReview`, `SubjectAccessReview`, `SelfSubjectAccessReview`, `Binding`, `Pod/binding`, `ReplicaSet`, the ephemeral report kinds, everything in `kube-system`, `kube-public` and `kube-node-lease`, and Kyverno's own ClusterRoles and bindings.
+- **`resourceFilters`** - `[kind,namespace,name]` entries the admission webhook skips. Wildcards work. Changes apply at runtime.
 - **`excludeGroups`** - default `system:serviceaccounts:kube-system,system:nodes`.
 - **`excludeUsernames`** - default `!system:kube-scheduler` (a `!` prefix negates).
 - **`webhooks`** - a JSON `namespaceSelector`; by default it excludes `kube-system` and `kyverno`.
 - **`defaultRegistry`** - `docker.io` by default.
 - **`updateRequestThreshold`** - default `1000`.
+
+The v1.20.0 Helm chart's default `resourceFilters` list (`config.resourceFilters` in `charts/kyverno/values.yaml`) skips `Event`, `Node`, `APIService`, `TokenReview`, `SubjectAccessReview`, `SelfSubjectAccessReview`, `Binding`, `Pod/binding`, `ReplicaSet`, the ephemeral report kinds, everything in `kube-system`, `kube-public` and `kube-node-lease`, and Kyverno's own ClusterRoles and bindings.
 
 **[📖 Customize Kyverno (flags, ConfigMap)](https://kyverno.io/docs/installation/customization/)** - the full flag and ConfigMap tables
 
