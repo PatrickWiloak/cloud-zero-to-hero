@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-11-07
+last-updated: 2026-11-22
 difficulty: beginner
 reading-time: 5 min
 ---
@@ -13,29 +13,29 @@ reading-time: 5 min
 **Level:** Foundational (Datadog calls it its "foundational certification offering")
 **Duration:** Maximum seat time of 2 hours
 **Format:** Multiple choice, one correct response; remote with a live proctor over webcam, or in person at a testing center
-**Questions:** 75 scored plus 15 unscored pre-test questions (exam guide dated July 2022)
+**Questions:** 75 scored plus 15 unscored pre-test questions (exam guide dated August 2026)
 **Passing Score:** Not publicly disclosed by Datadog
 **Cost:** USD 100 per exam (listed 2026-11-07)
 **Valid For:** 3 years from the date of certification; renew by retaking the exam
 **Prerequisites:** None formally; the guide targets entry-level Datadog users who understand observability principles
 **Languages:** English, Japanese, Korean, Brazilian Portuguese, French, Spanish
 
-### Verified facts and sources (checked 2026-11-07)
+### Verified facts and sources (checked 2026-11-07; exam guide re-read 2026-11-22)
 
 | Fact | Value | Source |
 |------|-------|--------|
 | Price, delivery, validity, retakes, passing score, languages | As above; retakes need separate payment, limited to three attempts in a 180-day period | [Datadog certification overview](https://www.datadoghq.com/certification/overview/) |
-| Seat time, question types, question counts, content outline | 2 hours, multiple choice, 75 scored plus 15 pre-test, six domains | [Datadog Fundamentals Exam Guide (PDF)](https://www.datadoghq.com/pdf/Datadog_Fundamentals_Exam_Guide.pdf), created July 2022 |
+| Seat time, question types, question counts, content outline | 2 hours, multiple choice, 75 scored plus 15 pre-test, six domains | [Datadog Fundamentals Exam Guide (PDF)](https://www.datadoghq.com/pdf/datadog-fundamentals-exam-guide-aug-2026.pdf), created 2026-08-05 (linked from the overview page; replaces the July 2022 guide) |
 | Domain weights | Not published; the outline lists domains and subdomains only | Exam guide |
 | Registration | Datadog's Webassessor site | Certification overview |
 
-> **Verify before booking.** The exam guide PDF is dated 2022 while the overview page is current; the guide's question counts and outline may have changed. Prices and policies change. Confirm on the official pages. Items marked "not stated" or "not disclosed" were not on the pages read, so this guide does not guess them.
+> **Verify before booking.** The August 2026 guide keeps the 2022 guide's question counts and domains 2-6; domain 1 was renamed and reshaped (below). Prices and policies change. Confirm on the official pages. Items marked "not stated" or "not disclosed" were not on the pages read, so this guide does not guess them.
 
 ## Exam Domains (from the exam guide, no weights published)
 
 | # | Domain | Subdomains | Notes |
 |---|--------|------------|-------|
-| 1 | Computer Fundamentals | config file modification, operating systems, programming languages, hardware concepts, shell, metadata, networking | [01](./notes/01-computer-fundamentals.md) |
+| 1 | Essential Concepts (was Computer Fundamentals in the 2022 guide) | config file modification, hardware concepts, metadata, networking, Datadog observability (the 2022 guide also listed operating systems, programming languages and shell; Linux, YAML/JSON/Python and shell scripts stay in the topic list) | [01](./notes/01-computer-fundamentals.md) |
 | 2 | Infrastructure Development | Agent installation, API key, application key, running the Agent, Agent hostname | [02](./notes/02-infrastructure-and-agent-install.md) |
 | 3 | Networking & Agent Configuration | Datadog ports, Datadog IP addresses, Auto-discovery | [03](./notes/03-networking-and-agent-configuration.md) |
 | 4 | Data Collection | DogStatsD, crawlers, Agent integrations, API endpoints, tagging best practices, metrics and timeseries | [04](./notes/04-data-collection.md) |
@@ -50,7 +50,7 @@ Out of scope per the guide (non-exhaustive): programming, systems architecture, 
 
 ## Study materials named by the guide
 
-Courses: Intro to Datadog: Dev + SRE, Introduction to Monitoring, Introduction to Integrations. Documentation: Getting Started, Datadog Agent, Metrics, Infrastructure List, API and Application Keys, Integrations, Docker Daemon, Query to the graph, Docker Agent, Metrics API, Monitor types, DogStatsD, ddtrace, Canonical Hostnames.
+Learning path: the 16-course Datadog Fundamentals Certification learning path. Practice exam: 25 questions, free, untimed. Documentation: Getting Started, Datadog Agent, Metrics, Infrastructure List, API and Application Keys, Integrations, Docker Daemon, Query to the graph, Docker Agent, Metrics API, Monitor types, DogStatsD, ddtrace (the 2022 guide also named Canonical Hostnames). Instructor-led 60-minute Foundation Enablement sessions: Introduction to Observability, Introduction to Datadog, Infrastructure Monitoring, Dashboarding, Introduction to Monitors, Tagging, Introduction to Datadog Agent Troubleshooting, Custom Metrics.
 
 ## Other Datadog exams (listed on the overview page, no guide here)
 

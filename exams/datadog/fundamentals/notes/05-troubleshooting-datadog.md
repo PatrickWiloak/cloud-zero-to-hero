@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-11-07
+last-updated: 2026-11-22
 difficulty: intermediate
 reading-time: 13 min
 ---
@@ -10,7 +10,7 @@ reading-time: 13 min
 
 Subdomains in the guide: Agent commands, Agent logs, Agent config files.
 
-The exam guide lists these without weights, but lists "common techniques for troubleshooting Datadog" among the topics tested, and the study list names the Agent docs and the Canonical Hostnames page. Commands are from the Datadog Agent documentation and were not run for this guide, since no Agent was installed. Treat the paths as the Linux defaults and confirm Windows and macOS locations in the docs.
+The exam guide lists these without weights, but lists "common techniques for troubleshooting Datadog" among the topics tested, and the study list names the Agent docs (the 2022 edition also named the Canonical Hostnames page). Commands are from the Datadog Agent documentation and were not run for this guide, since no Agent was installed. Treat the paths as the Linux defaults and confirm Windows and macOS locations in the docs.
 
 ---
 

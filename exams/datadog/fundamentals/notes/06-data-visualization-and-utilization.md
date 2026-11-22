@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-11-07
+last-updated: 2026-11-22
 difficulty: intermediate
 reading-time: 14 min
 ---
@@ -10,7 +10,7 @@ reading-time: 14 min
 
 Subdomains in the guide: Host Map, dashboards, using metrics, using tags, monitors and alerts.
 
-The overview page describes this area as dashboards and data use, and the exam guide outline (dated 2022) breaks it into the five subdomains above. The guide's topic list also says the exam covers aggregating and visualizing data, searching and filtering events, logs and metrics with tags and facets, and creating monitors with targeted notifications. Interface names change between releases, so check labels against your own account. Nothing was run for this guide.
+The overview page describes this area as dashboards and data use, and the exam guide outline (August 2026 edition, unchanged here from 2022) breaks it into the five subdomains above. The guide's topic list also says the exam covers aggregating and visualizing data, searching and filtering events, logs and metrics with tags and facets, and creating monitors with targeted notifications. Interface names change between releases, so check labels against your own account. Nothing was run for this guide.
 
 ---
 

@@ -1,14 +1,14 @@
 ---
-last-updated: 2026-11-07
+last-updated: 2026-11-22
 difficulty: beginner
 reading-time: 15 min
 ---
 
 # 01 - Computer Fundamentals
 
-**Exam guide domain 1: Computer Fundamentals**
+**Exam guide domain 1: Essential Concepts** (called Computer Fundamentals in the 2022 guide)
 
-Subdomains in the guide: config file modification, operating systems, programming languages, hardware concepts, shell, metadata, networking.
+Subdomains in the August 2026 guide: config file modification, hardware concepts, metadata, networking, Datadog observability. The 2022 guide also listed operating systems, programming languages and shell as subdomains; the new guide keeps Linux basics and reading YAML, JSON, Python and shell scripts in its topic list and recommended knowledge, so those sections below still apply.
 
 The exam guide publishes no weights, so this domain should be read as a floor: the guide opens its description by saying the exam runs from "Linux command line basics to metric visualization strategies", and lists computer fundamentals, Linux, reading YAML, JSON, Python and shell scripts, and networking basics as the knowledge a candidate should already have. The commands below are standard Linux and were not run for this guide.
 
@@ -20,7 +20,7 @@ Datadog is a service you talk to over the network, but its center of gravity is 
 
 The guide's own out-of-scope list helps set the depth: programming, systems architecture and testing are not required. You must be able to **read** YAML, JSON, Python and shell scripts, not write large programs. Think of the depth as "reads a config and a short script without panic".
 
-**[📖 Datadog Fundamentals exam guide](https://www.datadoghq.com/pdf/Datadog_Fundamentals_Exam_Guide.pdf)** - the outline this note follows
+**[📖 Datadog Fundamentals exam guide](https://www.datadoghq.com/pdf/datadog-fundamentals-exam-guide-aug-2026.pdf)** - the outline this note follows
 
 ---
 
@@ -167,6 +167,18 @@ Networking questions at this level are about vocabulary and a few protocols.
 The reason UDP matters here is that **DogStatsD**, the local metrics listener in the Agent, uses it by default. Sending a metric over UDP to a local port is cheap and cannot block your application, at the price of no confirmation that it arrived. That trade-off is the reason it was designed that way, and the data collection note returns to it.
 
 Useful diagnostics are the same everywhere: `ping` to see if a host answers, `curl` to test an HTTP endpoint, `nc` (netcat) to test whether a port accepts a connection, and `ss` or `netstat` to see which ports a machine is listening on.
+
+---
+
+## Datadog observability
+
+This subdomain is new in the August 2026 guide, which gives it a name and nothing more; the guide's target candidate "understands Observability principles", and its instructor-led list opens with "Introduction to Observability". Read it as the vocabulary the rest of the exam assumes:
+
+- **Monitoring** answers questions you decided to ask in advance (is CPU above 90%?). **Observability** is being able to ask new questions of a running system from the data it already emits.
+- The three main kinds of telemetry are **metrics** (numbers over time), **logs** (timestamped event records) and **traces** (the path of one request across services). Datadog collects all three and joins them with **tags**, which is why tagging comes up in nearly every later domain.
+- Datadog's model is one platform for that data: the Agent and integrations send it in, and dashboards, the Host Map, search and monitors read it back out. Domains 2 to 6 are each one part of that path.
+
+**[📖 Getting Started with Datadog](https://docs.datadoghq.com/getting_started/)** - the docs page the guide's study list names first
 
 ---
 

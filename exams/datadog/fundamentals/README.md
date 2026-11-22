@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-11-07
+last-updated: 2026-11-22
 difficulty: beginner
 reading-time: 5 min
 ---
@@ -14,7 +14,7 @@ It is broader than deep: from Linux command line basics to metric visualization 
 
 - **Exam Code:** Not stated by Datadog
 - **Duration:** maximum seat time of 2 hours
-- **Questions:** 75 scored plus 15 unscored pre-test questions (per the exam guide, dated 2022)
+- **Questions:** 75 scored plus 15 unscored pre-test questions (per the exam guide, dated August 2026)
 - **Passing Score:** Not publicly disclosed
 - **Cost:** USD 100 per exam (listed 2026-11-07)
 - **Validity:** 3 years from the date of certification
@@ -29,7 +29,7 @@ Datadog publishes the outline but no weights.
 
 | Domain | Notes |
 |--------|-------|
-| Computer Fundamentals | [01](./notes/01-computer-fundamentals.md) |
+| Essential Concepts (was Computer Fundamentals) | [01](./notes/01-computer-fundamentals.md) |
 | Infrastructure Development | [02](./notes/02-infrastructure-and-agent-install.md) |
 | Networking & Agent Configuration | [03](./notes/03-networking-and-agent-configuration.md) |
 | Data Collection | [04](./notes/04-data-collection.md) |
@@ -50,7 +50,7 @@ Schedule in the [practice plan](./practice-plan.md). Reasoning traps are in [sce
 ## Study resources
 
 - **[📖 Datadog certification overview](https://www.datadoghq.com/certification/overview/)** - exams, price, validity and policies
-- **[📖 Datadog Fundamentals exam guide (PDF)](https://www.datadoghq.com/pdf/Datadog_Fundamentals_Exam_Guide.pdf)** - the outline this guide follows
+- **[📖 Datadog Fundamentals exam guide (PDF)](https://www.datadoghq.com/pdf/datadog-fundamentals-exam-guide-aug-2026.pdf)** - the outline this guide follows (August 2026 edition)
 - **[📖 Datadog documentation](https://docs.datadoghq.com/)** - the primary source
 - **[📖 Datadog Learning Center](https://learn.datadoghq.com/)** - courses named in the exam guide (some pages need an account)
 

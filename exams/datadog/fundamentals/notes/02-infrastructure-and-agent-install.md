@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-11-07
+last-updated: 2026-11-22
 difficulty: beginner
 reading-time: 14 min
 ---
@@ -153,7 +153,7 @@ The Agent decides its hostname by trying sources in a fixed **order of precedenc
 3. The name given by a **container environment or a cloud provider** when the Agent runs in one, so that a cloud instance is matched with the cloud integration's view of it.
 4. The **operating system's** hostname, or its fully qualified domain name.
 
-The exact order, and the detail for each environment, is in the docs page named in the exam guide's study list: **Canonical Hostnames**. Read it before you book, as the order has special cases for containers and cloud providers. The idea to retain is "explicit setting first, then environment-supplied names, then the operating system".
+The exact order, and the detail for each environment, is in the docs page **Canonical Hostnames** (named in the 2022 exam guide's study list; Agent hostname is still a domain 2 subdomain). Read it before you book, as the order has special cases for containers and cloud providers. The idea to retain is "explicit setting first, then environment-supplied names, then the operating system".
 
 A **canonical hostname** is the one name the Agent settles on. Datadog applies some rules to make it a good identifier: names are lowercased, and certain generic names such as `localhost` are not accepted as the canonical name. Check what the Agent decided with:
 
