@@ -11,7 +11,7 @@ Start with Terraform. Take the exams in this order:
 
 HashiCorp also lists a Terraform Infrastructure Engineer Professional exam and two Vault exams (Vault Associate and Vault Operations Advanced). This repo has no guide for those yet.
 
-HashiCorp's certifications page no longer lists a Consul, Packer or Nomad exam; those guides are kept as product study notes: [Consul](consul-associate/), [Packer](packer-associate/) and [Nomad](nomad-associate/).
+HashiCorp's certifications page no longer lists a Consul, Packer or Nomad exam; those guides are kept as product study notes: [Consul](consul-associate/), [Packer](packer/) and [Nomad](nomad/).
 
 | Guide | Format | Duration | Cost | Validity |
 |-------|--------|----------|------|----------|
