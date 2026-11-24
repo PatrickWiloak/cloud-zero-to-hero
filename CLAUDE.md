@@ -79,5 +79,7 @@ Every number advertised in `README.md` and `STUDY-HUB.md` is verified by CI. Cer
 
 The script counts via `git ls-files`, never a filesystem walk: a local site build leaves a full staged copy of the tree in `.site-src/`, and walking the working directory counts every page twice.
 
+- **Exam-alerts box**: `.github/site-overrides/partials/z2h-alerts.html` is byte-identical in all four Zero to Hero repos (edit all four together); it renders only when `mkdocs.yml` `extra.z2h_alerts_api` is set, on cert main pages (`z2h_cert`, set by the site hook) and the home page. Backend and emails: noblerworks `lambda/z2h-*.ts`. The consent line must keep disclosing the gitGood + Nobler Works mentions.
+
 ## Docs stay current
 - Update README, `docs/`, this CLAUDE.md and TODO.md **in the same commit** as the change that makes them wrong, never in a later cleanup. A stale doc is a bug.

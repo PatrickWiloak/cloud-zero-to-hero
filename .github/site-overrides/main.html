@@ -90,3 +90,10 @@
   <a class="z2h-family__nw" href="https://noblerworks.com/">by Nobler Works</a>
 </nav>
 {% endblock %}
+
+{# Exam-change alerts box after the page content (partials/z2h-alerts.html;
+   off unless extra.z2h_alerts_api is set). #}
+{% block content %}
+  {{ super() }}
+  {% include "partials/z2h-alerts.html" %}
+{% endblock %}

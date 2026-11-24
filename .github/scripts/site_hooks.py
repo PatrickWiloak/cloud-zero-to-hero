@@ -203,8 +203,18 @@ def cert_description(cert: dict, inner: str) -> str:
         extras = []
         if notes:
             extras.append(f"{notes} study notes")
-        extras += ["a practice plan", "scenarios", "exam-day strategy"]
-        text = f"{parts[0]}: {', '.join(extras[:-1])} and {extras[-1]}."
+        # Name only the files this guide has: 2026-11-24 every description
+        # claimed scenarios and a strategy, which 23 and 28 cloud guides lack.
+        files = cert.get("files") or {}
+        for fname, label in (("practice-plan.md", "a practice plan"), ("scenarios.md", "scenarios"), ("strategy.md", "exam-day strategy")):
+            if files.get(fname):
+                extras.append(label)
+        if len(extras) > 1:
+            text = f"{parts[0]}: {', '.join(extras[:-1])} and {extras[-1]}."
+        elif extras:
+            text = f"{parts[0]}: {extras[0]}."
+        else:
+            text = f"{parts[0]}."
         if facts:
             text += f" {code}: {facts}."
         return _clip(text)
@@ -274,6 +284,9 @@ def on_page_markdown(markdown, page, config, files, **kwargs):
     meta = page.meta
     src = page.file.src_uri
     cert, inner = _cert_for(src)
+    if cert and inner == "README.md":
+        # The exam-alerts box (partials/z2h-alerts.html) follows this exam.
+        meta["z2h_cert"] = {"path": cert["path"], "name": cert.get("name", "")}
     # The page's own H1, not page.title: nav labels are clipped to 72 chars and
     # can carry a provider emoji.
     h1 = re.search(r"^#\s+(.+?)\s*#*\s*$", markdown, re.MULTILINE)

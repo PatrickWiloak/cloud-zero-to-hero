@@ -1,0 +1,119 @@
+{#
+  Exam-change alerts signup (2026-11-24). Byte-identical in all four Zero to
+  Hero repos - edit all four together.
+
+  Optional, never a gate: nothing on the site waits on it. Shown on a cert
+  guide's main page (page.meta.z2h_cert, set by the site hook from the cert
+  index) and on the home page (follows every exam on this site), and only when
+  mkdocs.yml sets extra.z2h_alerts_api to the API base URL - unset, it renders
+  nothing.
+
+  Backend: noblerworks repo, lambda/z2h-subscribe.ts (POST /z2h-subscribe).
+  Single opt-in; the consent line below must keep saying that the emails also
+  mention gitGood and Nobler Works, because they do.
+#}
+{% set z2h_api = config.extra.z2h_alerts_api %}
+{% set z2h_cert = page.meta.z2h_cert if page and page.meta else none %}
+{% if z2h_api and page and (z2h_cert or page.is_homepage) %}
+{% set z2h_site = config.site_url.split("//")[1].split(".")[0] %}
+<aside class="z2h-alerts" aria-labelledby="z2h-alerts-title">
+  <p class="z2h-alerts__title" id="z2h-alerts-title">
+    {% if z2h_cert %}Get an email when {{ z2h_cert.name | e }} changes or retires{% else %}Get an email when any exam on this site changes or retires{% endif %}
+  </p>
+  <p class="z2h-alerts__lead">New exam versions, retirement dates and reminders before an exam ends. No schedule and no weekly newsletter. Optional - every guide stays free and open.</p>
+  <form class="z2h-alerts__form" novalidate
+        data-api="{{ z2h_api | e }}" data-site="{{ z2h_site | e }}"
+        data-cert-path="{{ (z2h_cert.path if z2h_cert else '*') | e }}"
+        data-cert-name="{{ (z2h_cert.name if z2h_cert else '') | e }}">
+    <label class="z2h-alerts__label" for="z2h-email">Email address</label>
+    <div class="z2h-alerts__row">
+      <input class="z2h-alerts__input" id="z2h-email" name="email" type="email" autocomplete="email" required maxlength="254" placeholder="you@example.com">
+      <button class="z2h-alerts__button" type="submit">Email me</button>
+    </div>
+    <input class="z2h-alerts__hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <p class="z2h-alerts__consent">The alerts also mention <a href="https://gitgood.dev">gitGood</a> practice exams and <a href="https://noblerworks.com">Nobler Works</a>, who build these guides. One-click unsubscribe in every email. <a href="https://noblerworks.com/privacy-policy/">Privacy policy</a>.</p>
+    <p class="z2h-alerts__status" role="status" aria-live="polite"></p>
+  </form>
+</aside>
+<style>
+  .z2h-alerts { margin: 2.5rem 0 1rem; padding: 1.1rem 1.25rem; border: 1px solid var(--md-default-fg-color--lightest); border-left: 3px solid var(--md-accent-fg-color, #22c55e); border-radius: 0.5rem; background: var(--md-code-bg-color); }
+  .z2h-alerts p { margin: 0 0 0.6rem; }
+  .z2h-alerts__title { font-weight: 700; font-size: 0.95rem; color: var(--md-default-fg-color); }
+  .z2h-alerts__lead, .z2h-alerts__consent { font-size: 0.72rem; color: var(--md-default-fg-color--light); }
+  .z2h-alerts__label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .z2h-alerts__row { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.6rem; }
+  .z2h-alerts__input { flex: 1 1 14rem; min-width: 0; padding: 0.5rem 0.7rem; font: inherit; font-size: 0.8rem; color: var(--md-default-fg-color); background: var(--md-default-bg-color); border: 1px solid var(--md-default-fg-color--lighter); border-radius: 0.35rem; }
+  .z2h-alerts__input:focus { outline: 2px solid var(--md-accent-fg-color, #22c55e); outline-offset: 1px; }
+  .z2h-alerts__button { padding: 0.5rem 1rem; font: inherit; font-size: 0.8rem; font-weight: 700; color: #fff; background: #15803d; border: 0; border-radius: 0.35rem; cursor: pointer; }
+  .z2h-alerts__button:hover { background: #166534; }
+  .z2h-alerts__button[disabled] { opacity: 0.6; cursor: default; }
+  .z2h-alerts__hp { position: absolute; left: -10000px; width: 1px; height: 1px; opacity: 0; }
+  .z2h-alerts__status { font-size: 0.78rem; margin: 0 !important; }
+  .z2h-alerts__status[data-state="ok"] { color: var(--md-accent-fg-color, #22c55e); }
+  .z2h-alerts__status[data-state="error"] { color: #f87171; }
+</style>
+<script>
+(function () {
+  var form = document.querySelector(".z2h-alerts__form:not([data-bound])");
+  if (!form) return;
+  form.dataset.bound = "1";
+  var KEY = "z2h_attr";
+
+  // First-touch attribution on this site, so a signup says where the reader came from.
+  function attribution() {
+    try {
+      var saved = localStorage.getItem(KEY);
+      if (saved) return JSON.parse(saved);
+      var q = new URLSearchParams(location.search);
+      var ref = "";
+      try { ref = document.referrer ? new URL(document.referrer).hostname : ""; } catch (e) {}
+      if (ref === location.hostname) ref = "";
+      var a = {
+        source: q.get("utm_source") || ref || "direct",
+        medium: q.get("utm_medium") || (ref ? "referral" : "none"),
+        landingPage: location.pathname.slice(0, 200),
+        ts: new Date().toISOString()
+      };
+      if (q.get("utm_campaign")) a.campaign = q.get("utm_campaign");
+      if (ref) a.referrer = ref;
+      localStorage.setItem(KEY, JSON.stringify(a));
+      return a;
+    } catch (e) { return null; }
+  }
+  attribution();
+
+  var status = form.querySelector(".z2h-alerts__status");
+  var button = form.querySelector(".z2h-alerts__button");
+  function say(text, state) { status.textContent = text; status.setAttribute("data-state", state || ""); }
+
+  form.addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    var email = form.email.value.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { say("Enter a valid email address.", "error"); form.email.focus(); return; }
+    button.disabled = true;
+    say("Signing you up...");
+    fetch(form.dataset.api.replace(/\/$/, "") + "/z2h-subscribe", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        email: email,
+        site: form.dataset.site,
+        certPath: form.dataset.certPath,
+        certName: form.dataset.certName,
+        page: location.pathname,
+        website: form.website.value,
+        attribution: attribution()
+      })
+    }).then(function (r) {
+      return r.json().catch(function () { return {}; }).then(function (body) {
+        if (!r.ok) throw new Error(body.error || "Something went wrong");
+        form.email.value = "";
+        say("You're in. Check your inbox for a welcome email.", "ok");
+      });
+    }).catch(function (err) {
+      say((err && err.message && err.message !== "Failed to fetch" ? err.message : "That didn't go through. Try again in a minute.") , "error");
+    }).then(function () { button.disabled = false; });
+  });
+})();
+</script>
+{% endif %}
