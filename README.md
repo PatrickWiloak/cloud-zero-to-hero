@@ -27,16 +27,16 @@ Built for **every kind of technologist**, across 21 role-targeted learning paths
 
 [![Start a 7-day free trial](https://img.shields.io/badge/Start%207--Day%20Free%20Trial-000000?style=for-the-badge&logo=rocket&logoColor=white)](https://gitgood.dev)
 
-**$8/month** or **$64/year** after the trial. Free tier needs no card: 20 practice questions, the free coding challenges, streaks, achievements, and the job board.
+**$8/month** or **$48/year** after the trial. A free account needs no card.
 
 <details class="promo" markdown="1">
 <summary>What's inside gitGood.dev</summary>
 
 **Roles** - backend, frontend, full-stack and mobile development, SRE and DevOps, platform engineering, cloud and solutions architecture, security engineering, machine learning and AI engineering, data science, data analytics, data engineering, QA and SDET, engineering management, product management, TPM, and new grads breaking into tech.
 
-**Cloud certification practice exams** - 13 banks and 608 original scenario-style questions (never brain dumps), with per-domain scoring and a timed exam simulator: AWS Cloud Practitioner CLF-C02, Solutions Architect Associate SAA-C03 and Developer Associate DVA-C02; Azure AZ-900, AZ-104, AZ-305 and AI-900; Google Cloud Digital Leader and Associate Cloud Engineer; Kubernetes CKA and CKAD; CompTIA Security+; HashiCorp Terraform Associate.
+**Cloud certification practice exams** - 49 exams and 2,500+ original scenario-style questions (never brain dumps), with per-domain scoring and a timed exam simulator: AWS, Azure, Google Cloud, Kubernetes (CKA, CKAD, CKS, KCNA), CompTIA Security+, Cisco CCNA, GitHub, HashiCorp Terraform and Vault, ISC2, Databricks, Snowflake and Anthropic.
 
-**Everything else** - 1,950+ practice questions across 34 categories · coding challenges with real sandboxed execution in JavaScript, Python and TypeScript · a 45-problem SQL playground · 32 system design walkthroughs including LLM inference and RAG · behavioral and STAR interview prep · curated interview packs for 39 companies · AI mock interviews · AI resume reviews · salary negotiation coaching · a live tech job-market pulse and job board.
+**Everything else** - 3,500+ practice questions across 45+ categories · 300+ coding challenges with real sandboxed execution in JavaScript, Python, Java and Go · a 50+ problem SQL playground · 32 system design walkthroughs including LLM inference and RAG · behavioral and STAR interview prep · company interview prep packs · AI mock interviews · AI resume reviews · salary negotiation coaching · a live tech job-market pulse and job board.
 
 </details>
 
@@ -55,7 +55,7 @@ Built for **every kind of technologist**, across 21 role-targeted learning paths
 > 🎥 [@patrickwiloak](https://youtube.com/@patrickwiloak) | 💼 [LinkedIn](https://www.linkedin.com/in/patricklukewilson/)
 
 ![Certifications](https://img.shields.io/badge/Certifications-79-blue.svg)
-![Documentation Links](https://img.shields.io/badge/Documentation%20Links-6000+-green.svg)
+![Documentation Links](https://img.shields.io/badge/Documentation%20Links-7000+-green.svg)
 ![Providers](https://img.shields.io/badge/Providers-18-orange.svg)
 ![Free to Use](https://img.shields.io/badge/Free%20to%20Use-Educational-green.svg)
 
@@ -120,11 +120,11 @@ Cross-pillar **[topic index](./topics/)** ties Learn + Build + Reference + Certi
 
 See the **[CHANGELOG](./CHANGELOG.md)** for the rolling history. Recent batches:
 
+- **2026-11-22** - Exam facts re-checked against vendor pages: [SAP-C02](./exams/aws/professional/solutions-architect-pro-sap-c02/) and PAS-C01 marked retired, [Kyverno KCA](./exams/kubernetes/kca/) updated for Kyverno 1.20, [Datadog Fundamentals](./exams/datadog/fundamentals/) moved to the August 2026 exam guide, and CNPE, IBM, PL-900 and OCI facts reconciled. New [HashiCorp](./exams/hashicorp/) and [GitHub](./exams/github/) provider pages say which exam to take first; Packer and Nomad are now study tracks, not exams. The [GCP Professional Cloud Architect](./exams/gcp/cloud-architect/) guide gained [case-study notes](./exams/gcp/cloud-architect/notes/case-studies.md) for all four current case studies.
+- **2026-11-07** - Ten new or rebuilt certification guides: AWS [DVA-C03](./exams/aws/associate/developer-dva-c03/) and [SAP-C03](./exams/aws/professional/solutions-architect-pro-sap-c03/), [CompTIA Linux+ XK0-006](./exams/comptia/linux-plus/), [Terraform Associate 004](./exams/hashicorp/terraform-associate/), CNCF [CNPE](./exams/kubernetes/cnpe/), [CKNE](./exams/kubernetes/ckne/), [Backstage CBA](./exams/kubernetes/cba/) and [Kyverno KCA](./exams/kubernetes/kca/), [Splunk Core Certified User](./exams/splunk/core-user/) and [Datadog Fundamentals](./exams/datadog/fundamentals/). Every concept page now ends with "Check yourself" questions, every cert folder carries a `flashcards.csv` deck for Anki or Quizlet, and a [cross-site learning paths](./learn/learning-paths.md) page routes you across all four Zero to Hero sites.
 - **2026-10-21** - Fourteen new [concept pages](./learn/concepts/) (object/block/file storage, high availability, DR with RPO and RTO, API gateways, queues and pub/sub, landing zones, IaC, GitOps, service mesh, platform engineering, cloud identity for builders, Well-Architected, managed databases, edge computing), three new [Day One](./learn/day-one/) pages (environment variables, Linux processes and systemd, your first Docker container) and two hands-on builds: [a landing zone](./resources/hands-on-projects/build-a-landing-zone.md) and [GitOps with Argo CD](./resources/hands-on-projects/gitops-with-argo-cd.md).
 - **2026-10-21** - This repo is now **Cloud Zero to Hero**. The old all-in-one repo was split by subject into four sibling sites: cloud stays here, and the data, security and AI material moved to [Data](https://data.noblerworks.com/), [Security](https://security.noblerworks.com/) and [AI](https://ai.noblerworks.com/) Zero to Hero. Links between them are absolute, so nothing you bookmarked on a subject page is lost.
 - **2026-09-28** - New [CompTIA A+ (220-1201 and 220-1202)](./exams/comptia/a-plus/) guide: nine notes across both Core exams, a fact sheet, study plan, scenarios, strategy and 20 [practice questions](./resources/practice-questions/comptia-a-plus-220-1201-1202.md). On the site, every page now has its own search description and a title led by its exam code, and deploys notify search engines through IndexNow.
-- **2026-09-18** - Every dead vendor link repaired: each replacement fetched and matched to the page the citation meant. The sweep now also catches soft 404s and deep links that silently redirect to a homepage. The record of every old-to-new replacement is [docs/link-rot-2026-09-17.md](./docs/link-rot-2026-09-17.md).
-- **2026-08-14** - The whole repo is now a searchable website: [cloud.noblerworks.com](https://cloud.noblerworks.com/), with its own landing page, full-text search, dark mode and mobile nav, generated from these same markdown files. Every counted claim in the README is checked in CI.
 
 ---
 
@@ -135,7 +135,7 @@ A complete cloud learning resource. Whether you're starting fresh, building prod
 - ✅ **[Day One on-ramp](./learn/day-one/)** - terminal, git, HTTP, servers
 - ✅ **[37 concept pages](./learn/concepts/)** - cloud computing, regions, VPCs, DNS, CDNs, load balancing, containers, Kubernetes, serverless, Terraform, CI/CD, observability, cost, storage types, high availability, disaster recovery, API gateways, landing zones, IaC, GitOps, service mesh, platform engineering, edge
 - ✅ **[Cloud from Scratch](./learn/cloud-from-scratch.md)** - a structured 8-phase path
-- ✅ **79 certification study guides** across 16 providers, 6,000+ embedded vendor doc links
+- ✅ **79 certification study guides** across 18 providers, 7,000+ embedded vendor doc links
 - ✅ **[7 cross-pillar topic indexes](./topics/)** - Kubernetes, networking, serverless, observability, SRE, platform engineering, FinOps (find everything by topic, not provider)
 - ✅ **7 cross-cloud service comparisons** - compute, storage, networking, containers, DevOps/CI/CD, observability, serverless
 - ✅ **9 CLI cheat sheets** (AWS, Azure, GCP, kubectl, Terraform, Docker, Helm, GitHub CLI, multi-cloud)
@@ -268,7 +268,7 @@ On the sibling sites: [Data Pipeline](https://data.noblerworks.com/resources/han
 
 ## 📈 What Makes These Materials Special?
 
-1. **Documentation-rich** - 6,000+ embedded vendor doc links, format `**[📖 Title](URL)** - description`
+1. **Documentation-rich** - 7,000+ embedded vendor doc links, format `**[📖 Title](URL)** - description`
 2. **Multi-cloud** - AWS, Azure, GCP, OCI and IBM side by side, with cross-cloud comparisons and CLI cheat sheets
 3. **Comprehensive + structured** - consistent format across every cert (README → fact-sheet → notes → practice-plan → scenarios → strategy)
 4. **Practical + hands-on** - guided builds with inline code, free-tier guides
@@ -303,7 +303,7 @@ On the sibling sites: [Data Pipeline](https://data.noblerworks.com/resources/han
 ## 📊 Repository Statistics
 
 - **Certifications:** 79
-- **Documentation links:** 6,000+
+- **Documentation links:** 7,000+
 - **Providers:** 18
 - **Concept pages:** 37
 - **Service comparisons:** 7
@@ -364,7 +364,7 @@ Found a typo? Have a suggestion? Want to add content? See **[CONTRIBUTING.md](./
 
 ## ⚖️ Usage & Disclaimer
 
-**Free to use for educational purposes with attribution.** All technical information is sourced from and linked to official cloud provider documentation (12,000+ embedded links throughout).
+**Free to use for educational purposes with attribution.** All technical information is sourced from and linked to official cloud provider documentation (7,000+ embedded doc links throughout).
 
 **Disclaimer:** This repository is an independent educational resource and is not affiliated with, endorsed by, or sponsored by AWS, Microsoft, Google, Oracle, IBM, the Linux Foundation, HashiCorp, or any other vendor referenced. All trademarks and cloud technologies are the property of their respective owners.
 

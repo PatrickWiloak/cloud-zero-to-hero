@@ -161,8 +161,8 @@ All four are free, by [Nobler Works](https://noblerworks.com/). Not sure which t
 
 ## Who made this
 
-Built by **[Patrick Wiloak](https://patricklukewilson.com)** - ex-AWS Solutions Architect, 10 years in tech, multi-cloud certified.
-[YouTube](https://youtube.com/@patrickwiloak) · [LinkedIn](https://www.linkedin.com/in/patricklukewilson/) · [Website](https://patricklukewilson.com) · [Source on GitHub](https://github.com/PatrickWiloak/cloud-zero-to-hero)
+Built by **[Patrick Wiloak](https://patrickwiloak.com)** - ex-AWS Solutions Architect, 10 years in tech, multi-cloud certified.
+[YouTube](https://youtube.com/@patrickwiloak) · [LinkedIn](https://www.linkedin.com/in/patricklukewilson/) · [Website](https://patrickwiloak.com) · [Source on GitHub](https://github.com/PatrickWiloak/cloud-zero-to-hero)
 
 We build custom software and products at **[Nobler Works](https://noblerworks.com/)**. Open-source training like this is how we give back - we are nothing without the community that supports us. If you need software built, [get in touch](https://noblerworks.com/).
 
@@ -172,9 +172,9 @@ We build custom software and products at **[Nobler Works](https://noblerworks.co
 
     This site gives you the material. **[gitGood](https://gitgood.dev)** gives you the reps, and tells you whether you actually know it. Built for every kind of technologist across 21 role-targeted learning paths - engineering, SRE and DevOps, cloud architecture, security, ML and AI, data science, analytics and engineering, QA, product and TPM, and new grads breaking in.
 
-    1,950+ practice questions across 34 categories · certification practice exams for AWS CLF-C02, SAA-C03 and DVA-C02, Azure AZ-900, AZ-104, AZ-305 and AI-900, Google Cloud Digital Leader and Associate Cloud Engineer, Kubernetes CKA and CKAD, CompTIA Security+ and HashiCorp Terraform Associate - original scenario questions, never brain dumps, with per-domain scoring and a timed simulator · coding challenges · SQL playground · system design walkthroughs · AI mock interviews · AI resume reviews · salary coaching · live job-market pulse.
+    3,500+ practice questions across 45+ categories · 49 certification practice exams across AWS, Azure, Google Cloud, Kubernetes, CompTIA, Cisco, GitHub, HashiCorp and more - original scenario questions, never brain dumps, with per-domain scoring and a timed simulator · coding challenges · SQL playground · 32 system design walkthroughs · AI mock interviews · AI resume reviews · salary coaching · live job-market pulse.
 
-    A 7-day free trial, then $8/month or $64/year. The free tier needs no card.
+    A 7-day free trial, then $8/month or $48/year. A free account needs no card.
 
 ## Fine print
 

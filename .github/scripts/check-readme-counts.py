@@ -129,6 +129,8 @@ CLAIMS: list[tuple[str, str, str]] = [
     ("concept pages", r"\*\*\[(\d+) concept pages\]", "concept_pages"),
     ("topic indexes", r"\*\*\[(\d+) cross-pillar topic indexes\]", "topic_indexes"),
     ("cert study guides", r"\*\*(\d+) certification study guides\*\*", "certifications"),
+    # Unchecked until 2026-11-24, when it still said 16 providers against 18.
+    ("cert study guides providers", r"\*\*\d+ certification study guides\*\* across (\d+) providers", "providers"),
     ("service comparisons", r"\*\*(\d+) cross-cloud service comparisons\*\*", "service_comparisons"),
     ("CLI cheat sheets", r"\*\*(\d+) CLI cheat sheets\*\*", "cli_cheat_sheets"),
     ("architecture patterns", r"\*\*(\d+) architecture patterns\*\*", "architecture_patterns"),

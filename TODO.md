@@ -9,6 +9,11 @@ Working task list for **cloud-zero-to-hero** (Cloud Zero to Hero, https://cloud.
 - [ ] 2026-11-13 Pat: review 1 loop-drafted guide page(s) (""Cloud egress and data transfer costs explained""), then `publish per drafts/README.md: drafts/learn/concepts/cloud-egress-and-data-transfer-costs.md`
 - [ ] 2026-11-15 Pat: first `content-z2h-cloud` run (Sundays, pilot since 2026-11-13) drafts into `drafts/`, never built; publish or delete each per [drafts/README.md](drafts/README.md).
 
+## README refresh (2026-11-24)
+- [ ] 2026-11-24 Same stale gitGood promo (13 banks/608 Q, 1,950+, $64/yr; live is 49 exams, 3,500+, $48/yr) is in the data-, security- and ai-zero-to-hero READMEs + home.md; port this repo's 11-24 wording.
+- [ ] 2026-11-24 Pat: upload `assets/brand/social-preview-1280x640.png` as the GitHub social preview (Settings > General; API can't set it).
+- [ ] 2026-11-24 Pat: post the Cloud Zero to Hero LinkedIn draft (in the 11-24 session; link cloud.noblerworks.com).
+
 ## Community (2026-10-27)
 
 - [x] 2026-11-07 Cross-site learning paths (7 routes, `learn/learning-paths.md`, byte-identical in all four repos, linked from which-site, learn hub and home). Not pushed or deployed: ships with the train.

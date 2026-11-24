@@ -6,6 +6,32 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 
 ---
 
+## [2026-11-24] - README and home page brought up to date
+
+### Fixed
+
+- README said "16 providers" in one line against 18 in `docs/certs.json`; that line is now checked by `check-readme-counts.py` too.
+- The vendor doc-link figure read 6,000+ in four places and 12,000+ in a fifth. The tree has just over 7,000, so every mention now says 7,000+.
+- The gitGood block on the README and home page described an older gitGood (13 practice banks, 1,950+ questions, $64/year). It now matches gitgood.dev: 49 cert practice exams, 3,500+ questions, $8/month or $48/year.
+- The home page linked patricklukewilson.com, which redirects; it now links patrickwiloak.com.
+- "What's new" gained the two November batches below.
+
+## [2026-11-22] - Exam facts re-checked against vendor pages
+
+### Changed
+
+- SAP-C02 and PAS-C01 marked retired; Kyverno KCA updated for Kyverno 1.20; Datadog Fundamentals follows the August 2026 exam guide; CNPE, IBM, PL-900 and OCI facts reconciled with vendor pages.
+- HashiCorp Packer and Nomad are study tracks, not exams (folders renamed, old URLs redirect). New HashiCorp and GitHub provider pages say which exam to take first.
+- GCP Professional Cloud Architect: case-study notes, a diagram per case, and 40 recall cards (2026-11-18).
+
+## [2026-11-07] - Ten new or rebuilt certification guides
+
+### Added
+
+- Guides for AWS DVA-C03 and SAP-C03, CompTIA Linux+ XK0-006, Terraform Associate 004, CNCF CNPE, CKNE, Backstage CBA, Kyverno KCA, Splunk Core Certified User and Datadog Fundamentals.
+- "Check yourself" questions on all 37 concept pages, a generated `flashcards.csv` deck in every cert folder, and a cross-site learning paths page.
+- A weekly freshness check that reports guides whose `last-updated` date is old.
+
 ## [2026-11-04] - Dark mode by default
 
 ### Changed
