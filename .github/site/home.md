@@ -73,7 +73,7 @@
 
     ---
 
-    {{certifications}} cert guides across {{providers}} providers, each with a fact sheet, practice plan, scenarios, and exam-day strategy.
+    {{certifications}} cert guides across {{providers}} providers, each with a fact sheet, study notes and a practice plan; most add scenarios and an exam-day strategy.
 
     [:octicons-arrow-right-24: Find your cert](STUDY-HUB.md)
 
