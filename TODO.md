@@ -19,7 +19,7 @@ Working task list for **cloud-zero-to-hero** (Cloud Zero to Hero, https://cloud.
 
 ## Community (2026-10-27)
 
-- [x] 2026-11-07 Cross-site learning paths (7 routes, `learn/learning-paths.md`, byte-identical in all four repos, linked from which-site, learn hub and home). Not pushed or deployed: ships with the train.
+- [x] 2026-11-07 Cross-site learning paths (7 routes, `learn/learning-paths.md`, byte-identical in all four repos, linked from which-site, learn hub and home). Pushed and live (checked 2026-11-24).
 - [ ] 2026-12-07 re-verify every link in `learn/learning-paths.md` against each repo's `git ls-files` (script: loop the URLs through the four trees) and the matching certs against current exam codes.
 - [x] 2026-11-07 'Check yourself' sections (3-4 questions, collapsed `<details markdown="1">` answers) added to all 37 `learn/concepts/` pages.
 - [x] 2026-11-07 Port the same 'Check yourself' sections to the sibling sites' concept pages (data-zero-to-hero, security-zero-to-hero, ai-zero-to-hero); same markup, answers drawn only from each page's own text. ✅ 2026-11-08: already on every concept page: data 29/29, security 34/34, ai 38/38; answers not re-verified.
@@ -74,7 +74,7 @@ Read-only fleet audit (9 agents, nothing changed). Each line: effort S (<half da
 - [x] 2026-11-21 CBA guide: frontend system + question count ✅ 2026-11-22 LF page and CNCF curriculum (last changed 2024-10-22) name neither system nor question count/passing score; README now says expect legacy, new system default since v1.49.0 (2026-03).
 - [ ] 2026-11-21 CNPE guide: do the two LF Killer.sh simulator attempts before booking (YAML syntax-checked only, never applied). ✏️ 2026-11-22 LF candidate docs read: 15-20 tasks, 64% pass, Kubernetes v1.37, kubernetes.io docs/blog + Quick Reference docs allowed; added to the guide.
 - [x] 2026-11-21 CKNE guide: unfetched pages ✅ 2026-11-22 Cilium global/shared annotations, probes page, controller-manager CIDR flags and kubectl debug all match the notes; LF page still gives no task count, passing score, K8s version or allowed docs (2 h, $445). YAML still never applied.
-- [x] 2026-11-07 Splunk Core Certified User and Datadog Fundamentals guides built (new `splunk` and `datadog` providers; committed, not pushed or deployed: `ship cloud-zero-to-hero --no-deploy`). Neither is hands-on verified (no instance or Agent), no practice banks.
+- [x] 2026-11-07 Splunk Core Certified User and Datadog Fundamentals guides built (new `splunk` and `datadog` providers; pushed and live, checked 2026-11-24). Neither is hands-on verified (no instance or Agent), no practice banks.
 - [x] 2026-11-21 Splunk guide: FAQs + blueprint ✅ 2026-11-22 FAQ gives 3-yr validity, 7-day retake wait, 6-attempt cap (added to fact-sheet); blueprint weights unchanged (PDF 2026-10-08); passing score and languages still unpublished.
 - [x] 2026-11-21 Datadog guide: confirm counts/outline beyond the July 2022 PDF ✅ 2026-11-22 overview page links a new public guide (2026-08-05): still 75 scored + 15 pre-test, 2 h, no weights; domain 1 now Essential Concepts (+ Datadog observability). Guide updated. Exam code still not stated.
 - [x] 2026-11-21 Elastic Certified Observability Engineer ✅ 2026-11-22 page read in a headless browser: 6 objective groups, 3 h, $500, English, hands-on with Elastic docs; queued as QUEUE.md Q-005 with the objectives copied in (no count, pass score, validity or stack version stated).
