@@ -5,7 +5,7 @@ Working task list for **cloud-zero-to-hero** (Cloud Zero to Hero, https://cloud.
 ---
 
 ## Exam-change alerts (2026-11-24) - noblerworks CHANGELOG 2026-11-24
-- [ ] 2026-11-24 Exam-alerts box built, OFF: once noblerworks' z2h deploy is live (`curl -s -o /dev/null -w '%{http_code}' -X OPTIONS https://wfzdn3z8ed.execute-api.us-east-1.amazonaws.com/prod/z2h-subscribe` = 204), set `extra.z2h_alerts_api: "https://wfzdn3z8ed.execute-api.us-east-1.amazonaws.com/prod"` in mkdocs.yml in all four Zero to Hero repos and ship.
+- [x] 2026-11-24 Exam-alerts box ON in all four sites (backend live, OPTIONS 204, test signup 200). Check 2026-11-25 that the first daily run logged `z2h.alerts_run` with a baseline.
 
 ## ✍️ Content refill (loop content-refill; nobler-os docs/LOOPS.md)
 - [ ] 2026-11-15 Pat: from 11-15 the `queue-z2h-cloud` loop builds content items (gaps, deepening, new certs) from [QUEUE.md](QUEUE.md) on local `loop/queue-q-NNN` branches; read and land each per QUEUE.md "Landing a built item" (expires 14 days).

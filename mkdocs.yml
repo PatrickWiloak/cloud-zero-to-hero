@@ -175,8 +175,8 @@ validation:
 
 extra:
   # Exam-change alerts box (.github/site-overrides/partials/z2h-alerts.html).
-  # Empty = off. Set to the noblerworks API base once POST /z2h-subscribe is live.
-  z2h_alerts_api: ""
+  # Empty = off. On since 2026-11-24 (noblerworks POST /z2h-subscribe).
+  z2h_alerts_api: "https://wfzdn3z8ed.execute-api.us-east-1.amazonaws.com/prod"
   # Google Search Console URL-prefix verification token (HTML-tag method). Issued
   # 2026-09-28 to the nobler-reporting service account, which verified the
   # property; pat@noblerworks.com is a co-owner. Removing it un-verifies the site.
