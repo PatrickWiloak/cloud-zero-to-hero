@@ -6,6 +6,12 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 
 ---
 
+## [2026-11-25] - Site look brought in line with gitGood
+
+### Changed
+
+- The site chrome now uses the gitgood.dev look: a black glass header in place of the coloured bar, a bright accent call-to-action with black text and a glow, a home hero panel with an animated particle network (a still frame under reduced motion), stat tiles, pill section labels, and bordered code blocks, tables and admonitions. The CSS block at the end of `.github/site/extra.css` and the script at the end of `.github/site-overrides/main.html` are identical in all four Zero to Hero sites.
+
 ## [2026-11-24] - README and home page brought up to date
 
 ### Fixed

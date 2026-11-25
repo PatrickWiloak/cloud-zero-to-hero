@@ -97,3 +97,116 @@
   {{ super() }}
   {% include "partials/z2h-alerts.html" %}
 {% endblock %}
+
+{#- Home hero particle network, gitgood.dev's hero background (2026-11-25).
+    Identical in all four Zero to Hero repos - edit all four. Styled by the
+    "gitGood look" block at the end of .github/site/extra.css. Runs only where
+    .home-hero exists; one still frame under prefers-reduced-motion; pauses
+    while the hero is off screen. -#}
+{% block scripts %}
+  {{ super() }}
+  <script>
+  (function () {
+    var hero = document.querySelector(".home-hero");
+    if (!hero || !window.requestAnimationFrame) return;
+    var canvas = document.createElement("canvas");
+    canvas.className = "z2h-particles";
+    canvas.setAttribute("aria-hidden", "true");
+    hero.appendChild(canvas);
+    var ctx = canvas.getContext("2d");
+    if (!ctx) return;
+    var still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var w = 0, h = 0, pts = [], color = "#22c55e", tick = 0, visible = true, running = false;
+    var LINK = 120;
+
+    function readColor() {
+      var c = getComputedStyle(hero).getPropertyValue("--nw-cta").trim();
+      if (c) color = c;
+    }
+
+    function size() {
+      w = hero.clientWidth;
+      h = hero.clientHeight;
+      canvas.width = Math.round(w * dpr);
+      canvas.height = Math.round(h * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      var n = Math.round(Math.min(80, (w * h) / 8000));
+      pts = [];
+      for (var i = 0; i < n; i++) {
+        pts.push({
+          x: Math.random() * w,
+          y: Math.random() * h,
+          vx: (Math.random() - 0.5) * 0.3,
+          vy: (Math.random() - 0.5) * 0.3,
+          r: Math.random() * 1.6 + 0.6
+        });
+      }
+    }
+
+    function draw() {
+      if (tick++ % 30 === 0) readColor();
+      ctx.clearRect(0, 0, w, h);
+      ctx.fillStyle = color;
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 0.6;
+      for (var i = 0; i < pts.length; i++) {
+        var p = pts[i];
+        if (!still) {
+          p.x += p.vx;
+          p.y += p.vy;
+          if (p.x < -10) p.x = w + 10; else if (p.x > w + 10) p.x = -10;
+          if (p.y < -10) p.y = h + 10; else if (p.y > h + 10) p.y = -10;
+        }
+        for (var j = i + 1; j < pts.length; j++) {
+          var q = pts[j], dx = p.x - q.x, dy = p.y - q.y, d = Math.sqrt(dx * dx + dy * dy);
+          if (d < LINK) {
+            ctx.globalAlpha = (1 - d / LINK) * 0.28;
+            ctx.beginPath();
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(q.x, q.y);
+            ctx.stroke();
+          }
+        }
+        ctx.globalAlpha = 0.75;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, 6.2832);
+        ctx.fill();
+      }
+      ctx.globalAlpha = 1;
+    }
+
+    function loop() {
+      if (!visible || still) { running = false; return; }
+      draw();
+      requestAnimationFrame(loop);
+    }
+
+    function start() {
+      if (running || still) return;
+      running = true;
+      requestAnimationFrame(loop);
+    }
+
+    readColor();
+    size();
+    draw();
+    start();
+
+    var t;
+    window.addEventListener("resize", function () {
+      clearTimeout(t);
+      t = setTimeout(function () { size(); draw(); }, 150);
+    });
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (e) {
+        visible = e[0].isIntersecting;
+        if (visible) start();
+      }).observe(hero);
+    }
+    /* Scheme toggle: redraw the still frame in the new accent. */
+    new MutationObserver(function () { readColor(); if (still) draw(); })
+      .observe(document.body, { attributes: true, attributeFilter: ["data-md-color-scheme"] });
+  })();
+  </script>
+{% endblock %}

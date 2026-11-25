@@ -655,7 +655,7 @@
   --md-primary-fg-color--light: #15803d;
   --md-primary-fg-color--dark:  #14532d;
 }
-.md-header, .md-tabs { background-color: #166534; }
+/* The header bar itself is black glass since 2026-11-25 (gitGood look, below). */
 /* end site identity */
 
 /* ------------------------------------------------------------------ */
@@ -670,3 +670,362 @@
 .z2h-family a:hover { color: #fff; border-bottom-color: var(--fam, #fff); }
 .z2h-family a[aria-current="page"] { color: var(--fam); border-bottom-color: var(--fam); }
 .z2h-family a.z2h-family__nw { font-weight: 400; color: #737373; }
+
+/* Site CTA (the only per-site values the gitGood look block reads): the
+   bright accent, its hover, and its RGB triplet. */
+:root { --nw-cta: #22c55e; --nw-cta-hover: #4ade80; --nw-cta-rgb: 34, 197, 94; }
+
+/* ================================================================== */
+/* gitGood look (Patrick, 2026-11-25: "looks so boring... take         */
+/* inspiration from gitgood"). Identical in cloud / data / security /  */
+/* ai zero-to-hero - edit all four. Per-site values are only the four  */
+/* --nw-cta* variables in the "site CTA" line just above this block.   */
+/* Loaded last, so it supersedes the header bar colour and the         */
+/* primary-button fill defined earlier in this file.                   */
+/* ================================================================== */
+
+/* ---- Header: black glass + hairline, like gitgood.dev's nav ----
+   The coloured bar read as a stock docs theme. The site colour now lives in
+   the logo, the CTA, links and the family bar instead. */
+.md-header,
+.md-tabs {
+  background-color: rgba(0, 0, 0, 0.78);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  backdrop-filter: saturate(180%) blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Over a white page the blur shows through as grey; stay black in light. */
+[data-md-color-scheme="default"] .md-header,
+[data-md-color-scheme="default"] .md-tabs {
+  background-color: rgba(0, 0, 0, 0.94);
+}
+
+.md-header__title {
+  font-weight: 800;
+  letter-spacing: -0.015em;
+}
+
+.md-header__button.md-logo {
+  color: var(--nw-cta);
+}
+
+/* Search as gitGood's bordered pill rather than a filled slab. */
+@media screen and (min-width: 60em) {
+  .md-search__form {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--nw-radius);
+    transition: border-color 200ms, background-color 200ms;
+  }
+
+  .md-search__form:hover {
+    background-color: rgba(255, 255, 255, 0.09);
+    border-color: rgba(var(--nw-cta-rgb), 0.5);
+  }
+}
+
+/* ---- A faint accent glow at the top of every page ---- */
+.md-main {
+  background-image: radial-gradient(
+    1100px 380px at 50% -160px,
+    rgba(var(--nw-cta-rgb), 0.11),
+    transparent 70%
+  );
+  background-repeat: no-repeat;
+}
+
+/* ---- Buttons: gitGood's bright accent fill with black text + glow ----
+   Black on the bright accent clears AA on all four sites (green 10:1, cyan
+   9:1, amber 10:1, red 5.6:1), so the fill no longer has to be a darkened
+   shade - which is what made the CTAs look muted. Same fill in both schemes,
+   as on gitGood. */
+.md-typeset .md-button--primary,
+.md-typeset .md-button--primary:visited {
+  background-color: var(--nw-cta);
+  color: #000000;
+  font-weight: 700;
+  box-shadow: 0 0 0 1px rgba(var(--nw-cta-rgb), 0.4),
+    0 10px 28px -6px rgba(var(--nw-cta-rgb), 0.55);
+}
+
+.md-typeset .md-button--primary:hover,
+.md-typeset .md-button--primary:focus {
+  background-color: var(--nw-cta-hover);
+  color: #000000;
+  box-shadow: 0 0 0 1px rgba(var(--nw-cta-rgb), 0.6),
+    0 14px 36px -6px rgba(var(--nw-cta-rgb), 0.75);
+  transform: translateY(-1px);
+}
+
+/* Secondary: gitGood's outlined ghost - hairline border, faint fill. */
+.md-typeset .md-button:not(.md-button--primary) {
+  border: 1px solid var(--nw-border-hover);
+}
+
+.md-typeset .md-button:not(.md-button--primary):hover,
+.md-typeset .md-button:not(.md-button--primary):focus {
+  border-color: rgba(var(--nw-cta-rgb), 0.55);
+}
+
+/* ---- Home hero: one glowing panel with a live particle network ----
+   The canvas is added by the script in site-overrides/main.html (home page
+   only; a still frame under prefers-reduced-motion). Without JS the dot grid
+   and glow below still carry the look. */
+.md-typeset .home-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  margin-top: 0.4rem;
+  padding: 3rem 1.4rem 0.6rem;
+  border: 1px solid var(--nw-border);
+  border-radius: 1rem;
+}
+
+.md-typeset .home-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(70% 60% at 50% 0%, rgba(var(--nw-cta-rgb), 0.22), transparent 70%),
+    radial-gradient(circle at 1px 1px, var(--md-default-fg-color--lightest) 1px, transparent 1.5px)
+      0 0 / 22px 22px;
+  -webkit-mask-image: radial-gradient(ellipse 90% 80% at 50% 25%, #000 45%, transparent 100%);
+  mask-image: radial-gradient(ellipse 90% 80% at 50% 25%, #000 45%, transparent 100%);
+}
+
+.md-typeset .home-hero > canvas.z2h-particles {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  animation: none;
+}
+
+.md-typeset .home-title {
+  font-size: clamp(2.1rem, 5.2vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+  margin: 0.2rem auto 1rem;
+  background: linear-gradient(180deg, var(--md-default-fg-color) 35%, rgba(var(--nw-cta-rgb), 0.95) 160%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.md-typeset .home-intro {
+  font-size: 1rem;
+}
+
+.md-typeset .home-hero .md-button {
+  font-size: 0.8rem;
+  padding: 0.7em 1.6em;
+}
+
+.md-typeset .home-hero .md-button--primary {
+  font-size: 0.9rem;
+  padding: 0.75em 2em;
+}
+
+/* The heading permalink would render as a gradient pilcrow after the title. */
+.md-typeset .home-title .headerlink {
+  display: none;
+}
+
+/* Stats: gitGood-style tiles with accent-tinted numbers, one even row. */
+.md-typeset .stat-strip ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(6.2rem, 1fr));
+  border: none;
+  gap: 0.6rem;
+  margin: 2rem 0 1.2rem;
+  padding: 0;
+}
+
+.md-typeset .stat-strip li {
+  justify-content: center;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--nw-border);
+  border-radius: var(--nw-radius-lg);
+  background-color: rgba(var(--nw-cta-rgb), 0.04);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
+.md-typeset .stat-strip li strong {
+  font-size: 1.55rem;
+  background: linear-gradient(180deg, var(--md-default-fg-color) 20%, var(--nw-accent-text) 130%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Kicker as gitGood's pill badge. */
+.md-typeset .home-kicker {
+  display: inline-block;
+  padding: 0.2rem 0.7rem;
+  border: 1px solid var(--nw-accent-border);
+  border-radius: 999px;
+  background-color: rgba(var(--nw-cta-rgb), 0.08);
+}
+
+.md-typeset .home-kicker + h2 {
+  font-size: 1.55rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  margin-top: 0.5em;
+}
+
+/* Cards: accent line that sweeps in along the top edge on hover, and the
+   icon in a tinted tile like gitGood's feature icons. */
+.md-typeset .grid.cards > ul > li {
+  position: relative;
+  overflow: hidden;
+}
+
+.md-typeset .grid.cards > ul > li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--nw-cta), transparent);
+  transform: scaleX(0);
+  transition: transform 300ms ease-out;
+}
+
+.md-typeset .grid.cards > ul > li:hover::before {
+  transform: scaleX(1);
+}
+
+.md-typeset .grid.cards .twemoji.lg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  margin-right: 0.3rem;
+  border: 1px solid var(--nw-accent-border);
+  border-radius: var(--nw-radius);
+  background-color: rgba(var(--nw-cta-rgb), 0.1);
+  vertical-align: middle;
+}
+
+.md-typeset .grid.cards .twemoji.lg svg {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
+/* ---- Content pages (most of the traffic) ---- */
+
+/* H1 gets gitGood's weight plus a short accent rule under it. */
+.md-typeset h1:not(.home-title) {
+  font-size: 2.1em;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.md-typeset h1:not(.home-title)::after {
+  content: "";
+  display: block;
+  width: 2.6rem;
+  height: 3px;
+  margin-top: 0.45rem;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--nw-cta), rgba(var(--nw-cta-rgb), 0));
+}
+
+.md-typeset h2 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+/* Admonitions: panels on the page colour with a hairline border, not
+   Material's tinted slabs. The per-type left colour is kept. */
+.md-typeset .admonition,
+.md-typeset details[class] {
+  border-width: 1px 1px 1px 3px;
+  border-radius: var(--nw-radius-lg);
+  box-shadow: none;
+}
+
+.md-typeset .admonition-title,
+.md-typeset details[class] > summary {
+  border-top-right-radius: var(--nw-radius-lg);
+}
+
+/* Code blocks and tables as gitGood panels. */
+.md-typeset pre > code {
+  border: 1px solid var(--nw-border);
+  border-radius: var(--nw-radius-lg);
+}
+
+.md-typeset table:not([class]) {
+  border: 1px solid var(--nw-border);
+  border-radius: var(--nw-radius-lg);
+  overflow: hidden;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: rgba(var(--nw-cta-rgb), 0.07);
+  border-bottom: 1px solid var(--nw-border);
+}
+
+.md-typeset table:not([class]) tbody tr {
+  transition: background-color 150ms;
+}
+
+.md-typeset table:not([class]) tbody tr:hover {
+  background-color: rgba(var(--nw-cta-rgb), 0.05);
+  box-shadow: none;
+}
+
+/* Sidebar: the active page gets an accent bar, gitGood's active-state mark. */
+/* `a.` only: a section's expand toggle is a <label> that carries the same
+   active class and would get a second bar beside its chevron. */
+.md-nav--primary a.md-nav__link--active {
+  position: relative;
+}
+
+.md-nav--primary a.md-nav__link--active::before {
+  content: "";
+  position: absolute;
+  left: -0.5rem;
+  top: 0.15em;
+  bottom: 0.15em;
+  width: 2px;
+  border-radius: 2px;
+  background-color: var(--nw-cta);
+  box-shadow: 0 0 8px rgba(var(--nw-cta-rgb), 0.8);
+}
+
+/* Footer: black with the same hairline as the header. */
+.md-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media screen and (max-width: 44.9375em) {
+  .md-typeset .home-hero {
+    padding: 2rem 0.8rem 0.4rem;
+  }
+
+  .md-typeset .stat-strip li {
+    padding: 0.5rem 0.6rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .md-typeset .grid.cards > ul > li::before {
+    transition: none;
+  }
+
+  .md-typeset .md-button--primary:hover {
+    transform: none;
+  }
+}
+/* end gitGood look */
