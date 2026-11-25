@@ -71,6 +71,7 @@ Backfill is opportunistic. Don't add frontmatter to thousands of files in one PR
 - `.github/scripts/build-freshness-ledger.sh` - regenerate `docs/freshness.md` from `last-updated` frontmatter. Run after meaningful content updates.
 - `.github/scripts/build-site.py` - stage and build the site. `--serve` for live preview, `--strict` to fail on any broken link or anchor.
 - See [docs/freshness.md](./docs/freshness.md) for the per-cert verification ledger.
+- **Exam facts are watched** (2026-11-24): the nobler-os loop `exam-watch-z2h-cloud` checks each exam against the vendor's page about weekly (retiring ones daily) and puts a retired exam or a moved retirement date on local branch `loop/exam-watch-z2h-cloud`; Patrick lands it (approvals queue), then the exam-change alerts go out. It also runs the freshness report daily, so `freshness.yml` is dispatch-only.
 
 ### Counts are checked, not remembered
 Every number advertised in `README.md` and `STUDY-HUB.md` is verified by CI. Cert and provider counts come from `docs/certs.json` via `build-certs-index.py --check`. The per-provider tables in both files are **generated** from that index by `build-provider-indexes.py`, between `<!-- BEGIN GENERATED: ... -->` markers - don't hand-edit inside a marked block. Everything else (concept pages, topic indexes, comparisons, cheat sheets, projects, word count, doc-link floor, the Repository Statistics block) is verified by `check-readme-counts.py --check`.

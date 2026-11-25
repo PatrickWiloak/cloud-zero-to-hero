@@ -2,9 +2,9 @@ name: Freshness
 
 # Advisory report of cert guides and concept pages that are old or undated.
 # Never opens an issue. The only failing step is the 365-day strict check.
+# On demand only since 2026-11-24: the nobler-os loop exam-watch-z2h-cloud runs the same
+# report daily (with the exam checks) and puts its counts on the Loops page and digest.
 on:
-  schedule:
-    - cron: '23 6 * * 1'
   workflow_dispatch:
     inputs:
       days:
