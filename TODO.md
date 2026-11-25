@@ -8,7 +8,7 @@ Working task list for **cloud-zero-to-hero** (Cloud Zero to Hero, https://cloud.
 - [x] 2026-11-24 Exam-alerts box ON in all four sites (backend live, OPTIONS 204, test signup 200). Check 2026-11-25 that the first daily run logged `z2h.alerts_run` with a baseline.
 
 ## ✍️ Content refill (loop content-refill; nobler-os docs/LOOPS.md)
-- [ ] 2026-11-15 Pat: from 11-15 the `queue-z2h-cloud` loop builds content items (gaps, deepening, new certs) from [QUEUE.md](QUEUE.md) on local `loop/queue-q-NNN` branches; read and land each per QUEUE.md "Landing a built item" (expires 14 days).
+- [ ] 2026-11-29 Pat: from 11-15 the `queue-z2h-cloud` loop builds content items (gaps, deepening, new certs) from [QUEUE.md](QUEUE.md) on local `loop/queue-q-NNN` branches; read and land each per QUEUE.md "Landing a built item" (expires 14 days). ✏️ 2026-11-25 not yet: no `loop/queue-q-*` branch waiting (QUEUE.md items are approved or done); re-dated to the 11-29 expiry.
 - [ ] 2026-11-13 Pat: review 1 loop-drafted guide page(s) (""Cloud egress and data transfer costs explained""), then `publish per drafts/README.md: drafts/learn/concepts/cloud-egress-and-data-transfer-costs.md`
 - [ ] 2026-11-15 Pat: first `content-z2h-cloud` run (Sundays, pilot since 2026-11-13) drafts into `drafts/`, never built; publish or delete each per [drafts/README.md](drafts/README.md).
 
