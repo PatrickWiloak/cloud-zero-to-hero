@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-10-14
+last-updated: 2026-11-25
 applies-to: Professional Cloud Architect exam guide, checked 2026-10-14
 difficulty: advanced
 ---
@@ -40,7 +40,7 @@ Higher rungs cost more, take longer and need more skill. The exam rewards the lo
 | API | Use it for |
 |---|---|
 | **Vision** | Labels, text in images (OCR), faces, objects, SafeSearch |
-| **Video Intelligence** | Shot changes, labels, objects, speech in video |
+| **Video Intelligence** | Shot changes, labels, objects, speech in video. **Deprecated 2026-09-14, shuts down 2027-09-14**; Google points to Gemini models ([deprecations](https://docs.cloud.google.com/video-intelligence/docs/deprecations)) |
 | **Speech-to-Text / Text-to-Speech** | Audio to text, text to audio |
 | **Natural Language** | Entities, sentiment, syntax, classification |
 | **Translation** | Language translation |

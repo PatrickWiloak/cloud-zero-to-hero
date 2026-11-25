@@ -1137,7 +1137,7 @@ AI/ML enables business innovation without requiring deep technical expertise. Th
 - **Compute:** Cloud Run (transcode videos on-demand)
 - **Networking:** Premium tier for consistent performance
 - **Analytics:** BigQuery (viewer analytics, content performance)
-- **AI:** Video Intelligence API (content moderation, metadata extraction)
+- **AI:** Video Intelligence API (content moderation, metadata extraction); deprecated 2026-09-14 and shutting down 2027-09-14, so new builds use Gemini models for video understanding
 
 **Why:** Cloud CDN reduces origin load and egress costs. Cloud Storage lifecycle management archives old content. Global infrastructure serves viewers worldwide with low latency.
 

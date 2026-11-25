@@ -867,6 +867,8 @@ spec:
 
 ### GKE Enterprise (formerly Anthos)
 
+> **Status (checked 2026-11-25):** GKE Enterprise is no longer a separate tier. On 2025-09-02 its features became part of the standard GKE offering (fleets, Config Sync, Policy Controller, Connect Gateway, FQDN network policy, inter-node encryption at no extra cost) or standalone SKUs (Cloud Service Mesh, multi-cluster Gateway/Ingress, Binary Authorization and others). GKE is now one offering without editions. Source: [GKE release notes](https://docs.cloud.google.com/kubernetes-engine/docs/release-notes), [GKE editions](https://docs.cloud.google.com/kubernetes-engine/enterprise/docs/concepts/gke-editions).
+
 #### Features
 | Feature | Description | Use Case |
 |---------|-------------|----------|

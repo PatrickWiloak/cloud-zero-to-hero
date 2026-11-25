@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-10-14
+last-updated: 2026-11-25
 ---
 
 # Google Cloud Professional Cloud Architect - Fact Sheet
@@ -76,7 +76,7 @@ Case studies in the current guide: Altostrat Media, Cymbal Retail, EHR Healthcar
 **Enterprise Architecture:**
 - **Autopilot** - Fully managed, pay-per-pod, optimal configurations
 - **Standard** - Node-level control, custom configurations
-- **GKE Enterprise** - Multi-cluster management with Anthos
+- **GKE Enterprise** (former tier) - Multi-cluster fleet management, formerly Anthos. Since 2025-09-02 GKE is one offering with no editions: the Enterprise features are in standard GKE or sold as standalone SKUs ([release note](https://docs.cloud.google.com/kubernetes-engine/docs/release-notes))
 - **[📖 GKE Architecture](https://cloud.google.com/kubernetes-engine/docs/concepts/kubernetes-engine-overview)** - Complete overview
 - **[📖 Cluster Architecture](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-architecture)** - Control plane and nodes
 - **[📖 Multi-Cluster Ingress](https://cloud.google.com/kubernetes-engine/docs/concepts/multi-cluster-ingress)** - Global load balancing
