@@ -493,6 +493,7 @@ Was 54k words against 2.17M in `exams/`.
 Plan: [docs/content-gaps-2026-11-07.md](docs/content-gaps-2026-11-07.md). Wave 1 (currency) and the cert items are already listed above.
 
 - [x] 2026-11-07 Wave 2 (all but Python): postmortems CrowdStrike 2024 + AWS DynamoDB DNS Oct 2025 (from vendor reports), platform engineer + Kubernetes interview guides, CI/CD + Terraform state troubleshooting, Kubernetes cost page. Day-one Python still open above.
+- [ ] 2026-11-25 Gap review [docs/content-gaps-2026-11-25.md](docs/content-gaps-2026-11-25.md): 5 waves (wave 5 labs need a live run); loop reads it once nobler-os content.json lists it.
 - [ ] Wave 3: concept pages - eBPF, Backstage/developer portals, OpenTofu vs Terraform, service quotas, Wasm at the edge.
 - [ ] Wave 4: flashcard decks built for 18 of 21 guides (Terraform Associate, RHCSA, AZ-400, ANS-C01, GCP DevOps and 13 more). Left: AZ-204, Consul Associate, PL-100 are retired, so no deck unless kept as reference; labs for certs with none.
 - [x] 2026-11-22 Open verification leftovers ✅ 2026-11-22 OpsWorks settled as "May 2024" (ledger); Activity Tracker now IBM-sourced (2025-03-30); EX200 page says RHEL 10, EX280 page OCP 4.22 (fact-sheets fixed; price/pass score not on pages). Salesforce terms still unread (403).
