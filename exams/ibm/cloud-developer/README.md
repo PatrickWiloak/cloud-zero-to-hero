@@ -110,7 +110,7 @@ The IBM Cloud Application Developer certification validates skills in developing
 
 #### Cloud Foundry
 
-> **Retired platform.** IBM Cloud Foundry is no longer offered; IBM publishes a [Cloud Foundry to Code Engine migration guide](https://cloud.ibm.com/docs/codeengine?topic=codeengine-migrate-cf-ce-getstart). Secondary sources give 30 November 2022 (no new apps) and 1 June 2023 (end of support, instances deleted); no IBM page stating those dates could be read on 2026-11-22. Learn it for older exam items; deploy new apps on Code Engine or Red Hat OpenShift.
+> **Retired platform.** IBM Cloud Foundry is no longer offered; IBM publishes a [Cloud Foundry to Code Engine migration guide](https://cloud.ibm.com/docs/codeengine?topic=codeengine-migrate-cf-ce-getstart). IBM announced the deprecation on 31 May 2022; from 30 November 2022 no new apps could be created, and it reached end of support on 1 June 2023, when remaining runtime instances were disabled and deleted ([IBM Speech to Text release notes](https://github.com/ibm-cloud-docs/speech-to-text/blob/master/release-notes.md)). Learn it for older exam items; deploy new apps on Code Engine or Red Hat OpenShift.
 
 - **Platform as a Service**
   - Buildpacks for multiple languages

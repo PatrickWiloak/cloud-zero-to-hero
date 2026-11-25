@@ -844,7 +844,7 @@ async function synthesizeWithSSML(outputFile) {
 
 ### Watson Visual Recognition (retired 2021)
 
-> **Retired service.** Visual Recognition stopped taking new instances on 7 January 2021 and ended on 1 December 2021 (dates from secondary sources; no IBM page stating them could be read on 2026-11-22). The code below is kept for older exam items only.
+> **Retired service.** Visual Recognition stopped taking new instances on 7 January 2021 and ended on 1 December 2021 ([IBM Watson Studio docs](https://ibm.com/docs/en/SSQNUZ_4.0/wsj/analyze-data/visual-recognition-overview.html)). The code below is kept for older exam items only.
 
 
 ```javascript

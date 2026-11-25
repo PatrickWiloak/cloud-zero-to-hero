@@ -1136,7 +1136,7 @@ ibmcloud secrets-manager secret-rotate \
 
 ### IBM Cloud Certificate Manager
 
-> **Retired service.** IBM deprecated the free Certificate Manager in favor of the paid **Secrets Manager**, which now handles public and private TLS certificates ([IBM Community, 2022-12-20](https://community.ibm.com/community/user/blogs/michael-thompson/2022/12/20/api-connect-reserved-instance-and-deprecation-of-i); [Secrets Manager docs](https://cloud.ibm.com/docs/secrets-manager)). Secondary sources give 31 December 2022 as the date remaining instances were deleted; no IBM page stating it could be read on 2026-11-22.
+> **Retired service.** IBM deprecated the free Certificate Manager in favor of the paid **Secrets Manager**, which now handles public and private TLS certificates ([IBM Community, 2022-12-20](https://community.ibm.com/community/user/blogs/michael-thompson/2022/12/20/api-connect-reserved-instance-and-deprecation-of-i); [Secrets Manager docs](https://cloud.ibm.com/docs/secrets-manager)). Per IBM, clusters stopped getting Certificate Manager instances from 1 August 2022 and remaining instances were deleted on 31 December 2022 ([IBM Community, 2022-04-05](https://community.ibm.com/community/user/blogs/theodora-cheng/2022/04/05/transitioning-to-secrets-manager-for-kubernetes-an)).
 
 
 Manage SSL/TLS certificates.

@@ -778,7 +778,7 @@ helm uninstall myapp --namespace production
 
 ### IBM Cloud Functions (OpenWhisk)
 
-> **Legacy service:** IBM publishes migration guidance for moving off IBM Cloud Functions (OpenWhisk); its target is IBM Code Engine ([IBM: How to move from IBM Cloud Functions to IBM Code Engine](https://www.ibm.com/products/tutorials/how-to-move-from-ibm-cloud-functions-to-ibm-code-engine)). Treat the Cloud Functions material below as the legacy model.
+> **Legacy service:** IBM publishes migration guidance for moving off IBM Cloud Functions (OpenWhisk); its target is IBM Code Engine ([IBM: How to move from IBM Cloud Functions to IBM Code Engine](https://www.ibm.com/products/tutorials/how-to-move-from-ibm-cloud-functions-to-ibm-code-engine)). IBM deprecated Cloud Functions: no new entities from 28 December 2023, and remaining entities were deleted when support ended in October 2024 ([IBM Cloud Object Storage release notes](https://github.com/ibm-cloud-docs/cloud-object-storage/blob/master/release-notes.md)). Treat the Cloud Functions material below as the legacy model.
 
 #### Action Deployment
 
