@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-10-22
+last-updated: 2026-11-25
 ---
 
 # Section 6: Configuring, Implementing and Managing a Cloud Network Security Solution (~13%)
@@ -276,20 +276,25 @@ gcloud compute network-firewall-policies rules create 500 --firewall-policy=app-
 
 ### Migrating from VPC firewall rules to Cloud NGFW policies
 
-Google provides a **VPC firewall rules migration tool** in gcloud:
+Google provides a **VPC firewall rules migration tool** in gcloud. It is a **beta** command (`gcloud beta compute firewall-rules migrate`, also in alpha; not in the GA track), and each call does exactly one of `--export-tag-mapping`, `--bind-tags-to-instances`, `--target-firewall-policy` or `--export-exclusion-patterns`:
 
-- Rules **without network tags or service accounts** migrate directly into a new global network firewall policy (`gcloud compute firewall-rules migrate --source-network=... --target-firewall-policy=...`).
-- Rules **with network tags or service accounts** need a **tag mapping file**: you first create **secure tags** that correspond to the network tags, bind them to the VMs, then migrate with `--tag-mapping-file`. Service accounts map to service-account targets in the policy.
+- Rules **without network tags or service accounts** migrate directly into a new global network firewall policy (`gcloud beta compute firewall-rules migrate --source-network=... --target-firewall-policy=...`).
+- Rules **with network tags or service accounts** need a **tag mapping file**: you first create **secure tags** that correspond to the network tags, bind them to the VMs, then migrate with `--tag-mapping-file` (binding needs the Tag User role). Service accounts map to service-account targets in the policy.
 - The tool resolves duplicate priorities automatically.
 
 Safe cutover: create the policy, associate it with the network, set the network's enforcement order to `BEFORE_CLASSIC_FIREWALL` so the policy is evaluated first, verify with logs and Connectivity Tests, then delete the old VPC firewall rules.
 
 ```bash
-gcloud compute firewall-rules migrate --source-network=production-vpc \
-  --target-firewall-policy=migrated-policy --export-tag-mapping \
-  --tag-mapping-file=tag-map.json
-# edit tag-map.json to map each network tag to a secure tag, bind tags to VMs, then:
-gcloud compute firewall-rules migrate --source-network=production-vpc \
+# 1. list the network tags and service accounts the rules use
+gcloud beta compute firewall-rules migrate --source-network=production-vpc \
+  --export-tag-mapping --tag-mapping-file=tag-map.json
+# 2. create secure tags (gcloud resource-manager tags keys/values create, --purpose=GCE_FIREWALL),
+#    then edit tag-map.json to map each network tag or service account to one
+# 3. bind the secure tags to the VMs that carry the matching network tags
+gcloud beta compute firewall-rules migrate --source-network=production-vpc \
+  --bind-tags-to-instances --tag-mapping-file=tag-map.json
+# 4. migrate the rules into a new global network firewall policy
+gcloud beta compute firewall-rules migrate --source-network=production-vpc \
   --target-firewall-policy=migrated-policy --tag-mapping-file=tag-map.json
 gcloud compute networks update production-vpc \
   --network-firewall-policy-enforcement-order=BEFORE_CLASSIC_FIREWALL

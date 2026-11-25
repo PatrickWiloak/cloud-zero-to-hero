@@ -83,7 +83,7 @@ Read-only fleet audit (9 agents, nothing changed). Each line: effort S (<half da
 ## Stale cert-page domains (found 2026-10-22, bank expansion)
 
 - [x] 2026-10-22 Cert pages restructured to current guides: GH-200, GH-900, Cloud+, KCNA, SOA-C03, AZ-700, PCNE, Terraform Advanced.
-- [ ] 2026-11-29 Verify from-memory details flagged in the 2026-10-22 rewrites: PCNE gcloud flags (`--bgp-bps-*`, `firewall-rules migrate`, PBR next hop, Secure Web Proxy import) and Terraform Advanced OPA Rego sample (`notes/06-hcp-terraform.md`).
+- [x] 2026-11-29 Verify from-memory details flagged in the 2026-10-22 rewrites: PCNE gcloud flags and Terraform Advanced OPA Rego sample. ✅ 2026-11-25 bgp-bps, PBR ilb-ip, SWP import OK; fixed firewall-rules migrate (beta, one mode per call, bind step) and PBR `default-routing`; Rego matches HashiCorp docs, v1 note added.
 - [ ] 2026-12-06 (Claude) Reconcile README vs fact-sheet against vendor pages, not each other. ✏️ 2026-11-22 IBM x4 done (all withdrawn 2025-12-31, marked RETIRED with IBM's codes/counts); PL-900 done (July 2026 outline); OCI: only Architect Associate (-26, 90 min). Oracle pages block bots and -26 details need a sign-in. Next: the other 4 OCI exams via a signed-in browser.
 - [ ] 2026-12-19 (Claude) PL-900: rewrite notes + practice plan to the July 2026 outline (new Copilot Studio agents note, drop Power BI, Power Pages build), then re-read the study guide for the 2026-12-18 English update.
 - [x] 2026-11-06 Salesforce Administrator renamed Platform Administrator (Plat-Admn-201) from the credential page.

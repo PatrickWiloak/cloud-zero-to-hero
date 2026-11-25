@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-10-22
+last-updated: 2026-11-25
 ---
 
 # Objective 6: Collaborate on Infrastructure as Code Using HCP Terraform
@@ -238,7 +238,7 @@ policy "public_s3" {
 }
 ```
 
-The policy fails when the query returns a non-empty result.
+The policy fails when the query returns a non-empty result. The sample uses the pre-1.0 Rego syntax that HashiCorp's own OPA examples use; OPA 1.0 made Rego v1 syntax (`deny contains msg if { ... }`) the default, so check which OPA version the policy set runs; HashiCorp notes that OPA 1.4 or later needs HCP Terraform agent 1.28.1 or later ([Define OPA policies](https://developer.hashicorp.com/terraform/cloud-docs/policy-enforcement/define-policies/opa)).
 
 ### Choosing between them
 

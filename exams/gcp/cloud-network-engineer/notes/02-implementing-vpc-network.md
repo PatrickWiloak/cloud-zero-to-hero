@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-10-22
+last-updated: 2026-11-25
 ---
 
 # Section 2: Implementing a VPC Network (~20%)
@@ -433,7 +433,7 @@ gcloud network-connectivity policy-based-routes create inspect-onprem \
 gcloud network-connectivity policy-based-routes create skip-hc \
   --network=projects/PROJECT/global/networks/hub-vpc \
   --source-range=35.191.0.0/16 --destination-range=0.0.0.0/0 \
-  --ip-protocol=ALL --next-hop-other-routes=DEFAULT_ROUTING --priority=50
+  --ip-protocol=ALL --next-hop-other-routes=default-routing --priority=50
 ```
 
 ---
